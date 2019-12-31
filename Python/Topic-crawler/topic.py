@@ -24,16 +24,16 @@ def quickInputDestination() :
     desDic = {'1':'京都 日本','2':'東京 日本','3':'台北 台灣' ,'4':'台中 台灣'}
     desStr = ''
     for num,des in desDic.items():
-        desStr += "{}.{} ".format(num,des) 
+        desStr += "{}.{} ".format(num,des)
     dest= input("請輸入數字，例如: {} 或是直接輸入地名".format(desStr))
     if dest in desDic.keys():
         dest = desDic[dest]
     else:
         dest = dest
-    
+
     infos.append("目的地："+dest)
     return dest
-    
+
 destination = quickInputDestination()
 
 checkInOutDate = input("請輸入check-in&out日期, EX：2020-04-01 2020-04-05 : ")
@@ -47,12 +47,12 @@ for room in range(int(rooms)):
     howPeople= input("請輸入第{}間房:幾大幾小 , EX :2 1-->".format(room+1)).split()
     infos.append("第{}間房:{}大{}小".format(room+1,howPeople[0],howPeople[1]))
     roomsOfPeopleList.append(howPeople)
-    
+
 for info in infos:
     print("\x1b[31m{}\x1b[0m".format(info))
 correct = input("請確認以上資料正確嗎？不正確輸入n，正確輸入任意字元")
 if correct == 'n':
-    sys.exit("請重新輸入") 
+    sys.exit("請重新輸入")
 
 driver = webdriver.Chrome("chromedriver")
 driver.get("https://tw.hotels.com")
@@ -80,18 +80,18 @@ checkOutCol.click()
 checkOutCol.send_keys(checkOutDate)
 driver.find_element_by_css_selector('button.widget-overlay-close').click()
 
-s1 = Select(driver.find_element_by_css_selector('#qf-0q-compact-occupancy')) 
-s1.select_by_index(2)
+#s1 = Select(driver.find_element_by_css_selector('#qf-0q-compact-occupancy'))
+#s1.select_by_index(2)
 
-s1 = Select(driver.find_element_by_css_selector('select.query-rooms')) 
-s1.select_by_value(rooms) 
+s1 = Select(driver.find_element_by_css_selector('select.query-rooms'))
+s1.select_by_value(rooms)
 for roomOfPeople in range(len(roomsOfPeopleList)):
     adults,children = roomsOfPeopleList[roomOfPeople]
-    s1 = Select(driver.find_element_by_css_selector('#qf-0q-room-{}-adults'.format(roomOfPeople))) 
+    s1 = Select(driver.find_element_by_css_selector('#qf-0q-room-{}-adults'.format(roomOfPeople)))
     s1.select_by_value(adults)
     if children != '':
-        s1 = Select(driver.find_element_by_css_selector('#qf-0q-room-{}-children'.format(roomOfPeople))) 
-        s1.select_by_value(children) 
+        s1 = Select(driver.find_element_by_css_selector('#qf-0q-room-{}-children'.format(roomOfPeople)))
+        s1.select_by_value(children)
 
 #click search button
 driver.find_element_by_css_selector('button.cta.cta-strong').click();
@@ -115,7 +115,7 @@ def leftCheckbox(title):
         panelTitleParent =  panelTitle.parent(".filter-legend+div li label span:nth-child(2):contains('星級')")
     elif title=="設施":
         panelTitleParent =  panelTitle.parent(".filter-legend+div#filter-facilities-contents li")
-    else: 
+    else:
         panelTitleParent  =  panelTitle.parent(".filter-legend+div li")
 
     choList = []
@@ -125,16 +125,16 @@ def leftCheckbox(title):
 
     print('請從 {} 選擇：'.format(title))
     print(choStr)
- 
+
     conInput = input()
     if conInput == '':
         return 0
     userChecks = conInput.split(',')
-    
+
     ###check if the columns is collapsed
     panelTitle = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((
-            By.XPATH, "//h3[text()='{}']".format(title)))    
+            By.XPATH, "//h3[text()='{}']".format(title)))
     )
     checkTitle = driver.find_element_by_xpath("//h3[text()='{}']/../..".format(title))
     checkTitle = checkTitle.get_attribute("class")
@@ -144,13 +144,13 @@ def leftCheckbox(title):
         print("click....panel")
         panelTitle.click()
     ####################################
-    
-    for i in userChecks: 
+
+    for i in userChecks:
 
         if title == "星級評等" :
             check=driver.find_element_by_xpath("//span[text()='{}']/../preceding-sibling::input".format(i))
 
-        else: 
+        else:
             check=driver.find_element_by_xpath("//label[text()='{}']/preceding-sibling::input".format(i))
         check.click()
 
@@ -163,10 +163,10 @@ def leftControlPanel(title):
         minVal=int(minVal)
         maxVal=int(maxVal)
         leftSteps = minVal//250
-        rightSteps = (25000-maxVal)//250 
+        rightSteps = (25000-maxVal)//250
         startPoint = driver.find_element_by_xpath("//h3[text()='{}']/../following-sibling::div/div/div/div[contains(@class,'widget-slider-handle-min')]".format(title))
         endPoint = driver.find_element_by_xpath("//h3[text()='{}']/../following-sibling::div/div/div/div[contains(@class,'widget-slider-handle-max')]".format(title))
-        
+
     elif title == "旅客評分":
         minVal,maxVal = input("請輸入 旅客評分 的評分區間，EX:7,10 ").split(',')
         minVal=int(minVal)
@@ -175,7 +175,7 @@ def leftControlPanel(title):
         rightSteps = 10-maxVal
         startPoint = driver.find_element_by_xpath("//h3[text()='{}']/following-sibling::div/div/div/div[contains(@class,'widget-slider-handle-min')]".format(title))
         endPoint = driver.find_element_by_xpath("//h3[text()='{}']/following-sibling::div/div/div/div[contains(@class,'widget-slider-handle-max')]".format(title))
-        
+
     for i in range(leftSteps):
         startPoint.send_keys(Keys.RIGHT)
     for k in range(rightSteps):
@@ -205,7 +205,7 @@ while True:
     last_height = heightVal
     driver.execute_script("window.scrollTo({},{})".format(0,heightVal))
     time.sleep(8)
-    
+
 html = driver.find_element_by_css_selector("*").get_attribute("outerHTML")
 response = requests.get(driver.current_url)
 doc = pq(html)
@@ -215,30 +215,30 @@ tableHeader = "<table id='myTable' class='tablesorter-blue' >"
 tableTitle = "<thead><tr><td style='text-align:left;'>飯店</td><td>特價</td><td>原價</td><td width='80'>位置</td><td width='180' style='text-align:left';>距離</td><td width='120'>評價</td><td width='80'>評語數量</td><td width='130'>地址</td></tr></thead><tbody>"
 tableFooter = "</tbody></table>"
 tableBodyList=[]
-hotelCount = 0 
+hotelCount = 0
 hotelInfoList=[]
 for i in mainHtml.items():
-    
+
     hotelName = i("h3.p-name").html()
- 
+
     reviews = i("div.reviews-box strong.guest-reviews-badge").html()
     reviews=float(reviews[-3:])
     reviewsCount = i("div.reviews-box a span.small-view").html()
     reviewsCount = reviewsCount.replace("則評語",'')
     location = i("div.additional-details div.location-info a").html()
-    distance = i("div.additional-details div.location-info ul.property-landmarks").html() 
+    distance = i("div.additional-details div.location-info ul.property-landmarks").html()
     address = i("span.address").text()
-    specialPrice = i("div.price a del").text() or ''  
+    specialPrice = i("div.price a del").text() or ''
     actualPrice = i("div.price a ins").html() or i("div.price a strong").html()
 
-    if actualPrice is None: 
+    if actualPrice is None:
         actualPrice = '<strong>銷售一空</strong>'
     else:
         price = actualPrice.replace("NT$", '')
         price = price.replace(",", '')
-        hotelInfoList.append(((hotelName),(price),(specialPrice),(location),(distance),(reviews),(reviewsCount),(address)))       
+        hotelInfoList.append(((hotelName),(price),(specialPrice),(location),(distance),(reviews),(reviewsCount),(address)))
     #tableBodyList.append("<tr> <td class='left'>{}</td> <td>{}</td> <td>{}</td> <td>{}</td> <td>{}</td> <td>{}</td> <td>{}</td> <td>{}</td> </tr>".format(hotelName,actualPrice,specialPrice,location,distance,reviews,reviewsCount,address))
-    
+
     hotelCount += 1
 
 
@@ -247,19 +247,19 @@ hotelInfoList.sort(key=lambda x:x[1])
 
 for hotelInfo in hotelInfoList:
     tableBodyList.append("<tr> <td  style='text-align:left;'>{}</td> <td>NT${:,}</td> <td><del>{}</del></td> <td>{}</td> <td>{}</td> <td>{}</td> <td>{}</td> <td>{}</td> </tr>".format(hotelInfo[0],int(hotelInfo[1]),hotelInfo[2],hotelInfo[3],hotelInfo[4],hotelInfo[5],hotelInfo[6],hotelInfo[7]))
-    
+
 script ="<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script><script src=\"https://mottie.github.io/tablesorter/dist/js/jquery.tablesorter.min.js\"></script><script>$(function() {  $(\"#myTable\").tablesorter();\
 });\
 </script>"
 css="<link rel=stylesheet type=\"text/css\" href=\"table.css\">"
 
 display(HTML("{}".format(script)))
-display(HTML("{}".format(css)))   
-  
+display(HTML("{}".format(css)))
+
 display(HTML("<strong>一共有<font size='5' color='red'>{}</font>筆飯店</strong>".format(hotelCount)))
-    
+
 tableBody = ''.join(tableBodyList)
-                
+
 display(HTML(tableHeader+tableTitle+tableBody+tableFooter))
 with open("hotels.html" , 'w' ) as fileObj:
     fileObj.write(script+'\n')
@@ -290,7 +290,7 @@ trackList = input("關注飯店的keyword,EX: 京都三條飯店,京都東山丸
 formatList =[]
 for i in trackList:
     formatList.append('a:contains("{}")'.format(i))
-    
+
 FilterStr = ','.join(formatList)
 doc = pq(content)
 aTag=doc(FilterStr)
@@ -313,7 +313,7 @@ def trackHotelDic(hotelDic,times,interval):
             ######for test only
             if i==3:
                 price = price - random.randint(100,400)
-                
+
             if i==2:
                 price = price + random.randint(100,400)
             ######
@@ -323,7 +323,7 @@ def trackHotelDic(hotelDic,times,interval):
                 print('{} \t開始監控 現價是 : {}'.format(hotel,original[hotel]))
             elif price < original[hotel]:
                 messageLine = '{} \t\x1b[31m出現特價\x1b[0m 現價 : {}, 原價 : {} 網址 : {}'.format(hotel,price,original[hotel],url)
-                line_bot_api.push_message('U64843a4ebd4abcce420232ea4da7966e', 
+                line_bot_api.push_message('U64843a4ebd4abcce420232ea4da7966e',
     TextSendMessage(text=messageLine))
                 print(messageLine)
             elif price > original[hotel]:
@@ -332,7 +332,7 @@ def trackHotelDic(hotelDic,times,interval):
                 print('{} \t價格沒有變化 與原價相等'.format(hotel))
         print('')
         time.sleep(interval)
-        
+
 trackHotelDic(hotelDictTrack,5,10)
 #aTag.attr('href')
 
@@ -366,7 +366,7 @@ url ='https://www.callingtaiwan.com.tw/blog/hotels-com-agoda-hotelclub-expedia-c
 
 response = requests.get(url)
 doc = pq(response.text)
-couponList = doc("h2:contains('Hotels.com 優惠碼')+ul>li:contains('台灣')") 
+couponList = doc("h2:contains('Hotels.com 優惠碼')+ul>li:contains('台灣')")
 tableHeader = "<table>"
 tableTitle = "<thead><tr><td style='text-align:left;'>coupon優惠</td><td>coupon</td></tr></thead><tbody>"
 tableFooter = "</tbody></table>"
@@ -379,15 +379,15 @@ for i in couponList.items():
     tableBodyList.append("<tr> <td style='text-align:left;'>{}</td> <td>{}</td> </tr>".format(description,coupon))
 
 css="<link rel=stylesheet type=\"text/css\" href=\"table.css\">"
-display(HTML("{}".format(css)))  
-tableBody = ''.join(tableBodyList)                
+display(HTML("{}".format(css)))
+tableBody = ''.join(tableBodyList)
 display(HTML(tableHeader+tableTitle+tableBody+tableFooter))
 
 
 tableTitle = "<thead><tr><td  style='text-align:left;'>信用卡優惠</td></tr></thead><tbody>"
 tableFooter = "</tbody></table>"
 tableBodyList=[]
-creditList = doc("h2:contains('信用卡')+p+ul>li:contains('台灣')") 
+creditList = doc("h2:contains('信用卡')+p+ul>li:contains('台灣')")
 
 creditAllowList = ["Master","Visa","中國","玉山","富邦"]
 creditFilter = []
@@ -398,8 +398,8 @@ creditFilter = ','.join(creditFilter)
 creditList = creditList(creditFilter)
 for i in creditList.items():
     tableBodyList.append("<tr> <td style='text-align:left;'>{}</td> </tr>".format(i))
-tableBody = ''.join(tableBodyList) 
-display(HTML(tableHeader+tableTitle+tableBody+tableFooter))   
+tableBody = ''.join(tableBodyList)
+display(HTML(tableHeader+tableTitle+tableBody+tableFooter))
 
 
 # In[ ]:
