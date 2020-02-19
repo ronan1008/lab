@@ -65,3 +65,7 @@ Login ProEx Web
 	Click Element	//button[@class='login_send']
 	Wait Until Element Is Visible  //span[@class='icon icon-close safety_announcemen_close']  timeout=10
 	Click Element	//span[@class='icon icon-close safety_announcemen_close']
+
+
+
+	
