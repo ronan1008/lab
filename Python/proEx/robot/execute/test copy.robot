@@ -5,15 +5,14 @@ Metadata			Version 0.1
 
 Library		SeleniumLibrary
 #Library		../library/DisplayLib.py
-Resource	../library/browser_setting.robot
-Resource	../library/login_setting.robot
-Resource	../library/menu.robot
+Resource	../settings/login_setting.robot
+Resource	../settings/browser_setting.robot
 Resource	../library/log.robot
 #Suite Setup	DisplayLib.Start	${NoGUI}
 #Suite Teardown	DisplayLib.Stop	${NoGUI}
 
 *** Variables ***
-${HOST}		172.17.229.251
+${HOST}		www.proex.io/
 ${URL}		http://${HOST}/
 ${SSLURL}	https://${HOST}/
 ${BW}	chrome 

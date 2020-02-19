@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation	Default browser setting for us
 Library		String
+Library	../library/getTotp.py
 
 *** Keywords ***
 
@@ -39,7 +40,7 @@ Login WebUI
 	Run Keyword If	'${BW}' == 'firefox'	Open Firefox Browser for product	${URL}
 	...	ELSE IF		'${BW}' == 'chrome'		Open Chrome Browser for product	${URL}
 	...	ELSE IF		'${BW}' == 'safari'		Open Safari Browser for product	${URL}
-	Login Climax Web
+	Login ProEx Web
 	
 
 Login Register Page 
@@ -52,4 +53,15 @@ Login Register Page
 	Maximize Browser Window
     Reload Page
 	
-	
+Login ProEx Web
+	Click Element	//div[@class='name']/a[@href='/index.php?m=login']
+	Wait Until Element Is Visible  //input[@id='username']  timeout=10
+	Input Text	//input[@id='username']	softnextqcshock@gmail.com
+	Input Text	//input[@id='password']	Arborabc1234
+	Click Element	//button[@class='login_btn']
+	Wait Until Element Is Visible  //input[@class='mail_text']  timeout=10
+	${result}=  Run Keyword	get_totp_token	6RJFVNCMKMOG62SU
+	Input Text	//input[@class='mail_text']	${result} 
+	Click Element	//button[@class='login_send']
+	Wait Until Element Is Visible  //span[@class='icon icon-close safety_announcemen_close']  timeout=10
+	Click Element	//span[@class='icon icon-close safety_announcemen_close']

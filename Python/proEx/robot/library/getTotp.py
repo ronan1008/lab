@@ -9,11 +9,12 @@ def get_hotp_token(secret, intervals_no):
     return h
 
 def get_totp_token(secret):
-    return get_hotp_token(secret, intervals_no=int(time.time())//30)
+    token = str(get_hotp_token(secret, intervals_no=int(time.time())//30))
+    if len(token) == 5:
+        token = '0{}'.format(token)
+
+    return token
 
 
-token = str(get_totp_token('6RJFVNCMKMOG62SU'))
 
-
-if len(token) == 5:
-    token = '0{}'.format(token)
+#print(get_totp_token('6RJFVNCMKMOG62SU'))

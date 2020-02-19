@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.6 on darwin)" generated="20200219 15:57:07.910" rpa="false">
+<suite id="s1" name="Test" source="/Users/shocklee/Documents/github/workspace/Python/proEx/robot/execute/test.robot">
+<test id="s1-t1" name="Test Click Remote Log Servers Page On Log">
+<status status="FAIL" starttime="20200219 15:57:09.159" endtime="20200219 15:57:09.160" critical="yes">Test case contains no keywords.</status>
+</test>
+<doc>xxxxx</doc>
+<metadata>
+<item name="Version 0.1"></item>
+</metadata>
+<status status="FAIL" starttime="20200219 15:57:07.914" endtime="20200219 15:57:09.162"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
