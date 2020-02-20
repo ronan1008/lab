@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation	Log function control
+Documentation	front end page function control
 ...						include [TOMODIFY]
 #Metadata			Version 0.1
 
