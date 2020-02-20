@@ -5,3 +5,7 @@ Python/.DS_Store
 Python/.vscode/settings.json
 Python/.DS_Store
 .DS_Store
+Python/proEx/robot/execute/selenium-screenshot*
+Python/proEx/robot/execute/output.xml
+Python/proEx/robot/execute/report.html
+Python/proEx/robot/execute/log.html
