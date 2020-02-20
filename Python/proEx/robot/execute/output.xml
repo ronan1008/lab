@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.4 on darwin)" generated="20200219 22:51:03.055" rpa="false">
-<suite id="s1" name="Test" source="/Users/shocklee/Documents/GitHub/workspace/Python/proEx/robot/execute/test.robot">
+<robot generator="Robot 3.1.2 (Python 3.7.6 on darwin)" generated="20200220 16:48:13.533" rpa="false">
+<suite id="s1" name="Test" source="/Users/shocklee/Documents/github/workspace/Python/proEx/robot/execute/test.robot">
 <test id="s1-t1" name="Test Login ProEx Web">
 <kw name="Login WebUI" library="browser_setting" type="setup">
 <doc>Using browser login our ui</doc>
@@ -16,8 +16,8 @@
 <assign>
 <var>${BW}</var>
 </assign>
-<msg timestamp="20200219 22:51:03.222" level="INFO">${BW} = chrome</msg>
-<status status="PASS" starttime="20200219 22:51:03.222" endtime="20200219 22:51:03.222"></status>
+<msg timestamp="20200220 16:48:14.534" level="INFO">${BW} = chrome</msg>
+<status status="PASS" starttime="20200220 16:48:14.533" endtime="20200220 16:48:14.534"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -47,8 +47,8 @@
 <assign>
 <var>${chromeprofile}</var>
 </assign>
-<msg timestamp="20200219 22:51:03.223" level="INFO">${chromeprofile} = &lt;selenium.webdriver.chrome.options.Options object at 0x10adb6210&gt;</msg>
-<status status="PASS" starttime="20200219 22:51:03.223" endtime="20200219 22:51:03.223"></status>
+<msg timestamp="20200220 16:48:14.535" level="INFO">${chromeprofile} = &lt;selenium.webdriver.chrome.options.Options object at 0x1059c3e10&gt;</msg>
+<status status="PASS" starttime="20200220 16:48:14.535" endtime="20200220 16:48:14.535"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -57,7 +57,7 @@
 <arg>add_argument</arg>
 <arg>disable-gpu</arg>
 </arguments>
-<status status="PASS" starttime="20200219 22:51:03.223" endtime="20200219 22:51:03.224"></status>
+<status status="PASS" starttime="20200220 16:48:14.535" endtime="20200220 16:48:14.536"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -66,7 +66,7 @@
 <arg>add_argument</arg>
 <arg>--disable-extensions</arg>
 </arguments>
-<status status="PASS" starttime="20200219 22:51:03.224" endtime="20200219 22:51:03.224"></status>
+<status status="PASS" starttime="20200220 16:48:14.536" endtime="20200220 16:48:14.536"></status>
 </kw>
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <doc>Creates an instance of Selenium WebDriver.</doc>
@@ -74,22 +74,22 @@
 <arg>Chrome</arg>
 <arg>chrome_options=${chromeprofile}</arg>
 </arguments>
-<msg timestamp="20200219 22:51:03.224" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20200219 22:51:03.224" endtime="20200219 22:51:05.177"></status>
+<msg timestamp="20200220 16:48:14.538" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20200220 16:48:14.537" endtime="20200220 16:48:17.573"></status>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20200219 22:51:05.179" level="INFO">Opening url 'http://www.proex.io//'</msg>
-<status status="PASS" starttime="20200219 22:51:05.178" endtime="20200219 22:51:08.864"></status>
+<msg timestamp="20200220 16:48:17.577" level="INFO">Opening url 'http://www.proex.io//'</msg>
+<status status="PASS" starttime="20200220 16:48:17.575" endtime="20200220 16:48:20.635"></status>
 </kw>
-<status status="PASS" starttime="20200219 22:51:03.223" endtime="20200219 22:51:08.865"></status>
+<status status="PASS" starttime="20200220 16:48:14.534" endtime="20200220 16:48:20.635"></status>
 </kw>
-<status status="PASS" starttime="20200219 22:51:03.222" endtime="20200219 22:51:08.865"></status>
+<status status="PASS" starttime="20200220 16:48:14.534" endtime="20200220 16:48:20.635"></status>
 </kw>
-<status status="PASS" starttime="20200219 22:51:03.221" endtime="20200219 22:51:08.865"></status>
+<status status="PASS" starttime="20200220 16:48:14.533" endtime="20200220 16:48:20.636"></status>
 </kw>
 <kw name="Login ProEx Web" library="browser_setting">
 <arguments>
@@ -102,8 +102,8 @@
 <arguments>
 <arg>//div[@class='name']/a[@href='/index.php?m=login']</arg>
 </arguments>
-<msg timestamp="20200219 22:51:08.866" level="INFO">Clicking element '//div[@class='name']/a[@href='/index.php?m=login']'.</msg>
-<status status="PASS" starttime="20200219 22:51:08.866" endtime="20200219 22:51:09.240"></status>
+<msg timestamp="20200220 16:48:20.637" level="INFO">Clicking element '//div[@class='name']/a[@href='/index.php?m=login']'.</msg>
+<status status="PASS" starttime="20200220 16:48:20.636" endtime="20200220 16:48:21.079"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -111,7 +111,7 @@
 <arg>//input[@id='username']</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" starttime="20200219 22:51:09.241" endtime="20200219 22:51:09.268"></status>
+<status status="PASS" starttime="20200220 16:48:21.079" endtime="20200220 16:48:21.111"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -119,8 +119,8 @@
 <arg>//input[@id='username']</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200219 22:51:09.268" level="INFO">Typing text 'softnextqcshock@gmail.com' into text field '//input[@id='username']'.</msg>
-<status status="PASS" starttime="20200219 22:51:09.268" endtime="20200219 22:51:09.416"></status>
+<msg timestamp="20200220 16:48:21.112" level="INFO">Typing text 'softnextqcshock@gmail.com' into text field '//input[@id='username']'.</msg>
+<status status="PASS" starttime="20200220 16:48:21.111" endtime="20200220 16:48:21.443"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -128,16 +128,16 @@
 <arg>//input[@id='password']</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200219 22:51:09.416" level="INFO">Typing text 'Arborabc1234' into text field '//input[@id='password']'.</msg>
-<status status="PASS" starttime="20200219 22:51:09.416" endtime="20200219 22:51:09.496"></status>
+<msg timestamp="20200220 16:48:21.444" level="INFO">Typing text 'Arborabc1234' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20200220 16:48:21.443" endtime="20200220 16:48:21.595"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//button[@class='login_btn']</arg>
 </arguments>
-<msg timestamp="20200219 22:51:09.497" level="INFO">Clicking element '//button[@class='login_btn']'.</msg>
-<status status="PASS" starttime="20200219 22:51:09.496" endtime="20200219 22:51:09.553"></status>
+<msg timestamp="20200220 16:48:21.595" level="INFO">Clicking element '//button[@class='login_btn']'.</msg>
+<status status="PASS" starttime="20200220 16:48:21.595" endtime="20200220 16:48:21.647"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -145,7 +145,7 @@
 <arg>//input[@class='mail_text']</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" starttime="20200219 22:51:09.554" endtime="20200219 22:51:09.792"></status>
+<status status="PASS" starttime="20200220 16:48:21.647" endtime="20200220 16:48:21.930"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -160,10 +160,10 @@
 <arguments>
 <arg>${key}</arg>
 </arguments>
-<status status="PASS" starttime="20200219 22:51:09.792" endtime="20200219 22:51:09.793"></status>
+<status status="PASS" starttime="20200220 16:48:21.931" endtime="20200220 16:48:21.932"></status>
 </kw>
-<msg timestamp="20200219 22:51:09.793" level="INFO">${token} = 349221</msg>
-<status status="PASS" starttime="20200219 22:51:09.792" endtime="20200219 22:51:09.793"></status>
+<msg timestamp="20200220 16:48:21.932" level="INFO">${token} = 960926</msg>
+<status status="PASS" starttime="20200220 16:48:21.930" endtime="20200220 16:48:21.932"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -171,16 +171,16 @@
 <arg>//input[@class='mail_text']</arg>
 <arg>${token}</arg>
 </arguments>
-<msg timestamp="20200219 22:51:09.793" level="INFO">Typing text '349221' into text field '//input[@class='mail_text']'.</msg>
-<status status="PASS" starttime="20200219 22:51:09.793" endtime="20200219 22:51:09.849"></status>
+<msg timestamp="20200220 16:48:21.933" level="INFO">Typing text '960926' into text field '//input[@class='mail_text']'.</msg>
+<status status="PASS" starttime="20200220 16:48:21.932" endtime="20200220 16:48:22.053"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//button[@class='login_send']</arg>
 </arguments>
-<msg timestamp="20200219 22:51:09.849" level="INFO">Clicking element '//button[@class='login_send']'.</msg>
-<status status="PASS" starttime="20200219 22:51:09.849" endtime="20200219 22:51:09.888"></status>
+<msg timestamp="20200220 16:48:22.053" level="INFO">Clicking element '//button[@class='login_send']'.</msg>
+<status status="PASS" starttime="20200220 16:48:22.053" endtime="20200220 16:48:22.117"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -188,19 +188,19 @@
 <arg>//span[@class='icon icon-close safety_announcemen_close']</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" starttime="20200219 22:51:09.889" endtime="20200219 22:51:11.862"></status>
+<status status="PASS" starttime="20200220 16:48:22.117" endtime="20200220 16:48:24.029"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//span[@class='icon icon-close safety_announcemen_close']</arg>
 </arguments>
-<msg timestamp="20200219 22:51:11.863" level="INFO">Clicking element '//span[@class='icon icon-close safety_announcemen_close']'.</msg>
-<status status="PASS" starttime="20200219 22:51:11.863" endtime="20200219 22:51:11.900"></status>
+<msg timestamp="20200220 16:48:24.029" level="INFO">Clicking element '//span[@class='icon icon-close safety_announcemen_close']'.</msg>
+<status status="PASS" starttime="20200220 16:48:24.029" endtime="20200220 16:48:24.096"></status>
 </kw>
-<status status="PASS" starttime="20200219 22:51:08.865" endtime="20200219 22:51:11.900"></status>
+<status status="PASS" starttime="20200220 16:48:20.636" endtime="20200220 16:48:24.096"></status>
 </kw>
-<status status="PASS" starttime="20200219 22:51:03.220" endtime="20200219 22:51:11.900" critical="yes"></status>
+<status status="PASS" starttime="20200220 16:48:14.532" endtime="20200220 16:48:24.097" critical="yes"></status>
 </test>
 <test id="s1-t2" name="Test Every Web Page">
 <kw name="Goto Home Page" library="front_menu">
@@ -211,17 +211,17 @@
 <arg>//a[@href='/']</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" starttime="20200219 22:51:11.902" endtime="20200219 22:51:11.935"></status>
+<status status="PASS" starttime="20200220 16:48:24.103" endtime="20200220 16:48:24.152"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//a[@href='/']</arg>
 </arguments>
-<msg timestamp="20200219 22:51:11.935" level="INFO">Clicking element '//a[@href='/']'.</msg>
-<status status="PASS" starttime="20200219 22:51:11.935" endtime="20200219 22:51:12.155"></status>
+<msg timestamp="20200220 16:48:24.152" level="INFO">Clicking element '//a[@href='/']'.</msg>
+<status status="PASS" starttime="20200220 16:48:24.152" endtime="20200220 16:48:24.486"></status>
 </kw>
-<status status="PASS" starttime="20200219 22:51:11.902" endtime="20200219 22:51:12.155"></status>
+<status status="PASS" starttime="20200220 16:48:24.102" endtime="20200220 16:48:24.486"></status>
 </kw>
 <kw name="Goto IEO Page" library="front_menu">
 <doc>點擊 IEO</doc>
@@ -231,17 +231,17 @@
 <arg>//a[@href="/index.php?s=ieo&amp;c=ieo&amp;m=plan2"]</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" starttime="20200219 22:51:12.156" endtime="20200219 22:51:12.180"></status>
+<status status="PASS" starttime="20200220 16:48:24.487" endtime="20200220 16:48:24.549"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//a[@href="/index.php?s=ieo&amp;c=ieo&amp;m=plan2"]</arg>
 </arguments>
-<msg timestamp="20200219 22:51:12.182" level="INFO">Clicking element '//a[@href="/index.php?s=ieo&amp;c=ieo&amp;m=plan2"]'.</msg>
-<status status="PASS" starttime="20200219 22:51:12.181" endtime="20200219 22:51:13.453"></status>
+<msg timestamp="20200220 16:48:24.550" level="INFO">Clicking element '//a[@href="/index.php?s=ieo&amp;c=ieo&amp;m=plan2"]'.</msg>
+<status status="PASS" starttime="20200220 16:48:24.550" endtime="20200220 16:48:25.653"></status>
 </kw>
-<status status="PASS" starttime="20200219 22:51:12.156" endtime="20200219 22:51:13.453"></status>
+<status status="PASS" starttime="20200220 16:48:24.487" endtime="20200220 16:48:25.653"></status>
 </kw>
 <kw name="Goto C2C Account Page" library="front_menu">
 <doc>點擊 資產-&gt;C2C 帳戶</doc>
@@ -251,15 +251,15 @@
 <arg>//span[@class="icon icon-creditcard"]</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" starttime="20200219 22:51:13.454" endtime="20200219 22:51:13.476"></status>
+<status status="PASS" starttime="20200220 16:48:25.654" endtime="20200220 16:48:25.686"></status>
 </kw>
 <kw name="Mouse Over" library="SeleniumLibrary">
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
 <arguments>
 <arg>//span[@class="icon icon-creditcard"]</arg>
 </arguments>
-<msg timestamp="20200219 22:51:13.477" level="INFO">Simulating Mouse Over on element '//span[@class="icon icon-creditcard"]'.</msg>
-<status status="PASS" starttime="20200219 22:51:13.476" endtime="20200219 22:51:13.749"></status>
+<msg timestamp="20200220 16:48:25.686" level="INFO">Simulating Mouse Over on element '//span[@class="icon icon-creditcard"]'.</msg>
+<status status="PASS" starttime="20200220 16:48:25.686" endtime="20200220 16:48:26.033"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -267,17 +267,17 @@
 <arg>//a[@href="/index.php?m=otc"]</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" starttime="20200219 22:51:13.749" endtime="20200219 22:51:13.772"></status>
+<status status="PASS" starttime="20200220 16:48:26.034" endtime="20200220 16:48:26.066"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//a[@href="/index.php?m=otc"]</arg>
 </arguments>
-<msg timestamp="20200219 22:51:13.773" level="INFO">Clicking element '//a[@href="/index.php?m=otc"]'.</msg>
-<status status="PASS" starttime="20200219 22:51:13.773" endtime="20200219 22:51:14.022"></status>
+<msg timestamp="20200220 16:48:26.067" level="INFO">Clicking element '//a[@href="/index.php?m=otc"]'.</msg>
+<status status="PASS" starttime="20200220 16:48:26.066" endtime="20200220 16:48:26.306"></status>
 </kw>
-<status status="PASS" starttime="20200219 22:51:13.453" endtime="20200219 22:51:14.022"></status>
+<status status="PASS" starttime="20200220 16:48:25.654" endtime="20200220 16:48:26.306"></status>
 </kw>
 <kw name="Goto Open Orders Page" library="front_menu">
 <doc>點擊 訂單-&gt;當前委託</doc>
@@ -287,23 +287,23 @@
 <arg>//span[@class="icon icon-file-text-o"]</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" starttime="20200219 22:51:14.023" endtime="20200219 22:51:14.043"></status>
+<status status="PASS" starttime="20200220 16:48:26.308" endtime="20200220 16:48:26.348"></status>
 </kw>
 <kw name="Mouse Over" library="SeleniumLibrary">
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
 <arguments>
 <arg>//span[@class="icon icon-file-text-o"]</arg>
 </arguments>
-<msg timestamp="20200219 22:51:14.044" level="INFO">Simulating Mouse Over on element '//span[@class="icon icon-file-text-o"]'.</msg>
-<status status="PASS" starttime="20200219 22:51:14.044" endtime="20200219 22:51:14.071"></status>
+<msg timestamp="20200220 16:48:26.348" level="INFO">Simulating Mouse Over on element '//span[@class="icon icon-file-text-o"]'.</msg>
+<status status="PASS" starttime="20200220 16:48:26.348" endtime="20200220 16:48:26.637"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200219 22:51:15.072" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200219 22:51:14.072" endtime="20200219 22:51:15.073"></status>
+<msg timestamp="20200220 16:48:27.640" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200220 16:48:26.637" endtime="20200220 16:48:27.640"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
@@ -311,17 +311,17 @@
 <arg>//a[contains(@href,'/record/current/')]</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" starttime="20200219 22:51:15.073" endtime="20200219 22:51:15.095"></status>
+<status status="PASS" starttime="20200220 16:48:27.641" endtime="20200220 16:48:27.671"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//a[contains(@href,'/record/current/')]</arg>
 </arguments>
-<msg timestamp="20200219 22:51:15.095" level="INFO">Clicking element '//a[contains(@href,'/record/current/')]'.</msg>
-<status status="PASS" starttime="20200219 22:51:15.095" endtime="20200219 22:51:16.010"></status>
+<msg timestamp="20200220 16:48:27.671" level="INFO">Clicking element '//a[contains(@href,'/record/current/')]'.</msg>
+<status status="PASS" starttime="20200220 16:48:27.671" endtime="20200220 16:48:28.502"></status>
 </kw>
-<status status="PASS" starttime="20200219 22:51:14.022" endtime="20200219 22:51:16.010"></status>
+<status status="PASS" starttime="20200220 16:48:26.307" endtime="20200220 16:48:28.502"></status>
 </kw>
 <kw name="Goto Order History Page" library="front_menu">
 <doc>點擊 訂單-&gt;歷史委託</doc>
@@ -331,57 +331,255 @@
 <arg>//span[@class="icon icon-file-text-o"]</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" starttime="20200219 22:51:16.011" endtime="20200219 22:51:16.037"></status>
+<status status="PASS" starttime="20200220 16:48:28.503" endtime="20200220 16:48:28.533"></status>
 </kw>
 <kw name="Mouse Over" library="SeleniumLibrary">
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
 <arguments>
 <arg>//span[@class="icon icon-file-text-o"]</arg>
 </arguments>
-<msg timestamp="20200219 22:51:16.037" level="INFO">Simulating Mouse Over on element '//span[@class="icon icon-file-text-o"]'.</msg>
-<status status="PASS" starttime="20200219 22:51:16.037" endtime="20200219 22:51:16.070"></status>
+<msg timestamp="20200220 16:48:28.534" level="INFO">Simulating Mouse Over on element '//span[@class="icon icon-file-text-o"]'.</msg>
+<status status="PASS" starttime="20200220 16:48:28.533" endtime="20200220 16:48:28.815"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200219 22:51:17.072" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200219 22:51:16.071" endtime="20200219 22:51:17.072"></status>
+<msg timestamp="20200220 16:48:29.815" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200220 16:48:28.815" endtime="20200220 16:48:29.816"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
-<arg>//a[contains(@href,'/record/history/')]</arg>
+<arg>//a[contains(@href,'/record/hisitroy/')]</arg>
 <arg>timeout=10</arg>
 </arguments>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20200219 22:51:27.690" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200219 22:51:27.194" endtime="20200219 22:51:27.691"></status>
+<status status="PASS" starttime="20200220 16:48:29.816" endtime="20200220 16:48:29.846"></status>
 </kw>
-<msg timestamp="20200219 22:51:27.692" level="FAIL">Element '//a[contains(@href,'/record/history/')]' not visible after 10 seconds.</msg>
-<status status="FAIL" starttime="20200219 22:51:17.073" endtime="20200219 22:51:27.692"></status>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[contains(@href,'/record/hisitroy/')]</arg>
+</arguments>
+<msg timestamp="20200220 16:48:29.847" level="INFO">Clicking element '//a[contains(@href,'/record/hisitroy/')]'.</msg>
+<status status="PASS" starttime="20200220 16:48:29.847" endtime="20200220 16:48:30.086"></status>
 </kw>
-<status status="FAIL" starttime="20200219 22:51:16.010" endtime="20200219 22:51:27.692"></status>
+<status status="PASS" starttime="20200220 16:48:28.502" endtime="20200220 16:48:30.086"></status>
 </kw>
-<status status="FAIL" starttime="20200219 22:51:11.901" endtime="20200219 22:51:27.692" critical="yes">Element '//a[contains(@href,'/record/history/')]' not visible after 10 seconds.</status>
+<kw name="Goto Personal settings Page" library="front_menu">
+<doc>點擊 帳號-&gt;個人設置</doc>
+<kw name="Move To Account Page" library="front_menu">
+<doc>移動到 帳號</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//li/div[@class='name']/u[contains(@style,'text-decoration: inherit')]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200220 16:48:30.087" endtime="20200220 16:48:30.349"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//li/div[@class='name']/u[contains(@style,'text-decoration: inherit')]</arg>
+</arguments>
+<msg timestamp="20200220 16:48:30.349" level="INFO">Simulating Mouse Over on element '//li/div[@class='name']/u[contains(@style,'text-decoration: inherit')]'.</msg>
+<status status="PASS" starttime="20200220 16:48:30.349" endtime="20200220 16:48:30.622"></status>
+</kw>
+<status status="PASS" starttime="20200220 16:48:30.087" endtime="20200220 16:48:30.622"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//a[@href="/index.php?c=trans&amp;m=card"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200220 16:48:30.622" endtime="20200220 16:48:30.651"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@href="/index.php?c=trans&amp;m=card"]</arg>
+</arguments>
+<msg timestamp="20200220 16:48:30.652" level="INFO">Clicking element '//a[@href="/index.php?c=trans&amp;m=card"]'.</msg>
+<status status="PASS" starttime="20200220 16:48:30.651" endtime="20200220 16:48:31.328"></status>
+</kw>
+<status status="PASS" starttime="20200220 16:48:30.086" endtime="20200220 16:48:31.329"></status>
+</kw>
+<kw name="Goto Recharge and Withdraw Page" library="front_menu">
+<doc>點擊 資產-&gt;充幣 提幣</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//span[@class="icon icon-creditcard"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200220 16:48:31.330" endtime="20200220 16:48:31.362"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//span[@class="icon icon-creditcard"]</arg>
+</arguments>
+<msg timestamp="20200220 16:48:31.363" level="INFO">Simulating Mouse Over on element '//span[@class="icon icon-creditcard"]'.</msg>
+<status status="PASS" starttime="20200220 16:48:31.362" endtime="20200220 16:48:31.647"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//a[@href="/index.php?m=currency"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200220 16:48:31.647" endtime="20200220 16:48:31.679"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@href="/index.php?m=currency"]</arg>
+</arguments>
+<msg timestamp="20200220 16:48:31.679" level="INFO">Clicking element '//a[@href="/index.php?m=currency"]'.</msg>
+<status status="PASS" starttime="20200220 16:48:31.679" endtime="20200220 16:48:31.937"></status>
+</kw>
+<status status="PASS" starttime="20200220 16:48:31.329" endtime="20200220 16:48:31.937"></status>
+</kw>
+<kw name="Goto Flat Page" library="front_menu">
+<doc>點擊 場外交易</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//a[@href="/index.php?c=trans"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200220 16:48:31.938" endtime="20200220 16:48:31.971"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@href="/index.php?c=trans"]</arg>
+</arguments>
+<msg timestamp="20200220 16:48:31.972" level="INFO">Clicking element '//a[@href="/index.php?c=trans"]'.</msg>
+<status status="PASS" starttime="20200220 16:48:31.972" endtime="20200220 16:48:32.633"></status>
+</kw>
+<status status="PASS" starttime="20200220 16:48:31.937" endtime="20200220 16:48:32.634"></status>
+</kw>
+<kw name="Goto App Download Page" library="front_menu">
+<doc>點擊 App下載</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//a[@href="/index.php?m=download"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200220 16:48:32.636" endtime="20200220 16:48:32.682"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@href="/index.php?m=download"]</arg>
+</arguments>
+<msg timestamp="20200220 16:48:32.683" level="INFO">Clicking element '//a[@href="/index.php?m=download"]'.</msg>
+<status status="PASS" starttime="20200220 16:48:32.682" endtime="20200220 16:48:33.285"></status>
+</kw>
+<status status="PASS" starttime="20200220 16:48:32.635" endtime="20200220 16:48:33.285"></status>
+</kw>
+<kw name="Goto Account Security Page" library="front_menu">
+<doc>點擊 帳號-&gt;帳號安全</doc>
+<kw name="Move To Account Page" library="front_menu">
+<doc>移動到 帳號</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//li/div[@class='name']/u[contains(@style,'text-decoration: inherit')]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200220 16:48:33.286" endtime="20200220 16:48:33.316"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//li/div[@class='name']/u[contains(@style,'text-decoration: inherit')]</arg>
+</arguments>
+<msg timestamp="20200220 16:48:33.317" level="INFO">Simulating Mouse Over on element '//li/div[@class='name']/u[contains(@style,'text-decoration: inherit')]'.</msg>
+<status status="PASS" starttime="20200220 16:48:33.317" endtime="20200220 16:48:33.600"></status>
+</kw>
+<status status="PASS" starttime="20200220 16:48:33.286" endtime="20200220 16:48:33.600"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//a[@href="/index.php?m=safety"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200220 16:48:33.600" endtime="20200220 16:48:33.627"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@href="/index.php?m=invite"]</arg>
+</arguments>
+<msg timestamp="20200220 16:48:33.627" level="INFO">Clicking element '//a[@href="/index.php?m=invite"]'.</msg>
+<status status="PASS" starttime="20200220 16:48:33.627" endtime="20200220 16:48:34.820"></status>
+</kw>
+<status status="PASS" starttime="20200220 16:48:33.285" endtime="20200220 16:48:34.820"></status>
+</kw>
+<kw name="Goto Sign Out Page" library="front_menu">
+<doc>點擊 帳號-&gt;退出</doc>
+<kw name="Move To Account Page" library="front_menu">
+<doc>移動到 帳號</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//li/div[@class='name']/u[contains(@style,'text-decoration: inherit')]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200220 16:48:34.822" endtime="20200220 16:48:34.849"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//li/div[@class='name']/u[contains(@style,'text-decoration: inherit')]</arg>
+</arguments>
+<msg timestamp="20200220 16:48:34.849" level="INFO">Simulating Mouse Over on element '//li/div[@class='name']/u[contains(@style,'text-decoration: inherit')]'.</msg>
+<status status="PASS" starttime="20200220 16:48:34.849" endtime="20200220 16:48:35.131"></status>
+</kw>
+<status status="PASS" starttime="20200220 16:48:34.821" endtime="20200220 16:48:35.132"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//a[@onclick="loginout()"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200220 16:48:35.132" endtime="20200220 16:48:35.161"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@onclick="loginout()"]</arg>
+</arguments>
+<msg timestamp="20200220 16:48:35.162" level="INFO">Clicking element '//a[@onclick="loginout()"]'.</msg>
+<status status="PASS" starttime="20200220 16:48:35.162" endtime="20200220 16:48:35.217"></status>
+</kw>
+<status status="PASS" starttime="20200220 16:48:34.820" endtime="20200220 16:48:35.217"></status>
+</kw>
+<status status="PASS" starttime="20200220 16:48:24.099" endtime="20200220 16:48:35.217" critical="yes"></status>
 </test>
 <doc>xxxxx</doc>
 <metadata>
 <item name="Version 0.1"></item>
 </metadata>
-<status status="FAIL" starttime="20200219 22:51:03.057" endtime="20200219 22:51:27.693"></status>
+<status status="PASS" starttime="20200220 16:48:13.536" endtime="20200220 16:48:35.218"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1">Critical Tests</stat>
-<stat pass="1" fail="1">All Tests</stat>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="1" id="s1" name="Test">Test</stat>
+<stat pass="2" fail="0" id="s1" name="Test">Test</stat>
 </suite>
 </statistics>
 <errors>

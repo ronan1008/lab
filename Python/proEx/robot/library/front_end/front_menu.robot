@@ -60,34 +60,35 @@ Goto Order History Page
     Wait Until Element Is Visible   //span[@class="icon icon-file-text-o"]    timeout=10
     Mouse Over  //span[@class="icon icon-file-text-o"]
     Sleep   1s
-    Wait Until Element Is Visible   //a[contains(@href,'/record/history/')]    timeout=10
-    Click Element  //a[contains(@href,'/record/history/')]
+    Wait Until Element Is Visible   //a[contains(@href,'/record/hisitroy/')]    timeout=10
+    Click Element  //a[contains(@href,'/record/hisitroy/')]
+
+Move To Account Page
+    [Documentation]  移動到 帳號
+    Wait Until Element Is Visible   //li/div[@class='name']/u[contains(@style,'text-decoration: inherit')]    timeout=10
+    Mouse Over  //li/div[@class='name']/u[contains(@style,'text-decoration: inherit')]
 
 Goto My Invitation Code Page
     [Documentation]  點擊 帳號->我的邀請碼
-    Wait Until Element Is Visible   //li/div[@class='name']/u[@style='text-decoration: inherit']    timeout=10
-    Mouse Over  //li/div[@class='name']/u[@style='text-decoration: inherit']
+    Move To Account Page
     Wait Until Element Is Visible   //a[@href="/index.php?m=invite"]    timeout=10
     Click Element  //a[@href="/index.php?m=invite"]
 
 Goto Account Security Page
     [Documentation]  點擊 帳號->帳號安全
-    Wait Until Element Is Visible   //li/div[@class='name']/u[@style='text-decoration: inherit']    timeout=10
-    Mouse Over  //li/div[@class='name']/u[@style='text-decoration: inherit']
+    Move To Account Page
     Wait Until Element Is Visible   //a[@href="/index.php?m=safety"]    timeout=10
     Click Element  //a[@href="/index.php?m=invite"]
 
 Goto Personal settings Page
     [Documentation]  點擊 帳號->個人設置
-    Wait Until Element Is Visible   //li/div[@class='name']/u[@style='text-decoration: inherit']    timeout=10
-    Mouse Over  //li/div[@class='name']/u[@style='text-decoration: inherit']
+    Move To Account Page
     Wait Until Element Is Visible   //a[@href="/index.php?c=trans&m=card"]    timeout=10
     Click Element  //a[@href="/index.php?c=trans&m=card"]
 
 Goto Sign Out Page
     [Documentation]  點擊 帳號->退出
-    Wait Until Element Is Visible   //li/div[@class='name']/u[@style='text-decoration: inherit']    timeout=10
-    Mouse Over  //li/div[@class='name']/u[@style='text-decoration: inherit']
+    Move To Account Page
     Wait Until Element Is Visible   //a[@onclick="loginout()"]    timeout=10
     Click Element  //a[@onclick="loginout()"]
 

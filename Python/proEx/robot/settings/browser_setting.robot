@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation	Default browser setting for us
 Library		String
-Library	../library/getTotp.py
+Library	../library/tools/getTotp.py
 
 *** Keywords ***
 
