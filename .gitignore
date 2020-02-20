@@ -9,4 +9,4 @@ Python/proEx/robot/execute/selenium-screenshot*
 Python/proEx/robot/execute/output.xml
 Python/proEx/robot/execute/report.html
 Python/proEx/robot/execute/log.html
-proEx/robot/library/tools/__pycache__/
+proEx/robot/library/tools/__pycache__/*
