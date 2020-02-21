@@ -1,6 +1,5 @@
 *** Settings ***
 Documentation	front end page function control
-...						include [TOMODIFY]
 #Metadata			Version 0.1
 
 *** Keywords ***
