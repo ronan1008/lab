@@ -11,3 +11,17 @@ Test Every Web Page
 	Goto Account Security Page
 	Goto My Invitation Code Page
 #	Goto Sign Out Page
+
+
+Test Add Account In Flat Page
+	Goto Flat Page
+	Goto Bank Card Management Page On Flat Page
+	Add Bank Info On Bank Card Management Page
+	Add Bank Account On Bank Info Page
+	Sleep	5s
+	Add Bank Info On Bank Card Management Page
+	Add Wechat Account On Bank Info Page
+	Sleep	5s
+	Add Bank Info On Bank Card Management Page
+	Add Alipay Account On Bank Info Page
+	Sleep  5s
