@@ -1,4 +1,4 @@
-import email, imaplib, os, mailparser
+import email, imaplib, os, mailparser, re
 from html.parser import HTMLParser
 from datetime import datetime, timedelta
 
@@ -39,15 +39,22 @@ for emailid in items:
     maildate = datetime.strptime(str(mail.date),'%Y-%m-%d %H:%M:%S')
     nowdate = datetime.now()
     nowdate_a = datetime.now() -  timedelta(seconds=30)
-    if maildate > nowdate_a :
+    if maildate < nowdate_a :
         maildate = mail.date
-        mailbody = mail.body
+        mailbody = strip_tags(mail.body)
         mailfrom = mail.from_
         mailsubject = mail.subject
         print(mailsubject)
         print(maildate)
         print(mailfrom)
-        print(strip_tags(mailbody))
+        print(mailbody)
+
+        try:
+            match = re.search(r"验证码为：(\d+)", mailbody)
+            verificationCode = match.group(1)
+            print(verificationCode)
+        except:
+            print("not found")
     #    m.store(emailid, '+FLAGS', '\\Deleted')
     else:   
         pass
