@@ -55,13 +55,4 @@ Login ProEx Web
 	Wait Until Element Is Visible  //span[@class='icon icon-close safety_announcemen_close']  timeout=10
 	Click Element	//span[@class='icon icon-close safety_announcemen_close']
 
-Register ProEx Page
-	[Arguments]	${username}	${password}	${key} ${invite}
-	Click Element	//div[@class='name']/a[@href='/index.php?m=register']
-	Wait Until Element Is Visible  //input[@id='username']  timeout=10
-	Input Text	//input[@id='username']	${username}
-	Input Text	//input[@id='password']	${password}
-	Input Text	//input[@id='confirm_password']	${password}
-	Input Text	//input[@id='intro_user']	${invite}
-
 confirm_password
