@@ -19,7 +19,7 @@ ${NoGUI}	0
 *** Test Cases ***
 
 
-Test Login ProEx Web
+Test Login Web
 	[Setup]	Login WebUI	${URL}	${BW}
 	Login ProEx Web	softnextqcshock@gmail.com	Arborabc1234	6RJFVNCMKMOG62SU
 
