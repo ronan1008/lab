@@ -1,39 +1,57 @@
-import imaplib
-import smtplib
-import email
+import email, imaplib, os, mailparser
+from html.parser import HTMLParser
+from datetime import datetime, timedelta
 
-imap_ssl_host = 'imap.gmail.com'
-imap_ssl_port = 993
-username = 'softnextqcshock@gmail.com'
-password = 'Arborabc1234'
-server = imaplib.IMAP4_SSL(imap_ssl_host, imap_ssl_port)
+imapServer = 'imap.gmail.com'
+mailAccount = 'softnextqcshock@gmail.com'
+mailPass = 'Arborabc1234'
 
-server.login(username, password)
-server.select('INBOX')
+class MLStripper(HTMLParser):
+    def __init__(self):
+        self.reset()
+        self.strict = False
+        self.convert_charrefs= True
+        self.fed = []
+    def handle_data(self, d):
+        self.fed.append(d)
+    def get_data(self):
+        return ''.join(self.fed)
 
-data = server.uid('search',None, '(SUBJECT "MY QUERY HERE!")')
-print(data)
+def strip_tags(html):
+    s = MLStripper()
+    s.feed(html)
+    return s.get_data()
 
-status, count =server.select('Inbox')
-status, data = server.fetch(count[0], '(UID BODY[TEXT])')
-content = data[0][1]
-#print(content)
-server.close()
-server.logout()
+# connecting to the gmail imap server
+m = imaplib.IMAP4_SSL(imapServer)
+m.login(mailAccount,mailPass)
+m.select("Inbox")
 
+resp, items = m.search(None, "FROM ProEX") # the newsletter which i am 
+# trying to get the email body of
+items = items[0].split() # getting the mails id
 
+for emailid in items:
+    resp, data = m.fetch(emailid, "(RFC822)") # fetching the mail, "`(RFC822)`" means "get the whole stuff", but you can ask for headers only, etc
+    email_body = data[0][1] # getting the mail content
+#    mail = email.message_from_bytes(email_body) # parsing the mail content to get a mail object
+    mail = mailparser.parse_from_bytes(email_body)
+    maildate = datetime.strptime(str(mail.date),'%Y-%m-%d %H:%M:%S')
+    nowdate = datetime.now()
+    nowdate_a = datetime.now() -  timedelta(seconds=30)
+    if maildate > nowdate_a :
+        maildate = mail.date
+        mailbody = mail.body
+        mailfrom = mail.from_
+        mailsubject = mail.subject
+        print(mailsubject)
+        print(maildate)
+        print(mailfrom)
+        print(strip_tags(mailbody))
+    #    m.store(emailid, '+FLAGS', '\\Deleted')
+    else:   
+        pass
 
-# for response_part in data :
-#     if isinstance(response_part,tuple):
-#         print(response_part)
-#         msg = email.message_from_string(response_part[1])
-#         print("subj:", msg['subject'])
-#         print("from:", msg['from'])
-#         print("body:")
-#         for part in msg.walk():
-#             if part.get_content_type() == 'text/plain':
-#                 print(part.get_payload())
-
-# for num in data[0].split():
-#     status, data = server.fetch(num, '(RFC822)')
-#     email_msg = data[0][1]
+#m.expunge()
+m.close()
+m.logout()
