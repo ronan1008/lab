@@ -3,30 +3,6 @@ Documentation	Ui System function control
 ...				include change language, logout, login etc.
 *** Keywords ***
 
-Change Language To
-    [Arguments]     ${newLang}
-    ${oldLang}=   Get Now Language Setting
-    Click Element  //input[contains(@id,'languagecombo-')]
-    Click Element  //li[text()='${newLang}']  modifier=False
-    Sleep   20s
-    Wait Until Page Contains  AccelStor  timeout=None  error=None
-
-Change Language To zh_TW
-    Change Language To  正體中文
-
-Change Language To ja_JP
-    Change Language To  日本語
-
-Change Language To zh_CN
-    Change Language To  简体中文
-
-Change Language To en
-    Change Language To  English
-
-Restart System
-
-Shutdown System
-
 Logout UI
     Click Element   //span[contains(@id,'workspace-menu-btnWrap')]  modifier=False
     Sleep  2  reason=None
@@ -49,7 +25,7 @@ Result should be contain accelstor
 
 
 #############################################
-# i18n 
+# i18n
 #############################################
 
 Get Now Language Setting
@@ -101,7 +77,7 @@ OmvMath
     [Documentation]     Javascript math mothod.
     ...                 eg. give "$s=  OmvMath  1 + 4= " then $s will be get '5'
     [Arguments]  ${str}
-    ${REL}=  Execute Javascript  
+    ${REL}=  Execute Javascript
     ...  var tmp = (((${str}.replace(/=/g,"")).replace(/"/g,'')).replace(/'/g,"")).replace(/ /g,'');
     ...  return eval(tmp);
     [Return]  ${REL}

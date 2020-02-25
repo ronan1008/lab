@@ -28,7 +28,7 @@ def open_gmail_and_get_code(imapServer, mailAccount, mailPass):
     m.login(mailAccount,mailPass)
     m.select("Inbox")
 
-    resp, items = m.search(None, "FROM ProEX") # the newsletter which i am 
+    resp, items = m.search(None, "FROM ProEX") # the newsletter which i am
     # trying to get the email body of
     items = items[0].split() # getting the mails id
 
@@ -38,9 +38,11 @@ def open_gmail_and_get_code(imapServer, mailAccount, mailPass):
     #   mail = email.message_from_bytes(email_body) # parsing the mail content to get a mail object
         mail = mailparser.parse_from_bytes(email_body)
         maildate = datetime.strptime(str(mail.date),'%Y-%m-%d %H:%M:%S')
-        nowdate = datetime.now()
-        nowdate_a = datetime.now() -  timedelta(seconds=30)
-        if maildate > nowdate_a :
+        maildate = maildate + timedelta(hours=8)
+        nowdate = datetime.now() -  timedelta(minutes=5)
+#        print(maildate)
+#        print(nowdate_a)
+        if maildate > nowdate :
             maildate = mail.date
             mailbody = strip_tags(mail.body)
             mailfrom = mail.from_
@@ -53,13 +55,16 @@ def open_gmail_and_get_code(imapServer, mailAccount, mailPass):
             try:
                 match = re.search(r"验证码为：(\d+)", mailbody)
                 verificationCode = match.group(1)
+                print(verificationCode)
                 return verificationCode
             except:
                 return "not found"
         #    m.store(emailid, '+FLAGS', '\\Deleted')
-        else:   
+        else:
             pass
 
     #m.expunge()
     m.close()
     m.logout()
+
+#open_gmail_and_get_code("imap.gmail.com", "softnextqcshock@gmail.com", "Arborabc1234")

@@ -4,7 +4,7 @@ Library		String
 Library	../library/tools/getTotp.py
 
 *** Variables ***
-${HOST}		www.proex.io/
+${HOST}		www.proex.io
 ${URL}		http://${HOST}/
 ${MAILURL}	http://10minutemail.net//
 ${BW}	chrome
@@ -63,9 +63,26 @@ Login ProEx Web
 	Wait Until Element Is Visible  //span[@class='icon icon-close safety_announcemen_close']  timeout=10
 	Click Element	//span[@class='icon icon-close safety_announcemen_close']
 
+
+Change Language To
+    [Arguments]     ${Lang}
+	Sleep  5s
+	${status}=	Run Keyword And Return Status	Page Should Contain Element    //div[contains(text(),'简体中文')]
+	Run Keyword If	'${status}' == 'True'    Mouse Over  //div[contains(text(),'简体中文')]
+	...	ELSE IF		'${status}' == 'False'	 Mouse Over  //div[contains(text(),'English')]
+	Sleep  2s
+	Run Keyword If	'${Lang}' == 'CHS'	run keywords
+	...	Wait Until Element Is Visible	//p[contains(text(),'简体中文')]
+	...	AND     Click Element  //p[contains(text(),'简体中文')]
+
+	Run Keyword If	'${Lang}' == 'ENG'	run keywords
+	...	Wait Until Element Is Visible	//p[contains(text(),'English')]
+	...	AND     Click Element  //p[contains(text(),'English')]
+
+
 Test Register In Register Page
 	open browser	${MAILURL}	${BW}	alias=tab2
-	open browser	${URL}	${BW}	alias=tab1 
+	open browser	${URL}	${BW}	alias=tab1
 	switch browser  tab2
 	Sleep   5s
     Wait Until Element Is Visible  //input[@id='fe_text']  timeout=10

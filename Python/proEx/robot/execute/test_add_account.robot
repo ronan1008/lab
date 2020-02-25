@@ -10,7 +10,7 @@ Resource	../library/front_end/front_menu.robot
 Resource	../library/front_end/flat.robot
 
 *** Variables ***
-${HOST}		www.proex.io/
+${HOST}		www.proex.io
 ${URL}		http://${HOST}/
 ${SSLURL}	https://${HOST}/
 ${BW}	chrome
@@ -20,8 +20,9 @@ ${NoGUI}	0
 
 Test Login Web
 	[Setup]	Login WebUI	${URL}	${BW}
+#	Change Language To  CHS
+	Change Language To  ENG
 	Login ProEx Web	softnextqcshock@gmail.com	Arborabc1234	6RJFVNCMKMOG62SU
-
 Test Add Account In Flat Page
 	Goto Flat Page
 	Goto Bank Card Management Page On Flat Page

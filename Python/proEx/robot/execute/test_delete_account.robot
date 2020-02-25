@@ -10,7 +10,7 @@ Resource	../library/front_end/front_menu.robot
 Resource	../library/front_end/flat.robot
 
 *** Variables ***
-${HOST}		www.proex.io/
+${HOST}		www.proex.io
 ${URL}		http://${HOST}/
 ${SSLURL}	https://${HOST}/
 ${BW}	chrome

@@ -12,10 +12,10 @@ Resource	../library/log.robot
 #Suite Teardown	DisplayLib.Stop	${NoGUI}
 
 *** Variables ***
-${HOST}		www.proex.io/
+${HOST}		www.proex.io
 ${URL}		http://${HOST}/
 ${SSLURL}	https://${HOST}/
-${BW}	chrome 
+${BW}	chrome
 ${NoGUI}	0
 
 *** Test Cases ***
@@ -45,14 +45,14 @@ Test Log Page On Log
 	Change Category To System
 	Change Severity To Warning
 	Change Category To Array
-	Change Category To All 
+	Change Category To All
 	Change Severity To All
 	Click Next Page Button On Log Page
 	Click Next Page Button On Log Page
  	Click Prveious Page Button On Log Page
    	Click Last Page Button On Log Page
  	Click First Page Button On Log Page
-	Click Refresh Button On Log Page	
+	Click Refresh Button On Log Page
 
 
 Check Log on Log Page
@@ -60,4 +60,4 @@ Check Log on Log Page
 	Check Log On Logpage	Configuration	Notice	Apply changes
 	Check Log On Logpage	Configuration	Error	Drive rebuild failed
 
-#	[Teardown]	Close Browser	
+#	[Teardown]	Close Browser

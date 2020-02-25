@@ -7,10 +7,10 @@ Library		SeleniumLibrary
 Library	    ../library/tools/getGmailCode.py
 Resource	../settings/browser_setting.robot
 Resource	../library/front_end/front_menu.robot
-Resource	../library/front_end/forget_password.robot	
+Resource	../library/front_end/forget_password.robot
 
 *** Variables ***
-${HOST}		www.proex.io/
+${HOST}		www.proex.io
 ${URL}		http://${HOST}/
 ${SSLURL}	https://${HOST}/
 ${BW}	chrome
