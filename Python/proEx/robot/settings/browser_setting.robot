@@ -93,6 +93,6 @@ Test Register In Register Page
 	Sleep	0.2s
 	Click Element	//button[@class='reg_submit']
 	Sleep	2s
-	Wait Until Page Contains Element	//button[@class="login_btn"]
+	Wait Until Page Contains Element	//button[@class="login_btn"]	timeout=10
 	Log To Console	Register ${email_address} success!
-	[Teardown]	Close All Browsers
+#	[Teardown]	Close All Browsers
