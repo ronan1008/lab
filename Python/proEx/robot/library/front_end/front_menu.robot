@@ -85,6 +85,17 @@ Goto Personal settings Page
     Wait Until Element Is Visible   //a[@href="/index.php?c=trans&m=card"]    timeout=10
     Click Element  //a[@href="/index.php?c=trans&m=card"]
 
+Goto Login Page
+    [Documentation]  點擊 登錄
+    Wait Until Element Is Visible   //a[@href="/index.php?m=login"]    timeout=10
+    Click Element  //a[@href="/index.php?m=login"]  
+
+Goto Forget Password Page
+    [Documentation]  點擊 登錄->忘記密碼
+    Goto Login Page
+    Wait Until Element Is Visible   //a[@href="/index.php?m=forgetPassword"]    timeout=10
+    Click Element  //a[@href="/index.php?m=forgetPassword"]  
+
 Goto Sign Out Page
     [Documentation]  點擊 帳號->退出
     Move To Account Page
@@ -99,4 +110,6 @@ Change Language To EN
     [Documentation]  點擊 切換語系->英文
     Wait Until Element Is Visible   //a[@href="/index.php?s=ieo&c=ieo&m=plan2"]
     Click Element  //a[@href="/index.php?s=ieo&c=ieo&m=plan2"]
+
+
 

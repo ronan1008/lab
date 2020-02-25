@@ -3,6 +3,14 @@ Documentation	Default browser setting for us
 Library		String
 Library	../library/tools/getTotp.py
 
+*** Variables ***
+${HOST}		www.proex.io/
+${URL}		http://${HOST}/
+${MAILURL}	http://10minutemail.net//
+${BW}	chrome
+${NoGUI}	0
+${password}	  Arborabc1234
+
 *** Keywords ***
 
 #############################################
@@ -55,4 +63,36 @@ Login ProEx Web
 	Wait Until Element Is Visible  //span[@class='icon icon-close safety_announcemen_close']  timeout=10
 	Click Element	//span[@class='icon icon-close safety_announcemen_close']
 
-confirm_password
+Test Register In Register Page
+	open browser	${MAILURL}	${BW}	alias=tab2
+	open browser	${URL}	${BW}	alias=tab1 
+	switch browser  tab2
+	Sleep   5s
+    Wait Until Element Is Visible  //input[@id='fe_text']  timeout=10
+    ${email_address} =    Get Value    //input[@id='fe_text']
+    Set Global Variable    ${email_address}
+	switch browser  tab1
+    Click Element	//div[@class='name']/a[@href='/index.php?m=register']
+	Wait Until Element Is Visible  //input[@id='username']  timeout=10
+	Input Text	//input[@id='username']	${email_address}
+	Input Text	//input[@id='password']	${password}
+	Input Text	//input[@id='confirm_password']	${password}
+	#Input Text	//input[@id='intro_user']	${invite}=''
+	Click Element	//button[@id='e_v']
+	switch browser  tab2
+	Sleep  5s  reason=None
+	Wait Until Element Is Visible   //table[@id='maillist']/tbody/tr/td[contains(text(),'ProEx')]	timeout=90
+    Click Element   //table[@id='maillist']/tbody/tr/td[contains(text(),'ProEx')]
+    Wait Until Element Is Visible   //div[@id='tab1']
+    ${getVerificationCode} =    Get Text    //span[@style='color:#c83935;font-size:16px;']
+   # ${getVerificationCode} =  Get Regexp Matches  ${mailContent}	testcode(..)   1
+    Set Global Variable    ${getVerificationCode}
+	switch browser  tab1
+	Input Text	//input[@id='verify']	${getVerificationCode}
+	Click Element	//input[@class='check_protocol']
+	Sleep	0.2s
+	Click Element	//button[@class='reg_submit']
+	Sleep	2s
+	Wait Until Page Contains Element	//button[@class="login_btn"]
+	Log To Console	Register ${email_address} success!
+	[Teardown]	Close All Browsers
