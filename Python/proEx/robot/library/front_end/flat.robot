@@ -9,6 +9,40 @@ ${PayPassword}	Arborabc5678
 
 *** Keywords ***
 
+Goto Release Page On Flat Page
+    Wait Until Element Is Visible   //a[@data-href='/index.php?c=trans&m=release']    timeout=10
+    Click Element  //a[@data-href="/index.php?c=trans&m=release"]
+
+Select Trade Type On Release Page
+    [Arguments]	${type}
+    Wait Until Element Is Visible   //input[@id='type']
+    Click Element   //input[@id='type']
+    Run Keyword If  '${type}' ==  'buy'    Click Element   //p[@data-type='1']
+    Run Keyword If  '${type}' ==  'sell'    Click Element   //p[@data-type='2']
+
+Input Price On Release Page
+    [Arguments]	${price}
+    Input Text  //input[@id='price']  ${price}
+
+Input Number On Release Page
+    [Arguments]	${number}
+    Input Text  //input[@id='nums']  ${number}
+
+Input Min Range On Release Page
+    [Arguments]	${min}
+    Input Text  //input[@id='min']  ${min}
+Input Max Range On Release Page
+    [Arguments]	${max}
+    Input Text  //input[@id='max']  ${max}
+
+Select Pay Type On Release Page
+    [Arguments]	${pay}
+    Run Keyword If  '${pay}' ==  'bank'    Click Element   //input[@id='1']
+    Run Keyword If  '${pay}' ==  'alipay'    Click Element   //input[@id='2']
+    Run Keyword If  '${pay}' ==  'wechatpay'    Click Element   //input[@id='3']
+
+
+
 Goto Bank Card Management Page On Flat Page
     Wait Until Element Is Visible   //span[@class='icon icon-creditcardalt']/parent::a[@href='/index.php?c=trans&m=card']    timeout=10
     Click Element  //span[@class='icon icon-creditcardalt']/parent::a[@href='/index.php?c=trans&m=card']
@@ -63,12 +97,3 @@ Add Alipay Account On Bank Info Page
     Input Text    (//div[@class='input-box']/input[@class='password'])[2]   ${PayPassword}
     Click Element  //div[@class='text']/preceding-sibling::button[@type='button']
 
-$x("//ul/li/div[@class='number']")
-
-
-(//ul/li/div/p[@onclick='deletePay(this)'])[1]
-
-
-
-    ${count} =  Get Element Count   //ul/li/div[@class='number']
-    Run Keyword If	'${count}}' > 1
