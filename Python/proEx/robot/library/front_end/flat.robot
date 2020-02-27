@@ -15,10 +15,16 @@ Goto Release Page On Flat Page
 
 Select Trade Type On Release Page
     [Arguments]	${type}
-    Wait Until Element Is Visible   //input[@id='type']
-    Click Element   //input[@id='type']
-    Run Keyword If  '${type}' ==  'buy'    Click Element   //p[@data-type='1']
-    Run Keyword If  '${type}' ==  'sell'    Click Element   //p[@data-type='2']
+    Wait Until Element Is Visible   //span[@id='type-name']
+    Click Element   //span[@id='type-name']
+    Run Keyword If  '${type}' == 'buy'    Click Element   //p[@data-type='1']
+    Run Keyword If  '${type}' == 'sell'    Click Element   //p[@data-type='2']
+
+Select Currency Type On Release Page
+    [Arguments]	${currency}
+    Click Element   //span[@id='currency']
+    Wait Until Element Is Visible   //p[@data-countryid and text()='${currency}']
+    Click Element   //p[@data-countryid and text()='${currency}']
 
 Input Price On Release Page
     [Arguments]	${price}
@@ -35,13 +41,28 @@ Input Max Range On Release Page
     [Arguments]	${max}
     Input Text  //input[@id='max']  ${max}
 
+Input Pay Password On Release Page
+    [Arguments]	${pass}
+    Input Text  //input[@id='deal_psw']  ${pass}
+
+Input Submit On Release Page
+    Click Element   //button[@onclick='releaseC2C()']
+
+Check Buyer Info On Flat Page
+    [Arguments]	${country}  ${seller_name}  ${remain}   ${price}
+    ${status} =    Run Keyword And Return Status    Page Should Contain Element    //content[@id='sell']//li/p[text() = '${country}']/following-sibling::p[text() = '${seller_name}']/following-sibling::p[text() = '${remain}']/following-sibling::p[text() = '${price}']    timeout=10
+    Run Keyword If  '${status}' == 'True'  Log To Console	: Find The Right Record
+    
+Check Seller Info On Flat Page
+    [Arguments]	${country}  ${buyer_name}   ${remain}   ${price}
+    ${status} =    Run Keyword And Return Status    Page Should Contain Element   //content[@id='buy']//li/p[text() = '${country}']/following-sibling::p[text() = '${buyer_name}']/following-sibling::p[text() = '${remain}']/following-sibling::p[text() = '${price}']    timeout=10
+    Run Keyword If  '${status}' == 'True'  Log To Console	: Find The Right Record
+
 Select Pay Type On Release Page
     [Arguments]	${pay}
-    Run Keyword If  '${pay}' ==  'bank'    Click Element   //input[@id='1']
-    Run Keyword If  '${pay}' ==  'alipay'    Click Element   //input[@id='2']
-    Run Keyword If  '${pay}' ==  'wechatpay'    Click Element   //input[@id='3']
-
-
+    Run Keyword If  '${pay}' == 'bank'    Click Element   //input[@id='one']/..
+    Run Keyword If  '${pay}' == 'alipay'    Click Element   //input[@id='two']/..
+    Run Keyword If  '${pay}' == 'wechatpay'    Click Element   //input[@id='three']/..
 
 Goto Bank Card Management Page On Flat Page
     Wait Until Element Is Visible   //span[@class='icon icon-creditcardalt']/parent::a[@href='/index.php?c=trans&m=card']    timeout=10
