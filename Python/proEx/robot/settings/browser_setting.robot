@@ -66,7 +66,6 @@ Login ProEx Web
 
 Change Language To
     [Arguments]     ${Lang}
-	Sleep  5s
 	${status}=	Run Keyword And Return Status	Page Should Contain Element    //div[contains(text(),'简体中文')]
 	Run Keyword If	'${status}' == 'True'    Mouse Over  //div[contains(text(),'简体中文')]
 	...	ELSE IF		'${status}' == 'False'	 Mouse Over  //div[contains(text(),'English')]
@@ -74,11 +73,10 @@ Change Language To
 	Run Keyword If	'${Lang}' == 'CHS'	run keywords
 	...	Wait Until Element Is Visible	//p[contains(text(),'简体中文')]
 	...	AND     Click Element  //p[contains(text(),'简体中文')]
-
 	Run Keyword If	'${Lang}' == 'ENG'	run keywords
 	...	Wait Until Element Is Visible	//p[contains(text(),'English')]
 	...	AND     Click Element  //p[contains(text(),'English')]
-
+	Sleep  5s
 
 Test Register In Register Page
 	open browser	${MAILURL}	${BW}	alias=tab2

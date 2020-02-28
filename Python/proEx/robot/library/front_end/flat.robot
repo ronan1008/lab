@@ -17,6 +17,7 @@ Select Trade Type On Release Page
     [Arguments]	${type}
     Wait Until Element Is Visible   //span[@id='type-name']
     Click Element   //span[@id='type-name']
+    Wait Until Element Is Visible   //p[@data-type='2']
     Run Keyword If  '${type}' == 'buy'    Click Element   //p[@data-type='1']
     Run Keyword If  '${type}' == 'sell'    Click Element   //p[@data-type='2']
 
@@ -51,12 +52,74 @@ Input Submit On Release Page
 Check Buyer Info On Flat Page
     [Arguments]	${country}  ${seller_name}  ${remain}   ${price}
     ${status} =    Run Keyword And Return Status    Page Should Contain Element    //content[@id='sell']//li/p[text() = '${country}']/following-sibling::p[text() = '${seller_name}']/following-sibling::p[text() = '${remain}']/following-sibling::p[text() = '${price}']    timeout=10
-    Run Keyword If  '${status}' == 'True'  Log To Console	: Find The Right Record
-    
+    Run Keyword If  '${status}' == 'True'  Log    資料正確     WARN
+    Run Keyword If  '${status}' == 'False'  Log    發現錯誤    ERROR
+
 Check Seller Info On Flat Page
     [Arguments]	${country}  ${buyer_name}   ${remain}   ${price}
     ${status} =    Run Keyword And Return Status    Page Should Contain Element   //content[@id='buy']//li/p[text() = '${country}']/following-sibling::p[text() = '${buyer_name}']/following-sibling::p[text() = '${remain}']/following-sibling::p[text() = '${price}']    timeout=10
-    Run Keyword If  '${status}' == 'True'  Log To Console	: Find The Right Record
+    Run Keyword If  '${status}' == 'True'  Log    資料正確     WARN
+    Run Keyword If  '${status}' == 'False'  Log    發現錯誤    ERROR
+
+Click Sell Button On Buyer Info
+    Wait Until Element Is Visible   (//button[@type='2' and @price='20.0000000000' and @nums='9.9300000000'and @coin_name='USDT' and @currency='JPY'])[1]
+    Click Element  (//button[@type='2' and @price='20.0000000000' and @nums='9.9300000000'and @coin_name='USDT' and @currency='JPY'])[1]
+Click Buy Button On Seller Info
+    Wait Until Element Is Visible   (//button[@type='1' and @price='20.0000000000' and @nums='9.9300000000'and @coin_name='USDT' and @currency='AUD'])[1]
+    Click Element  (//button[@type='1' and @price='20.0000000000' and @nums='9.9300000000'and @coin_name='USDT' and @currency='AUD'])[1]
+
+
+
+Input Value And Password In Buy Window
+    [Arguments]	${number}   ${password}
+    [Documentation]    輸入數量在買入USDT視窗
+    Input Text  //input[@id='buy_amount']   ${number}
+    Click Element   //button[@data-type='1']
+    Wait Until Element Is Visible   //p[@class='buy_pay_password']
+    Input Text  (//input[@type='password'])[1]  ${password}
+    Click Element   //p[@class='buy_pay_password']
+
+Input Value And Password In Sell Window
+    [Arguments]	${number}   ${password}
+    [Documentation]    輸入數量在賣出USDT
+    Input Text  //input[@id='sell_amount']   ${number}
+    Click Element   //button[@data-type='2']
+    Wait Until Element Is Visible   //p[@onclick='submitOrder(this)']
+    Input Text  (//input[@type='password'])[3]  ${password}
+    Select Pay Type In Sell Window  bank
+    Click Element   //p[@onclick='submitOrder(this)']
+
+Select Pay Type In Sell Window
+    [Arguments]	${type}
+    Run Keyword If  '${type}' == 'bank'    Click Element   //input[@id='bank']/following-sibling::label
+    Run Keyword If  '${type}' == 'alipay'    Click Element   //input[@id='zfb']/following-sibling::label
+    Run Keyword If  '${type}' == 'wechatpay'    Click Element   //input[@id='wx']/following-sibling::label
+
+
+
+Upload Image On Receipt Windows
+    Click Element  (//a[@class='upload_voucher'])[1]
+    Sleep  1s
+    Choose File    //input[@id='upload1']    ${UploadImage}
+    Sleep  3s
+    Click Element  (//button[@class='update_voucher_submit'])
+    Sleep  1s
+
+Goto My Release Page On Flat Page
+    Wait Until Element Is Visible   //a[@data-href='/index.php?c=trans&m=myRelease']
+    Click Element   //a[@data-href='/index.php?c=trans&m=myRelease']
+
+Click First Detail On My Release Page
+    Wait Until Element Is Visible   (//a[contains(@href,'myReleaseDetail')])[1]
+    Click Element   (//a[contains(@href,'myReleaseDetail')])[1]
+
+Click First Confirm On Detail Page
+    Wait Until Element Is Visible   (//a[contains(@onclick,'paid')])[1]
+    Click Element   (//a[contains(@onclick,'paid')])[1]
+
+Click First Take Off On My Release Page
+    Wait Until Element Is Visible    (//a[@href='javascript:void(0)'])[1]
+    Click Element    (//a[@href='javascript:void(0)'])[1]
 
 Select Pay Type On Release Page
     [Arguments]	${pay}

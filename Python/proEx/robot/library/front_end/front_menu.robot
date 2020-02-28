@@ -7,6 +7,7 @@ Goto Home Page
 	[Documentation]	 點擊 首頁
     Wait Until Element Is Visible   //a[@href='/']    timeout=10
     Click Element  //a[@href='/']
+    Sleep  3s
 Goto Exchange Page
     [Documentation]  點擊 幣幣交易
     Wait Until Element Is Visible   //a[@href="/exchange/btcpusdt"]    timeout=10
@@ -88,13 +89,13 @@ Goto Personal settings Page
 Goto Login Page
     [Documentation]  點擊 登錄
     Wait Until Element Is Visible   //a[@href="/index.php?m=login"]    timeout=10
-    Click Element  //a[@href="/index.php?m=login"]  
+    Click Element  //a[@href="/index.php?m=login"]
 
 Goto Forget Password Page
     [Documentation]  點擊 登錄->忘記密碼
     Goto Login Page
     Wait Until Element Is Visible   //a[@href="/index.php?m=forgetPassword"]    timeout=10
-    Click Element  //a[@href="/index.php?m=forgetPassword"]  
+    Click Element  //a[@href="/index.php?m=forgetPassword"]
 
 Goto Sign Out Page
     [Documentation]  點擊 帳號->退出
