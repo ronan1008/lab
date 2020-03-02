@@ -22,11 +22,13 @@ ${EMAIL_PASS}    Arborabc1234
 
 Test Forget Password To Send Mail
     [Setup]	Login WebUI	${URL}	${BW}
+    Change Language To  CHS
     Goto Forget Password Page
     Input Email On Forget Password Page    ${EMAIL}
     Click Get Verify Code On Forget Password Page
     Sleep   50s
     ${VERIFY_CODE} =    open_gmail_and_get_code    ${IMAP_SERVER}   ${EMAIL}     ${EMAIL_PASS}
+    ${Email} =    open_gmail_and_get_content
+    log    ${Email}    WARN
     Input Verification Code On Forget Password Page    ${VERIFY_CODE}
     Click Next On Forget Password Page
-

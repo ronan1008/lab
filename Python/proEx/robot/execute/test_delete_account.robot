@@ -20,6 +20,7 @@ ${NoGUI}	0
 
 Test Login Web
 	[Setup]	Login WebUI	${URL}	${BW}
+	Change Language To  ENG
 	Login ProEx Web	softnextqcshock@gmail.com	Arborabc1234	6RJFVNCMKMOG62SU
 
 

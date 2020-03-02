@@ -36,6 +36,7 @@ def open_gmail_and_get_code(imapServer, mailAccount, mailPass):
         resp, data = m.fetch(emailid, "(RFC822)") # fetching the mail, "`(RFC822)`" means "get the whole stuff", but you can ask for headers only, etc
         email_body = data[0][1] # getting the mail content
     #   mail = email.message_from_bytes(email_body) # parsing the mail content to get a mail object
+        global mail, maildate, mailbody, mailfrom, mailsubject
         mail = mailparser.parse_from_bytes(email_body)
         maildate = datetime.strptime(str(mail.date),'%Y-%m-%d %H:%M:%S')
         maildate = maildate + timedelta(hours=8)
@@ -47,15 +48,10 @@ def open_gmail_and_get_code(imapServer, mailAccount, mailPass):
             mailbody = strip_tags(mail.body)
             mailfrom = mail.from_
             mailsubject = mail.subject
-            print(mailsubject)
-            print(maildate)
-            print(mailfrom)
-            print(mailbody)
 
             try:
                 match = re.search(r"验证码为：(\d+)", mailbody)
                 verificationCode = match.group(1)
-                print(verificationCode)
                 return verificationCode
             except:
                 return "not found"
@@ -63,8 +59,13 @@ def open_gmail_and_get_code(imapServer, mailAccount, mailPass):
         else:
             pass
 
-    #m.expunge()
+    m.expunge()
     m.close()
     m.logout()
 
-#open_gmail_and_get_code("imap.gmail.com", "softnextqcshock@gmail.com", "Arborabc1234")
+
+def open_gmail_and_get_content():
+    return "郵件時間 : {}\r\nFrom : {}\r\n標題：{}\r\n內文：{}".format(maildate, mailfrom, mailsubject, mailbody)
+
+#print(open_gmail_and_get_code("imap.gmail.com", "softnextqcshock@gmail.com", "Arborabc1234"))
+#print(open_gmail_and_get_content())

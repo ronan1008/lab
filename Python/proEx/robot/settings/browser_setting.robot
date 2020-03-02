@@ -99,7 +99,7 @@ Test Register In Register Page
 	Wait Until Element Is Visible   //table[@id='maillist']/tbody/tr/td[contains(text(),'ProEx')]	timeout=90
     Click Element   //table[@id='maillist']/tbody/tr/td[contains(text(),'ProEx')]
     Wait Until Element Is Visible   //div[@id='tab1']
-    ${getVerificationCode} =    Get Text    //span[@style='color:#c83935;font-size:16px;']
+    ${getVerificationCode} =    Get Text    (//span[@style='color:#e4007f;font-weight:bold;'])[2]
    # ${getVerificationCode} =  Get Regexp Matches  ${mailContent}	testcode(..)   1
     Set Global Variable    ${getVerificationCode}
 	switch browser  tab1
@@ -110,4 +110,4 @@ Test Register In Register Page
 	Sleep	2s
 	Wait Until Page Contains Element	//button[@class="login_btn"]	timeout=10
 	Log To Console	Register ${email_address} success!
-#	[Teardown]	Close All Browsers
+	[Teardown]	Close All Browsers

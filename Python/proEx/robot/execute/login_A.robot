@@ -21,6 +21,7 @@ ${NoGUI}	0
 *** Test Cases ***
 Test User A Login Web
 	[Setup]	open browser	${URL}	${BW}	alias=A
-    Login ProEx Web	softnextqcshock@gmail.com	Arborabc1234	6RJFVNCMKMOG62SU
     Change Language To  CHS
 	Change Language To  ENG
+    Login ProEx Web	softnextqcshock@gmail.com	Arborabc1234	6RJFVNCMKMOG62SU
+
