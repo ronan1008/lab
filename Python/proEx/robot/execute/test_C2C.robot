@@ -21,8 +21,6 @@ ${NoGUI}	0
 
 Test Login Web
 	[Setup]	Login WebUI	${URL}	${BW}
-#	Change Language To  CHS
-#	Change Language To  ENG
 	Login ProEx Web	softnextqcshock@gmail.com	Arborabc1234	6RJFVNCMKMOG62SU
 
 Test Record C2C Info On C2C Account Page
