@@ -11,8 +11,6 @@ Logout UI
     ${str}=     Translate String To Right Language String  Yes
     Click Element   //span[contains(text(),'${str}') and ancestor::div[contains(@class,'message')]]/ancestor::a
 
-
-
 Continue to Login
     Click Yes in MultiLogin Confirm Window
 	Wait Until Page Contains	AccelStor	timeout=240	error=DEBUG

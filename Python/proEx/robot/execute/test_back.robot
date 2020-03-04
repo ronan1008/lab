@@ -20,7 +20,6 @@ ${NoGUI}	0
 
 *** Test Cases ***
 
-
 Test Click Remote Log Servers Page On Log
 	[Setup]	Login WebUI	${URL}	${BW}
 	Goto Log Page

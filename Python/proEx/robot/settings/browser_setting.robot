@@ -84,6 +84,7 @@ Test Register In Register Page
 	Sleep   5s
     Wait Until Element Is Visible  //input[@id='fe_text']  timeout=10
     ${email_address} =    Get Value    //input[@id='fe_text']
+	${email_address} =	Convert To Uppercase	${email_address}
     Set Global Variable    ${email_address}
 	switch browser  tab1
     Click Element	//div[@class='name']/a[@href='/index.php?m=register']
