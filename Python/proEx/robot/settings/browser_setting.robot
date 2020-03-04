@@ -60,9 +60,8 @@ Login ProEx Web
 	${token}=  Run Keyword	get_totp_token	${key}
 	Input Text	//input[@class='mail_text']	${token}
 	Click Element	//button[@class='login_send']
-	Wait Until Element Is Visible  //span[@class='icon icon-close safety_announcemen_close']  timeout=10
-	Click Element	//span[@class='icon icon-close safety_announcemen_close']
-
+#	Wait Until Element Is Visible  //span[@class='icon icon-close safety_announcemen_close']  timeout=10
+#	Click Element	//span[@class='icon icon-close safety_announcemen_close']
 
 Change Language To
     [Arguments]     ${Lang}
@@ -76,7 +75,7 @@ Change Language To
 	Run Keyword If	'${Lang}' == 'ENG'	run keywords
 	...	Wait Until Element Is Visible	//p[contains(text(),'English')]
 	...	AND     Click Element  //p[contains(text(),'English')]
-	Sleep  5s
+	Sleep  3s
 
 Test Register In Register Page
 	open browser	${MAILURL}	${BW}	alias=tab2
@@ -109,5 +108,5 @@ Test Register In Register Page
 	Click Element	//button[@class='reg_submit']
 	Sleep	2s
 	Wait Until Page Contains Element	//button[@class="login_btn"]	timeout=10
-	Log To Console	Register ${email_address} success!
-	[Teardown]	Close All Browsers
+	Log    Register ${email_address} success!    WARN
+#	[Teardown]	Close All Browsers

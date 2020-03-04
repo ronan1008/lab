@@ -33,4 +33,4 @@ Test Add Account In Flat Page
 	Sleep	2s
 	Add Bank Info On Bank Card Management Page
 	Add Alipay Account On Bank Info Page
-	Sleep  2s
+	Sleep   2s

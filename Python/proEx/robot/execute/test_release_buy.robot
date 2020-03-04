@@ -22,14 +22,11 @@ ${NoGUI}	0
 Test User A Login Web
 	[Setup]	open browser	${URL}	${BW}	alias=A
     Login ProEx Web	softnextqcshock@gmail.com	Arborabc1234	6RJFVNCMKMOG62SU
+    Set Init Datetime
+
 Test User A Record C2C Info On C2C Account Page
     Goto C2C Account Page
-    # return ${currency} ${available_money} ${freeze_money}
     Test Record On C2C Page    USDT
-    ${init_currency}    Set Variable    ${currency}
-    ${init_available_money}    Set Variable    ${available_money}
-    ${init_freeze_money}    Set Variable    ${freeze_money}
-    Log To Console	初始值->幣值: ${init_currency} 可用: ${init_available_money} 凍結: ${init_freeze_money}
     Show New Otc Record On C2C Page
 
 Test User A Release Buy In Flat Page
@@ -51,10 +48,6 @@ Test User A Record C2C Info After Release On C2C Account Page
     Goto C2C Account Page
     # return ${currency} ${available_money} ${freeze_money}
     Test Record On C2C Page    USDT
-    ${after_currency}    Set Variable    ${currency}
-    ${after_available_money}    Set Variable    ${available_money}
-    ${after_freeze_money}    Set Variable    ${freeze_money}
-    Log To Console	發布後->幣值: ${after_currency} 可用: ${after_available_money} 凍結: ${after_freeze_money}
     Show New Otc Record On C2C Page
 
 Test User B Login Web
@@ -72,8 +65,6 @@ Switch To User A Upload Image
     Goto Flat Page
     Goto My Release Page On Flat Page
     Click First Detail On My Release Page
-
-
     Upload Image On Receipt Windows
     Go To   ${URL}
 
@@ -83,11 +74,6 @@ Switch To User A To Confirm Record C2C Info After B Sell
     Goto C2C Account Page
     # return ${currency} ${available_money} ${freeze_money}
     Test Record On C2C Page    USDT
-    ${after_currency}    Set Variable    ${currency}
-    ${after_available_money}    Set Variable    ${available_money}
-    ${after_freeze_money}    Set Variable    ${freeze_money}
-    Log To Console	UserA：UserB購買後->幣值: ${after_currency} 可用: ${after_available_money} 凍結: ${after_freeze_money}
-    Log    UserA：UserB購買後->幣值: ${after_currency} 可用: ${after_available_money} 凍結: ${after_freeze_money}
     Show New Otc Record On C2C Page
     Goto Home Page
 
@@ -102,20 +88,8 @@ Switch To User A To Confirm Record C2C Info After B Sell
     Goto C2C Account Page
     # return ${currency} ${available_money} ${freeze_money}
     Test Record On C2C Page    USDT
-    ${after_currency}    Set Variable    ${currency}
-    ${after_available_money}    Set Variable    ${available_money}
-    ${after_freeze_money}    Set Variable    ${freeze_money}
-    Log To Console	UserA：UserB購買後->幣值: ${after_currency} 可用: ${after_available_money} 凍結: ${after_freeze_money}
-    Log    UserA：UserB購買後->幣值: ${after_currency} 可用: ${after_available_money} 凍結: ${after_freeze_money}
     Show New Otc Record On C2C Page
     Goto Home Page
 
-
-<button onclick="buy_sell_alert(this,'USDT')" price="20.0000000000" coin_name="USDT" min="1.0000000000" max="5.0000000000" nums="9.9300000000" cid="204" currency="JPY" type="2">賣出</button>
-
 Test Compare Before And After On C2C Account Page
-
-
-
-
 	switch browser  B

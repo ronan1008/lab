@@ -15,6 +15,7 @@ ${password}	  Arborabc1234
 *** Test Cases ***
 
 Test Register Many Times In Register Page
-	Repeat Keyword    5 times    Test Register In Register Page
+#	Repeat Keyword    5 times    Test Register In Register Page
+	Test Register In Register Page
 
 

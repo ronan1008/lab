@@ -29,7 +29,3 @@ Test Record C2C Info On C2C Account Page
     Goto C2C Account Page
     # return ${currency} ${available_money} ${freeze_money}
     Test Record On C2C Page    USDT
-    ${init_currency}    Set Variable    ${currency}
-    ${init_available_money}    Set Variable    ${available_money}
-    ${init_freeze_money}    Set Variable    ${available_money}
-    Log To Console	幣值: ${init_currency} 可用: ${init_available_money} 凍結: ${init_freeze_money}

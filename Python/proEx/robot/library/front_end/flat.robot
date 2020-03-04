@@ -64,11 +64,10 @@ Check Seller Info On Flat Page
 Click Sell Button On Buyer Info
     Wait Until Element Is Visible   (//button[@type='2' and @price='20.0000000000' and @nums='9.9300000000'and @coin_name='USDT' and @currency='JPY'])[1]
     Click Element  (//button[@type='2' and @price='20.0000000000' and @nums='9.9300000000'and @coin_name='USDT' and @currency='JPY'])[1]
+
 Click Buy Button On Seller Info
     Wait Until Element Is Visible   (//button[@type='1' and @price='20.0000000000' and @nums='9.9300000000'and @coin_name='USDT' and @currency='AUD'])[1]
     Click Element  (//button[@type='1' and @price='20.0000000000' and @nums='9.9300000000'and @coin_name='USDT' and @currency='AUD'])[1]
-
-
 
 Input Value And Password In Buy Window
     [Arguments]	${number}   ${password}
@@ -94,8 +93,6 @@ Select Pay Type In Sell Window
     Run Keyword If  '${type}' == 'bank'    Click Element   //input[@id='bank']/following-sibling::label
     Run Keyword If  '${type}' == 'alipay'    Click Element   //input[@id='zfb']/following-sibling::label
     Run Keyword If  '${type}' == 'wechatpay'    Click Element   //input[@id='wx']/following-sibling::label
-
-
 
 Upload Image On Receipt Windows
     Click Element  (//a[@class='upload_voucher'])[1]
@@ -181,3 +178,6 @@ Add Alipay Account On Bank Info Page
     Input Text    (//div[@class='input-box']/input[@class='password'])[2]   ${PayPassword}
     Click Element  //div[@class='text']/preceding-sibling::button[@type='button']
 
+
+
+    

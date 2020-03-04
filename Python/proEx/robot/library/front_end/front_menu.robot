@@ -78,7 +78,7 @@ Goto Account Security Page
     [Documentation]  點擊 帳號->帳號安全
     Move To Account Page
     Wait Until Element Is Visible   //a[@href="/index.php?m=safety"]    timeout=10
-    Click Element  //a[@href="/index.php?m=invite"]
+    Click Element  //a[@href="/index.php?m=safety"]
 
 Goto Personal settings Page
     [Documentation]  點擊 帳號->個人設置
@@ -107,6 +107,7 @@ Change Language To CN
     [Documentation]  點擊 切換語系->簡體中文
     Wait Until Element Is Visible   //a[@href="/index.php?s=ieo&c=ieo&m=plan2"]
     Click Element  //a[@href="/index.php?s=ieo&c=ieo&m=plan2"]
+
 Change Language To EN
     [Documentation]  點擊 切換語系->英文
     Wait Until Element Is Visible   //a[@href="/index.php?s=ieo&c=ieo&m=plan2"]

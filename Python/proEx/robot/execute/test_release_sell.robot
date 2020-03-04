@@ -17,22 +17,18 @@ ${SSLURL}	https://${HOST}/
 ${BW}	chrome
 ${NoGUI}	0
 ${UploadImage}	/Users/shocklee/Documents/GitHub/workspace/Python/proEx/robot/library/tools/S__4390953.jpg
+
 *** Test Cases ***
 
 Test User A Login Web
 	[Setup]	open browser	${URL}	${BW}	alias=A
     Sleep    3s
 	Login ProEx Web	softnextqcshock@gmail.com	Arborabc1234	6RJFVNCMKMOG62SU
+    Set Init Datetime
 
 Test User A Record C2C Info On C2C Account Page
     Goto C2C Account Page
-    # return ${currency} ${available_money} ${freeze_money}
     Test Record On C2C Page    USDT
-    ${init_currency}    Set Variable    ${currency}
-    ${init_available_money}    Set Variable    ${available_money}
-    ${init_freeze_money}    Set Variable    ${freeze_money}
-    Log    [初始化數據]    WARN
-    Log    UserA C2C帳戶 ->幣值: ${init_currency} 可用: ${init_available_money} 凍結: ${init_freeze_money}    WARN
     Goto Otc Record On C2C Page
     Show New Otc Record On C2C Page
 
@@ -41,25 +37,20 @@ Test User A Release Sell In Flat Page
 	Goto Release Page On Flat Page
     Select Trade Type On Release Page   sell
     Select Currency Type On Release Page    AUD
-    Input Price On Release Page    20
-    Input Number On Release Page    10
+    Input Price On Release Page    9999
+    Input Number On Release Page    20
     Input Min Range On Release Page    1
-    Input Max Range On Release Page    5
+    Input Max Range On Release Page    10
     Input Pay Password On Release Page    Arborabc5678
     Select Pay Type On Release Page    bank
     Input Submit On Release Page
     Sleep    2s
     Check Seller Info On Flat Page   澳大利亚    softnextqcshock@gmail.com   9.9300  20.0000
-    Log    UserA：發布賣幣->幣種: AUD 價格: 20 數量: 10 範圍:1~5 支付方式:bank   WARN
+    Log    UserA：發布賣幣->幣種: AUD 價格: 20 數量: 10 範圍:1~10 支付方式:bank   WARN
 
 Test User A Record C2C Info After Release On C2C Account Page
     Goto C2C Account Page
-    # return ${currency} ${available_money} ${freeze_money}
     Test Record On C2C Page    USDT
-    ${after_currency}    Set Variable    ${currency}
-    ${after_available_money}    Set Variable    ${available_money}
-    ${after_freeze_money}    Set Variable    ${freeze_money}
-    Log    UserA C2C帳戶 ->幣值: ${after_currency} 可用: ${after_available_money} 凍結: ${after_freeze_money}    WARN
     Goto Otc Record On C2C Page
     Show New Otc Record On C2C Page
     Goto Home Page
@@ -81,10 +72,6 @@ Switch To User A To Confirm Record C2C Info After B Buy
     Goto C2C Account Page
     # return ${currency} ${available_money} ${freeze_money}
     Test Record On C2C Page    USDT
-    ${after_currency}    Set Variable    ${currency}
-    ${after_available_money}    Set Variable    ${available_money}
-    ${after_freeze_money}    Set Variable    ${freeze_money}
-    Log    UserA C2C帳戶 ->幣值: ${after_currency} 可用: ${after_available_money} 凍結: ${after_freeze_money}    WARN
     Goto Otc Record On C2C Page
     Show New Otc Record On C2C Page
     Goto Home Page
@@ -101,10 +88,6 @@ Switch To User A To Confirm Record C2C Info After B Upload Image
     Goto C2C Account Page
     # return ${currency} ${available_money} ${freeze_money}
     Test Record On C2C Page    USDT
-    ${after_currency}    Set Variable    ${currency}
-    ${after_available_money}    Set Variable    ${available_money}
-    ${after_freeze_money}    Set Variable    ${freeze_money}
-    Log    UserA C2C帳戶 ->幣值: ${after_currency} 可用: ${after_available_money} 凍結: ${after_freeze_money}    WARN
     Goto Otc Record On C2C Page
     Show New Otc Record On C2C Page
     Goto Home Page
@@ -114,16 +97,12 @@ Test User A Confirm B Trans On My Release Page
     Goto My Release Page On Flat Page
     Click First Detail On My Release Page
     Click First Confirm On Detail Page
-
     Log    UserA：將B的交易 已收款    WARN
+
 Test User A To Confirm Record C2C Info After A Confirm B Trans
     Goto C2C Account Page
     # return ${currency} ${available_money} ${freeze_money}
     Test Record On C2C Page    USDT
-    ${after_currency}    Set Variable    ${currency}
-    ${after_available_money}    Set Variable    ${available_money}
-    ${after_freeze_money}    Set Variable    ${freeze_money}
-    Log    UserA C2C帳戶 ->幣值: ${after_currency} 可用: ${after_available_money} 凍結: ${after_freeze_money}    WARN
     Goto Otc Record On C2C Page
     Show New Otc Record On C2C Page
     Goto Home Page
@@ -134,14 +113,11 @@ Test User A Take Off Order
     Click First Take Off On My Release Page
     Goto Home Page
     Log    UserA：將訂單下架    WARN
+
 Test User A Record C2C Info After Take Off Order
     Goto C2C Account Page
     # return ${currency} ${available_money} ${freeze_money}
     Test Record On C2C Page    USDT
-    ${after_currency}    Set Variable    ${currency}
-    ${after_available_money}    Set Variable    ${available_money}
-    ${after_freeze_money}    Set Variable    ${freeze_money}
-    Log    UserA C2C帳戶 ->幣值: ${after_currency} 可用: ${after_available_money} 凍結: ${after_freeze_money}    WARN
     Goto Otc Record On C2C Page
     Show New Otc Record On C2C Page
     Goto Home Page

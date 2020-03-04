@@ -19,11 +19,15 @@ ${NoGUI}	0
 
 
 *** Test Cases ***
-Test User B Login Web
-	open browser	${URL}	${BW}	alias=B
-    Login ProEx Web	harry.hung@ace.io	1qaz@wsx	OVRXEBIF3AVI5TQC
-Test User B Sell To A In Flat Page
-    Goto Flat Page
-    Click Sell Button On Buyer Info
-    Input Value And Password In Sell Window    2    zajack123
-    Go To   ${URL}
+
+Test User A Login Web
+	[Setup]	open browser	${URL}	${BW}	alias=A
+    Sleep    3s
+	Login ProEx Web	softnextqcshock@gmail.com	Arborabc1234	6RJFVNCMKMOG62SU
+    Set Init Datetime
+
+Test User A Record C2C Info On C2C Account Page
+    Goto C2C Account Page
+    Test Record On C2C Page    USDT
+    Goto Otc Record On C2C Page
+    Show New Otc Record On C2C Page
