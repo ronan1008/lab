@@ -79,13 +79,13 @@ Input Value And Password In Buy Window
     Click Element   //p[@class='buy_pay_password']
 
 Input Value And Password In Sell Window
-    [Arguments]	${number}   ${password}
+    [Arguments]	${number}   ${password} ${type}
     [Documentation]    輸入數量在賣出USDT
     Input Text  //input[@id='sell_amount']   ${number}
     Click Element   //button[@data-type='2']
     Wait Until Element Is Visible   //p[@onclick='submitOrder(this)']
     Input Text  (//input[@type='password'])[3]  ${password}
-    Select Pay Type In Sell Window  bank
+    Select Pay Type In Sell Window  ${type}
     Click Element   //p[@onclick='submitOrder(this)']
 
 Select Pay Type In Sell Window

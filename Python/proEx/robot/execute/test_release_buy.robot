@@ -57,7 +57,7 @@ Test User B Login Web
 Test User B Sell To A In Flat Page
     Goto Flat Page
     Click Sell Button On Buyer Info
-    Input Value And Password In Sell Window    2    zajack123
+    Input Value And Password In Sell Window    2    zajack123   bank
     Go To   ${URL}
 
 Switch To User A Upload Image
