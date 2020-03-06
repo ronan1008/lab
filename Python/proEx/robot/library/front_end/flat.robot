@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation	flat page function control
+Documentation	場外交易
 Resource	./front_menu.robot
 
 #Metadata			Version 0.1
@@ -79,7 +79,7 @@ Input Value And Password In Buy Window
     Click Element   //p[@class='buy_pay_password']
 
 Input Value And Password In Sell Window
-    [Arguments]	${number}   ${password} ${type}
+    [Arguments]	${number}    ${password}    ${type}
     [Documentation]    輸入數量在賣出USDT
     Input Text  //input[@id='sell_amount']   ${number}
     Click Element   //button[@data-type='2']

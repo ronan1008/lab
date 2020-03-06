@@ -33,3 +33,14 @@ Change Pass On Change Account Password Page
 	Input Text    //input[@id='unbindloginpass-googlecode'] 	${token}
     Click Element    (//button[contains(@onclick,'saveModifyPwd')])[1]
     Log    Change Account Password ${old_pass} To ${new_pass} Success   WARN
+
+
+Goto Real Name Authentication Page
+    Wait Until Element Is Visible   //button[contains(@onclick,'/index.php?m=verified')]
+    Click Element   //button[contains(@onclick,'/index.php?m=verified')]
+
+Input Personal Info On Authentication Page
+    [Arguments]    ${name}     ${country}    ${passport}
+    Input Text    //input[@id='bindrealinfo-realname']    ${name}
+
+

@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation	front end page function control
+Documentation	忘記密碼
 #Metadata			Version 0.1
 
 *** Keywords ***

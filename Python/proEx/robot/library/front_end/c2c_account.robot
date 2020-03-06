@@ -1,6 +1,6 @@
 *** Settings ***
 Library           DateTime
-Documentation	flat page function control
+Documentation	C2C帳號頁面
 Resource	./front_menu.robot
 
 #Metadata			Version 0.1
