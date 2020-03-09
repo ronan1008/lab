@@ -3,6 +3,10 @@ Documentation	安全配置頁面
 #Metadata			Version 0.1
 Library	../tools/getTotp.py
 
+*** Variables ***
+${UploadImage}	/Users/shocklee/Documents/GitHub/workspace/Python/proEx/robot/library/tools/S__4390953.jpg
+
+
 *** Keywords ***
 Goto Change Financial Password
     Wait Until Element Is Visible   //button[contains(@onclick,'funds-pwd')]
@@ -40,7 +44,15 @@ Goto Real Name Authentication Page
     Click Element   //button[contains(@onclick,'/index.php?m=verified')]
 
 Input Personal Info On Authentication Page
-    [Arguments]    ${name}     ${country}    ${passport}
+    [Arguments]    ${name}     ${passport}
+    Wait Until Element Is Visible   //input[@id='bindrealinfo-realname']
     Input Text    //input[@id='bindrealinfo-realname']    ${name}
-
-
+    Click Element    //u[@class='icon icon-unfold']
+    Wait Until Element Is Visible    //p[@data-cid='81']
+    Click Element    //p[@data-cid='81']
+    Input Text    //input[@id='bindrealinfo-identityno']    ${passport}
+    Choose File   //input[@onchange='file(event,this,1)']   ${UploadImage}
+    Sleep    2s
+    Choose File   //input[@onchange='file(event,this,3)']   ${UploadImage}
+    Sleep    2s
+    Click Element   //button[@onclick='saveRealName()']

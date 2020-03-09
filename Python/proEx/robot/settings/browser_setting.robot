@@ -2,6 +2,7 @@
 Documentation	Default browser setting for us
 Library		String
 Library	../library/tools/getTotp.py
+Library	../library/tools/getGmailCode.py
 
 *** Variables ***
 ${HOST}		www.proex.io
@@ -62,6 +63,9 @@ Login ProEx Web
 	Click Element	//button[@class='login_send']
 #	Wait Until Element Is Visible  //span[@class='icon icon-close safety_announcemen_close']  timeout=10
 #	Click Element	//span[@class='icon icon-close safety_announcemen_close']
+	Sleep    3s
+
+
 
 Change Language To
     [Arguments]     ${Lang}
@@ -111,3 +115,20 @@ Test Register In Register Page
 	Wait Until Page Contains Element	//button[@class="login_btn"]	timeout=10
 	Log    Register ${email_address} success!    WARN
 #	[Teardown]	Close All Browsers
+
+
+Test Login ProEx Web Without Key
+	[Arguments]	${username}	${password}
+	Click Element	//div[@class='name']/a[@href='/index.php?m=login']
+	Wait Until Element Is Visible  //input[@id='username']  timeout=10
+	Input Text	//input[@id='username']	${username}
+	Input Text	//input[@id='password']	${password}
+	Click Element	//button[@class='login_btn']
+	Wait Until Element Is Visible	//button[@id='get_email_v']  timeout=10
+	Click Element	//button[@id='get_email_v']
+	Sleep   50s
+    ${VERIFY_CODE} =    open_gmail_and_get_code    imap.gmail.com   ${username}     ${password}
+    ${Email} =    open_gmail_and_get_content
+    log    ${Email}    WARN
+    Input Text    //input[@class='mail_text']   ${VERIFY_CODE}
+    Click Element	//button[@class='login_send' and @data-type='2']

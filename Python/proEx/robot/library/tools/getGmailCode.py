@@ -40,7 +40,7 @@ def open_gmail_and_get_code(imapServer, mailAccount, mailPass):
         mail = mailparser.parse_from_bytes(email_body)
         maildate = datetime.strptime(str(mail.date),'%Y-%m-%d %H:%M:%S')
         maildate = maildate + timedelta(hours=8)
-        nowdate = datetime.now() -  timedelta(minutes=5)
+        nowdate = datetime.now() -  timedelta(minutes=3)
 #        print(maildate)
 #        print(nowdate_a)
         if maildate > nowdate :
@@ -48,14 +48,13 @@ def open_gmail_and_get_code(imapServer, mailAccount, mailPass):
             mailbody = strip_tags(mail.body)
             mailfrom = mail.from_
             mailsubject = mail.subject
-
+            m.store(emailid, '+FLAGS', '\\Deleted')
             try:
                 match = re.search(r"验证码为：(\d+)", mailbody)
                 verificationCode = match.group(1)
                 return verificationCode
             except:
                 return "not found"
-        #    m.store(emailid, '+FLAGS', '\\Deleted')
         else:
             pass
 
