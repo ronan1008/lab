@@ -38,6 +38,7 @@ Click Login Button In Email Login On Me Page
 Click Login Button In Mobile Login On Me Page
     Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/acb_login
     Click Element  id=com.asiainnovations.ace.taiwan:id/acb_login
+    Sleep    1s
 
 Input Google Auth In Login On Me Page
     [Arguments]	${key}

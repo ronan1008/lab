@@ -4,12 +4,12 @@ Documentation	xxxx
 Resource    ../library/navigation.robot
 Resource    ../library/me.robot
 Library    ../tools/getTotp.py
-Library    ../tools/getGmailCode.py
 
 *** Variables ***
 ${host}    http://localhost:4723/wd/hub 
 ${platformName}		Android
-${deviceName}		PNXGAM8932802833
+#${deviceName}		PNXGAM8932802833
+${deviceName}   192.168.244.102:55
 ${appPackage}	com.asiainnovations.ace.taiwan
 ${appActivity}	com.asiainnovations.ace.splash.SplashActivity
 ${googleAuth}   P4SIVMYMXBJ76PMV

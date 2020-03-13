@@ -24,15 +24,15 @@ Click Event Button On Home Page
     Click Element  id=com.asiainnovations.ace.taiwan:id/goEvent
 
 Click Back Button In Event On Home Page
-    Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/iv_back
+    Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/iv_back    timeout=10
     Click Element  id=com.asiainnovations.ace.taiwan:id/iv_back
 
 Click Crypto Card On Home Page
-    Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/goCard
+    Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/goCard    
     Click Element  id=com.asiainnovations.ace.taiwan:id/goCard
 
 Click Back Button In Crypto Card On Home Page
-    Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/iv_back
+    Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/iv_back    timeout=10
     Click Element  id=com.asiainnovations.ace.taiwan:id/iv_back
 
 Click Ace Launcher On Home Page
@@ -47,6 +47,11 @@ Click Back Button On Home Page
     Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/tvBack
     Click Element  id=com.asiainnovations.ace.taiwan:id/tvBack
 
+Swipe Right To Left On Home Page
+    Swipe    1000    560    0    560    5000
+
+Swipe Left To Right On Home Page
+    Swipe    0    560    1000    560    5000
 
 
 
