@@ -3,14 +3,14 @@ import time
 desired_caps = dict()
 
 desired_caps['platformName'] = 'Android'
-desired_caps['platformVersion'] = '9.0'
-#android 設備名稱 可以隨意,ios不能隨便寫 例如:iphone6
-desired_caps['deviceName'] = '192.168.244.102:55'
+desired_caps['platformVersion'] = '10.0'
+desired_caps['deviceName'] = 'PNXGAM8932802833'
 #desired_caps['appPackage'] = 'com.android.settings'
 #desired_caps['appActivity'] = '.Settings'
 
-desired_caps['appPackage'] = 'com.android.messaging'
-desired_caps['appActivity'] = '.ui.conversationlist.ConversationListActivity'
+desired_caps['appPackage'] = 'com.asiainnovations.ace.taiwan'
+desired_caps['appActivity'] = 'com.asiainnovations.ace.splash.SplashActivity'
+
 
 
 #0.0.0.0 = 127.0.0.1 = localhost
