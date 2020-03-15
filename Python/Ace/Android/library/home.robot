@@ -7,9 +7,18 @@ Click Top Banner On Home Page
     Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/bannerViewPager
     Click Element  id=com.asiainnovations.ace.taiwan:id/bannerViewPager
 
-Click Exchange Banner On Home Page
-    Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/acb_login
-    Click Element  id=com.asiainnovations.ace.taiwan:id/acb_login
+Click First Exchange Banner On Home Page
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/first']/*[@index='2']
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/first']/*[@index='2']
+
+Click Second Exchange Banner On Home Page
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/second']/*[@index='2']
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/second']/*[@index='2']
+
+Click Third Exchange Banner On Home Page
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/third']/*[@index='2']
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/third']/*[@index='2']
+
 
 Click Price Tab On Home Page
     Wait Until Element Is Visible   xpath=//*[@class='androidx.appcompat.app.ActionBar.Tab' and @index='0']
