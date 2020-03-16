@@ -24,7 +24,7 @@ Get Info In Charge Cash On Trade Page
     [Arguments]	${info}
     Wait Until Element Is Visible    xpath=//*[@text='${info}']/following-sibling::*[1]
     ${text} =    Get Element Attribute    xpath=//*[@text='${info}']/following-sibling::*[1]    text
-    [return]    ${text}
+    Log    ${info}: ${text}   WARN
     
 Click Back Button On Trade page 
     Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/iv_back

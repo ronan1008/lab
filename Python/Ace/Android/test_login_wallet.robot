@@ -15,4 +15,5 @@ Test Login Ace On Android
 Test Check Info On Wallet Page  
     Goto Wallet Tab On Home Page
     Click Charge Cash On Trade Page
-    Get Info In Charge Cash On Trade Page   銀行資訊
+    Get Info In Charge Cash On Trade Page    銀行資訊
+    Get Info In Charge Cash On Trade Page    匯款帳號
