@@ -7,6 +7,7 @@ Resource    ./settings/login.robot
 
 *** Variables ***
 
+
 *** Test Cases ***
 Test Login Ace On Android
     [Documentation]    登入ACE 使用 google 驗證
@@ -17,3 +18,15 @@ Test Check Info On Wallet Page
     Click Charge Cash On Trade Page
     Get Info In Charge Cash On Trade Page    銀行資訊
     Get Info In Charge Cash On Trade Page    匯款帳號
+
+Test Cash Withdraw On Wallet Page  
+    Goto Wallet Tab On Home Page
+    Click Withdraw Cash On Trade Page
+    Choose Bank In Withdraw Cash On Trade Page
+    Input Cash Amount In Withdraw Cash On Trade Page    100
+    Click Next In Withdraw Cash On Trade Page
+    Input Cash Password In Withdraw Cash On Trade Page    Arborabc5678
+    Input Google Auth In Withdraw Cash On Trade Page    ${googleAuth}
+    Click Confirm Button In Withdraw Cash On Trade Page
+
+
