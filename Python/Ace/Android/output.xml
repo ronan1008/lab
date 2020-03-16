@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20200315 20:31:33.666" rpa="false">
-<suite id="s1" name="Test Login Click Home" source="D:\GitHub\workspace\Python\Ace\Android\test_login_click_home.robot">
+<robot generator="Robot 3.1.2 (Python 3.7.6 on darwin)" generated="20200316 16:38:51.755" rpa="false">
+<suite id="s1" name="Test Login Click Trade" source="/Users/shocklee/Documents/github/workspace/Python/Ace/Android/test_login_click_trade.robot">
 <test id="s1-t1" name="Test Login Ace On Android">
 <kw name="Open Ace App And Login" library="login">
 <kw name="Open Application" library="AppiumLibrary">
@@ -17,7 +17,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>appPackage=${appPackage}</arg>
 <arg>appActivity=${appActivity}</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:31:33.987" endtime="20200315 20:31:57.332"></status>
+<status status="PASS" starttime="20200316 16:38:53.014" endtime="20200316 16:39:05.738"></status>
 </kw>
 <kw name="Goto Me Tab On Home Page" library="navigation">
 <doc>我 分頁</doc>
@@ -26,17 +26,17 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/navigation_me</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:31:57.333" endtime="20200315 20:32:01.030"></status>
+<status status="PASS" starttime="20200316 16:39:05.739" endtime="20200316 16:39:09.022"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/navigation_me</arg>
 </arguments>
-<msg timestamp="20200315 20:32:01.031" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_me'.</msg>
-<status status="PASS" starttime="20200315 20:32:01.030" endtime="20200315 20:32:01.254"></status>
+<msg timestamp="20200316 16:39:09.024" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_me'.</msg>
+<status status="PASS" starttime="20200316 16:39:09.022" endtime="20200316 16:39:09.203"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:31:57.332" endtime="20200315 20:32:01.254"></status>
+<status status="PASS" starttime="20200316 16:39:05.738" endtime="20200316 16:39:09.204"></status>
 </kw>
 <kw name="Click Mobile Login On Me Page" library="me">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
@@ -44,17 +44,17 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/tv_phone_login</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:01.254" endtime="20200315 20:32:02.924"></status>
+<status status="PASS" starttime="20200316 16:39:09.204" endtime="20200316 16:39:09.989"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/tv_phone_login</arg>
 </arguments>
-<msg timestamp="20200315 20:32:02.926" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tv_phone_login'.</msg>
-<status status="PASS" starttime="20200315 20:32:02.925" endtime="20200315 20:32:02.999"></status>
+<msg timestamp="20200316 16:39:09.990" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tv_phone_login'.</msg>
+<status status="PASS" starttime="20200316 16:39:09.989" endtime="20200316 16:39:10.688"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:01.254" endtime="20200315 20:32:02.999"></status>
+<status status="PASS" starttime="20200316 16:39:09.204" endtime="20200316 16:39:10.688"></status>
 </kw>
 <kw name="Input Tel Number In Mobile Login On Me Page" library="me">
 <arguments>
@@ -65,7 +65,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_phone</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:03.000" endtime="20200315 20:32:03.646"></status>
+<status status="PASS" starttime="20200316 16:39:10.689" endtime="20200316 16:39:10.750"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -73,10 +73,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_phone</arg>
 <arg>${tel_number}</arg>
 </arguments>
-<msg timestamp="20200315 20:32:03.648" level="INFO">Typing text '0936736561' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_phone'</msg>
-<status status="PASS" starttime="20200315 20:32:03.646" endtime="20200315 20:32:04.252"></status>
+<msg timestamp="20200316 16:39:10.753" level="INFO">Typing text '0936736561' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_phone'</msg>
+<status status="PASS" starttime="20200316 16:39:10.751" endtime="20200316 16:39:11.326"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:02.999" endtime="20200315 20:32:04.252"></status>
+<status status="PASS" starttime="20200316 16:39:10.688" endtime="20200316 16:39:11.326"></status>
 </kw>
 <kw name="Input Password In Mobile Login On Me Page" library="me">
 <arguments>
@@ -87,7 +87,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_password</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:04.253" endtime="20200315 20:32:04.809"></status>
+<status status="PASS" starttime="20200316 16:39:11.327" endtime="20200316 16:39:11.867"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -95,10 +95,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_password</arg>
 <arg>${Password}</arg>
 </arguments>
-<msg timestamp="20200315 20:32:04.811" level="INFO">Typing text 'Arborabc1234' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_password'</msg>
-<status status="PASS" starttime="20200315 20:32:04.809" endtime="20200315 20:32:05.393"></status>
+<msg timestamp="20200316 16:39:11.870" level="INFO">Typing text 'Arborabc1234' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_password'</msg>
+<status status="PASS" starttime="20200316 16:39:11.868" endtime="20200316 16:39:12.460"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:04.252" endtime="20200315 20:32:05.393"></status>
+<status status="PASS" starttime="20200316 16:39:11.326" endtime="20200316 16:39:12.461"></status>
 </kw>
 <kw name="Click Login Button In Mobile Login On Me Page" library="me">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
@@ -106,25 +106,25 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/acb_login</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:05.394" endtime="20200315 20:32:05.941"></status>
+<status status="PASS" starttime="20200316 16:39:12.461" endtime="20200316 16:39:12.997"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/acb_login</arg>
 </arguments>
-<msg timestamp="20200315 20:32:05.943" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_login'.</msg>
-<status status="PASS" starttime="20200315 20:32:05.942" endtime="20200315 20:32:06.025"></status>
+<msg timestamp="20200316 16:39:12.999" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_login'.</msg>
+<status status="PASS" starttime="20200316 16:39:12.998" endtime="20200316 16:39:13.091"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200315 20:32:07.026" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200315 20:32:06.025" endtime="20200315 20:32:07.026"></status>
+<msg timestamp="20200316 16:39:14.095" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200316 16:39:13.092" endtime="20200316 16:39:14.095"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:05.393" endtime="20200315 20:32:07.026"></status>
+<status status="PASS" starttime="20200316 16:39:12.461" endtime="20200316 16:39:14.095"></status>
 </kw>
 <kw name="Input Google Auth In Login On Me Page" library="me">
 <arguments>
@@ -143,17 +143,17 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>${key}</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:07.027" endtime="20200315 20:32:07.027"></status>
+<status status="PASS" starttime="20200316 16:39:14.096" endtime="20200316 16:39:14.096"></status>
 </kw>
-<msg timestamp="20200315 20:32:07.028" level="INFO">${token} = 240174</msg>
-<status status="PASS" starttime="20200315 20:32:07.027" endtime="20200315 20:32:07.028"></status>
+<msg timestamp="20200316 16:39:14.097" level="INFO">${token} = 805659</msg>
+<status status="PASS" starttime="20200316 16:39:14.096" endtime="20200316 16:39:14.097"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_vertify</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:07.028" endtime="20200315 20:32:08.079"></status>
+<status status="PASS" starttime="20200316 16:39:14.097" endtime="20200316 16:39:14.979"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -161,10 +161,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_vertify</arg>
 <arg>${token}</arg>
 </arguments>
-<msg timestamp="20200315 20:32:08.080" level="INFO">Typing text '240174' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_vertify'</msg>
-<status status="PASS" starttime="20200315 20:32:08.079" endtime="20200315 20:32:08.667"></status>
+<msg timestamp="20200316 16:39:14.980" level="INFO">Typing text '805659' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_vertify'</msg>
+<status status="PASS" starttime="20200316 16:39:14.979" endtime="20200316 16:39:15.667"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:07.026" endtime="20200315 20:32:08.667"></status>
+<status status="PASS" starttime="20200316 16:39:14.095" endtime="20200316 16:39:15.668"></status>
 </kw>
 <kw name="Click Login Button In Auth On Me Page" library="me">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
@@ -172,336 +172,1038 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/acb_commit</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:08.667" endtime="20200315 20:32:09.227"></status>
+<status status="PASS" starttime="20200316 16:39:15.668" endtime="20200316 16:39:16.211"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/acb_commit</arg>
 </arguments>
-<msg timestamp="20200315 20:32:09.228" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_commit'.</msg>
-<status status="PASS" starttime="20200315 20:32:09.227" endtime="20200315 20:32:09.293"></status>
+<msg timestamp="20200316 16:39:16.215" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_commit'.</msg>
+<status status="PASS" starttime="20200316 16:39:16.212" endtime="20200316 16:39:16.306"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:08.667" endtime="20200315 20:32:09.293"></status>
+<status status="PASS" starttime="20200316 16:39:15.668" endtime="20200316 16:39:16.307"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:31:33.987" endtime="20200315 20:32:09.293"></status>
-</kw>
-<kw name="Goto Home Tab On Home Page" library="navigation">
-<doc>Home 分頁</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_home</arg>
-</arguments>
-<status status="PASS" starttime="20200315 20:32:09.294" endtime="20200315 20:32:11.607"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_home</arg>
-</arguments>
-<msg timestamp="20200315 20:32:11.608" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_home'.</msg>
-<status status="PASS" starttime="20200315 20:32:11.607" endtime="20200315 20:32:11.757"></status>
-</kw>
-<status status="PASS" starttime="20200315 20:32:09.294" endtime="20200315 20:32:11.757"></status>
+<status status="PASS" starttime="20200316 16:38:53.013" endtime="20200316 16:39:16.307"></status>
 </kw>
 <doc>登入ACE 使用 google 驗證</doc>
-<status status="PASS" starttime="20200315 20:31:33.985" endtime="20200315 20:32:11.758" critical="yes"></status>
+<status status="PASS" starttime="20200316 16:38:53.012" endtime="20200316 16:39:16.307" critical="yes"></status>
 </test>
-<test id="s1-t2" name="Test Click Home Page">
-<kw name="Click First Exchange Banner On Home Page" library="home">
+<test id="s1-t2" name="Test Buy On Trade Page">
+<kw name="Goto Trading Tab On Home Page" library="navigation">
+<doc>交易 分頁</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/first']/*[@index='2']</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/navigation_trading</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:11.761" endtime="20200315 20:32:13.135"></status>
+<status status="PASS" starttime="20200316 16:39:16.309" endtime="20200316 16:39:17.970"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/first']/*[@index='2']</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/navigation_trading</arg>
 </arguments>
-<msg timestamp="20200315 20:32:13.137" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/first']/*[@index='2']'.</msg>
-<status status="PASS" starttime="20200315 20:32:13.136" endtime="20200315 20:32:13.814"></status>
+<msg timestamp="20200316 16:39:17.971" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_trading'.</msg>
+<status status="PASS" starttime="20200316 16:39:17.970" endtime="20200316 16:39:18.187"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:11.760" endtime="20200315 20:32:13.815"></status>
+<status status="PASS" starttime="20200316 16:39:16.309" endtime="20200316 16:39:18.187"></status>
 </kw>
-<kw name="Click Back Button On Home Page" library="home">
+<kw name="Choose Currency To Currency Exchange" library="trade">
+<doc>左上角的匯率-&gt;上面欄位幣值-&gt;底下的詳情</doc>
+<arguments>
+<arg>TWD</arg>
+<arg>ETH</arg>
+</arguments>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvBack</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/tvTradingCurrencyName</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:13.815" endtime="20200315 20:32:15.961"></status>
+<status status="PASS" starttime="20200316 16:39:18.189" endtime="20200316 16:39:19.827"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvBack</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/tvTradingCurrencyName</arg>
 </arguments>
-<msg timestamp="20200315 20:32:15.963" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tvBack'.</msg>
-<status status="PASS" starttime="20200315 20:32:15.962" endtime="20200315 20:32:16.199"></status>
-</kw>
-<status status="PASS" starttime="20200315 20:32:13.815" endtime="20200315 20:32:16.199"></status>
-</kw>
-<kw name="Click Second Exchange Banner On Home Page" library="home">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/second']/*[@index='2']</arg>
-</arguments>
-<status status="PASS" starttime="20200315 20:32:16.201" endtime="20200315 20:32:17.800"></status>
+<msg timestamp="20200316 16:39:19.829" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tvTradingCurrencyName'.</msg>
+<status status="PASS" starttime="20200316 16:39:19.828" endtime="20200316 16:39:19.986"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/second']/*[@index='2']</arg>
+<arg>//*[@resource-id='android:id/text1' and @text='${currency1}']</arg>
 </arguments>
-<msg timestamp="20200315 20:32:17.802" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/second']/*[@index='2']'.</msg>
-<status status="PASS" starttime="20200315 20:32:17.800" endtime="20200315 20:32:18.364"></status>
-</kw>
-<status status="PASS" starttime="20200315 20:32:16.200" endtime="20200315 20:32:18.364"></status>
-</kw>
-<kw name="Click Back Button On Home Page" library="home">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvBack</arg>
-</arguments>
-<status status="PASS" starttime="20200315 20:32:18.369" endtime="20200315 20:32:19.665"></status>
+<msg timestamp="20200316 16:39:19.988" level="INFO">Clicking element '//*[@resource-id='android:id/text1' and @text='TWD']'.</msg>
+<status status="PASS" starttime="20200316 16:39:19.986" endtime="20200316 16:39:21.021"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvBack</arg>
+<arg>//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout']/*[@text='${currency2}']</arg>
 </arguments>
-<msg timestamp="20200315 20:32:19.667" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tvBack'.</msg>
-<status status="PASS" starttime="20200315 20:32:19.666" endtime="20200315 20:32:19.750"></status>
+<msg timestamp="20200316 16:39:21.023" level="INFO">Clicking element '//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout']/*[@text='ETH']'.</msg>
+<status status="PASS" starttime="20200316 16:39:21.021" endtime="20200316 16:39:22.253"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:18.369" endtime="20200315 20:32:19.751"></status>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>選擇 ${currency1} -&gt; ${currency2} 交易</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200316 16:39:22.254" level="WARN">選擇 TWD -&gt; ETH 交易</msg>
+<status status="PASS" starttime="20200316 16:39:22.253" endtime="20200316 16:39:22.254"></status>
 </kw>
-<kw name="Click Third Exchange Banner On Home Page" library="home">
+<status status="PASS" starttime="20200316 16:39:18.188" endtime="20200316 16:39:22.254"></status>
+</kw>
+<kw name="Click BuyIn On Trade Page" library="trade">
+<doc>買入 分頁</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/third']/*[@index='2']</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/tvBuyBtn</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:19.764" endtime="20200315 20:32:21.063"></status>
+<status status="PASS" starttime="20200316 16:39:22.257" endtime="20200316 16:39:22.968"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/third']/*[@index='2']</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/tvBuyBtn</arg>
 </arguments>
-<msg timestamp="20200315 20:32:21.064" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/third']/*[@index='2']'.</msg>
-<status status="PASS" starttime="20200315 20:32:21.063" endtime="20200315 20:32:21.596"></status>
+<msg timestamp="20200316 16:39:22.972" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tvBuyBtn'.</msg>
+<status status="PASS" starttime="20200316 16:39:22.968" endtime="20200316 16:39:23.136"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:19.764" endtime="20200315 20:32:21.596"></status>
+<status status="PASS" starttime="20200316 16:39:22.255" endtime="20200316 16:39:23.137"></status>
 </kw>
-<kw name="Click Back Button On Home Page" library="home">
+<kw name="Input Price On Trade Page" library="trade">
+<doc>單價欄位</doc>
+<arguments>
+<arg>9999</arg>
+</arguments>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvBack</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/etTradingPrice</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:21.598" endtime="20200315 20:32:22.979"></status>
+<status status="PASS" starttime="20200316 16:39:23.138" endtime="20200316 16:39:23.752"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/etTradingPrice</arg>
+<arg>${price}</arg>
+</arguments>
+<msg timestamp="20200316 16:39:23.754" level="INFO">Typing text '9999' into text field 'id=com.asiainnovations.ace.taiwan:id/etTradingPrice'</msg>
+<status status="PASS" starttime="20200316 16:39:23.752" endtime="20200316 16:39:24.411"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:23.137" endtime="20200316 16:39:24.411"></status>
+</kw>
+<kw name="Click Up Button In Price On Trade Page" library="trade">
+<doc>單價欄位＋</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<kw name="${index} IN RANGE [ ${times} ]" type="for">
+<kw name="${index} = 0" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:24.412" endtime="20200316 16:39:25.016"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvBack</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
 </arguments>
-<msg timestamp="20200315 20:32:22.980" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tvBack'.</msg>
-<status status="PASS" starttime="20200315 20:32:22.979" endtime="20200315 20:32:23.083"></status>
+<msg timestamp="20200316 16:39:25.018" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd1'.</msg>
+<status status="PASS" starttime="20200316 16:39:25.016" endtime="20200316 16:39:25.671"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:21.598" endtime="20200315 20:32:23.083"></status>
+<status status="PASS" starttime="20200316 16:39:24.412" endtime="20200316 16:39:25.671"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
+<kw name="${index} = 1" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>2s</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
 </arguments>
-<msg timestamp="20200315 20:32:25.086" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200315 20:32:23.084" endtime="20200315 20:32:25.086"></status>
+<status status="PASS" starttime="20200316 16:39:25.671" endtime="20200316 16:39:25.807"></status>
 </kw>
-<kw name="Swipe Right To Left On Home Page" library="home">
-<kw name="Swipe" library="AppiumLibrary">
-<doc>Swipe from one point to another point, for an optional duration.</doc>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>1000</arg>
-<arg>560</arg>
-<arg>0</arg>
-<arg>560</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<msg timestamp="20200316 16:39:25.809" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd1'.</msg>
+<status status="PASS" starttime="20200316 16:39:25.807" endtime="20200316 16:39:25.969"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:25.671" endtime="20200316 16:39:25.969"></status>
+</kw>
+<kw name="${index} = 2" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:25.970" endtime="20200316 16:39:26.564"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<msg timestamp="20200316 16:39:26.566" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd1'.</msg>
+<status status="PASS" starttime="20200316 16:39:26.564" endtime="20200316 16:39:26.720"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:25.970" endtime="20200316 16:39:26.720"></status>
+</kw>
+<kw name="${index} = 3" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:26.721" endtime="20200316 16:39:27.325"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<msg timestamp="20200316 16:39:27.327" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd1'.</msg>
+<status status="PASS" starttime="20200316 16:39:27.326" endtime="20200316 16:39:27.487"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:26.720" endtime="20200316 16:39:27.487"></status>
+</kw>
+<kw name="${index} = 4" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:27.487" endtime="20200316 16:39:28.087"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<msg timestamp="20200316 16:39:28.089" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd1'.</msg>
+<status status="PASS" starttime="20200316 16:39:28.087" endtime="20200316 16:39:28.738"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:27.487" endtime="20200316 16:39:28.739"></status>
+</kw>
+<kw name="${index} = 5" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:28.739" endtime="20200316 16:39:28.861"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<msg timestamp="20200316 16:39:28.863" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd1'.</msg>
+<status status="PASS" starttime="20200316 16:39:28.862" endtime="20200316 16:39:29.706"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:28.739" endtime="20200316 16:39:29.706"></status>
+</kw>
+<kw name="${index} = 6" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:29.707" endtime="20200316 16:39:30.307"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<msg timestamp="20200316 16:39:30.309" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd1'.</msg>
+<status status="PASS" starttime="20200316 16:39:30.307" endtime="20200316 16:39:30.969"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:29.707" endtime="20200316 16:39:30.970"></status>
+</kw>
+<kw name="${index} = 7" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:30.970" endtime="20200316 16:39:31.086"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<msg timestamp="20200316 16:39:31.088" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd1'.</msg>
+<status status="PASS" starttime="20200316 16:39:31.086" endtime="20200316 16:39:31.239"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:30.970" endtime="20200316 16:39:31.239"></status>
+</kw>
+<kw name="${index} = 8" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:31.239" endtime="20200316 16:39:31.831"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<msg timestamp="20200316 16:39:31.833" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd1'.</msg>
+<status status="PASS" starttime="20200316 16:39:31.831" endtime="20200316 16:39:32.490"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:31.239" endtime="20200316 16:39:32.490"></status>
+</kw>
+<kw name="${index} = 9" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:32.490" endtime="20200316 16:39:32.613"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
+</arguments>
+<msg timestamp="20200316 16:39:32.615" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd1'.</msg>
+<status status="PASS" starttime="20200316 16:39:32.613" endtime="20200316 16:39:32.752"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:32.490" endtime="20200316 16:39:32.752"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:24.412" endtime="20200316 16:39:32.752"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:24.411" endtime="20200316 16:39:32.752"></status>
+</kw>
+<kw name="Input Amount On Trade Page" library="trade">
+<doc>數量欄位</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/etTradingNum</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:32.754" endtime="20200316 16:39:33.349"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/etTradingNum</arg>
+<arg>${amount}</arg>
+</arguments>
+<msg timestamp="20200316 16:39:33.351" level="INFO">Typing text '3' into text field 'id=com.asiainnovations.ace.taiwan:id/etTradingNum'</msg>
+<status status="PASS" starttime="20200316 16:39:33.350" endtime="20200316 16:39:33.529"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:32.753" endtime="20200316 16:39:33.529"></status>
+</kw>
+<kw name="Click Up Button In Amount On Trade Page" library="trade">
+<doc>數量欄位+</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<kw name="${index} IN RANGE [ ${times} ]" type="for">
+<kw name="${index} = 0" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:33.532" endtime="20200316 16:39:34.231"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:34.235" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd2'.</msg>
+<status status="PASS" starttime="20200316 16:39:34.232" endtime="20200316 16:39:34.388"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:33.531" endtime="20200316 16:39:34.388"></status>
+</kw>
+<kw name="${index} = 1" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:34.388" endtime="20200316 16:39:35.083"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:35.084" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd2'.</msg>
+<status status="PASS" starttime="20200316 16:39:35.083" endtime="20200316 16:39:35.817"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:34.388" endtime="20200316 16:39:35.817"></status>
+</kw>
+<kw name="${index} = 2" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:35.818" endtime="20200316 16:39:35.936"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:35.938" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd2'.</msg>
+<status status="PASS" starttime="20200316 16:39:35.936" endtime="20200316 16:39:36.088"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:35.817" endtime="20200316 16:39:36.088"></status>
+</kw>
+<kw name="${index} = 3" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:36.089" endtime="20200316 16:39:36.781"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:36.783" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd2'.</msg>
+<status status="PASS" starttime="20200316 16:39:36.782" endtime="20200316 16:39:36.919"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:36.088" endtime="20200316 16:39:36.919"></status>
+</kw>
+<kw name="${index} = 4" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:36.920" endtime="20200316 16:39:37.613"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:37.614" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd2'.</msg>
+<status status="PASS" starttime="20200316 16:39:37.613" endtime="20200316 16:39:38.371"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:36.919" endtime="20200316 16:39:38.371"></status>
+</kw>
+<kw name="${index} = 5" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:38.371" endtime="20200316 16:39:38.499"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:38.501" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd2'.</msg>
+<status status="PASS" starttime="20200316 16:39:38.499" endtime="20200316 16:39:38.653"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:38.371" endtime="20200316 16:39:38.654"></status>
+</kw>
+<kw name="${index} = 6" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:38.654" endtime="20200316 16:39:39.349"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:39.351" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd2'.</msg>
+<status status="PASS" starttime="20200316 16:39:39.349" endtime="20200316 16:39:40.091"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:38.654" endtime="20200316 16:39:40.091"></status>
+</kw>
+<kw name="${index} = 7" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:40.091" endtime="20200316 16:39:40.225"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:40.227" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd2'.</msg>
+<status status="PASS" starttime="20200316 16:39:40.225" endtime="20200316 16:39:40.388"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:40.091" endtime="20200316 16:39:40.389"></status>
+</kw>
+<kw name="${index} = 8" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:40.389" endtime="20200316 16:39:41.066"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:41.068" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd2'.</msg>
+<status status="PASS" starttime="20200316 16:39:41.066" endtime="20200316 16:39:41.799"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:40.389" endtime="20200316 16:39:41.799"></status>
+</kw>
+<kw name="${index} = 9" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:41.800" endtime="20200316 16:39:41.938"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:41.941" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd2'.</msg>
+<status status="PASS" starttime="20200316 16:39:41.939" endtime="20200316 16:39:42.103"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:41.800" endtime="20200316 16:39:42.104"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:33.531" endtime="20200316 16:39:42.104"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:33.530" endtime="20200316 16:39:42.104"></status>
+</kw>
+<kw name="Click Buy Button On Trade Page" library="trade">
+<doc>買 按鈕</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/btnPostOrder</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:42.105" endtime="20200316 16:39:42.795"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/btnPostOrder</arg>
+</arguments>
+<msg timestamp="20200316 16:39:42.797" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/btnPostOrder'.</msg>
+<status status="PASS" starttime="20200316 16:39:42.796" endtime="20200316 16:39:42.936"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:42.104" endtime="20200316 16:39:42.937"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:16.308" endtime="20200316 16:39:42.937" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Test Sell On Trade Page">
+<kw name="Click SellOut On Trade Page" library="trade">
+<doc>賣出 分頁</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/tvSellBtn</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:42.939" endtime="20200316 16:39:44.710"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/tvSellBtn</arg>
+</arguments>
+<msg timestamp="20200316 16:39:44.712" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tvSellBtn'.</msg>
+<status status="PASS" starttime="20200316 16:39:44.711" endtime="20200316 16:39:45.442"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:42.939" endtime="20200316 16:39:45.442"></status>
+</kw>
+<kw name="Input Price On Trade Page" library="trade">
+<doc>單價欄位</doc>
+<arguments>
 <arg>5000</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:25.087" endtime="20200315 20:32:28.282"></status>
-</kw>
-<status status="PASS" starttime="20200315 20:32:25.086" endtime="20200315 20:32:28.282"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2s</arg>
-</arguments>
-<msg timestamp="20200315 20:32:30.284" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200315 20:32:28.282" endtime="20200315 20:32:30.284"></status>
-</kw>
-<kw name="Click First Exchange Banner On Home Page" library="home">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/first']/*[@index='2']</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/etTradingPrice</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:30.285" endtime="20200315 20:32:30.820"></status>
+<status status="PASS" starttime="20200316 16:39:45.443" endtime="20200316 16:39:45.563"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/etTradingPrice</arg>
+<arg>${price}</arg>
+</arguments>
+<msg timestamp="20200316 16:39:45.565" level="INFO">Typing text '5000' into text field 'id=com.asiainnovations.ace.taiwan:id/etTradingPrice'</msg>
+<status status="PASS" starttime="20200316 16:39:45.563" endtime="20200316 16:39:46.199"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:45.442" endtime="20200316 16:39:46.200"></status>
+</kw>
+<kw name="Click Down Button In Price On Trade Page" library="trade">
+<doc>單價欄位-</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<kw name="${index} IN RANGE [ ${times} ]" type="for">
+<kw name="${index} = 0" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:46.203" endtime="20200316 16:39:46.765"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/first']/*[@index='2']</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
 </arguments>
-<msg timestamp="20200315 20:32:30.821" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/first']/*[@index='2']'.</msg>
-<status status="PASS" starttime="20200315 20:32:30.820" endtime="20200315 20:32:31.348"></status>
+<msg timestamp="20200316 16:39:46.767" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub1'.</msg>
+<status status="PASS" starttime="20200316 16:39:46.765" endtime="20200316 16:39:46.921"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:30.284" endtime="20200315 20:32:31.348"></status>
+<status status="PASS" starttime="20200316 16:39:46.203" endtime="20200316 16:39:46.921"></status>
 </kw>
-<kw name="Click Back Button On Home Page" library="home">
+<kw name="${index} = 1" type="foritem">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvBack</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:31.349" endtime="20200315 20:32:32.760"></status>
+<status status="PASS" starttime="20200316 16:39:46.921" endtime="20200316 16:39:47.525"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvBack</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
 </arguments>
-<msg timestamp="20200315 20:32:32.761" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tvBack'.</msg>
-<status status="PASS" starttime="20200315 20:32:32.760" endtime="20200315 20:32:32.893"></status>
+<msg timestamp="20200316 16:39:47.526" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub1'.</msg>
+<status status="PASS" starttime="20200316 16:39:47.525" endtime="20200316 16:39:47.754"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:31.349" endtime="20200315 20:32:32.893"></status>
+<status status="PASS" starttime="20200316 16:39:46.921" endtime="20200316 16:39:47.754"></status>
 </kw>
-<kw name="Click Second Exchange Banner On Home Page" library="home">
+<kw name="${index} = 2" type="foritem">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/second']/*[@index='2']</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:32.899" endtime="20200315 20:32:34.245"></status>
+<status status="PASS" starttime="20200316 16:39:47.755" endtime="20200316 16:39:48.340"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/second']/*[@index='2']</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
 </arguments>
-<msg timestamp="20200315 20:32:34.247" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/second']/*[@index='2']'.</msg>
-<status status="PASS" starttime="20200315 20:32:34.245" endtime="20200315 20:32:34.744"></status>
+<msg timestamp="20200316 16:39:48.344" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub1'.</msg>
+<status status="PASS" starttime="20200316 16:39:48.341" endtime="20200316 16:39:48.507"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:32.899" endtime="20200315 20:32:34.744"></status>
+<status status="PASS" starttime="20200316 16:39:47.754" endtime="20200316 16:39:48.507"></status>
 </kw>
-<kw name="Click Back Button On Home Page" library="home">
+<kw name="${index} = 3" type="foritem">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvBack</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:34.746" endtime="20200315 20:32:36.009"></status>
+<status status="PASS" starttime="20200316 16:39:48.508" endtime="20200316 16:39:49.090"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvBack</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
 </arguments>
-<msg timestamp="20200315 20:32:36.010" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tvBack'.</msg>
-<status status="PASS" starttime="20200315 20:32:36.009" endtime="20200315 20:32:36.077"></status>
+<msg timestamp="20200316 16:39:49.091" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub1'.</msg>
+<status status="PASS" starttime="20200316 16:39:49.090" endtime="20200316 16:39:49.269"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:34.746" endtime="20200315 20:32:36.077"></status>
+<status status="PASS" starttime="20200316 16:39:48.508" endtime="20200316 16:39:49.269"></status>
 </kw>
-<kw name="Click Third Exchange Banner On Home Page" library="home">
+<kw name="${index} = 4" type="foritem">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/third']/*[@index='2']</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:36.078" endtime="20200315 20:32:37.495"></status>
+<status status="PASS" starttime="20200316 16:39:49.269" endtime="20200316 16:39:49.964"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/third']/*[@index='2']</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
 </arguments>
-<msg timestamp="20200315 20:32:37.496" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/third']/*[@index='2']'.</msg>
-<status status="PASS" starttime="20200315 20:32:37.495" endtime="20200315 20:32:38.036"></status>
+<msg timestamp="20200316 16:39:49.966" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub1'.</msg>
+<status status="PASS" starttime="20200316 16:39:49.965" endtime="20200316 16:39:50.101"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:36.078" endtime="20200315 20:32:38.036"></status>
+<status status="PASS" starttime="20200316 16:39:49.269" endtime="20200316 16:39:50.101"></status>
 </kw>
-<kw name="Click Back Button On Home Page" library="home">
+<kw name="${index} = 5" type="foritem">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvBack</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:38.042" endtime="20200315 20:32:39.267"></status>
+<status status="PASS" starttime="20200316 16:39:50.101" endtime="20200316 16:39:50.690"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvBack</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
 </arguments>
-<msg timestamp="20200315 20:32:39.268" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tvBack'.</msg>
-<status status="PASS" starttime="20200315 20:32:39.267" endtime="20200315 20:32:39.374"></status>
+<msg timestamp="20200316 16:39:50.692" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub1'.</msg>
+<status status="PASS" starttime="20200316 16:39:50.690" endtime="20200316 16:39:50.856"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:38.041" endtime="20200315 20:32:39.374"></status>
+<status status="PASS" starttime="20200316 16:39:50.101" endtime="20200316 16:39:50.856"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
+<kw name="${index} = 6" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>2s</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
 </arguments>
-<msg timestamp="20200315 20:32:41.391" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200315 20:32:39.389" endtime="20200315 20:32:41.391"></status>
+<status status="PASS" starttime="20200316 16:39:50.857" endtime="20200316 16:39:51.439"></status>
 </kw>
-<kw name="Swipe Left To Right On Home Page" library="home">
-<kw name="Swipe" library="AppiumLibrary">
-<doc>Swipe from one point to another point, for an optional duration.</doc>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>0</arg>
-<arg>560</arg>
-<arg>1000</arg>
-<arg>560</arg>
-<arg>5000</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
 </arguments>
-<status status="PASS" starttime="20200315 20:32:41.392" endtime="20200315 20:32:44.610"></status>
+<msg timestamp="20200316 16:39:51.441" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub1'.</msg>
+<status status="PASS" starttime="20200316 16:39:51.439" endtime="20200316 16:39:51.601"></status>
 </kw>
-<status status="PASS" starttime="20200315 20:32:41.391" endtime="20200315 20:32:44.610"></status>
+<status status="PASS" starttime="20200316 16:39:50.856" endtime="20200316 16:39:51.601"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
+<kw name="${index} = 7" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>2s</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
 </arguments>
-<msg timestamp="20200315 20:32:46.613" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200315 20:32:44.611" endtime="20200315 20:32:46.613"></status>
+<status status="PASS" starttime="20200316 16:39:51.601" endtime="20200316 16:39:52.203"></status>
 </kw>
-<doc>切換到 首面 點擊 各個頁面</doc>
-<status status="PASS" starttime="20200315 20:32:11.759" endtime="20200315 20:32:46.614" critical="yes"></status>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
+</arguments>
+<msg timestamp="20200316 16:39:52.205" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub1'.</msg>
+<status status="PASS" starttime="20200316 16:39:52.203" endtime="20200316 16:39:52.355"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:51.601" endtime="20200316 16:39:52.355"></status>
+</kw>
+<kw name="${index} = 8" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:52.355" endtime="20200316 16:39:52.944"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
+</arguments>
+<msg timestamp="20200316 16:39:52.946" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub1'.</msg>
+<status status="PASS" starttime="20200316 16:39:52.944" endtime="20200316 16:39:53.101"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:52.355" endtime="20200316 16:39:53.101"></status>
+</kw>
+<kw name="${index} = 9" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:53.101" endtime="20200316 16:39:53.690"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
+</arguments>
+<msg timestamp="20200316 16:39:53.692" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub1'.</msg>
+<status status="PASS" starttime="20200316 16:39:53.690" endtime="20200316 16:39:53.790"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:53.101" endtime="20200316 16:39:53.790"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:46.202" endtime="20200316 16:39:53.790"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:46.200" endtime="20200316 16:39:53.790"></status>
+</kw>
+<kw name="Input Amount On Trade Page" library="trade">
+<doc>數量欄位</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/etTradingNum</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:53.792" endtime="20200316 16:39:54.390"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/etTradingNum</arg>
+<arg>${amount}</arg>
+</arguments>
+<msg timestamp="20200316 16:39:54.392" level="INFO">Typing text '1' into text field 'id=com.asiainnovations.ace.taiwan:id/etTradingNum'</msg>
+<status status="PASS" starttime="20200316 16:39:54.390" endtime="20200316 16:39:54.549"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:53.791" endtime="20200316 16:39:54.549"></status>
+</kw>
+<kw name="Click Down Button In Amount On Trade Page" library="trade">
+<doc>數量欄位-</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<kw name="${index} IN RANGE [ ${times} ]" type="for">
+<kw name="${index} = 0" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:54.552" endtime="20200316 16:39:55.247"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:55.249" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub2'.</msg>
+<status status="PASS" starttime="20200316 16:39:55.247" endtime="20200316 16:39:55.418"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:54.551" endtime="20200316 16:39:55.418"></status>
+</kw>
+<kw name="${index} = 1" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:55.418" endtime="20200316 16:39:56.095"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:56.097" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub2'.</msg>
+<status status="PASS" starttime="20200316 16:39:56.095" endtime="20200316 16:39:56.292"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:55.418" endtime="20200316 16:39:56.292"></status>
+</kw>
+<kw name="${index} = 2" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:56.292" endtime="20200316 16:39:56.968"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:56.970" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub2'.</msg>
+<status status="PASS" starttime="20200316 16:39:56.969" endtime="20200316 16:39:57.704"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:56.292" endtime="20200316 16:39:57.704"></status>
+</kw>
+<kw name="${index} = 3" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:57.704" endtime="20200316 16:39:57.821"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:57.823" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub2'.</msg>
+<status status="PASS" starttime="20200316 16:39:57.821" endtime="20200316 16:39:57.992"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:57.704" endtime="20200316 16:39:57.992"></status>
+</kw>
+<kw name="${index} = 4" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:57.994" endtime="20200316 16:39:58.667"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:58.669" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub2'.</msg>
+<status status="PASS" starttime="20200316 16:39:58.667" endtime="20200316 16:39:58.824"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:57.992" endtime="20200316 16:39:58.824"></status>
+</kw>
+<kw name="${index} = 5" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:58.824" endtime="20200316 16:39:59.493"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<msg timestamp="20200316 16:39:59.496" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub2'.</msg>
+<status status="PASS" starttime="20200316 16:39:59.494" endtime="20200316 16:39:59.619"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:58.824" endtime="20200316 16:39:59.620"></status>
+</kw>
+<kw name="${index} = 6" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:39:59.620" endtime="20200316 16:40:00.419"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<msg timestamp="20200316 16:40:00.422" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub2'.</msg>
+<status status="PASS" starttime="20200316 16:40:00.419" endtime="20200316 16:40:00.570"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:59.620" endtime="20200316 16:40:00.570"></status>
+</kw>
+<kw name="${index} = 7" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:40:00.570" endtime="20200316 16:40:01.341"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<msg timestamp="20200316 16:40:01.344" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub2'.</msg>
+<status status="PASS" starttime="20200316 16:40:01.342" endtime="20200316 16:40:01.502"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:40:00.570" endtime="20200316 16:40:01.503"></status>
+</kw>
+<kw name="${index} = 8" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:40:01.503" endtime="20200316 16:40:02.169"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<msg timestamp="20200316 16:40:02.172" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub2'.</msg>
+<status status="PASS" starttime="20200316 16:40:02.169" endtime="20200316 16:40:02.329"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:40:01.503" endtime="20200316 16:40:02.329"></status>
+</kw>
+<kw name="${index} = 9" type="foritem">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:40:02.329" endtime="20200316 16:40:03.067"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
+</arguments>
+<msg timestamp="20200316 16:40:03.070" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub2'.</msg>
+<status status="PASS" starttime="20200316 16:40:03.068" endtime="20200316 16:40:03.245"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:40:02.329" endtime="20200316 16:40:03.245"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:54.551" endtime="20200316 16:40:03.245"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:54.550" endtime="20200316 16:40:03.245"></status>
+</kw>
+<kw name="Click Sell Button On Trade Page" library="trade">
+<doc>賣 按鈕</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/btnPostOrder</arg>
+</arguments>
+<status status="PASS" starttime="20200316 16:40:03.247" endtime="20200316 16:40:03.922"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/btnPostOrder</arg>
+</arguments>
+<msg timestamp="20200316 16:40:03.924" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/btnPostOrder'.</msg>
+<status status="PASS" starttime="20200316 16:40:03.922" endtime="20200316 16:40:04.070"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:40:03.246" endtime="20200316 16:40:04.070"></status>
+</kw>
+<status status="PASS" starttime="20200316 16:39:42.938" endtime="20200316 16:40:04.070" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200315 20:31:33.668" endtime="20200315 20:32:46.615"></status>
+<status status="PASS" starttime="20200316 16:38:51.761" endtime="20200316 16:40:04.071"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0">Critical Tests</stat>
-<stat pass="2" fail="0">All Tests</stat>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" id="s1" name="Test Login Click Home">Test Login Click Home</stat>
+<stat pass="3" fail="0" id="s1" name="Test Login Click Trade">Test Login Click Trade</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20200315 20:31:33.659" level="WARN">Collapsing consecutive whitespace during parsing is deprecated. Fix ' #' in file 'D:\GitHub\workspace\Python\Ace\Android\test_login_click_home.robot' on line 64.</msg>
+<msg timestamp="20200316 16:39:22.254" level="WARN">選擇 TWD -&gt; ETH 交易</msg>
 </errors>
 </robot>

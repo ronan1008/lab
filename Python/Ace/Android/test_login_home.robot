@@ -46,7 +46,9 @@ Test Click Home Page
     Sleep    2s
     Swipe Left To Right On Home Page
     Sleep    2s
+    Click Eye On Home Page
 
+    
 *** comment ***
       Click Back Button On Home Page
       Click Top Banner On Home Page
