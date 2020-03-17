@@ -4,7 +4,7 @@ Resource    ./library/navigation.robot
 Resource    ./library/me.robot
 Resource    ./library/wallet.robot
 Resource    ./settings/login.robot
-
+Default Tags    prod
 *** Variables ***
 
 ${googleAuth}   P4SIVMYMXBJ76PMV
@@ -16,7 +16,8 @@ Test Login Ace On Android
 
 
 Test Cash Withdraw On Wallet Page 
-    [Documentation]    錢包->提領 
+    [Documentation]    錢包->提領
+    [tags]    stage    dev
     Goto Wallet Tab On Home Page
     Click Withdraw Cash On Trade Page
     Choose Bank In Withdraw Cash On Trade Page
@@ -52,6 +53,7 @@ Test Show Charge Coin Info
 
 Test Show Coin Withdraw On Wallet Page
     [Documentation]    錢包->提幣
+    [tags]    stage    dev
     Click Withdraw Coin On Trade Page
     Choose Currency In Withdraw Coin On Trade Page    BTC
     Input Coin Amount In Withdraw Coin On Trade Page    0.0001
