@@ -81,8 +81,8 @@ Click Buy Button On Trade Page
 
 Click Sell Button On Trade Page
     [Documentation]    賣 按鈕
-    Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/btnPostOrder
-    Click Element  id=com.asiainnovations.ace.taiwan:id/btnPostOrder
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/btnPostOrder' and @index='21']
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/btnPostOrder' and @index='21']
 
 
 

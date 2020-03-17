@@ -47,6 +47,12 @@ Input Google Auth In Login On Me Page
     Input Text  id=com.asiainnovations.ace.taiwan:id/aet_vertify    ${token}
 
 Click Login Button In Auth On Me Page
+    [Arguments]	${key}
     Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/acb_commit
     Click Element  id=com.asiainnovations.ace.taiwan:id/acb_commit
-    
+    Sleep    2s
+    ${status}=	Run Keyword And Return Status	Page Should Contain Element	id=com.asiainnovations.ace.taiwan:id/acb_commit
+	Run Keyword If	${status} == True	run keywords
+	...    ${token}=  Run Keyword	get_totp_token	${key}
+    ...    Input Text  id=com.asiainnovations.ace.taiwan:id/aet_vertify    ${token}
+    ...    Click Element  id=com.asiainnovations.ace.taiwan:id/acb_commit
