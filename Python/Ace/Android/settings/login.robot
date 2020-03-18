@@ -15,6 +15,7 @@ ${appActivity}	com.asiainnovations.ace.splash.SplashActivity
 ${googleAuth}   P4SIVMYMXBJ76PMV
 *** Keywords ***
 Open Ace App And Login
+    Set Selenium Speed    0.5s
     Open Application    ${host}    platformName=${platformName}     deviceName=${deviceName}    appPackage=${appPackage}   appActivity=${appActivity}
     Goto Me Tab On Home Page
     Click Mobile Login On Me Page

@@ -52,7 +52,83 @@ Click Login Button In Auth On Me Page
     Click Element  id=com.asiainnovations.ace.taiwan:id/acb_commit
     Sleep    2s
     ${status}=	Run Keyword And Return Status	Page Should Contain Element	id=com.asiainnovations.ace.taiwan:id/acb_commit
-	Run Keyword If	${status} == True	run keywords
-	...    ${token}=  Run Keyword	get_totp_token	${key}
-    ...    Input Text  id=com.asiainnovations.ace.taiwan:id/aet_vertify    ${token}
-    ...    Click Element  id=com.asiainnovations.ace.taiwan:id/acb_commit
+    ${token}=  Run Keyword	get_totp_token	${key}
+	Run Keyword If	${status} == True	Run Keywords
+ 	...	Input Text  id=com.asiainnovations.ace.taiwan:id/aet_vertify    ${token}
+ 	...	AND    Click Element  id=com.asiainnovations.ace.taiwan:id/acb_commit
+
+Click Id Identify Authentication On Me Page
+    [Documentation]    我->身份認證
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/view_left'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/view_left'] 
+
+Click Security Center On Me Page
+    [Documentation]    我->安全中心
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/view_right'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/view_right'] 
+
+Click Login Password In Security Center On Me Page
+    [Documentation]    我->安全中心->登入密碼
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/actv_login_pass'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/actv_login_pass'] 
+
+Click Bank Account On Me Page
+    [Documentation]    我->銀行帳號
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='銀行帳號'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='銀行帳號'] 
+
+Click Coin Withdraw Address On Me Page
+    [Documentation]    我->我的提幣地址
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='我的提幣地址'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='我的提幣地址'] 
+
+Click Invite Back On Me Page
+    [Documentation]    我->邀請返佣
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='邀請返佣'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='邀請返佣'] 
+
+Click Announcement On Me Page
+    [Documentation]    我->公告中心
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='公告中心'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='公告中心']
+
+Click System Settings On Me Page
+    [Documentation]    我->系統設置
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='系統設置'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='系統設置'] 
+
+Click Question Reply On Me Page
+    [Documentation]    我->問題回饋
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='問題回饋'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='問題回饋'] 
+
+Click Facebook On Me Page
+    [Documentation]    我->Facebook
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='FaceBook'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='FaceBook'] 
+
+Click Line On Me Page
+    [Documentation]    我->Line@
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='Line@'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='Line@'] 
+
+Click Medium On Me Page
+    [Documentation]    我->Medium
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='Medium'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='Medium']
+
+Click Telegram On Me Page
+    [Documentation]    我->Telegram
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='Telegram'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='Telegram']
+
+Click Twitter On Me Page
+    [Documentation]    我->Twitter
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='Twitter'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='Twitter'] 
+
+
+Click Back Button On Me Page
+    [Documentation]    返回鍵
+    Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/iv_back    timeout=10
+    Click Element  id=com.asiainnovations.ace.taiwan:id/iv_back

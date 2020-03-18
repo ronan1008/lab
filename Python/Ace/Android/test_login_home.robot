@@ -4,7 +4,7 @@ Resource    ./library/navigation.robot
 Resource    ./library/me.robot
 Resource    ./library/home.robot
 Resource    ./settings/login.robot
-
+Default Tags    prod
 *** Variables ***
 
 *** Test Cases ***
