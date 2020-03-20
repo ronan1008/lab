@@ -25,6 +25,12 @@ Test Login Ace On Android
 Test Click Home Page
     [Documentation]    切換到 首面 點擊 各個頁面
     Goto Home Tab On Home Page
+    
+    Click Price Tab On Home Page
+    Click All Exchange In Price And Gainers Tab On Home Page
+    Click Click Gainers Tab On Home Page
+    Click All Exchange In Price And Gainers Tab On Home Page
+
     Click First Exchange Banner On Home Page
     Click Back Button On Home Page
     Click Second Exchange Banner On Home Page
@@ -48,7 +54,6 @@ Test Click Home Page
     Sleep    2s
     Click Eye On Home Page
 
-    
 *** comment ***
       Click Back Button On Home Page
       Click Top Banner On Home Page

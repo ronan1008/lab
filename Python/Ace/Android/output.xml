@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.6 on darwin)" generated="20200318 17:48:14.580" rpa="false">
-<suite id="s1" name="Test Login Me" source="/Users/shocklee/Documents/github/workspace/Python/Ace/Android/test_login_me.robot">
+<robot generator="Robot 3.1.2 (Python 3.7.6 on darwin)" generated="20200320 18:28:33.382" rpa="false">
+<suite id="s1" name="Test Login Home" source="/Users/shocklee/Documents/github/workspace/Python/Ace/Android/test_login_home.robot">
 <test id="s1-t1" name="Test Login Ace On Android">
 <kw name="Open Ace App And Login" library="login">
-<kw name="Set Selenium Speed">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
 <arguments>
-<arg>0.5s</arg>
+<arg>${host}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>appPackage=${appPackage}</arg>
+<arg>appActivity=${appActivity}</arg>
 </arguments>
-<msg timestamp="20200318 17:48:17.414" level="FAIL">No keyword with name 'Set Selenium Speed' found.</msg>
-<status status="FAIL" starttime="20200318 17:48:17.412" endtime="20200318 17:48:17.414"></status>
+<status status="PASS" starttime="20200320 18:28:35.055" endtime="20200320 18:28:47.263"></status>
 </kw>
-<status status="FAIL" starttime="20200318 17:48:17.387" endtime="20200318 17:48:17.414"></status>
-</kw>
-<doc>登入ACE 使用 google 驗證</doc>
-<status status="FAIL" starttime="20200318 17:48:17.385" endtime="20200318 17:48:17.423" critical="yes">No keyword with name 'Set Selenium Speed' found.</status>
-</test>
-<test id="s1-t2" name="Test Click Me Page">
 <kw name="Goto Me Tab On Home Page" library="navigation">
 <doc>我 分頁</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
@@ -23,34 +26,466 @@
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/navigation_me</arg>
 </arguments>
+<status status="PASS" starttime="20200320 18:28:47.264" endtime="20200320 18:28:49.593"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/navigation_me</arg>
+</arguments>
+<msg timestamp="20200320 18:28:49.595" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_me'.</msg>
+<status status="PASS" starttime="20200320 18:28:49.593" endtime="20200320 18:28:49.745"></status>
+</kw>
+<status status="PASS" starttime="20200320 18:28:47.263" endtime="20200320 18:28:49.746"></status>
+</kw>
+<kw name="Click Mobile Login On Me Page" library="me">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/tv_phone_login</arg>
+</arguments>
+<status status="PASS" starttime="20200320 18:28:49.746" endtime="20200320 18:28:50.525"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/tv_phone_login</arg>
+</arguments>
+<msg timestamp="20200320 18:28:50.527" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tv_phone_login'.</msg>
+<status status="PASS" starttime="20200320 18:28:50.525" endtime="20200320 18:28:51.209"></status>
+</kw>
+<status status="PASS" starttime="20200320 18:28:49.746" endtime="20200320 18:28:51.209"></status>
+</kw>
+<kw name="Input Tel Number In Mobile Login On Me Page" library="me">
+<arguments>
+<arg>0936736561</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/aet_phone</arg>
+</arguments>
+<status status="PASS" starttime="20200320 18:28:51.210" endtime="20200320 18:28:51.269"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/aet_phone</arg>
+<arg>${tel_number}</arg>
+</arguments>
+<msg timestamp="20200320 18:28:51.271" level="INFO">Typing text '0936736561' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_phone'</msg>
+<status status="PASS" starttime="20200320 18:28:51.269" endtime="20200320 18:28:51.376"></status>
+</kw>
+<status status="PASS" starttime="20200320 18:28:51.209" endtime="20200320 18:28:51.376"></status>
+</kw>
+<kw name="Input Password In Mobile Login On Me Page" library="me">
+<arguments>
+<arg>Arborabc1234</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/aet_password</arg>
+</arguments>
+<status status="PASS" starttime="20200320 18:28:51.377" endtime="20200320 18:28:51.910"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/aet_password</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20200320 18:28:51.912" level="INFO">Typing text 'Arborabc1234' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_password'</msg>
+<status status="PASS" starttime="20200320 18:28:51.910" endtime="20200320 18:28:52.010"></status>
+</kw>
+<status status="PASS" starttime="20200320 18:28:51.377" endtime="20200320 18:28:52.011"></status>
+</kw>
+<kw name="Click Login Button In Mobile Login On Me Page" library="me">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/acb_login</arg>
+</arguments>
+<status status="PASS" starttime="20200320 18:28:52.011" endtime="20200320 18:28:52.546"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/acb_login</arg>
+</arguments>
+<msg timestamp="20200320 18:28:52.548" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_login'.</msg>
+<status status="PASS" starttime="20200320 18:28:52.547" endtime="20200320 18:28:52.629"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200320 18:28:53.633" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200320 18:28:52.630" endtime="20200320 18:28:53.633"></status>
+</kw>
+<status status="PASS" starttime="20200320 18:28:52.011" endtime="20200320 18:28:53.633"></status>
+</kw>
+<kw name="Input Google Auth In Login On Me Page" library="me">
+<arguments>
+<arg>${googleAuth}</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>get_totp_token</arg>
+<arg>${key}</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<kw name="Get Totp Token" library="getTotp">
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20200320 18:28:53.635" endtime="20200320 18:28:53.636"></status>
+</kw>
+<msg timestamp="20200320 18:28:53.636" level="INFO">${token} = 983196</msg>
+<status status="PASS" starttime="20200320 18:28:53.634" endtime="20200320 18:28:53.636"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/aet_vertify</arg>
+</arguments>
+<status status="PASS" starttime="20200320 18:28:53.637" endtime="20200320 18:28:54.089"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/aet_vertify</arg>
+<arg>${token}</arg>
+</arguments>
+<msg timestamp="20200320 18:28:54.092" level="INFO">Typing text '983196' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_vertify'</msg>
+<status status="PASS" starttime="20200320 18:28:54.090" endtime="20200320 18:28:54.174"></status>
+</kw>
+<status status="PASS" starttime="20200320 18:28:53.633" endtime="20200320 18:28:54.175"></status>
+</kw>
+<kw name="Click Login Button In Auth On Me Page" library="me">
+<arguments>
+<arg>${googleAuth}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/acb_commit</arg>
+</arguments>
+<status status="PASS" starttime="20200320 18:28:54.175" endtime="20200320 18:28:54.699"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/acb_commit</arg>
+</arguments>
+<msg timestamp="20200320 18:28:54.702" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_commit'.</msg>
+<status status="PASS" starttime="20200320 18:28:54.700" endtime="20200320 18:28:54.782"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200320 18:28:56.785" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200320 18:28:54.783" endtime="20200320 18:28:56.785"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Page Should Contain Element</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/acb_commit</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/acb_commit</arg>
+</arguments>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20200318 17:48:17.511" level="FAIL">No application is open</msg>
-<status status="FAIL" starttime="20200318 17:48:17.460" endtime="20200318 17:48:17.512"></status>
+<msg timestamp="20200320 18:28:57.845" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200320 18:28:57.077" endtime="20200320 18:28:57.845"></status>
 </kw>
-<msg timestamp="20200318 17:48:17.513" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg timestamp="20200318 17:48:17.525" level="FAIL">No application is open</msg>
-<status status="FAIL" starttime="20200318 17:48:17.443" endtime="20200318 17:48:17.525"></status>
+<msg timestamp="20200320 18:28:57.848" level="FAIL">Page should have contained element 'id=com.asiainnovations.ace.taiwan:id/acb_commit' but did not</msg>
+<status status="FAIL" starttime="20200320 18:28:56.786" endtime="20200320 18:28:57.848"></status>
 </kw>
-<status status="FAIL" starttime="20200318 17:48:17.443" endtime="20200318 17:48:17.525"></status>
+<msg timestamp="20200320 18:28:57.848" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20200320 18:28:56.785" endtime="20200320 18:28:57.848"></status>
 </kw>
-<doc>切換到 我 點擊 各個頁面</doc>
-<status status="FAIL" starttime="20200318 17:48:17.439" endtime="20200318 17:48:17.526" critical="yes">No application is open</status>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>get_totp_token</arg>
+<arg>${key}</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<kw name="Get Totp Token" library="getTotp">
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20200320 18:28:57.849" endtime="20200320 18:28:57.849"></status>
+</kw>
+<msg timestamp="20200320 18:28:57.849" level="INFO">${token} = 983196</msg>
+<status status="PASS" starttime="20200320 18:28:57.848" endtime="20200320 18:28:57.849"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${status} == True</arg>
+<arg>Run Keywords</arg>
+<arg>Input Text</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/aet_vertify</arg>
+<arg>${token}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/acb_commit</arg>
+</arguments>
+<status status="PASS" starttime="20200320 18:28:57.850" endtime="20200320 18:28:57.850"></status>
+</kw>
+<status status="PASS" starttime="20200320 18:28:54.175" endtime="20200320 18:28:57.850"></status>
+</kw>
+<status status="PASS" starttime="20200320 18:28:35.054" endtime="20200320 18:28:57.850"></status>
+</kw>
+<doc>登入ACE 使用 google 驗證</doc>
+<tags>
+<tag>prod</tag>
+</tags>
+<status status="PASS" starttime="20200320 18:28:35.053" endtime="20200320 18:28:57.851" critical="yes"></status>
 </test>
-<status status="FAIL" starttime="20200318 17:48:14.586" endtime="20200318 17:48:17.528"></status>
+<test id="s1-t2" name="Test Click Home Page">
+<kw name="Goto Home Tab On Home Page" library="navigation">
+<doc>Home 分頁</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/navigation_home</arg>
+</arguments>
+<status status="PASS" starttime="20200320 18:28:57.853" endtime="20200320 18:28:58.425"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/navigation_home</arg>
+</arguments>
+<msg timestamp="20200320 18:28:58.426" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_home'.</msg>
+<status status="PASS" starttime="20200320 18:28:58.425" endtime="20200320 18:28:58.579"></status>
+</kw>
+<status status="PASS" starttime="20200320 18:28:57.852" endtime="20200320 18:28:58.580"></status>
+</kw>
+<kw name="Click Price Tab On Home Page" library="home">
+<doc>Home-&gt;價格榜</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@class='androidx.appcompat.app.ActionBar.Tab' and @index='0']</arg>
+</arguments>
+<msg timestamp="20200320 18:29:04.047" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2034"&gt;
+  &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2034]" displayed="true"&gt;
+    &lt;android.widget.LinearLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2034]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,2034]" displayed="true"&gt;
+        &lt;android.widget.LinearLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.LinearLayout" text="" resource-id="com.asiainnovations.ace.taiwan:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,2034]" displayed="true"&gt;
+          &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,2034]" displayed="true"&gt;
+            &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" resource-id="com.asiainnovations.ace.taiwan:id/container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,2034]" displayed="true"&gt;
+              &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,2034]" displayed="true"&gt;
+                &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" resource-id="com.asiainnovations.ace.taiwan:id/container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,1962]" displayed="true"&gt;
+                  &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" resource-id="com.asiainnovations.ace.taiwan:id/rl_refresh" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,1962]" displayed="true"&gt;
+                    &lt;android.widget.ScrollView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.ScrollView" text="" resource-id="com.asiainnovations.ace.taiwan:id/nsvScrollView" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="true" selected="false" bounds="[0,86][1080,1962]" displayed="true"&gt;
+                      &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,1962]" displayed="true"&gt;
+                        &lt;android.widget.RelativeLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.RelativeLayout" text="" resource-id="com.asiainnovations.ace.taiwan:id/rlBanner" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,518]" displayed="true"&gt;
+                          &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,518]" displayed="true"&gt;
+                            &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" resource-id="com.asiainnovations.ace.taiwan:id/banner" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,518]" displayed="true"&gt;
+                              &lt;android.widget.RelativeLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.RelativeLayout" text="" resource-id="com.asiainnovations.ace.taiwan:id/bannerContainer" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,518]" displayed="true"&gt;
+                                &lt;androidx.viewpager.widget.ViewPager index="0" package="com.asiainnovations.ace.taiwan" class="androidx.viewpager.widget.ViewPager" text="" resource-id="com.asiainnovations.ace.taiwan:id/bannerViewPager" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="true" selected="false" bounds="[0,86][1080,518]" displayed="true"&gt;
+                                  &lt;android.widget.ImageView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,518]" displayed="true" /&gt;
+                                &lt;/androidx.viewpager.widget.ViewPager&gt;
+                              &lt;/android.widget.RelativeLayout&gt;
+                            &lt;/android.widget.FrameLayout&gt;
+                            &lt;android.widget.ImageView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/aa" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[364,246][716,359]" displayed="true" /&gt;
+                          &lt;/android.view.ViewGroup&gt;
+                        &lt;/android.widget.RelativeLayout&gt;
+                        &lt;android.widget.RelativeLayout index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.RelativeLayout" text="" resource-id="com.asiainnovations.ace.taiwan:id/rl_hot_coin_detail_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,518][1080,833]" displayed="true"&gt;
+                          &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,518][1080,833]" displayed="true"&gt;
+                            &lt;androidx.viewpager.widget.ViewPager index="0" package="com.asiainnovations.ace.taiwan" class="androidx.viewpager.widget.ViewPager" text="" resource-id="com.asiainnovations.ace.taiwan:id/vp_hot_coin_detail" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="true" selected="false" bounds="[0,518][1080,781]" displayed="true"&gt;
+                              &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,518][1080,781]" displayed="true"&gt;
+                                &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" resource-id="com.asiainnovations.ace.taiwan:id/first" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[133,518][323,749]" displayed="true"&gt;
+                                  &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="BTC/TWD" resource-id="com.asiainnovations.ace.taiwan:id/textView53" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[158,550][299,593]" displayed="true" /&gt;
+                                  &lt;android.widget.TextView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="260,722.3" resource-id="com.asiainnovations.ace.taiwan:id/textView41" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[133,598][323,655]" displayed="true" /&gt;
+                                  &lt;android.widget.TextView index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="5.84%" resource-id="com.asiainnovations.ace.taiwan:id/textView40" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[137,681][316,749]" displayed="true" /&gt;
+                                &lt;/android.view.ViewGroup&gt;
+                                &lt;android.view.ViewGroup index="1" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" resource-id="com.asiainnovations.ace.taiwan:id/second" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[456,518][635,749]" displayed="true"&gt;
+                                  &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="ETH/TWD" resource-id="com.asiainnovations.ace.taiwan:id/textView59" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[475,550][616,593]" displayed="true" /&gt;
+                                  &lt;android.widget.TextView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="10,000.0" resource-id="com.asiainnovations.ace.taiwan:id/textView57" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[463,598][629,655]" displayed="true" /&gt;
+                                  &lt;android.widget.TextView index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="37.03%" resource-id="com.asiainnovations.ace.taiwan:id/textView55" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[456,681][635,749]" displayed="true" /&gt;
+                                &lt;/android.view.ViewGroup&gt;
+                                &lt;android.view.ViewGroup index="2" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" resource-id="com.asiainnovations.ace.taiwan:id/third" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[768,518][947,749]" displayed="true"&gt;
+                                  &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="XRP/TWD" resource-id="com.asiainnovations.ace.taiwan:id/textView61" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[787,550][928,593]" displayed="true" /&gt;
+                                  &lt;android.widget.TextView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="12.0" resource-id="com.asiainnovations.ace.taiwan:id/textView52" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[816,598][900,655]" displayed="true" /&gt;
+                                  &lt;android.widget.TextView index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="-14.29%" resource-id="com.asiainnovations.ace.taiwan:id/textView48" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[768,681][947,749]" displayed="true" /&gt;
+                                &lt;/android.view.ViewGroup&gt;
+                              &lt;/android.view.ViewGroup&gt;
+                            &lt;/androidx.viewpager.widget.ViewPager&gt;
+                            &lt;android.view.View index="1" package="com.asiainnovations.ace.taiwan" class="android.view.View" text="" resource-id="com.asiainnovations.ace.taiwan:id/it1" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[524,802][535,813]" displayed="true" /&gt;
+                            &lt;android.view.View index="2" package="com.asiainnovations.ace.taiwan" class="android.view.View" text="" resource-id="com.asiainnovations.ace.taiwan:id/it2" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[546,802][557,813]" displayed="true" /&gt;
+                          &lt;/android.view.ViewGroup&gt;
+                        &lt;/android.widget.RelativeLayout&gt;
+                        &lt;android.view.ViewGroup index="2" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" resource-id="com.asiainnovations.ace.taiwan:id/constraintLayout8" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,833][1080,912]" displayed="true"&gt;
+                          &lt;android.view.View index="0" package="com.asiainnovations.ace.taiwan" class="android.view.View" text="" resource-id="com.asiainnovations.ace.taiwan:id/view11" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,833][1080,836]" displayed="true" /&gt;
+                          &lt;android.widget.ImageView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/imageView10" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,854][100,912]" displayed="true" /&gt;
+                          &lt;android.widget.TextView index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="第二期 開薪日2.0 來啦！" resource-id="com.asiainnovations.ace.taiwan:id/notifi" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[121,858][1038,909]" displayed="true" /&gt;
+                        &lt;/android.view.ViewGroup&gt;
+                        &lt;android.view.ViewGroup index="3" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" resource-id="com.asiainnovations.ace.taiwan:id/gap1" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,912][1080,933]" displayed="true" /&gt;
+                        &lt;android.widget.RelativeLayout index="4" package="com.asiainnovations.ace.taiwan" class="android.widget.RelativeLayout" text="" resource-id="com.asiainnovations.ace.taiwan:id/rl_account_info" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,933][1080,1175]" displayed="true"&gt;
+                          &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,933][1080,1175]" displayed="true"&gt;
+                            &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" resource-id="com.asiainnovations.ace.taiwan:id/cl_login" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,933][1080,1175]" displayed="true"&gt;
+                              &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="我的資產估值" resource-id="com.asiainnovations.ace.taiwan:id/tv_tag" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,954][234,1007]" displayed="true" /&gt;
+                              &lt;android.widget.TextView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="(TWD)" resource-id="com.asiainnovations.ace.taiwan:id/tvLegalCurrency" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[234,954][324,1007]" displayed="true" /&gt;
+                              &lt;android.widget.TextView index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="-----" resource-id="com.asiainnovations.ace.taiwan:id/tv_num_details" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1012][909,1118]" displayed="true" /&gt;
+                              &lt;android.widget.ImageView index="3" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/acibChangeState" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[975,1022][1038,1085]" displayed="true" /&gt;
+                              &lt;android.widget.TextView index="4" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="TWD" resource-id="com.asiainnovations.ace.taiwan:id/tv_money_tag" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1129][110,1175]" displayed="true" /&gt;
+                              &lt;android.widget.TextView index="5" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="-----" resource-id="com.asiainnovations.ace.taiwan:id/tv_money_num1" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[121,1129][171,1175]" displayed="true" /&gt;
+                              &lt;android.widget.TextView index="6" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="數位資產" resource-id="com.asiainnovations.ace.taiwan:id/tv_account_tag" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[506,1129][634,1175]" displayed="true" /&gt;
+                              &lt;android.widget.TextView index="7" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="-----" resource-id="com.asiainnovations.ace.taiwan:id/tv_account" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[645,1129][695,1175]" displayed="true" /&gt;
+                            &lt;/android.view.ViewGroup&gt;
+                          &lt;/android.view.ViewGroup&gt;
+                        &lt;/android.widget.RelativeLayout&gt;
+                        &lt;android.view.ViewGroup index="5" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" resource-id="com.asiainnovations.ace.taiwan:id/constraintLayout6" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1196][1075,1401]" displayed="true"&gt;
+                          &lt;android.view.View index="0" package="com.asiainnovations.ace.taiwan" class="android.view.View" text="" resource-id="com.asiainnovations.ace.taiwan:id/view8" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1196][1075,1199]" displayed="true" /&gt;
+                          &lt;android.widget.ImageView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/goIeo" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[64,1217][505,1359]" displayed="true" /&gt;
+                          &lt;android.widget.ImageView index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/goCard" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[548,1217][758,1359]" displayed="true" /&gt;
+                          &lt;android.widget.ImageView index="3" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/goEvent" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[801,1217][1011,1359]" displayed="true" /&gt;
+                        &lt;/android.view.ViewGroup&gt;
+                        &lt;android.view.ViewGroup index="6" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" resource-id="com.asiainnovations.ace.taiwan:id/gap2" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1401][1080,1422]" displayed="true" /&gt;
+                        &lt;android.widget.HorizontalScrollView index="7" package="com.asiainnovations.ace.taiwan" class="android.widget.HorizontalScrollView" text="" resource-id="com.asiainnovations.ace.taiwan:id/tabs" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1422][648,1569]" displayed="true"&gt;
+                          &lt;android.widget.LinearLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1422][648,1569]" displayed="true"&gt;
+                            &lt;android.widget.LinearLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.LinearLayout" text="" content-desc="價格榜" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[0,1422][237,1569]" displayed="true"&gt;
+                              &lt;android.widget.RelativeLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.RelativeLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[32,1453][205,1538]" displayed="true"&gt;
+                                &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[32,1453][205,1538]" displayed="true"&gt;
+                                  &lt;android.widget.LinearLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[32,1453][205,1538]" displayed="true"&gt;
+                                    &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="價格榜" resource-id="android:id/text1" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[32,1453][205,1527]" displayed="true" /&gt;
+                                    &lt;android.view.View index="1" package="com.asiainnovations.ace.taiwan" class="android.view.View" text="" resource-id="com.asiainnovations.ace.taiwan:id/divider" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[97,1527][139,1538]" displayed="true" /&gt;
+                                  &lt;/android.widget.LinearLayout&gt;
+                                &lt;/android.widget.FrameLayout&gt;
+                              &lt;/android.widget.RelativeLayout&gt;
+                            &lt;/android.widget.LinearLayout&gt;
+                            &lt;android.widget.LinearLayout index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.LinearLayout" text="" content-desc="漲跌榜" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[237,1422][459,1569]" displayed="true"&gt;
+                              &lt;android.widget.RelativeLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.RelativeLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[269,1456][427,1535]" displayed="true"&gt;
+                                &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[269,1456][427,1535]" displayed="true"&gt;
+                                  &lt;android.widget.LinearLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[269,1456][427,1535]" displayed="true"&gt;
+                                    &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="漲跌榜" resource-id="android:id/text1" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[269,1456][427,1524]" displayed="true" /&gt;
+                                  &lt;/android.widget.LinearLayout&gt;
+                                &lt;/android.widget.FrameLayout&gt;
+                              &lt;/android.widget.RelativeLayout&gt;
+                            &lt;/android.widget.LinearLayout&gt;
+                          &lt;/android.widget.LinearLayout&gt;
+                        &lt;/android.widget.HorizontalScrollView&gt;
+                        &lt;androidx.recyclerview.widget.RecyclerView index="8" package="com.asiainnovations.ace.taiwan" class="androidx.recyclerview.widget.RecyclerView" text="" resource-id="com.asiainnovations.ace.taiwan:id/rvItems" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1569][1080,1962]" displayed="true"&gt;
+                          &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" resource-id="com.asiainnovations.ace.taiwan:id/cl_container" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1569][1080,1763]" displayed="true"&gt;
+                            &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="ETH" resource-id="com.asiainnovations.ace.taiwan:id/tv_coin_name" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1611][121,1668]" displayed="true" /&gt;
+                            &lt;android.widget.TextView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="/TWD" resource-id="com.asiainnovations.ace.taiwan:id/tv_coin_name_base" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[121,1625][202,1668]" displayed="true" /&gt;
+                            &lt;android.widget.TextView index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="10,000.0" resource-id="com.asiainnovations.ace.taiwan:id/tv_total" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[378,1611][541,1668]" displayed="true" /&gt;
+                            &lt;android.widget.TextView index="3" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="成交量 :" resource-id="com.asiainnovations.ace.taiwan:id/quotes_volT" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1668][154,1711]" displayed="true" /&gt;
+                            &lt;android.widget.TextView index="4" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="1,842.302760" resource-id="com.asiainnovations.ace.taiwan:id/vol" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[154,1668][348,1711]" displayed="true" /&gt;
+                            &lt;android.widget.TextView index="5" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="≈ TWD 10,000.00" resource-id="com.asiainnovations.ace.taiwan:id/currentRmbScaleT" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[378,1668][620,1711]" displayed="true" /&gt;
+                            &lt;android.widget.TextView index="6" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="37.03%" resource-id="com.asiainnovations.ace.taiwan:id/actv_percent" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[870,1632][1038,1700]" displayed="true" /&gt;
+                          &lt;/android.view.ViewGroup&gt;
+                          &lt;android.view.ViewGroup index="1" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" resource-id="com.asiainnovations.ace.taiwan:id/cl_container" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1763][1080,1957]" displayed="true"&gt;
+                            &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="BTC" resource-id="com.asiainnovations.ace.taiwan:id/tv_coin_name" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1805][118,1862]" displayed="true" /&gt;
+                            &lt;android.widget.TextView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="/TWD" resource-id="com.asiainnovations.ace.taiwan:id/tv_coin_name_base" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[118,1819][199,1862]" displayed="true" /&gt;
+                            &lt;android.widget.TextView index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="260,722.3" resource-id="com.asiainnovations.ace.taiwan:id/tv_total" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[378,1805][565,1862]" displayed="true" /&gt;
+                            &lt;android.widget.TextView index="3" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="成交量 :" resource-id="com.asiainnovations.ace.taiwan:id/quotes_volT" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1862][154,1905]" displayed="true" /&gt;
+                            &lt;android.widget.TextView index="4" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="9.28090000" resource-id="com.asiainnovations.ace.taiwan:id/vol" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[154,1862][324,1905]" displayed="true" /&gt;
+                            &lt;android.widget.TextView index="5" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="≈ TWD 260,722.30" resource-id="com.asiainnovations.ace.taiwan:id/currentRmbScaleT" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[378,1862][638,1905]" displayed="true" /&gt;
+                            &lt;android.widget.TextView index="6" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="5.84%" resource-id="com.asiainnovations.ace.taiwan:id/actv_percent" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[870,1826][1038,1894]" displayed="true" /&gt;
+                          &lt;/android.view.ViewGroup&gt;
+                          &lt;android.view.ViewGroup index="2" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" resource-id="com.asiainnovations.ace.taiwan:id/cl_container" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1957][1080,1962]" displayed="true" /&gt;
+                        &lt;/androidx.recyclerview.widget.RecyclerView&gt;
+                      &lt;/android.view.ViewGroup&gt;
+                    &lt;/android.widget.ScrollView&gt;
+                  &lt;/android.view.ViewGroup&gt;
+                &lt;/android.widget.FrameLayout&gt;
+                &lt;android.view.View index="1" package="com.asiainnovations.ace.taiwan" class="android.view.View" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1961][1080,1962]" displayed="true" /&gt;
+                &lt;android.widget.FrameLayout index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" resource-id="com.asiainnovations.ace.taiwan:id/navigation" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1962][1080,2034]" displayed="true"&gt;
+                  &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1967][1080,2034]" displayed="true"&gt;
+                    &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" content-desc="首頁" resource-id="com.asiainnovations.ace.taiwan:id/navigation_home" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[0,1967][216,2034]" displayed="true"&gt;
+                      &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[71,2048][145,2114]" displayed="true"&gt;
+                        &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="首頁" resource-id="com.asiainnovations.ace.taiwan:id/largeLabel" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[71,2048][145,2099]" displayed="true" /&gt;
+                      &lt;/android.view.ViewGroup&gt;
+                      &lt;android.widget.ImageView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[76,1988][139,2034]" displayed="true" /&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                    &lt;android.widget.FrameLayout index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" content-desc="行情" resource-id="com.asiainnovations.ace.taiwan:id/navigation_quotes" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[216,1967][432,2034]" displayed="true"&gt;
+                      &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[287,2048][361,2114]" displayed="true"&gt;
+                        &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="行情" resource-id="com.asiainnovations.ace.taiwan:id/smallLabel" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[287,2048][361,2099]" displayed="true" /&gt;
+                      &lt;/android.view.ViewGroup&gt;
+                      &lt;android.widget.ImageView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[292,1988][355,2034]" displayed="true" /&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                    &lt;android.widget.FrameLayout index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" content-desc="交易" resource-id="com.asiainnovations.ace.taiwan:id/navigation_trading" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[432,1967][648,2034]" displayed="true"&gt;
+                      &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[503,2048][577,2114]" displayed="true"&gt;
+                        &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="交易" resource-id="com.asiainnovations.ace.taiwan:id/smallLabel" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[503,2048][577,2099]" displayed="true" /&gt;
+                      &lt;/android.view.ViewGroup&gt;
+                      &lt;android.widget.ImageView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[508,1988][571,2034]" displayed="true" /&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                    &lt;android.widget.FrameLayout index="3" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" content-desc="錢包" resource-id="com.asiainnovations.ace.taiwan:id/navigation_wallet" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[648,1967][864,2034]" displayed="true"&gt;
+                      &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[719,2048][793,2114]" displayed="true"&gt;
+                        &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="錢包" resource-id="com.asiainnovations.ace.taiwan:id/smallLabel" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[719,2048][793,2099]" displayed="true" /&gt;
+                      &lt;/android.view.ViewGroup&gt;
+                      &lt;android.widget.ImageView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[724,1988][787,2034]" displayed="true" /&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                    &lt;android.widget.FrameLayout index="4" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" content-desc="我" resource-id="com.asiainnovations.ace.taiwan:id/navigation_me" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[864,1967][1080,2034]" displayed="true"&gt;
+                      &lt;android.widget.ImageView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[940,1988][1003,2034]" displayed="true" /&gt;
+                      &lt;android.view.ViewGroup index="1" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[953,2048][990,2114]" displayed="true"&gt;
+                        &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="我" resource-id="com.asiainnovations.ace.taiwan:id/smallLabel" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[953,2048][990,2099]" displayed="true" /&gt;
+                      &lt;/android.view.ViewGroup&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                  &lt;/android.view.ViewGroup&gt;
+                &lt;/android.widget.FrameLayout&gt;
+              &lt;/android.view.ViewGroup&gt;
+            &lt;/android.widget.FrameLayout&gt;
+          &lt;/android.widget.FrameLayout&gt;
+        &lt;/android.widget.LinearLayout&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.LinearLayout&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20200320 18:29:04.783" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200320 18:29:04.050" endtime="20200320 18:29:04.783"></status>
+</kw>
+<msg timestamp="20200320 18:29:04.784" level="FAIL">Element locator 'xpath=//*[@class='androidx.appcompat.app.ActionBar.Tab' and @index='0']' did not match any elements after 5 seconds</msg>
+<status status="FAIL" starttime="20200320 18:28:58.581" endtime="20200320 18:29:04.784"></status>
+</kw>
+<status status="FAIL" starttime="20200320 18:28:58.580" endtime="20200320 18:29:04.785"></status>
+</kw>
+<doc>切換到 首面 點擊 各個頁面</doc>
+<tags>
+<tag>prod</tag>
+</tags>
+<status status="FAIL" starttime="20200320 18:28:57.851" endtime="20200320 18:29:04.785" critical="yes">Element locator 'xpath=//*[@class='androidx.appcompat.app.ActionBar.Tab' and @index='0']' did not match any elements after 5 seconds</status>
+</test>
+<status status="FAIL" starttime="20200320 18:28:33.385" endtime="20200320 18:29:04.800"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2">Critical Tests</stat>
-<stat pass="0" fail="2">All Tests</stat>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="1">prod</stat>
 </tag>
 <suite>
-<stat pass="0" fail="2" id="s1" name="Test Login Me">Test Login Me</stat>
+<stat pass="1" fail="1" id="s1" name="Test Login Home">Test Login Home</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20200318 17:48:17.513" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20200320 18:28:33.354" level="WARN">Collapsing consecutive whitespace during parsing is deprecated. Fix ' #' in file '/Users/shocklee/Documents/github/workspace/Python/Ace/Android/test_login_home.robot' on line 65.</msg>
 </errors>
 </robot>
