@@ -4,14 +4,17 @@ Documentation	分頁
 
 *** Keywords ***
 Click Email Login On Me Page
+    [Documentation]    我->Email 登入
     Wait Until Element Is Visible    id=com.asiainnovations.ace.taiwan:id/tv_email_login
     Click Element    id=com.asiainnovations.ace.taiwan:id/tv_email_login   
 
 Click Mobile Login On Me Page
+    [Documentation]    我->電話 登入
     Wait Until Element Is Visible    id=com.asiainnovations.ace.taiwan:id/tv_phone_login
     Click Element    id=com.asiainnovations.ace.taiwan:id/tv_phone_login
 
 Input Email In Email Login On Me Page
+    [Documentation]    我->Email 登入->輸入 mail
     [Arguments]	${Email}
     Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/aet_email
     Input Text  id=com.asiainnovations.ace.taiwan:id/aet_email    ${Email}
@@ -96,6 +99,12 @@ Click System Settings On Me Page
     [Documentation]    我->系統設置
     Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='系統設置'] 
     Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='系統設置'] 
+
+Click Logout In System Settings On Me Page
+    [Documentation]    我->系統設置->登出
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/tvExitLogin'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/tvExitLogin'] 
+
 
 Click Question Reply On Me Page
     [Documentation]    我->問題回饋

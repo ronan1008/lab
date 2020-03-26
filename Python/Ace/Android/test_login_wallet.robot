@@ -63,6 +63,6 @@ Test Show Coin Withdraw On Wallet Page
     Input Google Auth In Withdraw Coin On Trade Page    ${googleAuth}
     Click Confirm In Withdraw Coin On Trade Page
 
-
-
 *** comment ***
+robot -e stage -e dev test_login_wallet.robot 
+robot -i prod test_login_wallet.robot

@@ -21,12 +21,22 @@ Click Back Button On Quote Page
     Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/tvBack
     Click Element  id=com.asiainnovations.ace.taiwan:id/tvBack
 
+Check Detail Info On Quote Page
+    Wait Until Element Is Visible    xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/tvQuotesDetailCurrency']
+    ${ctoc} =    Get Element Attribute    xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/tvQuotesDetailCurrency']    text
+    ${price} =    Get Element Attribute    xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/tvQuotesDetailPrice']    text
+    ${volume} =    Get Element Attribute    xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/tvQuotesDetailVolume']    text
+    Log    幣種:${ctoc} 價格:${price} 數量:${volume}   WARN
+
 Click Every Detail Of Banner On Quote Page
     ${count} =    Get Count Of Banner On Quote Page
     FOR    ${index}    IN RANGE    ${count}
+        Sleep   0.5s
         ${currency} =    Get Element Attribute    xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']    text
         Log    Check "${currency}" Detail   WARN
+        Wait Until Element Is Visible    xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']
         Click Element    xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']
+        Check Detail Info On Quote Page
         Click Back Button On Quote Page
     END
 
