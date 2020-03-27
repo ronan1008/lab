@@ -1,15 +1,15 @@
 #!/bin/bash
 #brew install libimobiledevice --HEAD
-TEAM_ID=''
+TEAM_ID='84B2274B58'
 deviceid=`idevice_id -l`
 echo ${deviceid}
 #通過USB 通道測試iOS 真機
 brew install usbmuxd
 #應用中如含有WebView
 brew install ios-webkit-debug-proxy
+#安装Macaca命令行工具macaca-cli
 npm i -g macaca-cli
 brew install ideviceinstaller
-brew install ios-webkit-debug-proxy
 npm i macaca-ios -g
 npm uninstall -g macaca-ios
 # 安装有 TEAM_ID 的 macaca-ios
