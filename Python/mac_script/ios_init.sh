@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 xcode_version=`/usr/bin/xcodebuild -version`
 if [ -z "$xcode_version" ]
 then
@@ -9,7 +9,6 @@ else
     brew install carthage
     brew tap wix/brew
     brew install wix/brew/applesimutils
-    sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 
     #libimobiledevice(真機測試需要)
     brew install libimobiledevice
@@ -19,7 +18,7 @@ else
     gem install xcpretty
 fi
 
-if [ -z "$nodejs_version" ]
+if [ -z "`node -v`" ]
 then
     brew install node
     node -v
