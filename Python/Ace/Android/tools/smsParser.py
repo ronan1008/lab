@@ -28,13 +28,17 @@ def find_verifi_code(items):
 def get_verification_code(pattern):
     for i in smsList:
         iList = i.split(',')
-        if iList[1].find('seconds') != -1 and iList[2].find(pattern) !=-1 :
-            find_verifi_code(iList[2])
-        elif iList[1].find('minutes') != -1 and iList[2].find(pattern) !=-1 :
-            find_verifi_code(iList[2])
+        if iList[1].find('seconds') != -1 and iList[2].find(pattern) != -1 :
+            return    find_verifi_code(iList[2])
+            
+        elif iList[1].find('minutes') != -1 and iList[2].find(pattern) != -1 :
+            return    find_verifi_code(iList[2])
+          
+        else:
+            pass
 
 
-print(get_verification_code('[ACE]'))
+#print(get_verification_code('[ACE]'))
 
 #14249001XXX	20 seconds ago	[ACE]Verification code: 306692, Available for 10 minutes. Please check that you are visiting "ace.io", and do not share the code with anyone !
 

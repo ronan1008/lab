@@ -13,6 +13,44 @@ Click Mobile Login On Me Page
     Wait Until Element Is Visible    id=com.asiainnovations.ace.taiwan:id/tv_phone_login
     Click Element    id=com.asiainnovations.ace.taiwan:id/tv_phone_login
 
+Choose Country On Me Page
+    [Documentation]    我->電話 登入->選擇區碼
+    [Arguments]	${country}
+    Wait Until Element Is Visible    id=com.asiainnovations.ace.taiwan:id/atv_phone_tag
+    Click Element    id=com.asiainnovations.ace.taiwan:id/atv_phone_tag
+    Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/acet_coin
+    Input Text  id=com.asiainnovations.ace.taiwan:id/acet_coin    ${country}
+    Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/sectionBodyRL' and @index='1'] 
+    Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/sectionBodyRL' and @index='1'] 
+
+Click Register On Me Page
+    [Documentation]    我->電話 登入->註冊
+    Wait Until Element Is Visible    id=com.asiainnovations.ace.taiwan:id/act_no_account_register_tip
+    Click Element    id=com.asiainnovations.ace.taiwan:id/act_no_account_register_tip
+
+Click Get_verify_code On Me Page
+    [Documentation]    我->電話 登入->註冊->取得驗證碼
+    Wait Until Element Is Visible    id=com.asiainnovations.ace.taiwan:id/acb_get_vertify_code
+    Click Element    id=com.asiainnovations.ace.taiwan:id/acb_get_vertify_code
+    Sleep    30s
+
+Input Tel Auth In Register On Me Page
+    [Documentation]    我->電話 登入->註冊->輸入 驗證碼
+    ${verify_code}=  Run Keyword	get_verification_code    [ACE]	
+    Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/aet_vertify
+    Input Text  id=com.asiainnovations.ace.taiwan:id/aet_vertify    ${verify_code}
+
+Click Cancel On Me Page
+    [Documentation]    我->電話 登入->註冊->取消
+    Wait Until Element Is Visible    id=com.asiainnovations.ace.taiwan:id/ivClose
+    Click Element    id=com.asiainnovations.ace.taiwan:id/ivClose
+
+Input Tel Number In Register On Me Page
+    [Documentation]    我->電話 登入->註冊->輸入 電話
+    [Arguments]	${tel_number}
+    Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/aetPhone
+    Input Text  id=com.asiainnovations.ace.taiwan:id/aetPhone    ${tel_number}
+
 Input Email In Email Login On Me Page
     [Documentation]    我->Email 登入->輸入 mail
     [Arguments]	${Email}
@@ -20,25 +58,27 @@ Input Email In Email Login On Me Page
     Input Text  id=com.asiainnovations.ace.taiwan:id/aet_email    ${Email}
 
 Input Password In Email Login On Me Page
+    [Documentation]    我->Email 登入->輸入 密碼
     [Arguments]	${Password}
     Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/aet_password
     Input Text  id=com.asiainnovations.ace.taiwan:id/aet_password    ${Password}
 
+
+
 Input Tel Number In Mobile Login On Me Page
+    [Documentation]    我->電話 登入->輸入 電話
     [Arguments]	${tel_number}
     Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/aet_phone
     Input Text  id=com.asiainnovations.ace.taiwan:id/aet_phone    ${tel_number}
 
 Input Password In Mobile Login On Me Page
+    [Documentation]    我->電話 登入->輸入 密碼
     [Arguments]	${Password}
     Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/aet_password
     Input Text  id=com.asiainnovations.ace.taiwan:id/aet_password    ${Password}
 
-Click Login Button In Email Login On Me Page
-    Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/acb_login
-    Click Element  id=com.asiainnovations.ace.taiwan:id/acb_login
-
-Click Login Button In Mobile Login On Me Page
+Click Login Button In Login On Me Page
+    [Documentation]    我->電話orEmail 登入->登入
     Wait Until Element Is Visible   id=com.asiainnovations.ace.taiwan:id/acb_login
     Click Element  id=com.asiainnovations.ace.taiwan:id/acb_login
     Sleep    1s

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.6 on darwin)" generated="20200327 13:53:21.536" rpa="false">
-<suite id="s1" name="Test Login Wallet" source="/Users/shocklee/Documents/github/workspace/Python/Ace/Android/test_login_wallet.robot">
+<robot generator="Robot 3.1.2 (Python 3.7.6 on darwin)" generated="20200330 14:35:34.660" rpa="false">
+<suite id="s1" name="Test Login Me" source="/Users/shocklee/Documents/github/workspace/Python/Ace/Android/test_login_me.robot">
 <test id="s1-t1" name="Test Login Ace On Android">
-<kw name="Open Ace App And Login" library="login">
+<kw name="Open Ace App And Login With Mail" library="login">
+<kw name="Open Ace On Android" library="login">
 <kw name="Open Application" library="AppiumLibrary">
 <doc>Opens a new application to given Appium server.
 Capabilities of appium server, Android and iOS,
@@ -17,7 +18,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>appPackage=${appPackage}</arg>
 <arg>appActivity=${appActivity}</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:53:22.749" endtime="20200327 13:53:29.775"></status>
+<status status="PASS" starttime="20200330 14:35:35.134" endtime="20200330 14:35:42.005"></status>
 </kw>
 <kw name="Goto Me Tab On Home Page" library="navigation">
 <doc>我 分頁</doc>
@@ -26,60 +27,64 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/navigation_me</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:53:29.776" endtime="20200327 13:53:31.807"></status>
+<status status="PASS" starttime="20200330 14:35:42.006" endtime="20200330 14:35:43.538"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/navigation_me</arg>
 </arguments>
-<msg timestamp="20200327 13:53:31.810" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_me'.</msg>
-<status status="PASS" starttime="20200327 13:53:31.807" endtime="20200327 13:53:31.948"></status>
+<msg timestamp="20200330 14:35:43.541" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_me'.</msg>
+<status status="PASS" starttime="20200330 14:35:43.538" endtime="20200330 14:35:43.667"></status>
 </kw>
-<status status="PASS" starttime="20200327 13:53:29.775" endtime="20200327 13:53:31.949"></status>
+<status status="PASS" starttime="20200330 14:35:42.006" endtime="20200330 14:35:43.667"></status>
 </kw>
-<kw name="Click Mobile Login On Me Page" library="me">
-<doc>我-&gt;電話 登入</doc>
+<status status="PASS" starttime="20200330 14:35:35.134" endtime="20200330 14:35:43.667"></status>
+</kw>
+<kw name="Click Email Login On Me Page" library="me">
+<doc>我-&gt;Email 登入</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tv_phone_login</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/tv_email_login</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:53:31.950" endtime="20200327 13:53:32.736"></status>
+<status status="PASS" starttime="20200330 14:35:43.668" endtime="20200330 14:35:44.486"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tv_phone_login</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/tv_email_login</arg>
 </arguments>
-<msg timestamp="20200327 13:53:32.739" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tv_phone_login'.</msg>
-<status status="PASS" starttime="20200327 13:53:32.737" endtime="20200327 13:53:33.431"></status>
+<msg timestamp="20200330 14:35:44.489" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tv_email_login'.</msg>
+<status status="PASS" starttime="20200330 14:35:44.486" endtime="20200330 14:35:45.163"></status>
 </kw>
-<status status="PASS" starttime="20200327 13:53:31.949" endtime="20200327 13:53:33.432"></status>
+<status status="PASS" starttime="20200330 14:35:43.668" endtime="20200330 14:35:45.163"></status>
 </kw>
-<kw name="Input Tel Number In Mobile Login On Me Page" library="me">
+<kw name="Input Email In Email Login On Me Page" library="me">
+<doc>我-&gt;Email 登入-&gt;輸入 mail</doc>
 <arguments>
-<arg>0936736561</arg>
+<arg>ace.io.andro@gmail.com</arg>
 </arguments>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/aet_phone</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/aet_email</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:53:33.433" endtime="20200327 13:53:33.471"></status>
+<status status="PASS" starttime="20200330 14:35:45.165" endtime="20200330 14:35:45.217"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/aet_phone</arg>
-<arg>${tel_number}</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/aet_email</arg>
+<arg>${Email}</arg>
 </arguments>
-<msg timestamp="20200327 13:53:33.473" level="INFO">Typing text '0936736561' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_phone'</msg>
-<status status="PASS" starttime="20200327 13:53:33.472" endtime="20200327 13:53:34.042"></status>
+<msg timestamp="20200330 14:35:45.219" level="INFO">Typing text 'ace.io.andro@gmail.com' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_email'</msg>
+<status status="PASS" starttime="20200330 14:35:45.217" endtime="20200330 14:35:45.313"></status>
 </kw>
-<status status="PASS" starttime="20200327 13:53:33.432" endtime="20200327 13:53:34.042"></status>
+<status status="PASS" starttime="20200330 14:35:45.164" endtime="20200330 14:35:45.313"></status>
 </kw>
-<kw name="Input Password In Mobile Login On Me Page" library="me">
+<kw name="Input Password In Email Login On Me Page" library="me">
+<doc>我-&gt;Email 登入-&gt;輸入 密碼</doc>
 <arguments>
 <arg>Arborabc1234</arg>
 </arguments>
@@ -88,7 +93,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_password</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:53:34.043" endtime="20200327 13:53:34.577"></status>
+<status status="PASS" starttime="20200330 14:35:45.314" endtime="20200330 14:35:45.850"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -96,36 +101,37 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_password</arg>
 <arg>${Password}</arg>
 </arguments>
-<msg timestamp="20200327 13:53:34.581" level="INFO">Typing text 'Arborabc1234' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_password'</msg>
-<status status="PASS" starttime="20200327 13:53:34.578" endtime="20200327 13:53:35.161"></status>
+<msg timestamp="20200330 14:35:45.853" level="INFO">Typing text 'Arborabc1234' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_password'</msg>
+<status status="PASS" starttime="20200330 14:35:45.850" endtime="20200330 14:35:46.422"></status>
 </kw>
-<status status="PASS" starttime="20200327 13:53:34.042" endtime="20200327 13:53:35.161"></status>
+<status status="PASS" starttime="20200330 14:35:45.313" endtime="20200330 14:35:46.423"></status>
 </kw>
-<kw name="Click Login Button In Mobile Login On Me Page" library="me">
+<kw name="Click Login Button In Login On Me Page" library="me">
+<doc>我-&gt;電話orEmail 登入-&gt;登入</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/acb_login</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:53:35.162" endtime="20200327 13:53:35.694"></status>
+<status status="PASS" starttime="20200330 14:35:46.424" endtime="20200330 14:35:46.956"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/acb_login</arg>
 </arguments>
-<msg timestamp="20200327 13:53:35.697" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_login'.</msg>
-<status status="PASS" starttime="20200327 13:53:35.695" endtime="20200327 13:53:35.785"></status>
+<msg timestamp="20200330 14:35:46.959" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_login'.</msg>
+<status status="PASS" starttime="20200330 14:35:46.957" endtime="20200330 14:35:47.053"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200327 13:53:36.787" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200327 13:53:35.785" endtime="20200327 13:53:36.787"></status>
+<msg timestamp="20200330 14:35:48.056" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200330 14:35:47.054" endtime="20200330 14:35:48.057"></status>
 </kw>
-<status status="PASS" starttime="20200327 13:53:35.162" endtime="20200327 13:53:36.787"></status>
+<status status="PASS" starttime="20200330 14:35:46.423" endtime="20200330 14:35:48.057"></status>
 </kw>
 <kw name="Input Google Auth In Login On Me Page" library="me">
 <arguments>
@@ -144,17 +150,17 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>${key}</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:53:36.789" endtime="20200327 13:53:36.790"></status>
+<status status="PASS" starttime="20200330 14:35:48.059" endtime="20200330 14:35:48.060"></status>
 </kw>
-<msg timestamp="20200327 13:53:36.790" level="INFO">${token} = 063875</msg>
-<status status="PASS" starttime="20200327 13:53:36.789" endtime="20200327 13:53:36.790"></status>
+<msg timestamp="20200330 14:35:48.060" level="INFO">${token} = 010078</msg>
+<status status="PASS" starttime="20200330 14:35:48.058" endtime="20200330 14:35:48.060"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_vertify</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:53:36.790" endtime="20200327 13:53:37.243"></status>
+<status status="PASS" starttime="20200330 14:35:48.060" endtime="20200330 14:35:48.390"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -162,10 +168,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_vertify</arg>
 <arg>${token}</arg>
 </arguments>
-<msg timestamp="20200327 13:53:37.246" level="INFO">Typing text '063875' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_vertify'</msg>
-<status status="PASS" starttime="20200327 13:53:37.243" endtime="20200327 13:53:37.915"></status>
+<msg timestamp="20200330 14:35:48.393" level="INFO">Typing text '010078' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_vertify'</msg>
+<status status="PASS" starttime="20200330 14:35:48.391" endtime="20200330 14:35:48.464"></status>
 </kw>
-<status status="PASS" starttime="20200327 13:53:36.788" endtime="20200327 13:53:37.915"></status>
+<status status="PASS" starttime="20200330 14:35:48.057" endtime="20200330 14:35:48.464"></status>
 </kw>
 <kw name="Click Login Button In Auth On Me Page" library="me">
 <arguments>
@@ -176,23 +182,23 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/acb_commit</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:53:37.916" endtime="20200327 13:53:38.447"></status>
+<status status="PASS" starttime="20200330 14:35:48.465" endtime="20200330 14:35:48.998"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/acb_commit</arg>
 </arguments>
-<msg timestamp="20200327 13:53:38.451" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_commit'.</msg>
-<status status="PASS" starttime="20200327 13:53:38.448" endtime="20200327 13:53:38.535"></status>
+<msg timestamp="20200330 14:35:49.001" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_commit'.</msg>
+<status status="PASS" starttime="20200330 14:35:48.999" endtime="20200330 14:35:49.084"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20200327 13:53:40.538" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200327 13:53:38.535" endtime="20200327 13:53:40.538"></status>
+<msg timestamp="20200330 14:35:51.087" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200330 14:35:49.084" endtime="20200330 14:35:51.087"></status>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
@@ -210,14 +216,14 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 </arguments>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20200327 13:53:41.528" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200327 13:53:40.819" endtime="20200327 13:53:41.528"></status>
+<msg timestamp="20200330 14:35:51.977" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200330 14:35:51.284" endtime="20200330 14:35:51.977"></status>
 </kw>
-<msg timestamp="20200327 13:53:41.528" level="FAIL">Page should have contained element 'id=com.asiainnovations.ace.taiwan:id/acb_commit' but did not</msg>
-<status status="FAIL" starttime="20200327 13:53:40.539" endtime="20200327 13:53:41.529"></status>
+<msg timestamp="20200330 14:35:51.977" level="FAIL">Page should have contained element 'id=com.asiainnovations.ace.taiwan:id/acb_commit' but did not</msg>
+<status status="FAIL" starttime="20200330 14:35:51.089" endtime="20200330 14:35:51.977"></status>
 </kw>
-<msg timestamp="20200327 13:53:41.529" level="INFO">${status} = False</msg>
-<status status="PASS" starttime="20200327 13:53:40.539" endtime="20200327 13:53:41.529"></status>
+<msg timestamp="20200330 14:35:51.978" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20200330 14:35:51.088" endtime="20200330 14:35:51.978"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -232,10 +238,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>${key}</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:53:41.530" endtime="20200327 13:53:41.530"></status>
+<status status="PASS" starttime="20200330 14:35:51.978" endtime="20200330 14:35:51.978"></status>
 </kw>
-<msg timestamp="20200327 13:53:41.530" level="INFO">${token} = 063875</msg>
-<status status="PASS" starttime="20200327 13:53:41.529" endtime="20200327 13:53:41.531"></status>
+<msg timestamp="20200330 14:35:51.978" level="INFO">${token} = 010078</msg>
+<status status="PASS" starttime="20200330 14:35:51.978" endtime="20200330 14:35:51.978"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -249,1260 +255,292 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>Click Element</arg>
 <arg>id=com.asiainnovations.ace.taiwan:id/acb_commit</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:53:41.531" endtime="20200327 13:53:41.531"></status>
+<status status="PASS" starttime="20200330 14:35:51.979" endtime="20200330 14:35:51.979"></status>
 </kw>
-<status status="PASS" starttime="20200327 13:53:37.915" endtime="20200327 13:53:41.532"></status>
+<status status="PASS" starttime="20200330 14:35:48.464" endtime="20200330 14:35:51.979"></status>
 </kw>
-<status status="PASS" starttime="20200327 13:53:22.749" endtime="20200327 13:53:41.532"></status>
+<status status="PASS" starttime="20200330 14:35:35.133" endtime="20200330 14:35:51.979"></status>
 </kw>
-<doc>登入ACE 使用 google 驗證</doc>
+<doc>登入ACE 使用 手機 google 驗證</doc>
 <tags>
 <tag>prod</tag>
 </tags>
-<status status="PASS" starttime="20200327 13:53:22.747" endtime="20200327 13:53:41.532" critical="yes"></status>
+<status status="PASS" starttime="20200330 14:35:35.132" endtime="20200330 14:35:51.979" critical="yes"></status>
 </test>
-<test id="s1-t2" name="Test TWD Info On Wallet Page">
-<kw name="Goto Wallet Tab On Home Page" library="navigation">
-<doc>錢包 分頁</doc>
+<test id="s1-t2" name="Test Click Me Page">
+<kw name="Goto Me Tab On Home Page" library="navigation">
+<doc>我 分頁</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_wallet</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/navigation_me</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:53:41.534" endtime="20200327 13:53:41.637"></status>
+<status status="PASS" starttime="20200330 14:35:51.982" endtime="20200330 14:35:52.060"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_wallet</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/navigation_me</arg>
 </arguments>
-<msg timestamp="20200327 13:53:41.640" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_wallet'.</msg>
-<status status="PASS" starttime="20200327 13:53:41.637" endtime="20200327 13:53:41.765"></status>
+<msg timestamp="20200330 14:35:52.061" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_me'.</msg>
+<status status="PASS" starttime="20200330 14:35:52.060" endtime="20200330 14:35:52.180"></status>
 </kw>
-<status status="PASS" starttime="20200327 13:53:41.534" endtime="20200327 13:53:41.765"></status>
+<status status="PASS" starttime="20200330 14:35:51.982" endtime="20200330 14:35:52.180"></status>
 </kw>
-<kw name="Click Eye Button On Wallet Page" library="wallet">
+<kw name="Click Bank Account On Me Page" library="me">
+<doc>我-&gt;銀行帳號</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/acib_visiable</arg>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='銀行帳號']</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:53:41.767" endtime="20200327 13:53:44.300"></status>
+<status status="PASS" starttime="20200330 14:35:52.181" endtime="20200330 14:35:53.277"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/acib_visiable</arg>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='銀行帳號']</arg>
 </arguments>
-<msg timestamp="20200327 13:53:44.304" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acib_visiable'.</msg>
-<status status="PASS" starttime="20200327 13:53:44.301" endtime="20200327 13:53:45.231"></status>
+<msg timestamp="20200330 14:35:53.280" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='銀行帳號']'.</msg>
+<status status="PASS" starttime="20200330 14:35:53.277" endtime="20200330 14:35:53.599"></status>
 </kw>
-<status status="PASS" starttime="20200327 13:53:41.766" endtime="20200327 13:53:45.231"></status>
+<status status="PASS" starttime="20200330 14:35:52.181" endtime="20200330 14:35:53.599"></status>
 </kw>
-<kw name="Check TWD Info On Wallet Page" library="wallet">
-<doc>TWD可用餘額 TWD處理中 TWD總資產</doc>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tv_capital_balance</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${TWD_avail}</var>
-</assign>
-<msg timestamp="20200327 13:53:45.528" level="INFO">Element 'id=com.asiainnovations.ace.taiwan:id/tv_capital_balance' attribute 'text' value '993,948.78' </msg>
-<msg timestamp="20200327 13:53:45.528" level="INFO">${TWD_avail} = 993,948.78</msg>
-<status status="PASS" starttime="20200327 13:53:45.233" endtime="20200327 13:53:45.528"></status>
-</kw>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tv_total</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${TWD_proce}</var>
-</assign>
-<msg timestamp="20200327 13:53:45.765" level="INFO">Element 'id=com.asiainnovations.ace.taiwan:id/tv_total' attribute 'text' value '1,000.00' </msg>
-<msg timestamp="20200327 13:53:45.766" level="INFO">${TWD_proce} = 1,000.00</msg>
-<status status="PASS" starttime="20200327 13:53:45.528" endtime="20200327 13:53:45.766"></status>
-</kw>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tv_total_assets</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${TWD_total}</var>
-</assign>
-<msg timestamp="20200327 13:53:46.062" level="INFO">Element 'id=com.asiainnovations.ace.taiwan:id/tv_total_assets' attribute 'text' value '994,948.78' </msg>
-<msg timestamp="20200327 13:53:46.063" level="INFO">${TWD_total} = 994,948.78</msg>
-<status status="PASS" starttime="20200327 13:53:45.766" endtime="20200327 13:53:46.063"></status>
-</kw>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/atv_my_captial</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${TWD_digit_total}</var>
-</assign>
-<msg timestamp="20200327 13:53:46.378" level="INFO">Element 'id=com.asiainnovations.ace.taiwan:id/atv_my_captial' attribute 'text' value '數位資產估值（≈12,042,481,402.29TWD）' </msg>
-<msg timestamp="20200327 13:53:46.378" level="INFO">${TWD_digit_total} = 數位資產估值（≈12,042,481,402.29TWD）</msg>
-<status status="PASS" starttime="20200327 13:53:46.063" endtime="20200327 13:53:46.378"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>TWD可用餘額 ${TWD_avail}</arg>
-<arg>WARN</arg>
-</arguments>
-<msg timestamp="20200327 13:53:46.378" level="WARN">TWD可用餘額 993,948.78</msg>
-<status status="PASS" starttime="20200327 13:53:46.378" endtime="20200327 13:53:46.379"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>TWD處理中 ${TWD_proce}</arg>
-<arg>WARN</arg>
-</arguments>
-<msg timestamp="20200327 13:53:46.380" level="WARN">TWD處理中 1,000.00</msg>
-<status status="PASS" starttime="20200327 13:53:46.379" endtime="20200327 13:53:46.380"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>TWD可用餘額 ${TWD_total}</arg>
-<arg>WARN</arg>
-</arguments>
-<msg timestamp="20200327 13:53:46.381" level="WARN">TWD可用餘額 994,948.78</msg>
-<status status="PASS" starttime="20200327 13:53:46.380" endtime="20200327 13:53:46.381"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${TWD_digit_total}</arg>
-<arg>WARN</arg>
-</arguments>
-<msg timestamp="20200327 13:53:46.381" level="WARN">數位資產估值（≈12,042,481,402.29TWD）</msg>
-<status status="PASS" starttime="20200327 13:53:46.381" endtime="20200327 13:53:46.381"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:53:45.232" endtime="20200327 13:53:46.382"></status>
-</kw>
-<tags>
-<tag>prod</tag>
-</tags>
-<status status="PASS" starttime="20200327 13:53:41.533" endtime="20200327 13:53:46.382" critical="yes"></status>
-</test>
-<test id="s1-t3" name="Test Cash Withdraw On Wallet Page">
-<kw name="Goto Wallet Tab On Home Page" library="navigation">
-<doc>錢包 分頁</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_wallet</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:53:46.383" endtime="20200327 13:53:46.657"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_wallet</arg>
-</arguments>
-<msg timestamp="20200327 13:53:46.660" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_wallet'.</msg>
-<status status="PASS" starttime="20200327 13:53:46.657" endtime="20200327 13:53:46.967"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:53:46.383" endtime="20200327 13:53:46.967"></status>
-</kw>
-<kw name="Click Withdraw Cash On Wallet Page" library="wallet">
-<doc>錢包-&gt;提領</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/atv_withdraw</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:53:46.968" endtime="20200327 13:53:47.592"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/atv_withdraw</arg>
-</arguments>
-<msg timestamp="20200327 13:53:47.595" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/atv_withdraw'.</msg>
-<status status="PASS" starttime="20200327 13:53:47.592" endtime="20200327 13:53:47.879"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:53:46.967" endtime="20200327 13:53:47.880"></status>
-</kw>
-<kw name="Choose Bank In Withdraw Cash On Wallet Page" library="wallet">
-<doc>錢包-&gt;提領-&gt;選擇銀行帳戶</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.view.View' and @text='選擇銀行帳戶']</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:53:47.882" endtime="20200327 13:53:50.895"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.view.View' and @text='選擇銀行帳戶']</arg>
-</arguments>
-<msg timestamp="20200327 13:53:50.898" level="INFO">Clicking element 'xpath=//*[@class='android.view.View' and @text='選擇銀行帳戶']'.</msg>
-<status status="PASS" starttime="20200327 13:53:50.895" endtime="20200327 13:53:51.063"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3s</arg>
-</arguments>
-<msg timestamp="20200327 13:53:54.064" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200327 13:53:51.063" endtime="20200327 13:53:54.064"></status>
-</kw>
-<kw name="Click Element At Coordinates" library="AppiumLibrary">
-<doc>click element at a certain coordinate</doc>
-<arguments>
-<arg>980</arg>
-<arg>1240</arg>
-</arguments>
-<msg timestamp="20200327 13:53:54.068" level="INFO">Pressing at (980, 1240).</msg>
-<status status="PASS" starttime="20200327 13:53:54.065" endtime="20200327 13:53:54.232"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:53:47.881" endtime="20200327 13:53:54.232"></status>
-</kw>
-<kw name="Input Cash Amount In Withdraw Cash On Wallet Page" library="wallet">
-<doc>錢包-&gt;提領-&gt;提領金額</doc>
-<arguments>
-<arg>100</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.widget.EditText' and @index='0']</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:53:54.233" endtime="20200327 13:53:54.850"></status>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.widget.EditText' and @index='0']</arg>
-<arg>${cash_amount}</arg>
-</arguments>
-<msg timestamp="20200327 13:53:54.852" level="INFO">Typing text '100' into text field 'xpath=//*[@class='android.widget.EditText' and @index='0']'</msg>
-<status status="PASS" starttime="20200327 13:53:54.850" endtime="20200327 13:53:54.983"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:53:54.233" endtime="20200327 13:53:54.984"></status>
-</kw>
-<kw name="Click Next In Withdraw Cash On Wallet Page" library="wallet">
-<doc>錢包-&gt;提領-&gt;下一步</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.widget.Button' and @text='下一步']</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:53:54.985" endtime="20200327 13:53:55.523"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.widget.Button' and @text='下一步']</arg>
-</arguments>
-<msg timestamp="20200327 13:53:55.526" level="INFO">Clicking element 'xpath=//*[@class='android.widget.Button' and @text='下一步']'.</msg>
-<status status="PASS" starttime="20200327 13:53:55.523" endtime="20200327 13:53:55.679"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:53:54.984" endtime="20200327 13:53:55.679"></status>
-</kw>
-<kw name="Input Cash Password In Withdraw Cash On Wallet Page" library="wallet">
-<doc>錢包-&gt;提領-&gt;現金密碼</doc>
-<arguments>
-<arg>Arborabc5678</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.widget.EditText' and @password='true']</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:53:55.680" endtime="20200327 13:53:56.958"></status>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.widget.EditText' and @password='true']</arg>
-<arg>${pass}</arg>
-</arguments>
-<msg timestamp="20200327 13:53:56.962" level="INFO">Typing text 'Arborabc5678' into text field 'xpath=//*[@class='android.widget.EditText' and @password='true']'</msg>
-<status status="PASS" starttime="20200327 13:53:56.959" endtime="20200327 13:53:57.133"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:53:55.679" endtime="20200327 13:53:57.133"></status>
-</kw>
-<kw name="Input Google Auth In Withdraw Cash On Wallet Page" library="wallet">
-<doc>錢包-&gt;提領-&gt;google auth</doc>
-<arguments>
-<arg>${googleAuth}</arg>
-</arguments>
-<kw name="Run Keyword" library="BuiltIn">
-<doc>Executes the given keyword with the given arguments.</doc>
-<arguments>
-<arg>get_totp_token</arg>
-<arg>${key}</arg>
-</arguments>
-<assign>
-<var>${token}</var>
-</assign>
-<kw name="Get Totp Token" library="getTotp">
-<arguments>
-<arg>${key}</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:53:57.135" endtime="20200327 13:53:57.136"></status>
-</kw>
-<msg timestamp="20200327 13:53:57.136" level="INFO">${token} = 063875</msg>
-<status status="PASS" starttime="20200327 13:53:57.134" endtime="20200327 13:53:57.136"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.widget.EditText' and @password='false']</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:53:57.137" endtime="20200327 13:53:57.657"></status>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.widget.EditText' and @password='false']</arg>
-<arg>${token}</arg>
-</arguments>
-<msg timestamp="20200327 13:53:57.660" level="INFO">Typing text '063875' into text field 'xpath=//*[@class='android.widget.EditText' and @password='false']'</msg>
-<status status="PASS" starttime="20200327 13:53:57.657" endtime="20200327 13:53:57.830"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:53:57.133" endtime="20200327 13:53:57.831"></status>
-</kw>
-<kw name="Click Confirm Button In Withdraw Cash On Wallet Page" library="wallet">
-<doc>錢包-&gt;提領-&gt;確認</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.widget.Button' and @text='提領確認']</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:53:57.832" endtime="20200327 13:53:58.374"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.widget.Button' and @text='提領確認']</arg>
-</arguments>
-<msg timestamp="20200327 13:53:58.378" level="INFO">Clicking element 'xpath=//*[@class='android.widget.Button' and @text='提領確認']'.</msg>
-<status status="PASS" starttime="20200327 13:53:58.375" endtime="20200327 13:53:58.580"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:53:57.831" endtime="20200327 13:53:58.580"></status>
-</kw>
-<kw name="Click Back Button On Wallet Page" library="wallet">
+<kw name="Click Back Button On Me Page" library="me">
+<doc>返回鍵</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:53:58.581" endtime="20200327 13:54:00.028"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
-</arguments>
-<msg timestamp="20200327 13:54:00.031" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/iv_back'.</msg>
-<status status="PASS" starttime="20200327 13:54:00.029" endtime="20200327 13:54:00.131"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:53:58.581" endtime="20200327 13:54:00.131"></status>
-</kw>
-<doc>錢包-&gt;提領</doc>
-<tags>
-<tag>dev</tag>
-<tag>stage</tag>
-</tags>
-<status status="PASS" starttime="20200327 13:53:46.382" endtime="20200327 13:54:00.131" critical="yes"></status>
-</test>
-<test id="s1-t4" name="Test Check Info On Wallet Page">
-<kw name="Goto Wallet Tab On Home Page" library="navigation">
-<doc>錢包 分頁</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_wallet</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:00.135" endtime="20200327 13:54:01.493"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_wallet</arg>
-</arguments>
-<msg timestamp="20200327 13:54:01.497" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_wallet'.</msg>
-<status status="PASS" starttime="20200327 13:54:01.494" endtime="20200327 13:54:01.763"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:00.134" endtime="20200327 13:54:01.763"></status>
-</kw>
-<kw name="Click Charge Cash On Wallet Page" library="wallet">
-<doc>錢包-&gt;入金</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/atv_recharge</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:01.765" endtime="20200327 13:54:02.378"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/atv_recharge</arg>
-</arguments>
-<msg timestamp="20200327 13:54:02.381" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/atv_recharge'.</msg>
-<status status="PASS" starttime="20200327 13:54:02.378" endtime="20200327 13:54:02.666"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:01.764" endtime="20200327 13:54:02.666"></status>
-</kw>
-<kw name="Get Info In Charge Cash On Wallet Page" library="wallet">
-<doc>錢包-&gt;入金-&gt;入金資訊</doc>
-<arguments>
-<arg>銀行資訊</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@text='${info}']/following-sibling::*[1]</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:54:02.667" endtime="20200327 13:54:05.426"></status>
+<status status="PASS" starttime="20200330 14:35:53.600" endtime="20200330 14:35:55.011"></status>
 </kw>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//*[@text='${info}']/following-sibling::*[1]</arg>
-<arg>text</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
 </arguments>
-<assign>
-<var>${text}</var>
-</assign>
-<msg timestamp="20200327 13:54:05.549" level="INFO">Element 'xpath=//*[@text='銀行資訊']/following-sibling::*[1]' attribute 'text' value '805 遠東銀行' </msg>
-<msg timestamp="20200327 13:54:05.549" level="INFO">${text} = 805 遠東銀行</msg>
-<status status="PASS" starttime="20200327 13:54:05.427" endtime="20200327 13:54:05.549"></status>
+<msg timestamp="20200330 14:35:55.014" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/iv_back'.</msg>
+<status status="PASS" starttime="20200330 14:35:55.011" endtime="20200330 14:35:55.084"></status>
 </kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${info}: ${text}</arg>
-<arg>WARN</arg>
-</arguments>
-<msg timestamp="20200327 13:54:05.550" level="WARN">銀行資訊: 805 遠東銀行</msg>
-<status status="PASS" starttime="20200327 13:54:05.550" endtime="20200327 13:54:05.550"></status>
+<status status="PASS" starttime="20200330 14:35:53.599" endtime="20200330 14:35:55.085"></status>
 </kw>
-<status status="PASS" starttime="20200327 13:54:02.666" endtime="20200327 13:54:05.551"></status>
-</kw>
-<kw name="Get Info In Charge Cash On Wallet Page" library="wallet">
-<doc>錢包-&gt;入金-&gt;入金資訊</doc>
-<arguments>
-<arg>匯款帳號</arg>
-</arguments>
+<kw name="Click Coin Withdraw Address On Me Page" library="me">
+<doc>我-&gt;我的提幣地址</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//*[@text='${info}']/following-sibling::*[1]</arg>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='我的提幣地址']</arg>
+</arguments>
+<status status="PASS" starttime="20200330 14:35:55.086" endtime="20200330 14:35:56.383"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='我的提幣地址']</arg>
+</arguments>
+<msg timestamp="20200330 14:35:56.384" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='我的提幣地址']'.</msg>
+<status status="PASS" starttime="20200330 14:35:56.383" endtime="20200330 14:35:56.648"></status>
+</kw>
+<status status="PASS" starttime="20200330 14:35:55.085" endtime="20200330 14:35:56.648"></status>
+</kw>
+<kw name="Click Back Button On Me Page" library="me">
+<doc>返回鍵</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" starttime="20200327 13:54:05.552" endtime="20200327 13:54:05.664"></status>
-</kw>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>xpath=//*[@text='${info}']/following-sibling::*[1]</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${text}</var>
-</assign>
-<msg timestamp="20200327 13:54:05.785" level="INFO">Element 'xpath=//*[@text='匯款帳號']/following-sibling::*[1]' attribute 'text' value '1023110000004375' </msg>
-<msg timestamp="20200327 13:54:05.785" level="INFO">${text} = 1023110000004375</msg>
-<status status="PASS" starttime="20200327 13:54:05.665" endtime="20200327 13:54:05.785"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${info}: ${text}</arg>
-<arg>WARN</arg>
-</arguments>
-<msg timestamp="20200327 13:54:05.786" level="WARN">匯款帳號: 1023110000004375</msg>
-<status status="PASS" starttime="20200327 13:54:05.786" endtime="20200327 13:54:05.786"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:05.551" endtime="20200327 13:54:05.786"></status>
-</kw>
-<kw name="Click Back Button On Wallet Page" library="wallet">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:05.787" endtime="20200327 13:54:05.846"></status>
+<status status="PASS" starttime="20200330 14:35:56.650" endtime="20200330 14:35:57.933"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
 </arguments>
-<msg timestamp="20200327 13:54:05.849" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/iv_back'.</msg>
-<status status="PASS" starttime="20200327 13:54:05.846" endtime="20200327 13:54:05.933"></status>
+<msg timestamp="20200330 14:35:57.936" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/iv_back'.</msg>
+<status status="PASS" starttime="20200330 14:35:57.934" endtime="20200330 14:35:58.028"></status>
 </kw>
-<status status="PASS" starttime="20200327 13:54:05.787" endtime="20200327 13:54:05.933"></status>
+<status status="PASS" starttime="20200330 14:35:56.649" endtime="20200330 14:35:58.028"></status>
 </kw>
-<doc>錢包-&gt;入金</doc>
+<kw name="Click Invite Back On Me Page" library="me">
+<doc>我-&gt;邀請返佣</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='邀請返佣']</arg>
+</arguments>
+<status status="PASS" starttime="20200330 14:35:58.030" endtime="20200330 14:35:59.517"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='邀請返佣']</arg>
+</arguments>
+<msg timestamp="20200330 14:35:59.521" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='邀請返佣']'.</msg>
+<status status="PASS" starttime="20200330 14:35:59.518" endtime="20200330 14:35:59.784"></status>
+</kw>
+<status status="PASS" starttime="20200330 14:35:58.029" endtime="20200330 14:35:59.785"></status>
+</kw>
+<kw name="Click Back Button On Me Page" library="me">
+<doc>返回鍵</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200330 14:35:59.787" endtime="20200330 14:36:03.896"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
+</arguments>
+<msg timestamp="20200330 14:36:03.899" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/iv_back'.</msg>
+<status status="PASS" starttime="20200330 14:36:03.896" endtime="20200330 14:36:04.001"></status>
+</kw>
+<status status="PASS" starttime="20200330 14:35:59.785" endtime="20200330 14:36:04.001"></status>
+</kw>
+<kw name="Click Announcement On Me Page" library="me">
+<doc>我-&gt;公告中心</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='公告中心']</arg>
+</arguments>
+<status status="PASS" starttime="20200330 14:36:04.003" endtime="20200330 14:36:05.053"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='公告中心']</arg>
+</arguments>
+<msg timestamp="20200330 14:36:05.056" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='公告中心']'.</msg>
+<status status="PASS" starttime="20200330 14:36:05.053" endtime="20200330 14:36:05.313"></status>
+</kw>
+<status status="PASS" starttime="20200330 14:36:04.002" endtime="20200330 14:36:05.313"></status>
+</kw>
+<kw name="Click Back Button On Me Page" library="me">
+<doc>返回鍵</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200330 14:36:05.314" endtime="20200330 14:36:06.827"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
+</arguments>
+<msg timestamp="20200330 14:36:06.830" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/iv_back'.</msg>
+<status status="PASS" starttime="20200330 14:36:06.828" endtime="20200330 14:36:06.948"></status>
+</kw>
+<status status="PASS" starttime="20200330 14:36:05.313" endtime="20200330 14:36:06.948"></status>
+</kw>
+<kw name="Click System Settings On Me Page" library="me">
+<doc>我-&gt;系統設置</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='系統設置']</arg>
+</arguments>
+<status status="PASS" starttime="20200330 14:36:06.950" endtime="20200330 14:36:08.201"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='系統設置']</arg>
+</arguments>
+<msg timestamp="20200330 14:36:08.204" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='系統設置']'.</msg>
+<status status="PASS" starttime="20200330 14:36:08.202" endtime="20200330 14:36:08.484"></status>
+</kw>
+<status status="PASS" starttime="20200330 14:36:06.949" endtime="20200330 14:36:08.485"></status>
+</kw>
+<kw name="Click Back Button On Me Page" library="me">
+<doc>返回鍵</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200330 14:36:08.487" endtime="20200330 14:36:09.111"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
+</arguments>
+<msg timestamp="20200330 14:36:09.114" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/iv_back'.</msg>
+<status status="PASS" starttime="20200330 14:36:09.111" endtime="20200330 14:36:09.179"></status>
+</kw>
+<status status="PASS" starttime="20200330 14:36:08.485" endtime="20200330 14:36:09.179"></status>
+</kw>
+<kw name="Click Question Reply On Me Page" library="me">
+<doc>我-&gt;問題回饋</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='問題回饋']</arg>
+</arguments>
+<status status="PASS" starttime="20200330 14:36:09.180" endtime="20200330 14:36:10.257"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='問題回饋']</arg>
+</arguments>
+<msg timestamp="20200330 14:36:10.260" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/setting_left' and @text='問題回饋']'.</msg>
+<status status="PASS" starttime="20200330 14:36:10.258" endtime="20200330 14:36:10.498"></status>
+</kw>
+<status status="PASS" starttime="20200330 14:36:09.180" endtime="20200330 14:36:10.498"></status>
+</kw>
+<kw name="Click Back Button On Me Page" library="me">
+<doc>返回鍵</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200330 14:36:10.500" endtime="20200330 14:36:12.533"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
+</arguments>
+<msg timestamp="20200330 14:36:12.536" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/iv_back'.</msg>
+<status status="PASS" starttime="20200330 14:36:12.533" endtime="20200330 14:36:12.632"></status>
+</kw>
+<status status="PASS" starttime="20200330 14:36:10.499" endtime="20200330 14:36:12.633"></status>
+</kw>
+<doc>切換到 我 點擊 各個頁面</doc>
 <tags>
 <tag>prod</tag>
 </tags>
-<status status="PASS" starttime="20200327 13:54:00.132" endtime="20200327 13:54:05.935" critical="yes"></status>
+<status status="PASS" starttime="20200330 14:35:51.980" endtime="20200330 14:36:12.633" critical="yes"></status>
 </test>
-<test id="s1-t5" name="Test Show Charge Coin Info">
-<kw name="Goto Wallet Tab On Home Page" library="navigation">
-<doc>錢包 分頁</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_wallet</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:05.940" endtime="20200327 13:54:07.529"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_wallet</arg>
-</arguments>
-<msg timestamp="20200327 13:54:07.530" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_wallet'.</msg>
-<status status="PASS" starttime="20200327 13:54:07.529" endtime="20200327 13:54:07.762"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:05.939" endtime="20200327 13:54:07.763"></status>
-</kw>
-<kw name="Click Charge Coin On Wallet Page" library="wallet">
-<doc>錢包-&gt;入幣</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/atv_charging</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:07.764" endtime="20200327 13:54:08.387"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/atv_charging</arg>
-</arguments>
-<msg timestamp="20200327 13:54:08.392" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/atv_charging'.</msg>
-<status status="PASS" starttime="20200327 13:54:08.388" endtime="20200327 13:54:08.648"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:07.763" endtime="20200327 13:54:08.649"></status>
-</kw>
-<kw name="Click Change Button In Charge Coin On Wallet Page" library="wallet">
-<doc>錢包-&gt;入幣-&gt;更改</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tv_change</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:08.650" endtime="20200327 13:54:10.150"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tv_change</arg>
-</arguments>
-<msg timestamp="20200327 13:54:10.152" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tv_change'.</msg>
-<status status="PASS" starttime="20200327 13:54:10.150" endtime="20200327 13:54:10.232"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:08.649" endtime="20200327 13:54:10.232"></status>
-</kw>
-<kw name="Input Currency In Charge Coin Search Bar On Wallet Page" library="wallet">
-<doc>錢包-&gt;入幣-&gt;輸入幣種</doc>
-<arguments>
-<arg>BTC</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/acet_coin</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:10.233" endtime="20200327 13:54:11.351"></status>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/acet_coin</arg>
-<arg>${currency}</arg>
-</arguments>
-<msg timestamp="20200327 13:54:11.354" level="INFO">Typing text 'BTC' into text field 'id=com.asiainnovations.ace.taiwan:id/acet_coin'</msg>
-<status status="PASS" starttime="20200327 13:54:11.351" endtime="20200327 13:54:12.101"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/sectionBodyRL</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:12.101" endtime="20200327 13:54:12.723"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/sectionBodyRL</arg>
-</arguments>
-<msg timestamp="20200327 13:54:12.728" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/sectionBodyRL'.</msg>
-<status status="PASS" starttime="20200327 13:54:12.724" endtime="20200327 13:54:13.905"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:10.232" endtime="20200327 13:54:13.905"></status>
-</kw>
-<kw name="Get Currency Address In Charge Coin On Wallet Page" library="wallet">
-<doc>錢包-&gt;入幣-&gt;輸入幣種-&gt;入幣地址</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvAddress</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:13.907" endtime="20200327 13:54:13.948"></status>
-</kw>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvCoinName</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${currency}</var>
-</assign>
-<msg timestamp="20200327 13:54:14.002" level="INFO">Element 'id=com.asiainnovations.ace.taiwan:id/tvCoinName' attribute 'text' value 'BTC' </msg>
-<msg timestamp="20200327 13:54:14.002" level="INFO">${currency} = BTC</msg>
-<status status="PASS" starttime="20200327 13:54:13.949" endtime="20200327 13:54:14.002"></status>
-</kw>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvAddress</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${address}</var>
-</assign>
-<msg timestamp="20200327 13:54:14.053" level="INFO">Element 'id=com.asiainnovations.ace.taiwan:id/tvAddress' attribute 'text' value '38vJNZ3ycZf5hBEXwWDERzmCitactiys4J' </msg>
-<msg timestamp="20200327 13:54:14.053" level="INFO">${address} = 38vJNZ3ycZf5hBEXwWDERzmCitactiys4J</msg>
-<status status="PASS" starttime="20200327 13:54:14.002" endtime="20200327 13:54:14.053"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${currency}: ${address}</arg>
-<arg>WARN</arg>
-</arguments>
-<msg timestamp="20200327 13:54:14.054" level="WARN">BTC: 38vJNZ3ycZf5hBEXwWDERzmCitactiys4J</msg>
-<status status="PASS" starttime="20200327 13:54:14.054" endtime="20200327 13:54:14.054"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:13.906" endtime="20200327 13:54:14.055"></status>
-</kw>
-<kw name="Click Change Button In Charge Coin On Wallet Page" library="wallet">
-<doc>錢包-&gt;入幣-&gt;更改</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tv_change</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:14.055" endtime="20200327 13:54:14.095"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tv_change</arg>
-</arguments>
-<msg timestamp="20200327 13:54:14.097" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tv_change'.</msg>
-<status status="PASS" starttime="20200327 13:54:14.096" endtime="20200327 13:54:14.947"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:14.055" endtime="20200327 13:54:14.947"></status>
-</kw>
-<kw name="Input Currency In Charge Coin Search Bar On Wallet Page" library="wallet">
-<doc>錢包-&gt;入幣-&gt;輸入幣種</doc>
-<arguments>
-<arg>ETH</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/acet_coin</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:14.948" endtime="20200327 13:54:15.057"></status>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/acet_coin</arg>
-<arg>${currency}</arg>
-</arguments>
-<msg timestamp="20200327 13:54:15.061" level="INFO">Typing text 'ETH' into text field 'id=com.asiainnovations.ace.taiwan:id/acet_coin'</msg>
-<status status="PASS" starttime="20200327 13:54:15.057" endtime="20200327 13:54:15.799"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/sectionBodyRL</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:15.799" endtime="20200327 13:54:16.435"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/sectionBodyRL</arg>
-</arguments>
-<msg timestamp="20200327 13:54:16.438" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/sectionBodyRL'.</msg>
-<status status="PASS" starttime="20200327 13:54:16.436" endtime="20200327 13:54:17.620"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:14.947" endtime="20200327 13:54:17.620"></status>
-</kw>
-<kw name="Get Currency Address In Charge Coin On Wallet Page" library="wallet">
-<doc>錢包-&gt;入幣-&gt;輸入幣種-&gt;入幣地址</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvAddress</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:17.621" endtime="20200327 13:54:17.669"></status>
-</kw>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvCoinName</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${currency}</var>
-</assign>
-<msg timestamp="20200327 13:54:17.717" level="INFO">Element 'id=com.asiainnovations.ace.taiwan:id/tvCoinName' attribute 'text' value 'ETH' </msg>
-<msg timestamp="20200327 13:54:17.717" level="INFO">${currency} = ETH</msg>
-<status status="PASS" starttime="20200327 13:54:17.670" endtime="20200327 13:54:17.717"></status>
-</kw>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvAddress</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${address}</var>
-</assign>
-<msg timestamp="20200327 13:54:17.760" level="INFO">Element 'id=com.asiainnovations.ace.taiwan:id/tvAddress' attribute 'text' value '0x7a424116b1149f5986c46e4e0243ff1f0f6ae8cf' </msg>
-<msg timestamp="20200327 13:54:17.760" level="INFO">${address} = 0x7a424116b1149f5986c46e4e0243ff1f0f6ae8cf</msg>
-<status status="PASS" starttime="20200327 13:54:17.717" endtime="20200327 13:54:17.760"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${currency}: ${address}</arg>
-<arg>WARN</arg>
-</arguments>
-<msg timestamp="20200327 13:54:17.761" level="WARN">ETH: 0x7a424116b1149f5986c46e4e0243ff1f0f6ae8cf</msg>
-<status status="PASS" starttime="20200327 13:54:17.760" endtime="20200327 13:54:17.761"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:17.620" endtime="20200327 13:54:17.761"></status>
-</kw>
-<kw name="Click Change Button In Charge Coin On Wallet Page" library="wallet">
-<doc>錢包-&gt;入幣-&gt;更改</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tv_change</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:17.763" endtime="20200327 13:54:17.802"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tv_change</arg>
-</arguments>
-<msg timestamp="20200327 13:54:17.804" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tv_change'.</msg>
-<status status="PASS" starttime="20200327 13:54:17.802" endtime="20200327 13:54:18.880"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:17.762" endtime="20200327 13:54:18.880"></status>
-</kw>
-<kw name="Input Currency In Charge Coin Search Bar On Wallet Page" library="wallet">
-<doc>錢包-&gt;入幣-&gt;輸入幣種</doc>
-<arguments>
-<arg>BCH</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/acet_coin</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:18.882" endtime="20200327 13:54:19.020"></status>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/acet_coin</arg>
-<arg>${currency}</arg>
-</arguments>
-<msg timestamp="20200327 13:54:19.023" level="INFO">Typing text 'BCH' into text field 'id=com.asiainnovations.ace.taiwan:id/acet_coin'</msg>
-<status status="PASS" starttime="20200327 13:54:19.020" endtime="20200327 13:54:19.766"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/sectionBodyRL</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:19.766" endtime="20200327 13:54:20.410"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/sectionBodyRL</arg>
-</arguments>
-<msg timestamp="20200327 13:54:20.413" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/sectionBodyRL'.</msg>
-<status status="PASS" starttime="20200327 13:54:20.410" endtime="20200327 13:54:21.554"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:18.881" endtime="20200327 13:54:21.555"></status>
-</kw>
-<kw name="Get Currency Address In Charge Coin On Wallet Page" library="wallet">
-<doc>錢包-&gt;入幣-&gt;輸入幣種-&gt;入幣地址</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvAddress</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:21.556" endtime="20200327 13:54:21.593"></status>
-</kw>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvCoinName</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${currency}</var>
-</assign>
-<msg timestamp="20200327 13:54:21.638" level="INFO">Element 'id=com.asiainnovations.ace.taiwan:id/tvCoinName' attribute 'text' value 'BCH' </msg>
-<msg timestamp="20200327 13:54:21.638" level="INFO">${currency} = BCH</msg>
-<status status="PASS" starttime="20200327 13:54:21.594" endtime="20200327 13:54:21.638"></status>
-</kw>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvAddress</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${address}</var>
-</assign>
-<msg timestamp="20200327 13:54:21.685" level="INFO">Element 'id=com.asiainnovations.ace.taiwan:id/tvAddress' attribute 'text' value '' </msg>
-<msg timestamp="20200327 13:54:21.685" level="INFO">${address} = </msg>
-<status status="PASS" starttime="20200327 13:54:21.638" endtime="20200327 13:54:21.685"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${currency}: ${address}</arg>
-<arg>WARN</arg>
-</arguments>
-<msg timestamp="20200327 13:54:21.686" level="WARN">BCH: </msg>
-<status status="PASS" starttime="20200327 13:54:21.686" endtime="20200327 13:54:21.687"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:21.555" endtime="20200327 13:54:21.687"></status>
-</kw>
-<kw name="Click Back Button On Wallet Page" library="wallet">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:21.688" endtime="20200327 13:54:21.731"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/iv_back</arg>
-</arguments>
-<msg timestamp="20200327 13:54:21.733" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/iv_back'.</msg>
-<status status="PASS" starttime="20200327 13:54:21.732" endtime="20200327 13:54:21.802"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:21.687" endtime="20200327 13:54:21.803"></status>
-</kw>
-<doc>錢包-&gt;入幣</doc>
-<tags>
-<tag>prod</tag>
-</tags>
-<status status="PASS" starttime="20200327 13:54:05.937" endtime="20200327 13:54:21.803" critical="yes"></status>
-</test>
-<test id="s1-t6" name="Double Check TWD Info On Wallet Page">
-<kw name="Goto Wallet Tab On Home Page" library="navigation">
-<doc>錢包 分頁</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_wallet</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:21.806" endtime="20200327 13:54:23.091"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_wallet</arg>
-</arguments>
-<msg timestamp="20200327 13:54:23.094" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_wallet'.</msg>
-<status status="PASS" starttime="20200327 13:54:23.091" endtime="20200327 13:54:23.367"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:21.805" endtime="20200327 13:54:23.368"></status>
-</kw>
-<kw name="Check TWD Info On Wallet Page" library="wallet">
-<doc>TWD可用餘額 TWD處理中 TWD總資產</doc>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tv_capital_balance</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${TWD_avail}</var>
-</assign>
-<msg timestamp="20200327 13:54:23.989" level="INFO">Element 'id=com.asiainnovations.ace.taiwan:id/tv_capital_balance' attribute 'text' value '993,848.78' </msg>
-<msg timestamp="20200327 13:54:23.989" level="INFO">${TWD_avail} = 993,848.78</msg>
-<status status="PASS" starttime="20200327 13:54:23.370" endtime="20200327 13:54:23.989"></status>
-</kw>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tv_total</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${TWD_proce}</var>
-</assign>
-<msg timestamp="20200327 13:54:24.205" level="INFO">Element 'id=com.asiainnovations.ace.taiwan:id/tv_total' attribute 'text' value '1,100.00' </msg>
-<msg timestamp="20200327 13:54:24.206" level="INFO">${TWD_proce} = 1,100.00</msg>
-<status status="PASS" starttime="20200327 13:54:23.989" endtime="20200327 13:54:24.206"></status>
-</kw>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tv_total_assets</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${TWD_total}</var>
-</assign>
-<msg timestamp="20200327 13:54:24.418" level="INFO">Element 'id=com.asiainnovations.ace.taiwan:id/tv_total_assets' attribute 'text' value '994,948.78' </msg>
-<msg timestamp="20200327 13:54:24.418" level="INFO">${TWD_total} = 994,948.78</msg>
-<status status="PASS" starttime="20200327 13:54:24.206" endtime="20200327 13:54:24.418"></status>
-</kw>
-<kw name="Get Element Attribute" library="AppiumLibrary">
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/atv_my_captial</arg>
-<arg>text</arg>
-</arguments>
-<assign>
-<var>${TWD_digit_total}</var>
-</assign>
-<msg timestamp="20200327 13:54:24.641" level="INFO">Element 'id=com.asiainnovations.ace.taiwan:id/atv_my_captial' attribute 'text' value '數位資產估值（≈12,042,481,402.29TWD）' </msg>
-<msg timestamp="20200327 13:54:24.641" level="INFO">${TWD_digit_total} = 數位資產估值（≈12,042,481,402.29TWD）</msg>
-<status status="PASS" starttime="20200327 13:54:24.419" endtime="20200327 13:54:24.641"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>TWD可用餘額 ${TWD_avail}</arg>
-<arg>WARN</arg>
-</arguments>
-<msg timestamp="20200327 13:54:24.642" level="WARN">TWD可用餘額 993,848.78</msg>
-<status status="PASS" starttime="20200327 13:54:24.642" endtime="20200327 13:54:24.642"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>TWD處理中 ${TWD_proce}</arg>
-<arg>WARN</arg>
-</arguments>
-<msg timestamp="20200327 13:54:24.643" level="WARN">TWD處理中 1,100.00</msg>
-<status status="PASS" starttime="20200327 13:54:24.643" endtime="20200327 13:54:24.643"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>TWD可用餘額 ${TWD_total}</arg>
-<arg>WARN</arg>
-</arguments>
-<msg timestamp="20200327 13:54:24.644" level="WARN">TWD可用餘額 994,948.78</msg>
-<status status="PASS" starttime="20200327 13:54:24.644" endtime="20200327 13:54:24.645"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${TWD_digit_total}</arg>
-<arg>WARN</arg>
-</arguments>
-<msg timestamp="20200327 13:54:24.646" level="WARN">數位資產估值（≈12,042,481,402.29TWD）</msg>
-<status status="PASS" starttime="20200327 13:54:24.645" endtime="20200327 13:54:24.646"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:23.368" endtime="20200327 13:54:24.647"></status>
-</kw>
-<tags>
-<tag>prod</tag>
-</tags>
-<status status="PASS" starttime="20200327 13:54:21.804" endtime="20200327 13:54:24.647" critical="yes"></status>
-</test>
-<test id="s1-t7" name="Test Show Coin Withdraw On Wallet Page">
-<kw name="Click Withdraw Coin On Wallet Page" library="wallet">
-<doc>錢包-&gt;提幣</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/atv_coin</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:24.649" endtime="20200327 13:54:24.866"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/atv_coin</arg>
-</arguments>
-<msg timestamp="20200327 13:54:24.869" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/atv_coin'.</msg>
-<status status="PASS" starttime="20200327 13:54:24.866" endtime="20200327 13:54:25.152"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:24.648" endtime="20200327 13:54:25.152"></status>
-</kw>
-<kw name="Choose Currency In Withdraw Coin On Wallet Page" library="wallet">
-<doc>錢包-&gt;提幣-&gt;選擇幣種</doc>
-<arguments>
-<arg>BTC</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvSelectCoin</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:25.154" endtime="20200327 13:54:26.346"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvSelectCoin</arg>
-</arguments>
-<msg timestamp="20200327 13:54:26.347" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tvSelectCoin'.</msg>
-<status status="PASS" starttime="20200327 13:54:26.346" endtime="20200327 13:54:26.420"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/acet_coin</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:26.420" endtime="20200327 13:54:27.291"></status>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/acet_coin</arg>
-<arg>${currency}</arg>
-</arguments>
-<msg timestamp="20200327 13:54:27.294" level="INFO">Typing text 'BTC' into text field 'id=com.asiainnovations.ace.taiwan:id/acet_coin'</msg>
-<status status="PASS" starttime="20200327 13:54:27.291" endtime="20200327 13:54:28.010"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/sectionBodyRL</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:28.011" endtime="20200327 13:54:28.655"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/sectionBodyRL</arg>
-</arguments>
-<msg timestamp="20200327 13:54:28.658" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/sectionBodyRL'.</msg>
-<status status="PASS" starttime="20200327 13:54:28.656" endtime="20200327 13:54:29.855"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:25.153" endtime="20200327 13:54:29.855"></status>
-</kw>
-<kw name="Input Coin Amount In Withdraw Coin On Wallet Page" library="wallet">
-<doc>錢包-&gt;提幣-&gt;提幣數量</doc>
-<arguments>
-<arg>0.0001</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/et_money_num</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:29.856" endtime="20200327 13:54:29.904"></status>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/et_money_num</arg>
-<arg>${amount}</arg>
-</arguments>
-<msg timestamp="20200327 13:54:29.907" level="INFO">Typing text '0.0001' into text field 'id=com.asiainnovations.ace.taiwan:id/et_money_num'</msg>
-<status status="PASS" starttime="20200327 13:54:29.904" endtime="20200327 13:54:30.477"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:29.855" endtime="20200327 13:54:30.478"></status>
-</kw>
-<kw name="Input Coin Address In Withdraw Coin On Wallet Page" library="wallet">
-<doc>錢包-&gt;提幣-&gt;提幣地址</doc>
-<arguments>
-<arg>sfsdfsdfsdfsdfsdfsdf</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/et_withdraw</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:30.480" endtime="20200327 13:54:31.008"></status>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/et_withdraw</arg>
-<arg>${address}</arg>
-</arguments>
-<msg timestamp="20200327 13:54:31.012" level="INFO">Typing text 'sfsdfsdfsdfsdfsdfsdf' into text field 'id=com.asiainnovations.ace.taiwan:id/et_withdraw'</msg>
-<status status="PASS" starttime="20200327 13:54:31.009" endtime="20200327 13:54:31.092"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:30.478" endtime="20200327 13:54:31.092"></status>
-</kw>
-<kw name="Click Next In Withdraw Coin On Wallet Page" library="wallet">
-<doc>錢包-&gt;提幣-&gt;下一步</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/acb_next</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:31.093" endtime="20200327 13:54:31.625"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/acb_next</arg>
-</arguments>
-<msg timestamp="20200327 13:54:31.628" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_next'.</msg>
-<status status="PASS" starttime="20200327 13:54:31.625" endtime="20200327 13:54:31.704"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:31.092" endtime="20200327 13:54:31.704"></status>
-</kw>
-<kw name="Input Cash Password In Withdraw Coin On Wallet Page" library="wallet">
-<doc>錢包-&gt;提幣-&gt;資金密碼</doc>
-<arguments>
-<arg>Arborabc5678</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/et_trade_pass</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:31.706" endtime="20200327 13:54:32.356"></status>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/et_trade_pass</arg>
-<arg>${pass}</arg>
-</arguments>
-<msg timestamp="20200327 13:54:32.359" level="INFO">Typing text 'Arborabc5678' into text field 'id=com.asiainnovations.ace.taiwan:id/et_trade_pass'</msg>
-<status status="PASS" starttime="20200327 13:54:32.356" endtime="20200327 13:54:32.410"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:31.705" endtime="20200327 13:54:32.411"></status>
-</kw>
-<kw name="Input Google Auth In Withdraw Coin On Wallet Page" library="wallet">
-<doc>錢包-&gt;提幣-&gt;Google Auth</doc>
-<arguments>
-<arg>${googleAuth}</arg>
-</arguments>
-<kw name="Run Keyword" library="BuiltIn">
-<doc>Executes the given keyword with the given arguments.</doc>
-<arguments>
-<arg>get_totp_token</arg>
-<arg>${key}</arg>
-</arguments>
-<assign>
-<var>${token}</var>
-</assign>
-<kw name="Get Totp Token" library="getTotp">
-<arguments>
-<arg>${key}</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:32.412" endtime="20200327 13:54:32.413"></status>
-</kw>
-<msg timestamp="20200327 13:54:32.413" level="INFO">${token} = 465961</msg>
-<status status="PASS" starttime="20200327 13:54:32.412" endtime="20200327 13:54:32.413"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/et_phone_verify_code</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:32.413" endtime="20200327 13:54:32.941"></status>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/et_phone_verify_code</arg>
-<arg>${token}</arg>
-</arguments>
-<msg timestamp="20200327 13:54:32.944" level="INFO">Typing text '465961' into text field 'id=com.asiainnovations.ace.taiwan:id/et_phone_verify_code'</msg>
-<status status="PASS" starttime="20200327 13:54:32.941" endtime="20200327 13:54:32.999"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:32.411" endtime="20200327 13:54:32.999"></status>
-</kw>
-<kw name="Click Confirm In Withdraw Coin On Wallet Page" library="wallet">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/acb_next</arg>
-</arguments>
-<status status="PASS" starttime="20200327 13:54:33.000" endtime="20200327 13:54:33.535"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/acb_next</arg>
-</arguments>
-<msg timestamp="20200327 13:54:33.537" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_next'.</msg>
-<status status="PASS" starttime="20200327 13:54:33.535" endtime="20200327 13:54:33.627"></status>
-</kw>
-<status status="PASS" starttime="20200327 13:54:32.999" endtime="20200327 13:54:33.627"></status>
-</kw>
-<doc>錢包-&gt;提幣</doc>
-<tags>
-<tag>dev</tag>
-<tag>stage</tag>
-</tags>
-<status status="PASS" starttime="20200327 13:54:24.647" endtime="20200327 13:54:33.628" critical="yes"></status>
-</test>
-<status status="PASS" starttime="20200327 13:53:21.538" endtime="20200327 13:54:33.631"></status>
+<status status="PASS" starttime="20200330 14:35:34.662" endtime="20200330 14:36:12.634"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="7" fail="0">Critical Tests</stat>
-<stat pass="7" fail="0">All Tests</stat>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0">dev</stat>
-<stat pass="5" fail="0">prod</stat>
-<stat pass="2" fail="0">stage</stat>
+<stat pass="2" fail="0">prod</stat>
 </tag>
 <suite>
-<stat pass="7" fail="0" id="s1" name="Test Login Wallet">Test Login Wallet</stat>
+<stat pass="2" fail="0" id="s1" name="Test Login Me">Test Login Me</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20200327 13:53:46.378" level="WARN">TWD可用餘額 993,948.78</msg>
-<msg timestamp="20200327 13:53:46.380" level="WARN">TWD處理中 1,000.00</msg>
-<msg timestamp="20200327 13:53:46.381" level="WARN">TWD可用餘額 994,948.78</msg>
-<msg timestamp="20200327 13:53:46.381" level="WARN">數位資產估值（≈12,042,481,402.29TWD）</msg>
-<msg timestamp="20200327 13:54:05.550" level="WARN">銀行資訊: 805 遠東銀行</msg>
-<msg timestamp="20200327 13:54:05.786" level="WARN">匯款帳號: 1023110000004375</msg>
-<msg timestamp="20200327 13:54:14.054" level="WARN">BTC: 38vJNZ3ycZf5hBEXwWDERzmCitactiys4J</msg>
-<msg timestamp="20200327 13:54:17.761" level="WARN">ETH: 0x7a424116b1149f5986c46e4e0243ff1f0f6ae8cf</msg>
-<msg timestamp="20200327 13:54:21.686" level="WARN">BCH: </msg>
-<msg timestamp="20200327 13:54:24.642" level="WARN">TWD可用餘額 993,848.78</msg>
-<msg timestamp="20200327 13:54:24.643" level="WARN">TWD處理中 1,100.00</msg>
-<msg timestamp="20200327 13:54:24.644" level="WARN">TWD可用餘額 994,948.78</msg>
-<msg timestamp="20200327 13:54:24.646" level="WARN">數位資產估值（≈12,042,481,402.29TWD）</msg>
 </errors>
 </robot>

@@ -8,9 +8,9 @@ Default Tags    prod
 *** Variables ***
 
 *** Test Cases ***
-Test Login Ace On Android
-    [Documentation]    登入ACE 使用 google 驗證
-    Open Ace App And Login
+Open Ace App And Login With Mobile
+    [Documentation]    登入ACE 使用 手機 google 驗證
+    Open Ace App And Login With Mobile
 
 Test Click Home Page
     [Documentation]    切換到 首面 點擊 各個頁面

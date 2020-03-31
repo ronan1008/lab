@@ -11,8 +11,8 @@ ${googleAuth}   P4SIVMYMXBJ76PMV
 
 *** Test Cases ***
 Test Login Ace On Android
-    [Documentation]    登入ACE 使用 google 驗證
-    Open Ace App And Login
+    [Documentation]    登入ACE 使用 手機 google 驗證
+    Open Ace App And Login With Mobile
 
 Test TWD Info On Wallet Page 
     Goto Wallet Tab On Home Page
