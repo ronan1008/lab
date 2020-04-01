@@ -84,20 +84,25 @@ Click Sell Button On Trade Page
     Wait Until Element Is Visible   xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/btnPostOrder' and @index='21']
     Click Element  xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/btnPostOrder' and @index='21']
 
+Click Cancel Order Button On Trade Page
+    [Documentation]    撤單
+    [Arguments]	${number}
+    ${number}=    Evaluate    ${number} - 1
+    Wait Until Element Is Visible   xpath=//*[@class='android.view.ViewGroup' and @index='${number}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/btnCancel']  
+    Click Element  xpath=//*[@class='android.view.ViewGroup' and @index='${number}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/btnCancel']  
 
 
+Check List In My Order On Trade Page
+    [Arguments]    ${type}    ${currency1}    ${currency2}    ${amount}    ${price}  
 
+    ${float_leng}=    Set Variable If 
+    ...    "${currency1}" == "BTC"    0.00000000
+    ...    "${currency1}" == "ETH"    0.000000
 
+    Page Should Contain Element    xpath=//*[@class='android.view.ViewGroup']/*[@text='${type}']/following-sibling::*[@text='${currency1}']/following-sibling::*[@text='/${currency2}']/following-sibling::*[@text='${float_leng}/${amount}']/following-sibling::*[@text='${price}']    loglevel=WARN
+    Log    發現 該訂單：${type} ${currency1}/${currency2} 數量:${amount} 價格:${price}    WARN
 
-
-
-
-
-
-
-
-
-
-
-
-
+Swipe middle To Up On Home Page
+    Sleep    1s
+    Swipe By Percent    50    50    50    10    5000
+    Sleep    1s
