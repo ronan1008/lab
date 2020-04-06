@@ -40,13 +40,19 @@ Click Every Detail Of Banner On Quote Page
         Click Back Button On Quote Page
     END
 
+Check All Collections On Quote Page
+    ${count}=     Get Matching Xpath Count    xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']
+    Log    ${count}    WARN
+    FOR    ${index}    IN RANGE    ${count}
+        Sleep   0.5s
+        Click Element    xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']
+        ${text} =    Get Element Attribute    xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']    text
+        Log    Checked : ${text}    WARN
+    END
 
-
-
-
-
-
-
+Checked Collections On Quote Page
+    [Arguments]	${Cryptocurrency}
+    Click Element    xpath=//*[@text='${Cryptocurrency}']/following-sibling::*[@class='android.widget.CheckBox'][1]
 
 
 

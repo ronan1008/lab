@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.6 on darwin)" generated="20200401 18:24:30.400" rpa="false">
-<suite id="s1" name="Test Login Trade" source="/Users/shocklee/Documents/github/workspace/Python/Ace/Android/test_login_trade.robot">
+<robot generator="Robot 3.1.2 (Python 3.7.6 on darwin)" generated="20200406 18:11:38.822" rpa="false">
+<suite id="s1" name="Test Login Quote Collections" source="/Users/shocklee/Documents/github/workspace/Python/Ace/Android/test_login_quote_collections.robot">
 <test id="s1-t1" name="Test Login Ace On Android">
 <kw name="Open Ace App And Login With Mobile" library="login">
 <kw name="Open Ace On Android" library="login">
@@ -18,7 +18,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>appPackage=${appPackage}</arg>
 <arg>appActivity=${appActivity}</arg>
 </arguments>
-<status status="PASS" starttime="20200401 18:24:30.858" endtime="20200401 18:24:36.759"></status>
+<status status="PASS" starttime="20200406 18:11:39.447" endtime="20200406 18:11:45.843"></status>
 </kw>
 <kw name="Goto Me Tab On Home Page" library="navigation">
 <doc>我 分頁</doc>
@@ -27,19 +27,19 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/navigation_me</arg>
 </arguments>
-<status status="PASS" starttime="20200401 18:24:36.760" endtime="20200401 18:24:38.743"></status>
+<status status="PASS" starttime="20200406 18:11:45.844" endtime="20200406 18:11:47.831"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/navigation_me</arg>
 </arguments>
-<msg timestamp="20200401 18:24:38.746" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_me'.</msg>
-<status status="PASS" starttime="20200401 18:24:38.744" endtime="20200401 18:24:38.867"></status>
+<msg timestamp="20200406 18:11:47.834" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_me'.</msg>
+<status status="PASS" starttime="20200406 18:11:47.831" endtime="20200406 18:11:47.977"></status>
 </kw>
-<status status="PASS" starttime="20200401 18:24:36.759" endtime="20200401 18:24:38.867"></status>
+<status status="PASS" starttime="20200406 18:11:45.843" endtime="20200406 18:11:47.977"></status>
 </kw>
-<status status="PASS" starttime="20200401 18:24:30.858" endtime="20200401 18:24:38.867"></status>
+<status status="PASS" starttime="20200406 18:11:39.447" endtime="20200406 18:11:47.978"></status>
 </kw>
 <kw name="Click Mobile Login On Me Page" library="me">
 <doc>我-&gt;電話 登入</doc>
@@ -48,17 +48,17 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/tv_phone_login</arg>
 </arguments>
-<status status="PASS" starttime="20200401 18:24:38.868" endtime="20200401 18:24:39.662"></status>
+<status status="PASS" starttime="20200406 18:11:47.981" endtime="20200406 18:11:48.785"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/tv_phone_login</arg>
 </arguments>
-<msg timestamp="20200401 18:24:39.665" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tv_phone_login'.</msg>
-<status status="PASS" starttime="20200401 18:24:39.662" endtime="20200401 18:24:39.750"></status>
+<msg timestamp="20200406 18:11:48.789" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tv_phone_login'.</msg>
+<status status="PASS" starttime="20200406 18:11:48.786" endtime="20200406 18:11:49.476"></status>
 </kw>
-<status status="PASS" starttime="20200401 18:24:38.868" endtime="20200401 18:24:39.751"></status>
+<status status="PASS" starttime="20200406 18:11:47.978" endtime="20200406 18:11:49.477"></status>
 </kw>
 <kw name="Input Tel Number In Mobile Login On Me Page" library="me">
 <doc>我-&gt;電話 登入-&gt;輸入 電話</doc>
@@ -70,7 +70,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_phone</arg>
 </arguments>
-<status status="PASS" starttime="20200401 18:24:39.752" endtime="20200401 18:24:40.391"></status>
+<status status="PASS" starttime="20200406 18:11:49.478" endtime="20200406 18:11:49.528"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -78,10 +78,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_phone</arg>
 <arg>${tel_number}</arg>
 </arguments>
-<msg timestamp="20200401 18:24:40.394" level="INFO">Typing text '0936736561' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_phone'</msg>
-<status status="PASS" starttime="20200401 18:24:40.391" endtime="20200401 18:24:40.974"></status>
+<msg timestamp="20200406 18:11:49.530" level="INFO">Typing text '0936736561' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_phone'</msg>
+<status status="PASS" starttime="20200406 18:11:49.528" endtime="20200406 18:11:50.102"></status>
 </kw>
-<status status="PASS" starttime="20200401 18:24:39.751" endtime="20200401 18:24:40.975"></status>
+<status status="PASS" starttime="20200406 18:11:49.477" endtime="20200406 18:11:50.102"></status>
 </kw>
 <kw name="Input Password In Mobile Login On Me Page" library="me">
 <doc>我-&gt;電話 登入-&gt;輸入 密碼</doc>
@@ -93,7 +93,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_password</arg>
 </arguments>
-<status status="PASS" starttime="20200401 18:24:40.976" endtime="20200401 18:24:41.503"></status>
+<status status="PASS" starttime="20200406 18:11:50.103" endtime="20200406 18:11:50.635"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -101,10 +101,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_password</arg>
 <arg>${Password}</arg>
 </arguments>
-<msg timestamp="20200401 18:24:41.506" level="INFO">Typing text 'Arborabc1234' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_password'</msg>
-<status status="PASS" starttime="20200401 18:24:41.503" endtime="20200401 18:24:42.069"></status>
+<msg timestamp="20200406 18:11:50.637" level="INFO">Typing text 'Arborabc1234' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_password'</msg>
+<status status="PASS" starttime="20200406 18:11:50.636" endtime="20200406 18:11:51.212"></status>
 </kw>
-<status status="PASS" starttime="20200401 18:24:40.975" endtime="20200401 18:24:42.069"></status>
+<status status="PASS" starttime="20200406 18:11:50.102" endtime="20200406 18:11:51.213"></status>
 </kw>
 <kw name="Click Login Button In Login On Me Page" library="me">
 <doc>我-&gt;電話orEmail 登入-&gt;登入</doc>
@@ -113,25 +113,25 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/acb_login</arg>
 </arguments>
-<status status="PASS" starttime="20200401 18:24:42.070" endtime="20200401 18:24:42.601"></status>
+<status status="PASS" starttime="20200406 18:11:51.214" endtime="20200406 18:11:51.751"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/acb_login</arg>
 </arguments>
-<msg timestamp="20200401 18:24:42.603" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_login'.</msg>
-<status status="PASS" starttime="20200401 18:24:42.602" endtime="20200401 18:24:42.683"></status>
+<msg timestamp="20200406 18:11:51.753" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_login'.</msg>
+<status status="PASS" starttime="20200406 18:11:51.751" endtime="20200406 18:11:51.839"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200401 18:24:43.684" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200401 18:24:42.683" endtime="20200401 18:24:43.685"></status>
+<msg timestamp="20200406 18:11:52.842" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200406 18:11:51.839" endtime="20200406 18:11:52.842"></status>
 </kw>
-<status status="PASS" starttime="20200401 18:24:42.070" endtime="20200401 18:24:43.685"></status>
+<status status="PASS" starttime="20200406 18:11:51.213" endtime="20200406 18:11:52.842"></status>
 </kw>
 <kw name="Input Google Auth In Login On Me Page" library="me">
 <arguments>
@@ -150,17 +150,17 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>${key}</arg>
 </arguments>
-<status status="PASS" starttime="20200401 18:24:43.687" endtime="20200401 18:24:43.687"></status>
+<status status="PASS" starttime="20200406 18:11:52.844" endtime="20200406 18:11:52.845"></status>
 </kw>
-<msg timestamp="20200401 18:24:43.688" level="INFO">${token} = 497662</msg>
-<status status="PASS" starttime="20200401 18:24:43.686" endtime="20200401 18:24:43.688"></status>
+<msg timestamp="20200406 18:11:52.845" level="INFO">${token} = 276771</msg>
+<status status="PASS" starttime="20200406 18:11:52.843" endtime="20200406 18:11:52.845"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_vertify</arg>
 </arguments>
-<status status="PASS" starttime="20200401 18:24:43.688" endtime="20200401 18:24:43.966"></status>
+<status status="PASS" starttime="20200406 18:11:52.845" endtime="20200406 18:11:53.014"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -168,10 +168,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>id=com.asiainnovations.ace.taiwan:id/aet_vertify</arg>
 <arg>${token}</arg>
 </arguments>
-<msg timestamp="20200401 18:24:43.969" level="INFO">Typing text '497662' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_vertify'</msg>
-<status status="PASS" starttime="20200401 18:24:43.966" endtime="20200401 18:24:44.050"></status>
+<msg timestamp="20200406 18:11:53.017" level="INFO">Typing text '276771' into text field 'id=com.asiainnovations.ace.taiwan:id/aet_vertify'</msg>
+<status status="PASS" starttime="20200406 18:11:53.015" endtime="20200406 18:11:53.096"></status>
 </kw>
-<status status="PASS" starttime="20200401 18:24:43.685" endtime="20200401 18:24:44.050"></status>
+<status status="PASS" starttime="20200406 18:11:52.843" endtime="20200406 18:11:53.096"></status>
 </kw>
 <kw name="Click Login Button In Auth On Me Page" library="me">
 <arguments>
@@ -182,23 +182,23 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/acb_commit</arg>
 </arguments>
-<status status="PASS" starttime="20200401 18:24:44.051" endtime="20200401 18:24:44.586"></status>
+<status status="PASS" starttime="20200406 18:11:53.097" endtime="20200406 18:11:53.633"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=com.asiainnovations.ace.taiwan:id/acb_commit</arg>
 </arguments>
-<msg timestamp="20200401 18:24:44.588" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_commit'.</msg>
-<status status="PASS" starttime="20200401 18:24:44.586" endtime="20200401 18:24:44.665"></status>
+<msg timestamp="20200406 18:11:53.636" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/acb_commit'.</msg>
+<status status="PASS" starttime="20200406 18:11:53.633" endtime="20200406 18:11:53.725"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20200401 18:24:46.669" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200401 18:24:44.666" endtime="20200401 18:24:46.669"></status>
+<msg timestamp="20200406 18:11:55.727" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200406 18:11:53.725" endtime="20200406 18:11:55.727"></status>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
@@ -216,14 +216,14 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 </arguments>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20200401 18:24:47.609" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200401 18:24:46.910" endtime="20200401 18:24:47.609"></status>
+<msg timestamp="20200406 18:11:56.694" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200406 18:11:56.005" endtime="20200406 18:11:56.694"></status>
 </kw>
-<msg timestamp="20200401 18:24:47.610" level="FAIL">Page should have contained element 'id=com.asiainnovations.ace.taiwan:id/acb_commit' but did not</msg>
-<status status="FAIL" starttime="20200401 18:24:46.670" endtime="20200401 18:24:47.610"></status>
+<msg timestamp="20200406 18:11:56.694" level="FAIL">Page should have contained element 'id=com.asiainnovations.ace.taiwan:id/acb_commit' but did not</msg>
+<status status="FAIL" starttime="20200406 18:11:55.728" endtime="20200406 18:11:56.694"></status>
 </kw>
-<msg timestamp="20200401 18:24:47.610" level="INFO">${status} = False</msg>
-<status status="PASS" starttime="20200401 18:24:46.670" endtime="20200401 18:24:47.610"></status>
+<msg timestamp="20200406 18:11:56.695" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20200406 18:11:55.728" endtime="20200406 18:11:56.695"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -238,10 +238,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>${key}</arg>
 </arguments>
-<status status="PASS" starttime="20200401 18:24:47.611" endtime="20200401 18:24:47.611"></status>
+<status status="PASS" starttime="20200406 18:11:56.695" endtime="20200406 18:11:56.695"></status>
 </kw>
-<msg timestamp="20200401 18:24:47.611" level="INFO">${token} = 497662</msg>
-<status status="PASS" starttime="20200401 18:24:47.610" endtime="20200401 18:24:47.611"></status>
+<msg timestamp="20200406 18:11:56.695" level="INFO">${token} = 276771</msg>
+<status status="PASS" starttime="20200406 18:11:56.695" endtime="20200406 18:11:56.696"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -255,782 +255,484 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>Click Element</arg>
 <arg>id=com.asiainnovations.ace.taiwan:id/acb_commit</arg>
 </arguments>
-<status status="PASS" starttime="20200401 18:24:47.611" endtime="20200401 18:24:47.611"></status>
+<status status="PASS" starttime="20200406 18:11:56.696" endtime="20200406 18:11:56.696"></status>
 </kw>
-<status status="PASS" starttime="20200401 18:24:44.050" endtime="20200401 18:24:47.612"></status>
+<status status="PASS" starttime="20200406 18:11:53.096" endtime="20200406 18:11:56.696"></status>
 </kw>
-<status status="PASS" starttime="20200401 18:24:30.858" endtime="20200401 18:24:47.612"></status>
+<status status="PASS" starttime="20200406 18:11:39.446" endtime="20200406 18:11:56.696"></status>
 </kw>
 <doc>登入ACE 使用 手機 google 驗證</doc>
 <tags>
 <tag>prod</tag>
 </tags>
-<status status="PASS" starttime="20200401 18:24:30.856" endtime="20200401 18:24:47.612" critical="yes"></status>
+<status status="PASS" starttime="20200406 18:11:39.445" endtime="20200406 18:11:56.697" critical="yes"></status>
 </test>
-<test id="s1-t2" name="Test Sell On Trade Page">
-<kw name="Goto Trading Tab On Home Page" library="navigation">
-<doc>交易 分頁</doc>
+<test id="s1-t2" name="Test Click Quote Page">
+<kw name="Goto Quotes Tab On Home Page" library="navigation">
+<doc>行情 分頁</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_trading</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/navigation_quotes</arg>
 </arguments>
-<status status="PASS" starttime="20200401 18:24:47.613" endtime="20200401 18:24:47.728"></status>
+<status status="PASS" starttime="20200406 18:11:56.699" endtime="20200406 18:11:56.800"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_trading</arg>
+<arg>id=com.asiainnovations.ace.taiwan:id/navigation_quotes</arg>
 </arguments>
-<msg timestamp="20200401 18:24:47.731" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_trading'.</msg>
-<status status="PASS" starttime="20200401 18:24:47.728" endtime="20200401 18:24:47.888"></status>
+<msg timestamp="20200406 18:11:56.803" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_quotes'.</msg>
+<status status="PASS" starttime="20200406 18:11:56.801" endtime="20200406 18:11:56.959"></status>
 </kw>
-<status status="PASS" starttime="20200401 18:24:47.613" endtime="20200401 18:24:47.889"></status>
+<status status="PASS" starttime="20200406 18:11:56.698" endtime="20200406 18:11:56.959"></status>
 </kw>
-<kw name="Choose Currency To Currency Exchange" library="trade">
-<doc>左上角的匯率-&gt;上面欄位幣值-&gt;底下的詳情</doc>
+<kw name="Click Banner On Quote Page" library="quote">
 <arguments>
 <arg>TWD</arg>
-<arg>ETH</arg>
 </arguments>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvTradingCurrencyName</arg>
+<arg>xpath=//*[@resource-id='android:id/text1' and @text='${Cryptocurrency}']</arg>
 </arguments>
-<status status="PASS" starttime="20200401 18:24:47.891" endtime="20200401 18:24:49.254"></status>
+<status status="PASS" starttime="20200406 18:11:56.960" endtime="20200406 18:11:58.616"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvTradingCurrencyName</arg>
+<arg>xpath=//*[@resource-id='android:id/text1' and @text='${Cryptocurrency}']</arg>
 </arguments>
-<msg timestamp="20200401 18:24:49.256" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tvTradingCurrencyName'.</msg>
-<status status="PASS" starttime="20200401 18:24:49.254" endtime="20200401 18:24:49.383"></status>
+<msg timestamp="20200406 18:11:58.618" level="INFO">Clicking element 'xpath=//*[@resource-id='android:id/text1' and @text='TWD']'.</msg>
+<status status="PASS" starttime="20200406 18:11:58.617" endtime="20200406 18:12:00.061"></status>
 </kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>//*[@resource-id='android:id/text1' and @text='${currency1}']</arg>
-</arguments>
-<msg timestamp="20200401 18:24:49.386" level="INFO">Clicking element '//*[@resource-id='android:id/text1' and @text='TWD']'.</msg>
-<status status="PASS" starttime="20200401 18:24:49.383" endtime="20200401 18:24:50.567"></status>
+<status status="PASS" starttime="20200406 18:11:56.960" endtime="20200406 18:12:00.061"></status>
 </kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
+<kw name="Check All Collections On Quote Page" library="quote">
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<doc>Returns number of elements matching ``xpath``</doc>
 <arguments>
-<arg>//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout']/*[@text='${currency2}']</arg>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']</arg>
 </arguments>
-<msg timestamp="20200401 18:24:50.570" level="INFO">Clicking element '//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout']/*[@text='ETH']'.</msg>
-<status status="PASS" starttime="20200401 18:24:50.567" endtime="20200401 18:24:51.403"></status>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20200406 18:12:00.608" level="INFO">${count} = 9</msg>
+<status status="PASS" starttime="20200406 18:12:00.063" endtime="20200406 18:12:00.608"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
-<arg>選擇 ${currency1} -&gt; ${currency2} 交易</arg>
+<arg>${count}</arg>
 <arg>WARN</arg>
 </arguments>
-<msg timestamp="20200401 18:24:51.404" level="WARN">選擇 TWD -&gt; ETH 交易</msg>
-<status status="PASS" starttime="20200401 18:24:51.403" endtime="20200401 18:24:51.404"></status>
+<msg timestamp="20200406 18:12:00.609" level="WARN">9</msg>
+<status status="PASS" starttime="20200406 18:12:00.608" endtime="20200406 18:12:00.609"></status>
 </kw>
-<status status="PASS" starttime="20200401 18:24:47.889" endtime="20200401 18:24:51.405"></status>
-</kw>
-<kw name="Click SellOut On Trade Page" library="trade">
-<doc>賣出 分頁</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvSellBtn</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:24:51.405" endtime="20200401 18:24:52.197"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvSellBtn</arg>
-</arguments>
-<msg timestamp="20200401 18:24:52.200" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tvSellBtn'.</msg>
-<status status="PASS" starttime="20200401 18:24:52.197" endtime="20200401 18:24:53.117"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:51.405" endtime="20200401 18:24:53.117"></status>
-</kw>
-<kw name="Input Price On Trade Page" library="trade">
-<doc>單價欄位</doc>
-<arguments>
-<arg>12000</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/etTradingPrice</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:24:53.119" endtime="20200401 18:24:53.211"></status>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/etTradingPrice</arg>
-<arg>${price}</arg>
-</arguments>
-<msg timestamp="20200401 18:24:53.214" level="INFO">Typing text '12000' into text field 'id=com.asiainnovations.ace.taiwan:id/etTradingPrice'</msg>
-<status status="PASS" starttime="20200401 18:24:53.211" endtime="20200401 18:24:53.351"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:53.118" endtime="20200401 18:24:53.351"></status>
-</kw>
-<kw name="Click Down Button In Price On Trade Page" library="trade">
-<doc>單價欄位-</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<kw name="${index} IN RANGE [ ${times} ]" type="for">
+<kw name="${index} IN RANGE [ ${count} ]" type="for">
 <kw name="${index} = 0" type="foritem">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:24:53.354" endtime="20200401 18:24:53.928"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
-</arguments>
-<msg timestamp="20200401 18:24:53.931" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub1'.</msg>
-<status status="PASS" starttime="20200401 18:24:53.928" endtime="20200401 18:24:54.071"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:53.353" endtime="20200401 18:24:54.071"></status>
-</kw>
-<kw name="${index} = 1" type="foritem">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:24:54.072" endtime="20200401 18:24:54.641"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
-</arguments>
-<msg timestamp="20200401 18:24:54.644" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub1'.</msg>
-<status status="PASS" starttime="20200401 18:24:54.641" endtime="20200401 18:24:54.765"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:54.072" endtime="20200401 18:24:54.765"></status>
-</kw>
-<kw name="${index} = 2" type="foritem">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:24:54.766" endtime="20200401 18:24:55.352"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewSub1</arg>
-</arguments>
-<msg timestamp="20200401 18:24:55.355" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub1'.</msg>
-<status status="PASS" starttime="20200401 18:24:55.352" endtime="20200401 18:24:55.985"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:54.765" endtime="20200401 18:24:55.985"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:53.353" endtime="20200401 18:24:55.985"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:53.352" endtime="20200401 18:24:55.986"></status>
-</kw>
-<kw name="Click Up Button In Price On Trade Page" library="trade">
-<doc>單價欄位＋</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<kw name="${index} IN RANGE [ ${times} ]" type="for">
-<kw name="${index} = 0" type="foritem">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:24:55.988" endtime="20200401 18:24:56.074"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
-</arguments>
-<msg timestamp="20200401 18:24:56.078" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd1'.</msg>
-<status status="PASS" starttime="20200401 18:24:56.075" endtime="20200401 18:24:56.198"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:55.987" endtime="20200401 18:24:56.198"></status>
-</kw>
-<kw name="${index} = 1" type="foritem">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:24:56.198" endtime="20200401 18:24:56.765"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
-</arguments>
-<msg timestamp="20200401 18:24:56.769" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd1'.</msg>
-<status status="PASS" starttime="20200401 18:24:56.766" endtime="20200401 18:24:57.389"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:56.198" endtime="20200401 18:24:57.389"></status>
-</kw>
-<kw name="${index} = 2" type="foritem">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:24:57.390" endtime="20200401 18:24:57.485"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd1</arg>
-</arguments>
-<msg timestamp="20200401 18:24:57.488" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd1'.</msg>
-<status status="PASS" starttime="20200401 18:24:57.486" endtime="20200401 18:24:57.597"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:57.389" endtime="20200401 18:24:57.597"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:55.987" endtime="20200401 18:24:57.597"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:55.986" endtime="20200401 18:24:57.597"></status>
-</kw>
-<kw name="Input Amount On Trade Page" library="trade">
-<doc>數量欄位</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/etTradingNum</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:24:57.599" endtime="20200401 18:24:58.172"></status>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/etTradingNum</arg>
-<arg>${amount}</arg>
-</arguments>
-<msg timestamp="20200401 18:24:58.175" level="INFO">Typing text '1' into text field 'id=com.asiainnovations.ace.taiwan:id/etTradingNum'</msg>
-<status status="PASS" starttime="20200401 18:24:58.172" endtime="20200401 18:24:58.296"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:57.598" endtime="20200401 18:24:58.296"></status>
-</kw>
-<kw name="Click Down Button In Amount On Trade Page" library="trade">
-<doc>數量欄位-</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<kw name="${index} IN RANGE [ ${times} ]" type="for">
-<kw name="${index} = 0" type="foritem">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:24:58.299" endtime="20200401 18:24:59.316"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
-</arguments>
-<msg timestamp="20200401 18:24:59.319" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub2'.</msg>
-<status status="PASS" starttime="20200401 18:24:59.316" endtime="20200401 18:24:59.453"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:58.298" endtime="20200401 18:24:59.453"></status>
-</kw>
-<kw name="${index} = 1" type="foritem">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:24:59.454" endtime="20200401 18:25:00.103"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
-</arguments>
-<msg timestamp="20200401 18:25:00.106" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub2'.</msg>
-<status status="PASS" starttime="20200401 18:25:00.103" endtime="20200401 18:25:00.214"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:59.453" endtime="20200401 18:25:00.214"></status>
-</kw>
-<kw name="${index} = 2" type="foritem">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:25:00.215" endtime="20200401 18:25:00.884"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewSub2</arg>
-</arguments>
-<msg timestamp="20200401 18:25:00.887" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewSub2'.</msg>
-<status status="PASS" starttime="20200401 18:25:00.884" endtime="20200401 18:25:01.017"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:25:00.214" endtime="20200401 18:25:01.017"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:58.298" endtime="20200401 18:25:01.017"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:24:58.297" endtime="20200401 18:25:01.017"></status>
-</kw>
-<kw name="Click Up Button In Amount On Trade Page" library="trade">
-<doc>數量欄位+</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<kw name="${index} IN RANGE [ ${times} ]" type="for">
-<kw name="${index} = 0" type="foritem">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:25:01.019" endtime="20200401 18:25:01.679"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
-</arguments>
-<msg timestamp="20200401 18:25:01.682" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd2'.</msg>
-<status status="PASS" starttime="20200401 18:25:01.679" endtime="20200401 18:25:01.797"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:25:01.019" endtime="20200401 18:25:01.798"></status>
-</kw>
-<kw name="${index} = 1" type="foritem">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:25:01.798" endtime="20200401 18:25:02.402"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
-</arguments>
-<msg timestamp="20200401 18:25:02.405" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd2'.</msg>
-<status status="PASS" starttime="20200401 18:25:02.402" endtime="20200401 18:25:02.515"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:25:01.798" endtime="20200401 18:25:02.515"></status>
-</kw>
-<kw name="${index} = 2" type="foritem">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:25:02.516" endtime="20200401 18:25:03.176"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/viewAdd2</arg>
-</arguments>
-<msg timestamp="20200401 18:25:03.179" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/viewAdd2'.</msg>
-<status status="PASS" starttime="20200401 18:25:03.177" endtime="20200401 18:25:03.283"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:25:02.515" endtime="20200401 18:25:03.283"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:25:01.018" endtime="20200401 18:25:03.283"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:25:01.018" endtime="20200401 18:25:03.284"></status>
-</kw>
-<kw name="Click Sell Button On Trade Page" library="trade">
-<doc>賣 按鈕</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/btnPostOrder' and @index='21']</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:25:03.285" endtime="20200401 18:25:04.103"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/btnPostOrder' and @index='21']</arg>
-</arguments>
-<msg timestamp="20200401 18:25:04.106" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/btnPostOrder' and @index='21']'.</msg>
-<status status="PASS" starttime="20200401 18:25:04.103" endtime="20200401 18:25:04.666"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:25:03.284" endtime="20200401 18:25:04.666"></status>
-</kw>
-<kw name="Swipe middle To Up On Home Page" library="trade">
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>1s</arg>
+<arg>0.5s</arg>
 </arguments>
-<msg timestamp="20200401 18:25:05.669" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200401 18:25:04.668" endtime="20200401 18:25:05.670"></status>
+<msg timestamp="20200406 18:12:01.111" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200406 18:12:00.610" endtime="20200406 18:12:01.112"></status>
 </kw>
-<kw name="Swipe By Percent" library="AppiumLibrary">
-<doc>Swipe from one percent of the screen to another percent, for an optional duration.
-Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>50</arg>
-<arg>50</arg>
-<arg>50</arg>
-<arg>10</arg>
-<arg>5000</arg>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']</arg>
 </arguments>
-<status status="PASS" starttime="20200401 18:25:05.670" endtime="20200401 18:25:08.975"></status>
+<msg timestamp="20200406 18:12:01.116" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='0']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']'.</msg>
+<status status="PASS" starttime="20200406 18:12:01.113" endtime="20200406 18:12:01.740"></status>
 </kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']</arg>
+<arg>text</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20200406 18:12:02.299" level="INFO">Element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='0']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']' attribute 'text' value 'BTC' </msg>
+<msg timestamp="20200406 18:12:02.299" level="INFO">${text} = BTC</msg>
+<status status="PASS" starttime="20200406 18:12:01.740" endtime="20200406 18:12:02.299"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Checked : ${text}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200406 18:12:02.300" level="WARN">Checked : BTC</msg>
+<status status="PASS" starttime="20200406 18:12:02.300" endtime="20200406 18:12:02.300"></status>
+</kw>
+<status status="PASS" starttime="20200406 18:12:00.610" endtime="20200406 18:12:02.300"></status>
+</kw>
+<kw name="${index} = 1" type="foritem">
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>1s</arg>
+<arg>0.5s</arg>
 </arguments>
-<msg timestamp="20200401 18:25:09.978" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200401 18:25:08.975" endtime="20200401 18:25:09.978"></status>
+<msg timestamp="20200406 18:12:02.801" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200406 18:12:02.301" endtime="20200406 18:12:02.802"></status>
 </kw>
-<status status="PASS" starttime="20200401 18:25:04.667" endtime="20200401 18:25:09.978"></status>
-</kw>
-<kw name="Check List In My Order On Trade Page" library="trade">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>賣</arg>
-<arg>ETH</arg>
-<arg>TWD</arg>
-<arg>1.000000</arg>
-<arg>12,000.0</arg>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']</arg>
 </arguments>
-<kw name="Set Variable If" library="BuiltIn">
-<doc>Sets variable based on the given condition.</doc>
+<msg timestamp="20200406 18:12:02.805" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='1']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']'.</msg>
+<status status="PASS" starttime="20200406 18:12:02.802" endtime="20200406 18:12:03.320"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
 <arguments>
-<arg>"${currency1}" == "BTC"</arg>
-<arg>0.00000000</arg>
-<arg>"${currency1}" == "ETH"</arg>
-<arg>0.000000</arg>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']</arg>
+<arg>text</arg>
 </arguments>
 <assign>
-<var>${float_leng}</var>
+<var>${text}</var>
 </assign>
-<kw name="Set Variable If" library="BuiltIn">
-<doc>Sets variable based on the given condition.</doc>
-<arguments>
-<arg>"${currency1}" == "ETH"</arg>
-<arg>0.000000</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:25:09.984" endtime="20200401 18:25:09.986"></status>
-</kw>
-<msg timestamp="20200401 18:25:09.986" level="INFO">${float_leng} = 0.000000</msg>
-<status status="PASS" starttime="20200401 18:25:09.981" endtime="20200401 18:25:09.987"></status>
-</kw>
-<kw name="Page Should Contain Element" library="AppiumLibrary">
-<doc>Verifies that current page contains `locator` element.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.view.ViewGroup']/*[@text='${type}']/following-sibling::*[@text='${currency1}']/following-sibling::*[@text='/${currency2}']/following-sibling::*[@text='${float_leng}/${amount}']/following-sibling::*[@text='${price}']</arg>
-<arg>loglevel=WARN</arg>
-</arguments>
-<msg timestamp="20200401 18:25:10.229" level="INFO">Current page contains element 'xpath=//*[@class='android.view.ViewGroup']/*[@text='賣']/following-sibling::*[@text='ETH']/following-sibling::*[@text='/TWD']/following-sibling::*[@text='0.000000/1.000000']/following-sibling::*[@text='12,000.0']'.</msg>
-<status status="PASS" starttime="20200401 18:25:09.987" endtime="20200401 18:25:10.229"></status>
+<msg timestamp="20200406 18:12:04.334" level="INFO">Element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='1']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']' attribute 'text' value 'ETH' </msg>
+<msg timestamp="20200406 18:12:04.334" level="INFO">${text} = ETH</msg>
+<status status="PASS" starttime="20200406 18:12:03.321" endtime="20200406 18:12:04.334"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
-<arg>發現 該訂單：${type} ${currency1}/${currency2} 數量:${amount} 價格:${price}</arg>
+<arg>Checked : ${text}</arg>
 <arg>WARN</arg>
 </arguments>
-<msg timestamp="20200401 18:25:10.230" level="WARN">發現 該訂單：賣 ETH/TWD 數量:1.000000 價格:12,000.0</msg>
-<status status="PASS" starttime="20200401 18:25:10.230" endtime="20200401 18:25:10.231"></status>
+<msg timestamp="20200406 18:12:04.335" level="WARN">Checked : ETH</msg>
+<status status="PASS" starttime="20200406 18:12:04.334" endtime="20200406 18:12:04.335"></status>
 </kw>
-<status status="PASS" starttime="20200401 18:25:09.979" endtime="20200401 18:25:10.231"></status>
+<status status="PASS" starttime="20200406 18:12:02.300" endtime="20200406 18:12:04.335"></status>
 </kw>
-<kw name="Click Cancel Order Button On Trade Page" library="trade">
-<doc>撤單</doc>
+<kw name="${index} = 2" type="foritem">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>1</arg>
+<arg>0.5s</arg>
 </arguments>
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
+<msg timestamp="20200406 18:12:04.838" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200406 18:12:04.336" endtime="20200406 18:12:04.838"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>${number} - 1</arg>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']</arg>
+</arguments>
+<msg timestamp="20200406 18:12:04.841" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='2']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']'.</msg>
+<status status="PASS" starttime="20200406 18:12:04.838" endtime="20200406 18:12:05.391"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']</arg>
+<arg>text</arg>
 </arguments>
 <assign>
-<var>${number}</var>
+<var>${text}</var>
 </assign>
-<msg timestamp="20200401 18:25:10.233" level="INFO">${number} = 0</msg>
-<status status="PASS" starttime="20200401 18:25:10.232" endtime="20200401 18:25:10.233"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.view.ViewGroup' and @index='${number}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/btnCancel']</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:25:10.233" endtime="20200401 18:25:10.469"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//*[@class='android.view.ViewGroup' and @index='${number}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/btnCancel']</arg>
-</arguments>
-<msg timestamp="20200401 18:25:10.472" level="INFO">Clicking element 'xpath=//*[@class='android.view.ViewGroup' and @index='0']/*[@resource-id='com.asiainnovations.ace.taiwan:id/btnCancel']'.</msg>
-<status status="PASS" starttime="20200401 18:25:10.469" endtime="20200401 18:25:10.732"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:25:10.231" endtime="20200401 18:25:10.732"></status>
-</kw>
-<tags>
-<tag>dev</tag>
-<tag>stage</tag>
-</tags>
-<status status="PASS" starttime="20200401 18:24:47.612" endtime="20200401 18:25:10.732" critical="yes"></status>
-</test>
-<test id="s1-t3" name="Test Buy On Trade Page">
-<kw name="Goto Trading Tab On Home Page" library="navigation">
-<doc>交易 分頁</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_trading</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:25:10.733" endtime="20200401 18:25:11.720"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/navigation_trading</arg>
-</arguments>
-<msg timestamp="20200401 18:25:11.723" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/navigation_trading'.</msg>
-<status status="PASS" starttime="20200401 18:25:11.720" endtime="20200401 18:25:11.833"></status>
-</kw>
-<status status="PASS" starttime="20200401 18:25:10.733" endtime="20200401 18:25:11.833"></status>
-</kw>
-<kw name="Choose Currency To Currency Exchange" library="trade">
-<doc>左上角的匯率-&gt;上面欄位幣值-&gt;底下的詳情</doc>
-<arguments>
-<arg>TWD</arg>
-<arg>BTC</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvTradingCurrencyName</arg>
-</arguments>
-<status status="PASS" starttime="20200401 18:25:11.835" endtime="20200401 18:25:12.457"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvTradingCurrencyName</arg>
-</arguments>
-<msg timestamp="20200401 18:25:12.461" level="INFO">Clicking element 'id=com.asiainnovations.ace.taiwan:id/tvTradingCurrencyName'.</msg>
-<status status="PASS" starttime="20200401 18:25:12.458" endtime="20200401 18:25:12.567"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>//*[@resource-id='android:id/text1' and @text='${currency1}']</arg>
-</arguments>
-<msg timestamp="20200401 18:25:12.570" level="INFO">Clicking element '//*[@resource-id='android:id/text1' and @text='TWD']'.</msg>
-<status status="PASS" starttime="20200401 18:25:12.568" endtime="20200401 18:25:13.467"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout']/*[@text='${currency2}']</arg>
-</arguments>
-<msg timestamp="20200401 18:25:13.470" level="INFO">Clicking element '//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout']/*[@text='BTC']'.</msg>
-<status status="PASS" starttime="20200401 18:25:13.467" endtime="20200401 18:25:14.266"></status>
+<msg timestamp="20200406 18:12:06.830" level="INFO">Element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='2']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']' attribute 'text' value 'GTO' </msg>
+<msg timestamp="20200406 18:12:06.830" level="INFO">${text} = GTO</msg>
+<status status="PASS" starttime="20200406 18:12:05.392" endtime="20200406 18:12:06.830"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
-<arg>選擇 ${currency1} -&gt; ${currency2} 交易</arg>
+<arg>Checked : ${text}</arg>
 <arg>WARN</arg>
 </arguments>
-<msg timestamp="20200401 18:25:14.267" level="WARN">選擇 TWD -&gt; BTC 交易</msg>
-<status status="PASS" starttime="20200401 18:25:14.266" endtime="20200401 18:25:14.267"></status>
+<msg timestamp="20200406 18:12:06.831" level="WARN">Checked : GTO</msg>
+<status status="PASS" starttime="20200406 18:12:06.830" endtime="20200406 18:12:06.831"></status>
 </kw>
-<status status="PASS" starttime="20200401 18:25:11.834" endtime="20200401 18:25:14.268"></status>
+<status status="PASS" starttime="20200406 18:12:04.335" endtime="20200406 18:12:06.831"></status>
 </kw>
-<kw name="Click BuyIn On Trade Page" library="trade">
-<doc>買入 分頁</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
+<kw name="${index} = 3" type="foritem">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>id=com.asiainnovations.ace.taiwan:id/tvBuyBtn</arg>
+<arg>0.5s</arg>
 </arguments>
-<msg timestamp="20200401 18:25:19.537" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
-&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2034"&gt;
-  &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2034]" displayed="true"&gt;
-    &lt;android.widget.LinearLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2034]" displayed="true"&gt;
-      &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,2034]" displayed="true"&gt;
-        &lt;android.widget.LinearLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.LinearLayout" text="" resource-id="com.asiainnovations.ace.taiwan:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,2034]" displayed="true"&gt;
-          &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,2034]" displayed="true"&gt;
-            &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" resource-id="com.asiainnovations.ace.taiwan:id/container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,2034]" displayed="true"&gt;
-              &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,2034]" displayed="true"&gt;
-                &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" resource-id="com.asiainnovations.ace.taiwan:id/container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,1962]" displayed="true"&gt;
-                  &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,1962]" displayed="true"&gt;
-                    &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="" resource-id="com.asiainnovations.ace.taiwan:id/textView" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,86][1080,233]" displayed="true" /&gt;
-                    &lt;android.widget.TextView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="BTC" resource-id="com.asiainnovations.ace.taiwan:id/tvTradingCurrencyName" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,124][219,195]" displayed="true" /&gt;
-                    &lt;android.widget.TextView index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="/TWD" resource-id="com.asiainnovations.ace.taiwan:id/tvTradingBaseCurrencyName" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[219,140][313,191]" displayed="true" /&gt;
-                    &lt;android.widget.CheckBox index="3" package="com.asiainnovations.ace.taiwan" class="android.widget.CheckBox" text="" resource-id="com.asiainnovations.ace.taiwan:id/cbCollection" checkable="true" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[896,128][959,191]" displayed="true" /&gt;
-                    &lt;android.widget.Button index="4" package="com.asiainnovations.ace.taiwan" class="android.widget.Button" text="" resource-id="com.asiainnovations.ace.taiwan:id/btnCollection" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[896,128][959,191]" displayed="true" /&gt;
-                    &lt;android.widget.TextView index="5" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="" resource-id="com.asiainnovations.ace.taiwan:id/tvTradingDetail" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[1001,131][1059,189]" displayed="true" /&gt;
-                    &lt;android.view.View index="6" package="com.asiainnovations.ace.taiwan" class="android.view.View" text="" resource-id="com.asiainnovations.ace.taiwan:id/dividingLine" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,233][1080,234]" displayed="true" /&gt;
-                    &lt;android.view.ViewGroup index="7" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" resource-id="com.asiainnovations.ace.taiwan:id/refresh" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,234][1080,1962]" displayed="true"&gt;
-                      &lt;android.widget.ScrollView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.ScrollView" text="" resource-id="com.asiainnovations.ace.taiwan:id/nestedScrollView" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="true" selected="false" bounds="[0,234][1080,1962]" displayed="true"&gt;
-                        &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,234][1080,1962]" displayed="true"&gt;
-                          &lt;android.widget.EditText index="13" package="com.asiainnovations.ace.taiwan" class="android.widget.EditText" text="單價 (TWD)" resource-id="com.asiainnovations.ace.taiwan:id/etTradingPrice" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[42,234][1038,249]" displayed="true" /&gt;
-                          &lt;android.widget.EditText index="16" package="com.asiainnovations.ace.taiwan" class="android.widget.EditText" text="數量 (BTC)" resource-id="com.asiainnovations.ace.taiwan:id/etTradingNum" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[42,270][1038,396]" displayed="true" /&gt;
-                          &lt;android.widget.ImageButton index="17" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageButton" text="" resource-id="com.asiainnovations.ace.taiwan:id/viewSub2" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[47,291][131,375]" displayed="true" /&gt;
-                          &lt;android.widget.ImageButton index="18" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageButton" text="" resource-id="com.asiainnovations.ace.taiwan:id/viewAdd2" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[949,291][1033,375]" displayed="true" /&gt;
-                          &lt;android.widget.LinearLayout index="19" package="com.asiainnovations.ace.taiwan" class="android.widget.LinearLayout" text="" resource-id="com.asiainnovations.ace.taiwan:id/radioGroup" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,417][1038,480]" displayed="true"&gt;
-                            &lt;android.widget.CheckBox index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.CheckBox" text="25%" resource-id="com.asiainnovations.ace.taiwan:id/rb25" checkable="true" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,417][283,480]" displayed="true" /&gt;
-                            &lt;android.widget.CheckBox index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.CheckBox" text="50%" resource-id="com.asiainnovations.ace.taiwan:id/rb50" checkable="true" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[293,417][534,480]" displayed="true" /&gt;
-                            &lt;android.widget.CheckBox index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.CheckBox" text="75%" resource-id="com.asiainnovations.ace.taiwan:id/rb75" checkable="true" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[544,417][786,480]" displayed="true" /&gt;
-                            &lt;android.widget.CheckBox index="3" package="com.asiainnovations.ace.taiwan" class="android.widget.CheckBox" text="100%" resource-id="com.asiainnovations.ace.taiwan:id/rb100" checkable="true" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[796,417][1038,480]" displayed="true" /&gt;
-                          &lt;/android.widget.LinearLayout&gt;
-                          &lt;android.widget.EditText index="20" package="com.asiainnovations.ace.taiwan" class="android.widget.EditText" text="成交金額 (TWD)" resource-id="com.asiainnovations.ace.taiwan:id/tvAmountPrice" checkable="false" checked="false" clickable="true" enabled="false" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[42,501][1038,627]" displayed="true" /&gt;
-                          &lt;android.widget.TextView index="21" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="賣" resource-id="com.asiainnovations.ace.taiwan:id/btnPostOrder" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,648][1038,753]" displayed="true" /&gt;
-                          &lt;android.widget.TextView index="22" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="餘額" resource-id="com.asiainnovations.ace.taiwan:id/textView39" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,774][106,817]" displayed="true" /&gt;
-                          &lt;android.widget.TextView index="23" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="10,000.00000000" resource-id="com.asiainnovations.ace.taiwan:id/textView35" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[127,774][375,817]" displayed="true" /&gt;
-                          &lt;android.widget.TextView index="24" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="BTC" resource-id="com.asiainnovations.ace.taiwan:id/tvCurrencyName" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[375,774][435,817]" displayed="true" /&gt;
-                          &lt;android.widget.TextView index="25" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="入幣" resource-id="com.asiainnovations.ace.taiwan:id/btnTradingCharge" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[964,770][1038,821]" displayed="true" /&gt;
-                          &lt;android.widget.TextView index="26" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="" resource-id="com.asiainnovations.ace.taiwan:id/textView37" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,859][1080,880]" displayed="true" /&gt;
-                          &lt;android.widget.TextView index="27" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="我的委託" resource-id="com.asiainnovations.ace.taiwan:id/tvTradingMyDelegate" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,880][1080,1006]" displayed="true" /&gt;
-                          &lt;android.widget.TextView index="28" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="歷史訂單" resource-id="com.asiainnovations.ace.taiwan:id/textView49" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[868,922][1038,965]" displayed="true" /&gt;
-                          &lt;android.view.View index="29" package="com.asiainnovations.ace.taiwan" class="android.view.View" text="" resource-id="com.asiainnovations.ace.taiwan:id/switchView" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1017][110,1061]" displayed="true" /&gt;
-                          &lt;android.widget.TextView index="30" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="隱藏資產為零的幣種" resource-id="com.asiainnovations.ace.taiwan:id/textView68" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[163,1014][496,1065]" displayed="true" /&gt;
-                          &lt;androidx.recyclerview.widget.RecyclerView index="31" package="com.asiainnovations.ace.taiwan" class="androidx.recyclerview.widget.RecyclerView" text="" resource-id="com.asiainnovations.ace.taiwan:id/rvTradingDelegate" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1072][1080,1962]" displayed="true"&gt;
-                            &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1072][1080,1449]" displayed="true"&gt;
-                              &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="賣" resource-id="com.asiainnovations.ace.taiwan:id/textView36" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1116][96,1169]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="ETH" resource-id="com.asiainnovations.ace.taiwan:id/textView38" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[117,1114][196,1171]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="/TWD" resource-id="com.asiainnovations.ace.taiwan:id/textView2" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[201,1114][308,1171]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="3" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="撤單" resource-id="com.asiainnovations.ace.taiwan:id/btnCancel" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[954,1114][1038,1171]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="4" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="數量" resource-id="com.asiainnovations.ace.taiwan:id/textView44" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1211][116,1262]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="5" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="0.000000/1.000000" resource-id="com.asiainnovations.ace.taiwan:id/textView43" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[541,1211][870,1262]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="6" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="價格" resource-id="com.asiainnovations.ace.taiwan:id/textView46" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1283][116,1334]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="7" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="12,000.0" resource-id="com.asiainnovations.ace.taiwan:id/textView45" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[727,1283][870,1334]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="8" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="時間" resource-id="com.asiainnovations.ace.taiwan:id/textView11" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1355][116,1406]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="9" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="2020-04-01 18:23:06" resource-id="com.asiainnovations.ace.taiwan:id/textView42" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[529,1355][870,1406]" displayed="true" /&gt;
-                              &lt;android.view.View index="10" package="com.asiainnovations.ace.taiwan" class="android.view.View" text="" resource-id="com.asiainnovations.ace.taiwan:id/progressBar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[912,1246][1038,1372]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="11" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="" resource-id="com.asiainnovations.ace.taiwan:id/textView47" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1448][1080,1449]" displayed="true" /&gt;
-                            &lt;/android.view.ViewGroup&gt;
-                            &lt;android.view.ViewGroup index="1" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1449][1080,1826]" displayed="true"&gt;
-                              &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="買" resource-id="com.asiainnovations.ace.taiwan:id/textView36" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1493][96,1546]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="BTC" resource-id="com.asiainnovations.ace.taiwan:id/textView38" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[117,1491][193,1548]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="/TWD" resource-id="com.asiainnovations.ace.taiwan:id/textView2" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[198,1491][305,1548]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="3" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="撤單" resource-id="com.asiainnovations.ace.taiwan:id/btnCancel" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[954,1491][1038,1548]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="4" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="數量" resource-id="com.asiainnovations.ace.taiwan:id/textView44" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1588][116,1639]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="5" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="0.00000000/1.00000000" resource-id="com.asiainnovations.ace.taiwan:id/textView43" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[457,1588][870,1639]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="6" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="價格" resource-id="com.asiainnovations.ace.taiwan:id/textView46" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1660][116,1711]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="7" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="99,999.0" resource-id="com.asiainnovations.ace.taiwan:id/textView45" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[727,1660][870,1711]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="8" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="時間" resource-id="com.asiainnovations.ace.taiwan:id/textView11" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1732][116,1783]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="9" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="2020-04-01 17:58:17" resource-id="com.asiainnovations.ace.taiwan:id/textView42" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[529,1732][870,1783]" displayed="true" /&gt;
-                              &lt;android.view.View index="10" package="com.asiainnovations.ace.taiwan" class="android.view.View" text="" resource-id="com.asiainnovations.ace.taiwan:id/progressBar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[912,1623][1038,1749]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="11" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="" resource-id="com.asiainnovations.ace.taiwan:id/textView47" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1825][1080,1826]" displayed="true" /&gt;
-                            &lt;/android.view.ViewGroup&gt;
-                            &lt;android.view.ViewGroup index="2" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1826][1080,1962]" displayed="true"&gt;
-                              &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="賣" resource-id="com.asiainnovations.ace.taiwan:id/textView36" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[42,1870][96,1923]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="ETH" resource-id="com.asiainnovations.ace.taiwan:id/textView38" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[117,1868][196,1925]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="/TWD" resource-id="com.asiainnovations.ace.taiwan:id/textView2" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[201,1868][308,1925]" displayed="true" /&gt;
-                              &lt;android.widget.TextView index="3" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="撤單" resource-id="com.asiainnovations.ace.taiwan:id/btnCancel" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[954,1868][1038,1925]" displayed="true" /&gt;
-                            &lt;/android.view.ViewGroup&gt;
-                          &lt;/androidx.recyclerview.widget.RecyclerView&gt;
-                        &lt;/android.view.ViewGroup&gt;
-                      &lt;/android.widget.ScrollView&gt;
-                    &lt;/android.view.ViewGroup&gt;
-                  &lt;/android.view.ViewGroup&gt;
-                &lt;/android.widget.FrameLayout&gt;
-                &lt;android.view.View index="1" package="com.asiainnovations.ace.taiwan" class="android.view.View" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1961][1080,1962]" displayed="true" /&gt;
-                &lt;android.widget.FrameLayout index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" resource-id="com.asiainnovations.ace.taiwan:id/navigation" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1962][1080,2034]" displayed="true"&gt;
-                  &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1967][1080,2034]" displayed="true"&gt;
-                    &lt;android.widget.FrameLayout index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" content-desc="首頁" resource-id="com.asiainnovations.ace.taiwan:id/navigation_home" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1967][216,2034]" displayed="true"&gt;
-                      &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[71,2048][145,2114]" displayed="true"&gt;
-                        &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="首頁" resource-id="com.asiainnovations.ace.taiwan:id/smallLabel" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[71,2048][145,2099]" displayed="true" /&gt;
-                      &lt;/android.view.ViewGroup&gt;
-                      &lt;android.widget.ImageView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[76,1988][139,2034]" displayed="true" /&gt;
-                    &lt;/android.widget.FrameLayout&gt;
-                    &lt;android.widget.FrameLayout index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" content-desc="行情" resource-id="com.asiainnovations.ace.taiwan:id/navigation_quotes" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[216,1967][432,2034]" displayed="true"&gt;
-                      &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[287,2048][361,2114]" displayed="true"&gt;
-                        &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="行情" resource-id="com.asiainnovations.ace.taiwan:id/smallLabel" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[287,2048][361,2099]" displayed="true" /&gt;
-                      &lt;/android.view.ViewGroup&gt;
-                      &lt;android.widget.ImageView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[292,1988][355,2034]" displayed="true" /&gt;
-                    &lt;/android.widget.FrameLayout&gt;
-                    &lt;android.widget.FrameLayout index="2" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" content-desc="交易" resource-id="com.asiainnovations.ace.taiwan:id/navigation_trading" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[432,1967][648,2034]" displayed="true"&gt;
-                      &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[503,2048][577,2114]" displayed="true"&gt;
-                        &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="交易" resource-id="com.asiainnovations.ace.taiwan:id/largeLabel" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[503,2048][577,2099]" displayed="true" /&gt;
-                      &lt;/android.view.ViewGroup&gt;
-                      &lt;android.widget.ImageView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[508,1988][571,2034]" displayed="true" /&gt;
-                    &lt;/android.widget.FrameLayout&gt;
-                    &lt;android.widget.FrameLayout index="3" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" content-desc="錢包" resource-id="com.asiainnovations.ace.taiwan:id/navigation_wallet" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[648,1967][864,2034]" displayed="true"&gt;
-                      &lt;android.view.ViewGroup index="0" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[719,2048][793,2114]" displayed="true"&gt;
-                        &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="錢包" resource-id="com.asiainnovations.ace.taiwan:id/smallLabel" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[719,2048][793,2099]" displayed="true" /&gt;
-                      &lt;/android.view.ViewGroup&gt;
-                      &lt;android.widget.ImageView index="1" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[724,1988][787,2034]" displayed="true" /&gt;
-                    &lt;/android.widget.FrameLayout&gt;
-                    &lt;android.widget.FrameLayout index="4" package="com.asiainnovations.ace.taiwan" class="android.widget.FrameLayout" text="" content-desc="我" resource-id="com.asiainnovations.ace.taiwan:id/navigation_me" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[864,1967][1080,2034]" displayed="true"&gt;
-                      &lt;android.widget.ImageView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.ImageView" text="" resource-id="com.asiainnovations.ace.taiwan:id/icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[940,1988][1003,2034]" displayed="true" /&gt;
-                      &lt;android.view.ViewGroup index="1" package="com.asiainnovations.ace.taiwan" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[953,2048][990,2114]" displayed="true"&gt;
-                        &lt;android.widget.TextView index="0" package="com.asiainnovations.ace.taiwan" class="android.widget.TextView" text="我" resource-id="com.asiainnovations.ace.taiwan:id/smallLabel" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[953,2048][990,2099]" displayed="true" /&gt;
-                      &lt;/android.view.ViewGroup&gt;
-                    &lt;/android.widget.FrameLayout&gt;
-                  &lt;/android.view.ViewGroup&gt;
-                &lt;/android.widget.FrameLayout&gt;
-              &lt;/android.view.ViewGroup&gt;
-            &lt;/android.widget.FrameLayout&gt;
-          &lt;/android.widget.FrameLayout&gt;
-        &lt;/android.widget.LinearLayout&gt;
-      &lt;/android.widget.FrameLayout&gt;
-    &lt;/android.widget.LinearLayout&gt;
-  &lt;/android.widget.FrameLayout&gt;
-&lt;/hierarchy&gt;</msg>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20200401 18:25:20.078" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200401 18:25:19.539" endtime="20200401 18:25:20.079"></status>
+<msg timestamp="20200406 18:12:07.332" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200406 18:12:06.831" endtime="20200406 18:12:07.333"></status>
 </kw>
-<msg timestamp="20200401 18:25:20.079" level="FAIL">Element locator 'id=com.asiainnovations.ace.taiwan:id/tvBuyBtn' did not match any elements after 5 seconds</msg>
-<status status="FAIL" starttime="20200401 18:25:14.269" endtime="20200401 18:25:20.079"></status>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']</arg>
+</arguments>
+<msg timestamp="20200406 18:12:07.337" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='3']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']'.</msg>
+<status status="PASS" starttime="20200406 18:12:07.333" endtime="20200406 18:12:07.889"></status>
 </kw>
-<status status="FAIL" starttime="20200401 18:25:14.268" endtime="20200401 18:25:20.079"></status>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']</arg>
+<arg>text</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20200406 18:12:09.288" level="INFO">Element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='3']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']' attribute 'text' value 'USDT' </msg>
+<msg timestamp="20200406 18:12:09.288" level="INFO">${text} = USDT</msg>
+<status status="PASS" starttime="20200406 18:12:07.890" endtime="20200406 18:12:09.288"></status>
 </kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Checked : ${text}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200406 18:12:09.289" level="WARN">Checked : USDT</msg>
+<status status="PASS" starttime="20200406 18:12:09.288" endtime="20200406 18:12:09.289"></status>
+</kw>
+<status status="PASS" starttime="20200406 18:12:06.831" endtime="20200406 18:12:09.289"></status>
+</kw>
+<kw name="${index} = 4" type="foritem">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200406 18:12:09.791" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200406 18:12:09.289" endtime="20200406 18:12:09.791"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']</arg>
+</arguments>
+<msg timestamp="20200406 18:12:09.795" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='4']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']'.</msg>
+<status status="PASS" starttime="20200406 18:12:09.792" endtime="20200406 18:12:10.321"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']</arg>
+<arg>text</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20200406 18:12:11.724" level="INFO">Element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='4']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']' attribute 'text' value 'ZNA' </msg>
+<msg timestamp="20200406 18:12:11.725" level="INFO">${text} = ZNA</msg>
+<status status="PASS" starttime="20200406 18:12:10.321" endtime="20200406 18:12:11.725"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Checked : ${text}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200406 18:12:11.725" level="WARN">Checked : ZNA</msg>
+<status status="PASS" starttime="20200406 18:12:11.725" endtime="20200406 18:12:11.725"></status>
+</kw>
+<status status="PASS" starttime="20200406 18:12:09.289" endtime="20200406 18:12:11.725"></status>
+</kw>
+<kw name="${index} = 5" type="foritem">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200406 18:12:12.227" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200406 18:12:11.726" endtime="20200406 18:12:12.228"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']</arg>
+</arguments>
+<msg timestamp="20200406 18:12:12.231" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='5']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']'.</msg>
+<status status="PASS" starttime="20200406 18:12:12.228" endtime="20200406 18:12:12.770"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']</arg>
+<arg>text</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20200406 18:12:14.189" level="INFO">Element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='5']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']' attribute 'text' value 'FTT' </msg>
+<msg timestamp="20200406 18:12:14.189" level="INFO">${text} = FTT</msg>
+<status status="PASS" starttime="20200406 18:12:12.771" endtime="20200406 18:12:14.189"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Checked : ${text}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200406 18:12:14.190" level="WARN">Checked : FTT</msg>
+<status status="PASS" starttime="20200406 18:12:14.190" endtime="20200406 18:12:14.190"></status>
+</kw>
+<status status="PASS" starttime="20200406 18:12:11.726" endtime="20200406 18:12:14.190"></status>
+</kw>
+<kw name="${index} = 6" type="foritem">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200406 18:12:14.692" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200406 18:12:14.191" endtime="20200406 18:12:14.693"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']</arg>
+</arguments>
+<msg timestamp="20200406 18:12:14.696" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='6']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']'.</msg>
+<status status="PASS" starttime="20200406 18:12:14.693" endtime="20200406 18:12:15.239"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']</arg>
+<arg>text</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20200406 18:12:16.230" level="INFO">Element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='6']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']' attribute 'text' value 'HGG' </msg>
+<msg timestamp="20200406 18:12:16.231" level="INFO">${text} = HGG</msg>
+<status status="PASS" starttime="20200406 18:12:15.239" endtime="20200406 18:12:16.231"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Checked : ${text}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200406 18:12:16.231" level="WARN">Checked : HGG</msg>
+<status status="PASS" starttime="20200406 18:12:16.231" endtime="20200406 18:12:16.232"></status>
+</kw>
+<status status="PASS" starttime="20200406 18:12:14.190" endtime="20200406 18:12:16.232"></status>
+</kw>
+<kw name="${index} = 7" type="foritem">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200406 18:12:16.733" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200406 18:12:16.232" endtime="20200406 18:12:16.733"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']</arg>
+</arguments>
+<msg timestamp="20200406 18:12:16.737" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='7']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']'.</msg>
+<status status="PASS" starttime="20200406 18:12:16.734" endtime="20200406 18:12:17.272"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']</arg>
+<arg>text</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20200406 18:12:18.268" level="INFO">Element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='7']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']' attribute 'text' value 'SOX' </msg>
+<msg timestamp="20200406 18:12:18.268" level="INFO">${text} = SOX</msg>
+<status status="PASS" starttime="20200406 18:12:17.273" endtime="20200406 18:12:18.268"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Checked : ${text}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200406 18:12:18.269" level="WARN">Checked : SOX</msg>
+<status status="PASS" starttime="20200406 18:12:18.268" endtime="20200406 18:12:18.269"></status>
+</kw>
+<status status="PASS" starttime="20200406 18:12:16.232" endtime="20200406 18:12:18.269"></status>
+</kw>
+<kw name="${index} = 8" type="foritem">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200406 18:12:18.771" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200406 18:12:18.270" endtime="20200406 18:12:18.771"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']</arg>
+</arguments>
+<msg timestamp="20200406 18:12:18.775" level="INFO">Clicking element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='8']/*[@resource-id='com.asiainnovations.ace.taiwan:id/viewCollection']'.</msg>
+<status status="PASS" starttime="20200406 18:12:18.772" endtime="20200406 18:12:19.305"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='${index}']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']</arg>
+<arg>text</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20200406 18:12:20.660" level="INFO">Element 'xpath=//*[@resource-id='com.asiainnovations.ace.taiwan:id/cl_item_layout' and @index='8']/*[@resource-id='com.asiainnovations.ace.taiwan:id/tvCurrencyName']' attribute 'text' value 'ACEX' </msg>
+<msg timestamp="20200406 18:12:20.660" level="INFO">${text} = ACEX</msg>
+<status status="PASS" starttime="20200406 18:12:19.305" endtime="20200406 18:12:20.660"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Checked : ${text}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200406 18:12:20.661" level="WARN">Checked : ACEX</msg>
+<status status="PASS" starttime="20200406 18:12:20.661" endtime="20200406 18:12:20.661"></status>
+</kw>
+<status status="PASS" starttime="20200406 18:12:18.269" endtime="20200406 18:12:20.662"></status>
+</kw>
+<status status="PASS" starttime="20200406 18:12:00.609" endtime="20200406 18:12:20.662"></status>
+</kw>
+<status status="PASS" starttime="20200406 18:12:00.062" endtime="20200406 18:12:20.662"></status>
+</kw>
+<doc>切換到 行情 點擊 各個頁面</doc>
 <tags>
-<tag>dev</tag>
-<tag>stage</tag>
+<tag>prod</tag>
 </tags>
-<status status="FAIL" starttime="20200401 18:25:10.732" endtime="20200401 18:25:20.079" critical="yes">Element locator 'id=com.asiainnovations.ace.taiwan:id/tvBuyBtn' did not match any elements after 5 seconds</status>
+<status status="PASS" starttime="20200406 18:11:56.697" endtime="20200406 18:12:20.662" critical="yes"></status>
 </test>
-<status status="FAIL" starttime="20200401 18:24:30.402" endtime="20200401 18:25:20.080"></status>
+<status status="PASS" starttime="20200406 18:11:38.825" endtime="20200406 18:12:20.663"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="1">Critical Tests</stat>
-<stat pass="2" fail="1">All Tests</stat>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="1">dev</stat>
-<stat pass="1" fail="0">prod</stat>
-<stat pass="1" fail="1">stage</stat>
+<stat pass="2" fail="0">prod</stat>
 </tag>
 <suite>
-<stat pass="2" fail="1" id="s1" name="Test Login Trade">Test Login Trade</stat>
+<stat pass="2" fail="0" id="s1" name="Test Login Quote Collections">Test Login Quote Collections</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20200401 18:24:51.404" level="WARN">選擇 TWD -&gt; ETH 交易</msg>
-<msg timestamp="20200401 18:25:10.230" level="WARN">發現 該訂單：賣 ETH/TWD 數量:1.000000 價格:12,000.0</msg>
-<msg timestamp="20200401 18:25:14.267" level="WARN">選擇 TWD -&gt; BTC 交易</msg>
+<msg timestamp="20200406 18:12:00.609" level="WARN">9</msg>
+<msg timestamp="20200406 18:12:02.300" level="WARN">Checked : BTC</msg>
+<msg timestamp="20200406 18:12:04.335" level="WARN">Checked : ETH</msg>
+<msg timestamp="20200406 18:12:06.831" level="WARN">Checked : GTO</msg>
+<msg timestamp="20200406 18:12:09.289" level="WARN">Checked : USDT</msg>
+<msg timestamp="20200406 18:12:11.725" level="WARN">Checked : ZNA</msg>
+<msg timestamp="20200406 18:12:14.190" level="WARN">Checked : FTT</msg>
+<msg timestamp="20200406 18:12:16.231" level="WARN">Checked : HGG</msg>
+<msg timestamp="20200406 18:12:18.269" level="WARN">Checked : SOX</msg>
+<msg timestamp="20200406 18:12:20.661" level="WARN">Checked : ACEX</msg>
 </errors>
 </robot>
