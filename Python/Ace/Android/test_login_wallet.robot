@@ -76,7 +76,7 @@ Test Show Coin Withdraw On Wallet Page
     Click Confirm In Withdraw Coin On Wallet Page
 
 
-*** comment ***
+
 
 *** comment ***
 robot -e stage -e dev test_login_wallet.robot 
