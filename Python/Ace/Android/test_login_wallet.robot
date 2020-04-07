@@ -56,8 +56,6 @@ Test Show Charge Coin Info
     Get Currency Address In Charge Coin On Wallet Page
     Click Back Button On Wallet Page 
 
-
-
 Double Check TWD Info On Wallet Page 
     Goto Wallet Tab On Home Page
     Check TWD Info On Wallet Page

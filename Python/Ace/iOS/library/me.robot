@@ -33,7 +33,6 @@ Click Login Button In Login On Me Page
     Click Element    xpath=//XCUIElementTypeButton[@name="登入"]
     Sleep    1s
 
-
 Input Google Auth In Login On Me Page
     [Arguments]	${key}
     ${token}=  Run Keyword	get_totp_token	${key}
