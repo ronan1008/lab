@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.6 on darwin)" generated="20200407 15:26:32.871" rpa="false">
-<suite id="s1" name="Test Login" source="/Users/shocklee/Documents/github/workspace/Python/Ace/iOS/test_login.robot">
+<robot generator="Robot 3.1.2 (Python 3.7.6 on darwin)" generated="20200410 15:46:40.178" rpa="false">
+<suite id="s1" name="Test Login Me" source="/Users/shocklee/Documents/github/workspace/Python/Ace/iOS/test_login_me.robot">
 <test id="s1-t1" name="Test Login Ace On iOS">
-<kw name="Open Ace App And Login With Mobile" library="login">
+<kw name="Open Ace App And Login With Mail" library="login">
 <kw name="Open Ace On iOS" library="login">
 <kw name="Open Application" library="AppiumLibrary">
 <doc>Opens a new application to given Appium server.
@@ -21,9 +21,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>xcodeSigningId=${xcodeSigningId}</arg>
 <arg>automationName=${automationName}</arg>
 </arguments>
-<status status="PASS" starttime="20200407 15:26:33.970" endtime="20200407 15:26:47.127"></status>
+<status status="PASS" starttime="20200410 15:46:41.530" endtime="20200410 15:46:56.127"></status>
 </kw>
-<status status="PASS" starttime="20200407 15:26:33.970" endtime="20200407 15:26:47.128"></status>
+<status status="PASS" starttime="20200410 15:46:41.529" endtime="20200410 15:46:56.127"></status>
 </kw>
 <kw name="Goto Me Tab On Home Page" library="navigation">
 <doc>我 分頁</doc>
@@ -32,70 +32,70 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="我"]</arg>
 </arguments>
-<status status="PASS" starttime="20200407 15:26:47.130" endtime="20200407 15:26:48.051"></status>
+<status status="PASS" starttime="20200410 15:46:56.128" endtime="20200410 15:46:57.013"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="我"]</arg>
 </arguments>
-<msg timestamp="20200407 15:26:48.053" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="我"]'.</msg>
-<status status="PASS" starttime="20200407 15:26:48.052" endtime="20200407 15:26:49.391"></status>
+<msg timestamp="20200410 15:46:57.016" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="我"]'.</msg>
+<status status="PASS" starttime="20200410 15:46:57.014" endtime="20200410 15:46:58.356"></status>
 </kw>
-<status status="PASS" starttime="20200407 15:26:47.129" endtime="20200407 15:26:49.392"></status>
+<status status="PASS" starttime="20200410 15:46:56.127" endtime="20200410 15:46:58.356"></status>
 </kw>
-<kw name="Click Mobile Login On Me Page" library="me">
-<doc>我-&gt;電話 登入</doc>
+<kw name="Click Email Login On Me Page" library="me">
+<doc>我-&gt;Email 登入</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//XCUIElementTypeStaticText[@name="手機登入"]</arg>
+<arg>xpath=//XCUIElementTypeStaticText[@name="信箱登入"]</arg>
 </arguments>
-<status status="PASS" starttime="20200407 15:26:49.392" endtime="20200407 15:26:50.082"></status>
+<status status="PASS" starttime="20200410 15:46:58.357" endtime="20200410 15:46:59.055"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//XCUIElementTypeStaticText[@name="手機登入"]</arg>
+<arg>xpath=//XCUIElementTypeStaticText[@name="信箱登入"]</arg>
 </arguments>
-<msg timestamp="20200407 15:26:50.084" level="INFO">Clicking element 'xpath=//XCUIElementTypeStaticText[@name="手機登入"]'.</msg>
-<status status="PASS" starttime="20200407 15:26:50.083" endtime="20200407 15:26:50.740"></status>
+<msg timestamp="20200410 15:46:59.057" level="INFO">Clicking element 'xpath=//XCUIElementTypeStaticText[@name="信箱登入"]'.</msg>
+<status status="PASS" starttime="20200410 15:46:59.055" endtime="20200410 15:46:59.718"></status>
 </kw>
-<status status="PASS" starttime="20200407 15:26:49.392" endtime="20200407 15:26:50.741"></status>
+<status status="PASS" starttime="20200410 15:46:58.357" endtime="20200410 15:46:59.718"></status>
 </kw>
-<kw name="Input Tel Number In Mobile Login On Me Page" library="me">
-<doc>我-&gt;電話 登入-&gt;輸入 電話</doc>
+<kw name="Input Email In Email Login On Me Page" library="me">
+<doc>我-&gt;Email 登入-&gt;輸入 mail</doc>
 <arguments>
-<arg>0936736561</arg>
+<arg>ace.io.andro@gmail.com</arg>
 </arguments>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTextField</arg>
 </arguments>
-<status status="PASS" starttime="20200407 15:26:50.741" endtime="20200407 15:26:51.112"></status>
+<status status="PASS" starttime="20200410 15:46:59.719" endtime="20200410 15:47:00.273"></status>
 </kw>
 <kw name="Clear Text" library="AppiumLibrary">
 <doc>Clears the text field identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTextField</arg>
 </arguments>
-<msg timestamp="20200407 15:26:51.116" level="INFO">Clear text field 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTextField'</msg>
-<status status="PASS" starttime="20200407 15:26:51.112" endtime="20200407 15:26:53.807"></status>
+<msg timestamp="20200410 15:47:00.276" level="INFO">Clear text field 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTextField'</msg>
+<status status="PASS" starttime="20200410 15:47:00.274" endtime="20200410 15:47:03.758"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTextField</arg>
-<arg>${tel_number}</arg>
+<arg>${Email}</arg>
 </arguments>
-<msg timestamp="20200407 15:26:53.809" level="INFO">Typing text '0936736561' into text field 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTextField'</msg>
-<status status="PASS" starttime="20200407 15:26:53.807" endtime="20200407 15:26:54.935"></status>
+<msg timestamp="20200410 15:47:03.760" level="INFO">Typing text 'ace.io.andro@gmail.com' into text field 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTextField'</msg>
+<status status="PASS" starttime="20200410 15:47:03.758" endtime="20200410 15:47:05.214"></status>
 </kw>
-<status status="PASS" starttime="20200407 15:26:50.741" endtime="20200407 15:26:54.936"></status>
+<status status="PASS" starttime="20200410 15:46:59.718" endtime="20200410 15:47:05.214"></status>
 </kw>
-<kw name="Input Password In Mobile Login On Me Page" library="me">
-<doc>我-&gt;電話 登入-&gt;輸入 密碼</doc>
+<kw name="Input Password In Email Login On Me Page" library="me">
+<doc>我-&gt;Email 登入-&gt;輸入 密碼</doc>
 <arguments>
 <arg>Arborabc1234</arg>
 </arguments>
@@ -104,7 +104,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[3]/XCUIElementTypeSecureTextField</arg>
 </arguments>
-<status status="PASS" starttime="20200407 15:26:54.936" endtime="20200407 15:26:55.555"></status>
+<status status="PASS" starttime="20200410 15:47:05.215" endtime="20200410 15:47:05.861"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -112,10 +112,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[3]/XCUIElementTypeSecureTextField</arg>
 <arg>${Password}</arg>
 </arguments>
-<msg timestamp="20200407 15:26:55.556" level="INFO">Typing text 'Arborabc1234' into text field 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[3]/XCUIElementTypeSecureTextField'</msg>
-<status status="PASS" starttime="20200407 15:26:55.555" endtime="20200407 15:26:57.119"></status>
+<msg timestamp="20200410 15:47:05.865" level="INFO">Typing text 'Arborabc1234' into text field 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[3]/XCUIElementTypeSecureTextField'</msg>
+<status status="PASS" starttime="20200410 15:47:05.862" endtime="20200410 15:47:07.755"></status>
 </kw>
-<status status="PASS" starttime="20200407 15:26:54.936" endtime="20200407 15:26:57.119"></status>
+<status status="PASS" starttime="20200410 15:47:05.214" endtime="20200410 15:47:07.755"></status>
 </kw>
 <kw name="Click Login Button In Login On Me Page" library="me">
 <doc>我-&gt;電話orEmail 登入-&gt;登入</doc>
@@ -124,25 +124,25 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="登入"]</arg>
 </arguments>
-<status status="PASS" starttime="20200407 15:26:57.120" endtime="20200407 15:26:57.934"></status>
+<status status="PASS" starttime="20200410 15:47:07.756" endtime="20200410 15:47:08.555"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="登入"]</arg>
 </arguments>
-<msg timestamp="20200407 15:26:57.938" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="登入"]'.</msg>
-<status status="PASS" starttime="20200407 15:26:57.934" endtime="20200407 15:26:59.134"></status>
+<msg timestamp="20200410 15:47:08.557" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="登入"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:08.555" endtime="20200410 15:47:09.718"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200407 15:27:00.137" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200407 15:26:59.135" endtime="20200407 15:27:00.137"></status>
+<msg timestamp="20200410 15:47:10.721" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200410 15:47:09.718" endtime="20200410 15:47:10.721"></status>
 </kw>
-<status status="PASS" starttime="20200407 15:26:57.119" endtime="20200407 15:27:00.137"></status>
+<status status="PASS" starttime="20200410 15:47:07.755" endtime="20200410 15:47:10.721"></status>
 </kw>
 <kw name="Input Google Auth In Login On Me Page" library="me">
 <arguments>
@@ -161,17 +161,17 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>${key}</arg>
 </arguments>
-<status status="PASS" starttime="20200407 15:27:00.138" endtime="20200407 15:27:00.139"></status>
+<status status="PASS" starttime="20200410 15:47:10.722" endtime="20200410 15:47:10.723"></status>
 </kw>
-<msg timestamp="20200407 15:27:00.139" level="INFO">${token} = 567483</msg>
-<status status="PASS" starttime="20200407 15:27:00.138" endtime="20200407 15:27:00.139"></status>
+<msg timestamp="20200410 15:47:10.723" level="INFO">${token} = 552645</msg>
+<status status="PASS" starttime="20200410 15:47:10.722" endtime="20200410 15:47:10.723"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField</arg>
 </arguments>
-<status status="PASS" starttime="20200407 15:27:00.139" endtime="20200407 15:27:00.540"></status>
+<status status="PASS" starttime="20200410 15:47:10.723" endtime="20200410 15:47:11.060"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -179,10 +179,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField</arg>
 <arg>${token}</arg>
 </arguments>
-<msg timestamp="20200407 15:27:00.545" level="INFO">Typing text '567483' into text field 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField'</msg>
-<status status="PASS" starttime="20200407 15:27:00.541" endtime="20200407 15:27:02.780"></status>
+<msg timestamp="20200410 15:47:11.062" level="INFO">Typing text '552645' into text field 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField'</msg>
+<status status="PASS" starttime="20200410 15:47:11.060" endtime="20200410 15:47:13.270"></status>
 </kw>
-<status status="PASS" starttime="20200407 15:27:00.137" endtime="20200407 15:27:02.780"></status>
+<status status="PASS" starttime="20200410 15:47:10.721" endtime="20200410 15:47:13.270"></status>
 </kw>
 <kw name="Click Login Button In Auth On Me Page" library="me">
 <arguments>
@@ -193,23 +193,23 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="送出"]</arg>
 </arguments>
-<status status="PASS" starttime="20200407 15:27:02.781" endtime="20200407 15:27:03.299"></status>
+<status status="PASS" starttime="20200410 15:47:13.271" endtime="20200410 15:47:13.790"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="送出"]</arg>
 </arguments>
-<msg timestamp="20200407 15:27:03.301" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="送出"]'.</msg>
-<status status="PASS" starttime="20200407 15:27:03.299" endtime="20200407 15:27:04.157"></status>
+<msg timestamp="20200410 15:47:13.794" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="送出"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:13.791" endtime="20200410 15:47:14.623"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20200407 15:27:06.160" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200407 15:27:04.158" endtime="20200407 15:27:06.160"></status>
+<msg timestamp="20200410 15:47:16.624" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200410 15:47:14.623" endtime="20200410 15:47:16.624"></status>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
@@ -227,14 +227,14 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 </arguments>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20200407 15:27:06.933" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200407 15:27:06.815" endtime="20200407 15:27:06.933"></status>
+<msg timestamp="20200410 15:47:17.371" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200410 15:47:17.241" endtime="20200410 15:47:17.371"></status>
 </kw>
-<msg timestamp="20200407 15:27:06.934" level="FAIL">Page should have contained element 'xpath=//XCUIElementTypeButton[@name="送出"]' but did not</msg>
-<status status="FAIL" starttime="20200407 15:27:06.161" endtime="20200407 15:27:06.934"></status>
+<msg timestamp="20200410 15:47:17.372" level="FAIL">Page should have contained element 'xpath=//XCUIElementTypeButton[@name="送出"]' but did not</msg>
+<status status="FAIL" starttime="20200410 15:47:16.624" endtime="20200410 15:47:17.372"></status>
 </kw>
-<msg timestamp="20200407 15:27:06.934" level="INFO">${status} = False</msg>
-<status status="PASS" starttime="20200407 15:27:06.160" endtime="20200407 15:27:06.934"></status>
+<msg timestamp="20200410 15:47:17.372" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20200410 15:47:16.624" endtime="20200410 15:47:17.372"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -249,10 +249,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>${key}</arg>
 </arguments>
-<status status="PASS" starttime="20200407 15:27:06.935" endtime="20200407 15:27:06.936"></status>
+<status status="PASS" starttime="20200410 15:47:17.373" endtime="20200410 15:47:17.373"></status>
 </kw>
-<msg timestamp="20200407 15:27:06.936" level="INFO">${token} = 567483</msg>
-<status status="PASS" starttime="20200407 15:27:06.935" endtime="20200407 15:27:06.936"></status>
+<msg timestamp="20200410 15:47:17.373" level="INFO">${token} = 552645</msg>
+<status status="PASS" starttime="20200410 15:47:17.373" endtime="20200410 15:47:17.373"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -266,30 +266,290 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>Click Element</arg>
 <arg>xpath=//XCUIElementTypeButton[@name="送出"]</arg>
 </arguments>
-<status status="PASS" starttime="20200407 15:27:06.936" endtime="20200407 15:27:06.937"></status>
+<status status="PASS" starttime="20200410 15:47:17.374" endtime="20200410 15:47:17.374"></status>
 </kw>
-<status status="PASS" starttime="20200407 15:27:02.780" endtime="20200407 15:27:06.937"></status>
+<status status="PASS" starttime="20200410 15:47:13.271" endtime="20200410 15:47:17.374"></status>
 </kw>
-<status status="PASS" starttime="20200407 15:26:33.969" endtime="20200407 15:27:06.937"></status>
+<status status="PASS" starttime="20200410 15:46:41.528" endtime="20200410 15:47:17.374"></status>
 </kw>
-<doc>登入ACE 使用 google 驗證</doc>
+<doc>登入ACE 使用 手機 google 驗證</doc>
 <tags>
 <tag>prod</tag>
 </tags>
-<status status="PASS" starttime="20200407 15:26:33.968" endtime="20200407 15:27:06.937" critical="yes"></status>
+<status status="PASS" starttime="20200410 15:46:41.527" endtime="20200410 15:47:17.375" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200407 15:26:32.876" endtime="20200407 15:27:06.939"></status>
+<test id="s1-t2" name="Test Click Me Page">
+<kw name="Goto Me Tab On Home Page" library="navigation">
+<doc>我 分頁</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="我"]</arg>
+</arguments>
+<status status="PASS" starttime="20200410 15:47:17.378" endtime="20200410 15:47:18.242"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="我"]</arg>
+</arguments>
+<msg timestamp="20200410 15:47:18.244" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="我"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:18.242" endtime="20200410 15:47:19.432"></status>
+</kw>
+<status status="PASS" starttime="20200410 15:47:17.378" endtime="20200410 15:47:19.432"></status>
+</kw>
+<kw name="Click Bank Account On Me Page" library="me">
+<doc>我-&gt;銀行帳號</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeStaticText[@name="銀行帳號"]</arg>
+</arguments>
+<status status="PASS" starttime="20200410 15:47:19.433" endtime="20200410 15:47:20.305"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeStaticText[@name="銀行帳號"]</arg>
+</arguments>
+<msg timestamp="20200410 15:47:20.307" level="INFO">Clicking element 'xpath=//XCUIElementTypeStaticText[@name="銀行帳號"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:20.305" endtime="20200410 15:47:21.507"></status>
+</kw>
+<status status="PASS" starttime="20200410 15:47:19.432" endtime="20200410 15:47:21.507"></status>
+</kw>
+<kw name="Click Back Button On Me Page" library="me">
+<doc>返回鍵</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200410 15:47:21.508" endtime="20200410 15:47:22.589"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+</arguments>
+<msg timestamp="20200410 15:47:22.591" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:22.589" endtime="20200410 15:47:23.382"></status>
+</kw>
+<status status="PASS" starttime="20200410 15:47:21.508" endtime="20200410 15:47:23.383"></status>
+</kw>
+<kw name="Click Coin Withdraw Address On Me Page" library="me">
+<doc>我-&gt;我的提幣地址</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeStaticText[@name="提幣地址"]</arg>
+</arguments>
+<status status="PASS" starttime="20200410 15:47:23.384" endtime="20200410 15:47:24.227"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeStaticText[@name="提幣地址"]</arg>
+</arguments>
+<msg timestamp="20200410 15:47:24.230" level="INFO">Clicking element 'xpath=//XCUIElementTypeStaticText[@name="提幣地址"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:24.227" endtime="20200410 15:47:25.436"></status>
+</kw>
+<status status="PASS" starttime="20200410 15:47:23.383" endtime="20200410 15:47:25.437"></status>
+</kw>
+<kw name="Click Back Button On Me Page" library="me">
+<doc>返回鍵</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200410 15:47:25.438" endtime="20200410 15:47:26.458"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+</arguments>
+<msg timestamp="20200410 15:47:26.460" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:26.458" endtime="20200410 15:47:27.118"></status>
+</kw>
+<status status="PASS" starttime="20200410 15:47:25.437" endtime="20200410 15:47:27.118"></status>
+</kw>
+<kw name="Click Invite Back On Me Page" library="me">
+<doc>我-&gt;邀請返佣</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeStaticText[@name="邀請返佣"]</arg>
+</arguments>
+<status status="PASS" starttime="20200410 15:47:27.119" endtime="20200410 15:47:27.863"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeStaticText[@name="邀請返佣"]</arg>
+</arguments>
+<msg timestamp="20200410 15:47:27.865" level="INFO">Clicking element 'xpath=//XCUIElementTypeStaticText[@name="邀請返佣"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:27.863" endtime="20200410 15:47:29.113"></status>
+</kw>
+<status status="PASS" starttime="20200410 15:47:27.118" endtime="20200410 15:47:29.113"></status>
+</kw>
+<kw name="Click Back Button On Me Page" library="me">
+<doc>返回鍵</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200410 15:47:29.114" endtime="20200410 15:47:29.971"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+</arguments>
+<msg timestamp="20200410 15:47:29.973" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:29.971" endtime="20200410 15:47:30.690"></status>
+</kw>
+<status status="PASS" starttime="20200410 15:47:29.114" endtime="20200410 15:47:30.690"></status>
+</kw>
+<kw name="Click Announcement On Me Page" library="me">
+<doc>我-&gt;公告中心</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeStaticText[@name="公告中心"]</arg>
+</arguments>
+<status status="PASS" starttime="20200410 15:47:30.691" endtime="20200410 15:47:31.316"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeStaticText[@name="公告中心"]</arg>
+</arguments>
+<msg timestamp="20200410 15:47:31.319" level="INFO">Clicking element 'xpath=//XCUIElementTypeStaticText[@name="公告中心"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:31.316" endtime="20200410 15:47:32.409"></status>
+</kw>
+<status status="PASS" starttime="20200410 15:47:30.690" endtime="20200410 15:47:32.409"></status>
+</kw>
+<kw name="Click Back Button On Me Page" library="me">
+<doc>返回鍵</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200410 15:47:32.411" endtime="20200410 15:47:33.710"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+</arguments>
+<msg timestamp="20200410 15:47:33.712" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:33.711" endtime="20200410 15:47:34.763"></status>
+</kw>
+<status status="PASS" starttime="20200410 15:47:32.410" endtime="20200410 15:47:34.764"></status>
+</kw>
+<kw name="Click System Settings On Me Page" library="me">
+<doc>我-&gt;系統設置</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeStaticText[@name="系統設置"]</arg>
+</arguments>
+<status status="PASS" starttime="20200410 15:47:34.765" endtime="20200410 15:47:35.610"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeStaticText[@name="系統設置"]</arg>
+</arguments>
+<msg timestamp="20200410 15:47:35.612" level="INFO">Clicking element 'xpath=//XCUIElementTypeStaticText[@name="系統設置"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:35.610" endtime="20200410 15:47:36.830"></status>
+</kw>
+<status status="PASS" starttime="20200410 15:47:34.764" endtime="20200410 15:47:36.830"></status>
+</kw>
+<kw name="Click Back Button On Me Page" library="me">
+<doc>返回鍵</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200410 15:47:36.831" endtime="20200410 15:47:38.062"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+</arguments>
+<msg timestamp="20200410 15:47:38.064" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:38.062" endtime="20200410 15:47:38.913"></status>
+</kw>
+<status status="PASS" starttime="20200410 15:47:36.830" endtime="20200410 15:47:38.914"></status>
+</kw>
+<kw name="Click Question Reply On Me Page" library="me">
+<doc>我-&gt;問題回饋</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeStaticText[@name="問題回饋"]</arg>
+</arguments>
+<status status="PASS" starttime="20200410 15:47:38.915" endtime="20200410 15:47:39.787"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeStaticText[@name="問題回饋"]</arg>
+</arguments>
+<msg timestamp="20200410 15:47:39.791" level="INFO">Clicking element 'xpath=//XCUIElementTypeStaticText[@name="問題回饋"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:39.787" endtime="20200410 15:47:41.074"></status>
+</kw>
+<status status="PASS" starttime="20200410 15:47:38.914" endtime="20200410 15:47:41.075"></status>
+</kw>
+<kw name="Click Back Button On Me Page" library="me">
+<doc>返回鍵</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" starttime="20200410 15:47:41.077" endtime="20200410 15:47:42.388"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+</arguments>
+<msg timestamp="20200410 15:47:42.390" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
+<status status="PASS" starttime="20200410 15:47:42.388" endtime="20200410 15:47:43.322"></status>
+</kw>
+<status status="PASS" starttime="20200410 15:47:41.076" endtime="20200410 15:47:43.322"></status>
+</kw>
+<doc>切換到 我 點擊 各個頁面</doc>
+<tags>
+<tag>prod</tag>
+</tags>
+<status status="PASS" starttime="20200410 15:47:17.375" endtime="20200410 15:47:43.322" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200410 15:46:40.181" endtime="20200410 15:47:43.323"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0">prod</stat>
+<stat pass="2" fail="0">prod</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Test Login">Test Login</stat>
+<stat pass="2" fail="0" id="s1" name="Test Login Me">Test Login Me</stat>
 </suite>
 </statistics>
 <errors>
