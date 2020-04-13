@@ -10,7 +10,7 @@ Default Tags    prod
 *** Test Cases ***
 Test Login Ace On iOS
     [Documentation]    登入ACE 使用 手機 google 驗證
-    Open Ace App And Login With Mail
+    Open Ace App And Login With Mobile
 
 Test Click Me Page
     [Documentation]    切換到 我 點擊 各個頁面
