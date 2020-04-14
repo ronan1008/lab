@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.6 on darwin)" generated="20200413 17:47:10.596" rpa="false">
-<suite id="s1" name="Test Login Home" source="/Users/shocklee/Documents/github/workspace/Python/Ace/iOS/test_login_home.robot">
-<test id="s1-t1" name="Open Ace App And Login With Mobile">
+<robot generator="Robot 3.1.2 (Python 3.7.6 on darwin)" generated="20200414 18:21:41.367" rpa="false">
+<suite id="s1" name="Test Login Quote" source="/Users/shocklee/Documents/github/workspace/Python/Ace/iOS/test_login_quote.robot">
+<test id="s1-t1" name="Test Login Ace On Android">
 <kw name="Open Ace App And Login With Mobile" library="login">
 <kw name="Open Ace On iOS" library="login">
 <kw name="Open Application" library="AppiumLibrary">
@@ -21,9 +21,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>xcodeSigningId=${xcodeSigningId}</arg>
 <arg>automationName=${automationName}</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:47:11.916" endtime="20200413 17:47:27.057"></status>
+<status status="PASS" starttime="20200414 18:21:42.699" endtime="20200414 18:22:34.145"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:47:11.916" endtime="20200413 17:47:27.058"></status>
+<status status="PASS" starttime="20200414 18:21:42.699" endtime="20200414 18:22:34.146"></status>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
@@ -41,14 +41,14 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 </arguments>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20200413 17:47:28.024" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200413 17:47:27.814" endtime="20200413 17:47:28.024"></status>
+<msg timestamp="20200414 18:22:35.099" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200414 18:22:34.920" endtime="20200414 18:22:35.099"></status>
 </kw>
-<msg timestamp="20200413 17:47:28.025" level="FAIL">Page should have contained element 'xpath=(//XCUIElementTypeButton[@name="點擊登入"])[1]' but did not</msg>
-<status status="FAIL" starttime="20200413 17:47:27.058" endtime="20200413 17:47:28.025"></status>
+<msg timestamp="20200414 18:22:35.100" level="FAIL">Page should have contained element 'xpath=(//XCUIElementTypeButton[@name="點擊登入"])[1]' but did not</msg>
+<status status="FAIL" starttime="20200414 18:22:34.148" endtime="20200414 18:22:35.100"></status>
 </kw>
-<msg timestamp="20200413 17:47:28.025" level="INFO">${status} = False</msg>
-<status status="PASS" starttime="20200413 17:47:27.058" endtime="20200413 17:47:28.025"></status>
+<msg timestamp="20200414 18:22:35.100" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20200414 18:22:34.147" endtime="20200414 18:22:35.100"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -73,85 +73,131 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>Click Login Button In Auth On Me Page</arg>
 <arg>${googleAuth}</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:47:28.026" endtime="20200413 17:47:28.027"></status>
+<status status="PASS" starttime="20200414 18:22:35.101" endtime="20200414 18:22:35.101"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:47:11.915" endtime="20200413 17:47:28.027"></status>
+<status status="PASS" starttime="20200414 18:21:42.699" endtime="20200414 18:22:35.101"></status>
 </kw>
 <doc>登入ACE 使用 手機 google 驗證</doc>
 <tags>
 <tag>prod</tag>
 </tags>
-<status status="PASS" starttime="20200413 17:47:11.914" endtime="20200413 17:47:28.027" critical="yes"></status>
+<status status="PASS" starttime="20200414 18:21:42.685" endtime="20200414 18:22:35.102" critical="yes"></status>
 </test>
-<test id="s1-t2" name="Test Click Home Page">
-<kw name="Goto Home Tab On Home Page" library="navigation">
-<doc>Home 分頁</doc>
+<test id="s1-t2" name="Test Click Quote Page">
+<kw name="Goto Quotes Tab On Home Page" library="navigation">
+<doc>行情 分頁</doc>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="首頁"]</arg>
+<arg>xpath=//XCUIElementTypeButton[@name="行情"]</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:47:28.032" endtime="20200413 17:47:29.248"></status>
+<status status="PASS" starttime="20200414 18:22:35.106" endtime="20200414 18:22:36.232"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="首頁"]</arg>
+<arg>xpath=//XCUIElementTypeButton[@name="行情"]</arg>
 </arguments>
-<msg timestamp="20200413 17:47:29.251" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="首頁"]'.</msg>
-<status status="PASS" starttime="20200413 17:47:29.249" endtime="20200413 17:47:30.773"></status>
+<msg timestamp="20200414 18:22:36.234" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="行情"]'.</msg>
+<status status="PASS" starttime="20200414 18:22:36.233" endtime="20200414 18:22:37.880"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:47:28.031" endtime="20200413 17:47:30.773"></status>
+<status status="PASS" starttime="20200414 18:22:35.104" endtime="20200414 18:22:37.881"></status>
 </kw>
-<doc>切換到 首面 點擊 各個頁面</doc>
-<tags>
-<tag>prod</tag>
-</tags>
-<status status="PASS" starttime="20200413 17:47:28.028" endtime="20200413 17:47:30.774" critical="yes"></status>
-</test>
-<test id="s1-t3" name="Test Price And Gainers Tab On Home Page">
-<kw name="Click Price Tab On Home Page" library="home">
-<doc>Home-&gt;價格榜</doc>
+<kw name="Click Banner On Quote Page" library="quote">
+<arguments>
+<arg>BTC</arg>
+</arguments>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=(//XCUIElementTypeStaticText[@name="價格"])[1]</arg>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView//XCUIElementTypeStaticText[@name="${Cryptocurrency}"]</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:47:30.779" endtime="20200413 17:47:31.940"></status>
+<status status="PASS" starttime="20200414 18:22:37.883" endtime="20200414 18:22:38.330"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=(//XCUIElementTypeStaticText[@name="價格"])[1]</arg>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView//XCUIElementTypeStaticText[@name="${Cryptocurrency}"]</arg>
 </arguments>
-<msg timestamp="20200413 17:47:31.942" level="INFO">Clicking element 'xpath=(//XCUIElementTypeStaticText[@name="價格"])[1]'.</msg>
-<status status="PASS" starttime="20200413 17:47:31.940" endtime="20200413 17:47:33.472"></status>
+<msg timestamp="20200414 18:22:38.334" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView//XCUIElementTypeStaticText[@name="BTC"]'.</msg>
+<status status="PASS" starttime="20200414 18:22:38.331" endtime="20200414 18:22:39.586"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:47:30.778" endtime="20200413 17:47:33.473"></status>
+<status status="PASS" starttime="20200414 18:22:37.881" endtime="20200414 18:22:39.586"></status>
 </kw>
-<kw name="Click All Exchange In Price And Gainers Tab On Home Page" library="home">
-<doc>Home-&gt;價格榜(漲跌榜)-&gt;欄位</doc>
-<kw name="Swipe By Percent" library="AppiumLibrary">
-<doc>Swipe from one percent of the screen to another percent, for an optional duration.
-Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<kw name="Click Detail Of Banner On Quote Page" library="quote">
 <arguments>
-<arg>50</arg>
-<arg>50</arg>
-<arg>50</arg>
-<arg>20</arg>
+<arg>ETH</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:47:33.474" endtime="20200413 17:47:35.068"></status>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable//XCUIElementTypeStaticText[@name="${Cryptocurrency}"]</arg>
+</arguments>
+<status status="PASS" starttime="20200414 18:22:39.587" endtime="20200414 18:22:40.209"></status>
 </kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable//XCUIElementTypeStaticText[@name="${Cryptocurrency}"]</arg>
+</arguments>
+<msg timestamp="20200414 18:22:40.212" level="INFO">Clicking element '//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable//XCUIElementTypeStaticText[@name="ETH"]'.</msg>
+<status status="PASS" starttime="20200414 18:22:40.210" endtime="20200414 18:22:41.288"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:22:39.586" endtime="20200414 18:22:41.288"></status>
+</kw>
+<kw name="Click Back Button On Quote Page" library="quote">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+</arguments>
+<status status="PASS" starttime="20200414 18:22:41.289" endtime="20200414 18:22:42.129"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+</arguments>
+<msg timestamp="20200414 18:22:42.131" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
+<status status="PASS" starttime="20200414 18:22:42.129" endtime="20200414 18:22:43.287"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200414 18:22:43.789" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200414 18:22:43.287" endtime="20200414 18:22:43.789"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:22:41.289" endtime="20200414 18:22:43.789"></status>
+</kw>
+<kw name="Click Every Detail Of Banner On Quote Page" library="quote">
+<kw name="Get Count Of Banner On Quote Page" library="quote">
+<assign>
+<var>${count}</var>
+</assign>
 <kw name="Get Matching Xpath Count" library="AppiumLibrary">
 <doc>Returns number of elements matching ``xpath``</doc>
 <arguments>
-<arg>//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell</arg>
+<arg>//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell</arg>
 </arguments>
 <assign>
 <var>${count}</var>
 </assign>
-<msg timestamp="20200413 17:47:36.141" level="INFO">${count} = 4</msg>
-<status status="PASS" starttime="20200413 17:47:35.068" endtime="20200413 17:47:36.142"></status>
+<msg timestamp="20200414 18:22:44.259" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20200414 18:22:43.791" endtime="20200414 18:22:44.259"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${count}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:22:44.260" level="WARN">2</msg>
+<status status="PASS" starttime="20200414 18:22:44.260" endtime="20200414 18:22:44.260"></status>
+</kw>
+<msg timestamp="20200414 18:22:44.261" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20200414 18:22:43.790" endtime="20200414 18:22:44.261"></status>
 </kw>
 <kw name="${index} IN RANGE [ ${count} ]" type="for">
 <kw name="${index} = 0" type="foritem">
@@ -163,52 +209,139 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <assign>
 <var>${index}</var>
 </assign>
-<msg timestamp="20200413 17:47:36.143" level="INFO">${index} = 1</msg>
-<status status="PASS" starttime="20200413 17:47:36.142" endtime="20200413 17:47:36.143"></status>
+<msg timestamp="20200414 18:22:44.262" level="INFO">${index} = 1</msg>
+<status status="PASS" starttime="20200414 18:22:44.261" endtime="20200414 18:22:44.262"></status>
 </kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:47:36.143" endtime="20200413 17:47:37.347"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
-</arguments>
-<msg timestamp="20200413 17:47:37.349" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]'.</msg>
-<status status="PASS" starttime="20200413 17:47:37.347" endtime="20200413 17:47:38.995"></status>
-</kw>
-<kw name="Click Back Button On All Page" library="home">
-<doc>Home-&gt;其他返回</doc>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200413 17:47:39.996" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:47:38.996" endtime="20200413 17:47:39.996"></status>
+<msg timestamp="20200414 18:22:45.265" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200414 18:22:44.263" endtime="20200414 18:22:45.265"></status>
 </kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]/XCUIElementTypeStaticText[2]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${currency}</var>
+</assign>
+<msg timestamp="20200414 18:22:45.959" level="INFO">Element '//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]/XCUIElementTypeStaticText[2]' attribute 'name' value 'ETH' </msg>
+<msg timestamp="20200414 18:22:45.960" level="INFO">${currency} = ETH</msg>
+<status status="PASS" starttime="20200414 18:22:45.265" endtime="20200414 18:22:45.960"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Check "${currency}" Detail</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:22:45.961" level="WARN">Check "ETH" Detail</msg>
+<status status="PASS" starttime="20200414 18:22:45.960" endtime="20200414 18:22:45.962"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
+</arguments>
+<status status="PASS" starttime="20200414 18:22:45.962" endtime="20200414 18:22:46.652"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
+</arguments>
+<msg timestamp="20200414 18:22:46.655" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]'.</msg>
+<status status="PASS" starttime="20200414 18:22:46.653" endtime="20200414 18:22:47.490"></status>
+</kw>
+<kw name="Check Detail Info On Quote Page" library="quote">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]</arg>
+</arguments>
+<status status="PASS" starttime="20200414 18:22:47.491" endtime="20200414 18:22:48.296"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${ctoc}</var>
+</assign>
+<msg timestamp="20200414 18:22:49.082" level="INFO">Element 'xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]' attribute 'name' value 'ETH' </msg>
+<msg timestamp="20200414 18:22:49.083" level="INFO">${ctoc} = ETH</msg>
+<status status="PASS" starttime="20200414 18:22:48.297" endtime="20200414 18:22:49.083"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${price}</var>
+</assign>
+<msg timestamp="20200414 18:22:50.063" level="INFO">Element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]' attribute 'name' value '0.024469' </msg>
+<msg timestamp="20200414 18:22:50.063" level="INFO">${price} = 0.024469</msg>
+<status status="PASS" starttime="20200414 18:22:49.083" endtime="20200414 18:22:50.063"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[8]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${volume}</var>
+</assign>
+<msg timestamp="20200414 18:22:51.128" level="INFO">Element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[8]' attribute 'name' value '6.856' </msg>
+<msg timestamp="20200414 18:22:51.128" level="INFO">${volume} = 6.856</msg>
+<status status="PASS" starttime="20200414 18:22:50.063" endtime="20200414 18:22:51.128"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>幣種:${ctoc} 價格:${price} 數量:${volume}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:22:51.128" level="WARN">幣種:ETH 價格:0.024469 數量:6.856</msg>
+<status status="PASS" starttime="20200414 18:22:51.128" endtime="20200414 18:22:51.129"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:22:47.490" endtime="20200414 18:22:51.129"></status>
+</kw>
+<kw name="Click Back Button On Quote Page" library="quote">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:47:39.997" endtime="20200413 17:47:41.005"></status>
+<status status="PASS" starttime="20200414 18:22:51.129" endtime="20200414 18:22:52.112"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
 </arguments>
-<msg timestamp="20200413 17:47:41.007" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
-<status status="PASS" starttime="20200413 17:47:41.005" endtime="20200413 17:47:42.499"></status>
+<msg timestamp="20200414 18:22:52.115" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
+<status status="PASS" starttime="20200414 18:22:52.113" endtime="20200414 18:22:53.487"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:47:38.995" endtime="20200413 17:47:42.500"></status>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200414 18:22:53.989" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200414 18:22:53.488" endtime="20200414 18:22:53.989"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:47:36.142" endtime="20200413 17:47:42.500"></status>
+<status status="PASS" starttime="20200414 18:22:51.129" endtime="20200414 18:22:53.989"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:22:44.261" endtime="20200414 18:22:53.989"></status>
 </kw>
 <kw name="${index} = 1" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -219,222 +352,192 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <assign>
 <var>${index}</var>
 </assign>
-<msg timestamp="20200413 17:47:42.500" level="INFO">${index} = 2</msg>
-<status status="PASS" starttime="20200413 17:47:42.500" endtime="20200413 17:47:42.500"></status>
+<msg timestamp="20200414 18:22:53.991" level="INFO">${index} = 2</msg>
+<status status="PASS" starttime="20200414 18:22:53.990" endtime="20200414 18:22:53.991"></status>
 </kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:47:42.501" endtime="20200413 17:47:43.902"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
-</arguments>
-<msg timestamp="20200413 17:47:43.906" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[2]'.</msg>
-<status status="PASS" starttime="20200413 17:47:43.902" endtime="20200413 17:47:45.550"></status>
-</kw>
-<kw name="Click Back Button On All Page" library="home">
-<doc>Home-&gt;其他返回</doc>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200413 17:47:46.554" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:47:45.551" endtime="20200413 17:47:46.554"></status>
+<msg timestamp="20200414 18:22:54.992" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200414 18:22:53.991" endtime="20200414 18:22:54.992"></status>
 </kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
 <arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:47:46.554" endtime="20200413 17:47:47.538"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<msg timestamp="20200413 17:47:47.540" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
-<status status="PASS" starttime="20200413 17:47:47.538" endtime="20200413 17:47:49.017"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:47:45.551" endtime="20200413 17:47:49.018"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:47:42.500" endtime="20200413 17:47:49.018"></status>
-</kw>
-<kw name="${index} = 2" type="foritem">
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>${index} + 1</arg>
+<arg>//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]/XCUIElementTypeStaticText[2]</arg>
+<arg>name</arg>
 </arguments>
 <assign>
-<var>${index}</var>
+<var>${currency}</var>
 </assign>
-<msg timestamp="20200413 17:47:49.019" level="INFO">${index} = 3</msg>
-<status status="PASS" starttime="20200413 17:47:49.018" endtime="20200413 17:47:49.019"></status>
+<msg timestamp="20200414 18:22:55.679" level="INFO">Element '//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]' attribute 'name' value 'GTO' </msg>
+<msg timestamp="20200414 18:22:55.679" level="INFO">${currency} = GTO</msg>
+<status status="PASS" starttime="20200414 18:22:54.992" endtime="20200414 18:22:55.679"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Check "${currency}" Detail</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:22:55.680" level="WARN">Check "GTO" Detail</msg>
+<status status="PASS" starttime="20200414 18:22:55.680" endtime="20200414 18:22:55.680"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:47:49.019" endtime="20200413 17:47:51.247"></status>
+<status status="PASS" starttime="20200414 18:22:55.680" endtime="20200414 18:22:56.415"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
 </arguments>
-<msg timestamp="20200413 17:47:51.249" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[3]'.</msg>
-<status status="PASS" starttime="20200413 17:47:51.247" endtime="20200413 17:47:52.874"></status>
+<msg timestamp="20200414 18:22:56.417" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[2]'.</msg>
+<status status="PASS" starttime="20200414 18:22:56.416" endtime="20200414 18:22:57.267"></status>
 </kw>
-<kw name="Click Back Button On All Page" library="home">
-<doc>Home-&gt;其他返回</doc>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20200413 17:47:53.876" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:47:52.875" endtime="20200413 17:47:53.876"></status>
-</kw>
+<kw name="Check Detail Info On Quote Page" library="quote">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+<arg>xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:47:53.876" endtime="20200413 17:47:54.852"></status>
+<status status="PASS" starttime="20200414 18:22:57.268" endtime="20200414 18:22:58.924"></status>
 </kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
 <arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<msg timestamp="20200413 17:47:54.855" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
-<status status="PASS" starttime="20200413 17:47:54.852" endtime="20200413 17:47:56.284"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:47:52.874" endtime="20200413 17:47:56.284"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:47:49.018" endtime="20200413 17:47:56.284"></status>
-</kw>
-<kw name="${index} = 3" type="foritem">
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>${index} + 1</arg>
+<arg>xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]</arg>
+<arg>name</arg>
 </arguments>
 <assign>
-<var>${index}</var>
+<var>${ctoc}</var>
 </assign>
-<msg timestamp="20200413 17:47:56.285" level="INFO">${index} = 4</msg>
-<status status="PASS" starttime="20200413 17:47:56.284" endtime="20200413 17:47:56.285"></status>
+<msg timestamp="20200414 18:22:59.887" level="INFO">Element 'xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]' attribute 'name' value 'GTO' </msg>
+<msg timestamp="20200414 18:22:59.887" level="INFO">${ctoc} = GTO</msg>
+<status status="PASS" starttime="20200414 18:22:58.924" endtime="20200414 18:22:59.887"></status>
 </kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${price}</var>
+</assign>
+<msg timestamp="20200414 18:23:00.927" level="INFO">Element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]' attribute 'name' value '0.00000832' </msg>
+<msg timestamp="20200414 18:23:00.928" level="INFO">${price} = 0.00000832</msg>
+<status status="PASS" starttime="20200414 18:22:59.887" endtime="20200414 18:23:00.928"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[8]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${volume}</var>
+</assign>
+<msg timestamp="20200414 18:23:01.928" level="INFO">Element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[8]' attribute 'name' value '0' </msg>
+<msg timestamp="20200414 18:23:01.929" level="INFO">${volume} = 0</msg>
+<status status="PASS" starttime="20200414 18:23:00.928" endtime="20200414 18:23:01.929"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>幣種:${ctoc} 價格:${price} 數量:${volume}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:23:01.929" level="WARN">幣種:GTO 價格:0.00000832 數量:0</msg>
+<status status="PASS" starttime="20200414 18:23:01.929" endtime="20200414 18:23:01.930"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:22:57.267" endtime="20200414 18:23:01.930"></status>
+</kw>
+<kw name="Click Back Button On Quote Page" library="quote">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:47:56.285" endtime="20200413 17:47:57.683"></status>
+<status status="PASS" starttime="20200414 18:23:01.931" endtime="20200414 18:23:02.911"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
+<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
 </arguments>
-<msg timestamp="20200413 17:47:57.686" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[4]'.</msg>
-<status status="PASS" starttime="20200413 17:47:57.683" endtime="20200413 17:47:59.333"></status>
+<msg timestamp="20200414 18:23:02.913" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
+<status status="PASS" starttime="20200414 18:23:02.911" endtime="20200414 18:23:04.223"></status>
 </kw>
-<kw name="Click Back Button On All Page" library="home">
-<doc>Home-&gt;其他返回</doc>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>1s</arg>
+<arg>0.5s</arg>
 </arguments>
-<msg timestamp="20200413 17:48:00.337" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:47:59.334" endtime="20200413 17:48:00.338"></status>
+<msg timestamp="20200414 18:23:04.724" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200414 18:23:04.223" endtime="20200414 18:23:04.725"></status>
 </kw>
+<status status="PASS" starttime="20200414 18:23:01.930" endtime="20200414 18:23:04.725"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:22:53.990" endtime="20200414 18:23:04.725"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:22:44.261" endtime="20200414 18:23:04.725"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:22:43.790" endtime="20200414 18:23:04.725"></status>
+</kw>
+<kw name="Click Banner On Quote Page" library="quote">
+<arguments>
+<arg>USDT</arg>
+</arguments>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView//XCUIElementTypeStaticText[@name="${Cryptocurrency}"]</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:48:00.338" endtime="20200413 17:48:01.315"></status>
+<status status="PASS" starttime="20200414 18:23:04.726" endtime="20200414 18:23:05.397"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView//XCUIElementTypeStaticText[@name="${Cryptocurrency}"]</arg>
 </arguments>
-<msg timestamp="20200413 17:48:01.317" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
-<status status="PASS" starttime="20200413 17:48:01.315" endtime="20200413 17:48:02.782"></status>
+<msg timestamp="20200414 18:23:05.400" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView//XCUIElementTypeStaticText[@name="USDT"]'.</msg>
+<status status="PASS" starttime="20200414 18:23:05.398" endtime="20200414 18:23:06.414"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:47:59.333" endtime="20200413 17:48:02.783"></status>
+<status status="PASS" starttime="20200414 18:23:04.726" endtime="20200414 18:23:06.414"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:47:56.284" endtime="20200413 17:48:02.783"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:47:36.142" endtime="20200413 17:48:02.783"></status>
-</kw>
-<kw name="Swipe By Percent" library="AppiumLibrary">
-<doc>Swipe from one percent of the screen to another percent, for an optional duration.
-Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
-<arguments>
-<arg>50</arg>
-<arg>50</arg>
-<arg>50</arg>
-<arg>80</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:48:02.783" endtime="20200413 17:48:04.488"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:47:33.473" endtime="20200413 17:48:04.488"></status>
-</kw>
-<kw name="Click Gainers Tab On Home Page" library="home">
-<doc>Home-&gt;漲跌榜</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=(//XCUIElementTypeStaticText[@name="漲跌"])[1]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:48:04.489" endtime="20200413 17:48:05.658"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=(//XCUIElementTypeStaticText[@name="漲跌"])[1]</arg>
-</arguments>
-<msg timestamp="20200413 17:48:05.663" level="INFO">Clicking element 'xpath=(//XCUIElementTypeStaticText[@name="漲跌"])[1]'.</msg>
-<status status="PASS" starttime="20200413 17:48:05.659" endtime="20200413 17:48:07.205"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:48:04.488" endtime="20200413 17:48:07.206"></status>
-</kw>
-<kw name="Click All Exchange In Price And Gainers Tab On Home Page" library="home">
-<doc>Home-&gt;價格榜(漲跌榜)-&gt;欄位</doc>
-<kw name="Swipe By Percent" library="AppiumLibrary">
-<doc>Swipe from one percent of the screen to another percent, for an optional duration.
-Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
-<arguments>
-<arg>50</arg>
-<arg>50</arg>
-<arg>50</arg>
-<arg>20</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:48:07.207" endtime="20200413 17:48:08.782"></status>
-</kw>
+<kw name="Click Every Detail Of Banner On Quote Page" library="quote">
+<kw name="Get Count Of Banner On Quote Page" library="quote">
+<assign>
+<var>${count}</var>
+</assign>
 <kw name="Get Matching Xpath Count" library="AppiumLibrary">
 <doc>Returns number of elements matching ``xpath``</doc>
 <arguments>
-<arg>//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell</arg>
+<arg>//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell</arg>
 </arguments>
 <assign>
 <var>${count}</var>
 </assign>
-<msg timestamp="20200413 17:48:09.881" level="INFO">${count} = 4</msg>
-<status status="PASS" starttime="20200413 17:48:08.783" endtime="20200413 17:48:09.881"></status>
+<msg timestamp="20200414 18:23:06.915" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20200414 18:23:06.416" endtime="20200414 18:23:06.915"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${count}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:23:06.916" level="WARN">2</msg>
+<status status="PASS" starttime="20200414 18:23:06.916" endtime="20200414 18:23:06.917"></status>
+</kw>
+<msg timestamp="20200414 18:23:06.917" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20200414 18:23:06.415" endtime="20200414 18:23:06.917"></status>
 </kw>
 <kw name="${index} IN RANGE [ ${count} ]" type="for">
 <kw name="${index} = 0" type="foritem">
@@ -446,52 +549,139 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <assign>
 <var>${index}</var>
 </assign>
-<msg timestamp="20200413 17:48:09.882" level="INFO">${index} = 1</msg>
-<status status="PASS" starttime="20200413 17:48:09.882" endtime="20200413 17:48:09.882"></status>
+<msg timestamp="20200414 18:23:06.918" level="INFO">${index} = 1</msg>
+<status status="PASS" starttime="20200414 18:23:06.918" endtime="20200414 18:23:06.918"></status>
 </kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:48:09.882" endtime="20200413 17:48:11.100"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
-</arguments>
-<msg timestamp="20200413 17:48:11.104" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]'.</msg>
-<status status="PASS" starttime="20200413 17:48:11.100" endtime="20200413 17:48:12.750"></status>
-</kw>
-<kw name="Click Back Button On All Page" library="home">
-<doc>Home-&gt;其他返回</doc>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200413 17:48:13.753" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:48:12.752" endtime="20200413 17:48:13.753"></status>
+<msg timestamp="20200414 18:23:07.921" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200414 18:23:06.918" endtime="20200414 18:23:07.921"></status>
 </kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]/XCUIElementTypeStaticText[2]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${currency}</var>
+</assign>
+<msg timestamp="20200414 18:23:08.534" level="INFO">Element '//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]/XCUIElementTypeStaticText[2]' attribute 'name' value 'TACEX' </msg>
+<msg timestamp="20200414 18:23:08.534" level="INFO">${currency} = TACEX</msg>
+<status status="PASS" starttime="20200414 18:23:07.921" endtime="20200414 18:23:08.535"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Check "${currency}" Detail</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:23:08.535" level="WARN">Check "TACEX" Detail</msg>
+<status status="PASS" starttime="20200414 18:23:08.535" endtime="20200414 18:23:08.535"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
+</arguments>
+<status status="PASS" starttime="20200414 18:23:08.536" endtime="20200414 18:23:09.185"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
+</arguments>
+<msg timestamp="20200414 18:23:09.187" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]'.</msg>
+<status status="PASS" starttime="20200414 18:23:09.185" endtime="20200414 18:23:10.046"></status>
+</kw>
+<kw name="Check Detail Info On Quote Page" library="quote">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]</arg>
+</arguments>
+<status status="PASS" starttime="20200414 18:23:10.048" endtime="20200414 18:23:11.545"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${ctoc}</var>
+</assign>
+<msg timestamp="20200414 18:23:12.420" level="INFO">Element 'xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]' attribute 'name' value 'TACEX' </msg>
+<msg timestamp="20200414 18:23:12.421" level="INFO">${ctoc} = TACEX</msg>
+<status status="PASS" starttime="20200414 18:23:11.545" endtime="20200414 18:23:12.421"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${price}</var>
+</assign>
+<msg timestamp="20200414 18:23:13.297" level="INFO">Element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]' attribute 'name' value '0.0317' </msg>
+<msg timestamp="20200414 18:23:13.297" level="INFO">${price} = 0.0317</msg>
+<status status="PASS" starttime="20200414 18:23:12.421" endtime="20200414 18:23:13.297"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[8]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${volume}</var>
+</assign>
+<msg timestamp="20200414 18:23:14.171" level="INFO">Element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[8]' attribute 'name' value '128,181.40' </msg>
+<msg timestamp="20200414 18:23:14.171" level="INFO">${volume} = 128,181.40</msg>
+<status status="PASS" starttime="20200414 18:23:13.297" endtime="20200414 18:23:14.171"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>幣種:${ctoc} 價格:${price} 數量:${volume}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:23:14.172" level="WARN">幣種:TACEX 價格:0.0317 數量:128,181.40</msg>
+<status status="PASS" starttime="20200414 18:23:14.172" endtime="20200414 18:23:14.174"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:23:10.047" endtime="20200414 18:23:14.175"></status>
+</kw>
+<kw name="Click Back Button On Quote Page" library="quote">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:48:13.753" endtime="20200413 17:48:15.196"></status>
+<status status="PASS" starttime="20200414 18:23:14.176" endtime="20200414 18:23:14.966"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
 </arguments>
-<msg timestamp="20200413 17:48:15.197" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
-<status status="PASS" starttime="20200413 17:48:15.196" endtime="20200413 17:48:16.714"></status>
+<msg timestamp="20200414 18:23:14.968" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
+<status status="PASS" starttime="20200414 18:23:14.966" endtime="20200414 18:23:16.159"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:48:12.751" endtime="20200413 17:48:16.714"></status>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200414 18:23:16.660" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200414 18:23:16.159" endtime="20200414 18:23:16.660"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:48:09.882" endtime="20200413 17:48:16.714"></status>
+<status status="PASS" starttime="20200414 18:23:14.175" endtime="20200414 18:23:16.660"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:23:06.917" endtime="20200414 18:23:16.660"></status>
 </kw>
 <kw name="${index} = 1" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -502,54 +692,195 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <assign>
 <var>${index}</var>
 </assign>
-<msg timestamp="20200413 17:48:16.715" level="INFO">${index} = 2</msg>
-<status status="PASS" starttime="20200413 17:48:16.714" endtime="20200413 17:48:16.715"></status>
+<msg timestamp="20200414 18:23:16.661" level="INFO">${index} = 2</msg>
+<status status="PASS" starttime="20200414 18:23:16.661" endtime="20200414 18:23:16.661"></status>
 </kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:48:16.715" endtime="20200413 17:48:18.136"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
-</arguments>
-<msg timestamp="20200413 17:48:18.138" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[2]'.</msg>
-<status status="PASS" starttime="20200413 17:48:18.136" endtime="20200413 17:48:19.791"></status>
-</kw>
-<kw name="Click Back Button On All Page" library="home">
-<doc>Home-&gt;其他返回</doc>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200413 17:48:20.793" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:48:19.792" endtime="20200413 17:48:20.793"></status>
+<msg timestamp="20200414 18:23:17.663" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200414 18:23:16.661" endtime="20200414 18:23:17.664"></status>
 </kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]/XCUIElementTypeStaticText[2]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${currency}</var>
+</assign>
+<msg timestamp="20200414 18:23:18.362" level="INFO">Element '//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]' attribute 'name' value 'ACEX' </msg>
+<msg timestamp="20200414 18:23:18.362" level="INFO">${currency} = ACEX</msg>
+<status status="PASS" starttime="20200414 18:23:17.664" endtime="20200414 18:23:18.362"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Check "${currency}" Detail</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:23:18.363" level="WARN">Check "ACEX" Detail</msg>
+<status status="PASS" starttime="20200414 18:23:18.363" endtime="20200414 18:23:18.363"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
+</arguments>
+<status status="PASS" starttime="20200414 18:23:18.363" endtime="20200414 18:23:19.021"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
+</arguments>
+<msg timestamp="20200414 18:23:19.023" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[2]'.</msg>
+<status status="PASS" starttime="20200414 18:23:19.021" endtime="20200414 18:23:19.907"></status>
+</kw>
+<kw name="Check Detail Info On Quote Page" library="quote">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]</arg>
+</arguments>
+<status status="PASS" starttime="20200414 18:23:19.907" endtime="20200414 18:23:21.446"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${ctoc}</var>
+</assign>
+<msg timestamp="20200414 18:23:22.396" level="INFO">Element 'xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]' attribute 'name' value 'ACEX' </msg>
+<msg timestamp="20200414 18:23:22.396" level="INFO">${ctoc} = ACEX</msg>
+<status status="PASS" starttime="20200414 18:23:21.446" endtime="20200414 18:23:22.396"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${price}</var>
+</assign>
+<msg timestamp="20200414 18:23:23.414" level="INFO">Element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]' attribute 'name' value '0.0326' </msg>
+<msg timestamp="20200414 18:23:23.414" level="INFO">${price} = 0.0326</msg>
+<status status="PASS" starttime="20200414 18:23:22.396" endtime="20200414 18:23:23.414"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[8]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${volume}</var>
+</assign>
+<msg timestamp="20200414 18:23:24.350" level="INFO">Element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[8]' attribute 'name' value '130,582.4' </msg>
+<msg timestamp="20200414 18:23:24.350" level="INFO">${volume} = 130,582.4</msg>
+<status status="PASS" starttime="20200414 18:23:23.414" endtime="20200414 18:23:24.350"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>幣種:${ctoc} 價格:${price} 數量:${volume}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:23:24.351" level="WARN">幣種:ACEX 價格:0.0326 數量:130,582.4</msg>
+<status status="PASS" starttime="20200414 18:23:24.351" endtime="20200414 18:23:24.352"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:23:19.907" endtime="20200414 18:23:24.352"></status>
+</kw>
+<kw name="Click Back Button On Quote Page" library="quote">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:48:20.794" endtime="20200413 17:48:21.861"></status>
+<status status="PASS" starttime="20200414 18:23:24.353" endtime="20200414 18:23:25.340"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
 </arguments>
-<msg timestamp="20200413 17:48:21.865" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
-<status status="PASS" starttime="20200413 17:48:21.861" endtime="20200413 17:48:23.733"></status>
+<msg timestamp="20200414 18:23:25.342" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
+<status status="PASS" starttime="20200414 18:23:25.340" endtime="20200414 18:23:26.782"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:48:19.792" endtime="20200413 17:48:23.734"></status>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200414 18:23:27.284" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200414 18:23:26.782" endtime="20200414 18:23:27.284"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:48:16.714" endtime="20200413 17:48:23.734"></status>
+<status status="PASS" starttime="20200414 18:23:24.352" endtime="20200414 18:23:27.284"></status>
 </kw>
-<kw name="${index} = 2" type="foritem">
+<status status="PASS" starttime="20200414 18:23:16.660" endtime="20200414 18:23:27.285"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:23:06.917" endtime="20200414 18:23:27.285"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:23:06.415" endtime="20200414 18:23:27.285"></status>
+</kw>
+<kw name="Click Banner On Quote Page" library="quote">
+<arguments>
+<arg>BTC</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView//XCUIElementTypeStaticText[@name="${Cryptocurrency}"]</arg>
+</arguments>
+<status status="PASS" starttime="20200414 18:23:27.286" endtime="20200414 18:23:27.946"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView//XCUIElementTypeStaticText[@name="${Cryptocurrency}"]</arg>
+</arguments>
+<msg timestamp="20200414 18:23:27.948" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView//XCUIElementTypeStaticText[@name="BTC"]'.</msg>
+<status status="PASS" starttime="20200414 18:23:27.947" endtime="20200414 18:23:28.937"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:23:27.285" endtime="20200414 18:23:28.937"></status>
+</kw>
+<kw name="Click Every Detail Of Banner On Quote Page" library="quote">
+<kw name="Get Count Of Banner On Quote Page" library="quote">
+<assign>
+<var>${count}</var>
+</assign>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<doc>Returns number of elements matching ``xpath``</doc>
+<arguments>
+<arg>//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20200414 18:23:29.422" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20200414 18:23:28.938" endtime="20200414 18:23:29.422"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${count}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:23:29.422" level="WARN">2</msg>
+<status status="PASS" starttime="20200414 18:23:29.422" endtime="20200414 18:23:29.423"></status>
+</kw>
+<msg timestamp="20200414 18:23:29.423" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20200414 18:23:28.938" endtime="20200414 18:23:29.423"></status>
+</kw>
+<kw name="${index} IN RANGE [ ${count} ]" type="for">
+<kw name="${index} = 0" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
@@ -558,54 +889,141 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <assign>
 <var>${index}</var>
 </assign>
-<msg timestamp="20200413 17:48:23.735" level="INFO">${index} = 3</msg>
-<status status="PASS" starttime="20200413 17:48:23.734" endtime="20200413 17:48:23.735"></status>
+<msg timestamp="20200414 18:23:29.425" level="INFO">${index} = 1</msg>
+<status status="PASS" starttime="20200414 18:23:29.424" endtime="20200414 18:23:29.425"></status>
 </kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:48:23.735" endtime="20200413 17:48:25.066"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
-</arguments>
-<msg timestamp="20200413 17:48:25.068" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[3]'.</msg>
-<status status="PASS" starttime="20200413 17:48:25.066" endtime="20200413 17:48:26.742"></status>
-</kw>
-<kw name="Click Back Button On All Page" library="home">
-<doc>Home-&gt;其他返回</doc>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200413 17:48:27.746" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:48:26.744" endtime="20200413 17:48:27.746"></status>
+<msg timestamp="20200414 18:23:30.427" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200414 18:23:29.425" endtime="20200414 18:23:30.428"></status>
 </kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]/XCUIElementTypeStaticText[2]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${currency}</var>
+</assign>
+<msg timestamp="20200414 18:23:31.139" level="INFO">Element '//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]/XCUIElementTypeStaticText[2]' attribute 'name' value 'ETH' </msg>
+<msg timestamp="20200414 18:23:31.139" level="INFO">${currency} = ETH</msg>
+<status status="PASS" starttime="20200414 18:23:30.428" endtime="20200414 18:23:31.139"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Check "${currency}" Detail</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:23:31.141" level="WARN">Check "ETH" Detail</msg>
+<status status="PASS" starttime="20200414 18:23:31.139" endtime="20200414 18:23:31.141"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
+</arguments>
+<status status="PASS" starttime="20200414 18:23:31.141" endtime="20200414 18:23:31.797"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
+</arguments>
+<msg timestamp="20200414 18:23:31.798" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[1]'.</msg>
+<status status="PASS" starttime="20200414 18:23:31.797" endtime="20200414 18:23:32.650"></status>
+</kw>
+<kw name="Check Detail Info On Quote Page" library="quote">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]</arg>
+</arguments>
+<status status="PASS" starttime="20200414 18:23:32.651" endtime="20200414 18:23:34.181"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${ctoc}</var>
+</assign>
+<msg timestamp="20200414 18:23:35.202" level="INFO">Element 'xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]' attribute 'name' value 'ETH' </msg>
+<msg timestamp="20200414 18:23:35.202" level="INFO">${ctoc} = ETH</msg>
+<status status="PASS" starttime="20200414 18:23:34.181" endtime="20200414 18:23:35.202"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${price}</var>
+</assign>
+<msg timestamp="20200414 18:23:36.267" level="INFO">Element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]' attribute 'name' value '0.024469' </msg>
+<msg timestamp="20200414 18:23:36.267" level="INFO">${price} = 0.024469</msg>
+<status status="PASS" starttime="20200414 18:23:35.202" endtime="20200414 18:23:36.267"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[8]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${volume}</var>
+</assign>
+<msg timestamp="20200414 18:23:37.291" level="INFO">Element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[8]' attribute 'name' value '6.856' </msg>
+<msg timestamp="20200414 18:23:37.291" level="INFO">${volume} = 6.856</msg>
+<status status="PASS" starttime="20200414 18:23:36.267" endtime="20200414 18:23:37.291"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>幣種:${ctoc} 價格:${price} 數量:${volume}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:23:37.292" level="WARN">幣種:ETH 價格:0.024469 數量:6.856</msg>
+<status status="PASS" starttime="20200414 18:23:37.291" endtime="20200414 18:23:37.292"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:23:32.651" endtime="20200414 18:23:37.292"></status>
+</kw>
+<kw name="Click Back Button On Quote Page" library="quote">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:48:27.747" endtime="20200413 17:48:28.754"></status>
+<status status="PASS" starttime="20200414 18:23:37.293" endtime="20200414 18:23:38.263"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
 </arguments>
-<msg timestamp="20200413 17:48:28.755" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
-<status status="PASS" starttime="20200413 17:48:28.754" endtime="20200413 17:48:30.258"></status>
+<msg timestamp="20200414 18:23:38.265" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
+<status status="PASS" starttime="20200414 18:23:38.264" endtime="20200414 18:23:39.661"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:48:26.743" endtime="20200413 17:48:30.259"></status>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200414 18:23:40.164" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200414 18:23:39.662" endtime="20200414 18:23:40.164"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:48:23.734" endtime="20200413 17:48:30.259"></status>
+<status status="PASS" starttime="20200414 18:23:37.293" endtime="20200414 18:23:40.165"></status>
 </kw>
-<kw name="${index} = 3" type="foritem">
+<status status="PASS" starttime="20200414 18:23:29.424" endtime="20200414 18:23:40.165"></status>
+</kw>
+<kw name="${index} = 1" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
@@ -614,453 +1032,179 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <assign>
 <var>${index}</var>
 </assign>
-<msg timestamp="20200413 17:48:30.260" level="INFO">${index} = 4</msg>
-<status status="PASS" starttime="20200413 17:48:30.259" endtime="20200413 17:48:30.260"></status>
+<msg timestamp="20200414 18:23:40.166" level="INFO">${index} = 2</msg>
+<status status="PASS" starttime="20200414 18:23:40.166" endtime="20200414 18:23:40.166"></status>
 </kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:48:30.260" endtime="20200413 17:48:31.658"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
-</arguments>
-<msg timestamp="20200413 17:48:31.660" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[4]'.</msg>
-<status status="PASS" starttime="20200413 17:48:31.658" endtime="20200413 17:48:33.290"></status>
-</kw>
-<kw name="Click Back Button On All Page" library="home">
-<doc>Home-&gt;其他返回</doc>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20200413 17:48:34.292" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:48:33.290" endtime="20200413 17:48:34.292"></status>
+<msg timestamp="20200414 18:23:41.169" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200414 18:23:40.166" endtime="20200414 18:23:41.169"></status>
 </kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]/XCUIElementTypeStaticText[2]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${currency}</var>
+</assign>
+<msg timestamp="20200414 18:23:41.824" level="INFO">Element '//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]' attribute 'name' value 'GTO' </msg>
+<msg timestamp="20200414 18:23:41.824" level="INFO">${currency} = GTO</msg>
+<status status="PASS" starttime="20200414 18:23:41.169" endtime="20200414 18:23:41.824"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Check "${currency}" Detail</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:23:41.825" level="WARN">Check "GTO" Detail</msg>
+<status status="PASS" starttime="20200414 18:23:41.825" endtime="20200414 18:23:41.826"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
+</arguments>
+<status status="PASS" starttime="20200414 18:23:41.826" endtime="20200414 18:23:42.570"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[${index}]</arg>
+</arguments>
+<msg timestamp="20200414 18:23:42.575" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[2]'.</msg>
+<status status="PASS" starttime="20200414 18:23:42.571" endtime="20200414 18:23:43.511"></status>
+</kw>
+<kw name="Check Detail Info On Quote Page" library="quote">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]</arg>
+</arguments>
+<status status="PASS" starttime="20200414 18:23:43.512" endtime="20200414 18:23:45.033"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${ctoc}</var>
+</assign>
+<msg timestamp="20200414 18:23:46.018" level="INFO">Element 'xpath=//XCUIElementTypeNavigationBar[@name="AIPriceDetailView"]/XCUIElementTypeStaticText/XCUIElementTypeStaticText[1]' attribute 'name' value 'GTO' </msg>
+<msg timestamp="20200414 18:23:46.018" level="INFO">${ctoc} = GTO</msg>
+<status status="PASS" starttime="20200414 18:23:45.033" endtime="20200414 18:23:46.018"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${price}</var>
+</assign>
+<msg timestamp="20200414 18:23:47.046" level="INFO">Element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]' attribute 'name' value '0.00000832' </msg>
+<msg timestamp="20200414 18:23:47.046" level="INFO">${price} = 0.00000832</msg>
+<status status="PASS" starttime="20200414 18:23:46.018" endtime="20200414 18:23:47.047"></status>
+</kw>
+<kw name="Get Element Attribute" library="AppiumLibrary">
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<arguments>
+<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[8]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${volume}</var>
+</assign>
+<msg timestamp="20200414 18:23:48.082" level="INFO">Element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[8]' attribute 'name' value '0' </msg>
+<msg timestamp="20200414 18:23:48.082" level="INFO">${volume} = 0</msg>
+<status status="PASS" starttime="20200414 18:23:47.047" endtime="20200414 18:23:48.083"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>幣種:${ctoc} 價格:${price} 數量:${volume}</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20200414 18:23:48.083" level="WARN">幣種:GTO 價格:0.00000832 數量:0</msg>
+<status status="PASS" starttime="20200414 18:23:48.083" endtime="20200414 18:23:48.083"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:23:43.512" endtime="20200414 18:23:48.084"></status>
+</kw>
+<kw name="Click Back Button On Quote Page" library="quote">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:48:34.292" endtime="20200413 17:48:35.301"></status>
+<status status="PASS" starttime="20200414 18:23:48.084" endtime="20200414 18:23:49.045"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
 </arguments>
-<msg timestamp="20200413 17:48:35.303" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
-<status status="PASS" starttime="20200413 17:48:35.301" endtime="20200413 17:48:36.799"></status>
+<msg timestamp="20200414 18:23:49.048" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
+<status status="PASS" starttime="20200414 18:23:49.046" endtime="20200414 18:23:50.442"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:48:33.290" endtime="20200413 17:48:36.799"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:48:30.259" endtime="20200413 17:48:36.799"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:48:09.881" endtime="20200413 17:48:36.799"></status>
-</kw>
-<kw name="Swipe By Percent" library="AppiumLibrary">
-<doc>Swipe from one percent of the screen to another percent, for an optional duration.
-Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>50</arg>
-<arg>50</arg>
-<arg>50</arg>
-<arg>80</arg>
+<arg>0.5s</arg>
 </arguments>
-<status status="PASS" starttime="20200413 17:48:36.799" endtime="20200413 17:48:38.558"></status>
+<msg timestamp="20200414 18:23:50.943" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20200414 18:23:50.442" endtime="20200414 18:23:50.944"></status>
 </kw>
-<status status="PASS" starttime="20200413 17:48:07.206" endtime="20200413 17:48:38.558"></status>
+<status status="PASS" starttime="20200414 18:23:48.084" endtime="20200414 18:23:50.944"></status>
 </kw>
-<doc>切換 價格榜 點擊匯率 在切換到 漲跌榜 點擊匯率</doc>
+<status status="PASS" starttime="20200414 18:23:40.165" endtime="20200414 18:23:50.944"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:23:29.423" endtime="20200414 18:23:50.944"></status>
+</kw>
+<status status="PASS" starttime="20200414 18:23:28.937" endtime="20200414 18:23:50.944"></status>
+</kw>
+<doc>切換到 行情 點擊 各個頁面</doc>
 <tags>
 <tag>prod</tag>
 </tags>
-<status status="PASS" starttime="20200413 17:47:30.774" endtime="20200413 17:48:38.559" critical="yes"></status>
+<status status="PASS" starttime="20200414 18:22:35.102" endtime="20200414 18:23:50.945" critical="yes"></status>
 </test>
-<test id="s1-t4" name="Test Top Exchange Banner On Home Page">
-<kw name="Click First Exchange Banner On Home Page" library="home">
-<doc>Home-&gt;上方匯率第一項</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeOther</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:48:38.564" endtime="20200413 17:48:39.894"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeOther</arg>
-</arguments>
-<msg timestamp="20200413 17:48:39.896" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeOther'.</msg>
-<status status="PASS" starttime="20200413 17:48:39.895" endtime="20200413 17:48:41.501"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:48:38.563" endtime="20200413 17:48:41.501"></status>
-</kw>
-<kw name="Click Back Button On All Page" library="home">
-<doc>Home-&gt;其他返回</doc>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20200413 17:48:42.504" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:48:41.503" endtime="20200413 17:48:42.504"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:48:42.505" endtime="20200413 17:48:43.510"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<msg timestamp="20200413 17:48:43.512" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
-<status status="PASS" starttime="20200413 17:48:43.510" endtime="20200413 17:48:45.018"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:48:41.502" endtime="20200413 17:48:45.018"></status>
-</kw>
-<kw name="Click Second Exchange Banner On Home Page" library="home">
-<doc>Home-&gt;上方匯率第二項</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[2]/XCUIElementTypeOther</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:48:45.019" endtime="20200413 17:48:46.467"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[2]/XCUIElementTypeOther</arg>
-</arguments>
-<msg timestamp="20200413 17:48:46.469" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[2]/XCUIElementTypeOther'.</msg>
-<status status="PASS" starttime="20200413 17:48:46.467" endtime="20200413 17:48:48.263"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:48:45.018" endtime="20200413 17:48:48.264"></status>
-</kw>
-<kw name="Click Back Button On All Page" library="home">
-<doc>Home-&gt;其他返回</doc>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20200413 17:48:49.267" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:48:48.265" endtime="20200413 17:48:49.267"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:48:49.267" endtime="20200413 17:48:50.451"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<msg timestamp="20200413 17:48:50.454" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
-<status status="PASS" starttime="20200413 17:48:50.451" endtime="20200413 17:48:52.019"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:48:48.264" endtime="20200413 17:48:52.019"></status>
-</kw>
-<kw name="Click Third Exchange Banner On Home Page" library="home">
-<doc>Home-&gt;上方匯率第三項</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[3]/XCUIElementTypeOther</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:48:52.020" endtime="20200413 17:48:53.408"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[3]/XCUIElementTypeOther</arg>
-</arguments>
-<msg timestamp="20200413 17:48:53.409" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[3]/XCUIElementTypeOther'.</msg>
-<status status="PASS" starttime="20200413 17:48:53.408" endtime="20200413 17:48:55.065"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:48:52.019" endtime="20200413 17:48:55.065"></status>
-</kw>
-<kw name="Click Back Button On All Page" library="home">
-<doc>Home-&gt;其他返回</doc>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20200413 17:48:56.067" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:48:55.067" endtime="20200413 17:48:56.067"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:48:56.068" endtime="20200413 17:48:57.155"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<msg timestamp="20200413 17:48:57.157" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
-<status status="PASS" starttime="20200413 17:48:57.155" endtime="20200413 17:48:58.804"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:48:55.066" endtime="20200413 17:48:58.804"></status>
-</kw>
-<kw name="Swipe Right To Left On Home Page" library="home">
-<doc>Home-&gt;上方匯率的向右滑轉</doc>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20200413 17:48:59.807" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:48:58.805" endtime="20200413 17:48:59.808"></status>
-</kw>
-<kw name="Swipe By Percent" library="AppiumLibrary">
-<doc>Swipe from one percent of the screen to another percent, for an optional duration.
-Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
-<arguments>
-<arg>90</arg>
-<arg>25</arg>
-<arg>10</arg>
-<arg>25</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:48:59.808" endtime="20200413 17:49:01.603"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20200413 17:49:02.604" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:49:01.603" endtime="20200413 17:49:02.604"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:48:58.804" endtime="20200413 17:49:02.604"></status>
-</kw>
-<kw name="Click First Exchange Banner On Home Page" library="home">
-<doc>Home-&gt;上方匯率第一項</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeOther</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:49:02.605" endtime="20200413 17:49:04.004"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeOther</arg>
-</arguments>
-<msg timestamp="20200413 17:49:04.006" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeOther'.</msg>
-<status status="PASS" starttime="20200413 17:49:04.004" endtime="20200413 17:49:05.802"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:49:02.605" endtime="20200413 17:49:05.802"></status>
-</kw>
-<kw name="Click Back Button On All Page" library="home">
-<doc>Home-&gt;其他返回</doc>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20200413 17:49:06.805" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:49:05.804" endtime="20200413 17:49:06.805"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:49:06.805" endtime="20200413 17:49:07.914"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<msg timestamp="20200413 17:49:07.917" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
-<status status="PASS" starttime="20200413 17:49:07.914" endtime="20200413 17:49:09.502"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:49:05.803" endtime="20200413 17:49:09.502"></status>
-</kw>
-<kw name="Click Second Exchange Banner On Home Page" library="home">
-<doc>Home-&gt;上方匯率第二項</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[2]/XCUIElementTypeOther</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:49:09.504" endtime="20200413 17:49:10.907"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[2]/XCUIElementTypeOther</arg>
-</arguments>
-<msg timestamp="20200413 17:49:10.909" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[2]/XCUIElementTypeOther'.</msg>
-<status status="PASS" starttime="20200413 17:49:10.907" endtime="20200413 17:49:12.561"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:49:09.503" endtime="20200413 17:49:12.561"></status>
-</kw>
-<kw name="Click Back Button On All Page" library="home">
-<doc>Home-&gt;其他返回</doc>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20200413 17:49:13.563" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:49:12.562" endtime="20200413 17:49:13.563"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:49:13.563" endtime="20200413 17:49:14.609"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<msg timestamp="20200413 17:49:14.612" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
-<status status="PASS" starttime="20200413 17:49:14.609" endtime="20200413 17:49:16.916"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:49:12.562" endtime="20200413 17:49:16.916"></status>
-</kw>
-<kw name="Click Third Exchange Banner On Home Page" library="home">
-<doc>Home-&gt;上方匯率第三項</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[3]/XCUIElementTypeOther</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:49:16.917" endtime="20200413 17:49:18.359"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[3]/XCUIElementTypeOther</arg>
-</arguments>
-<msg timestamp="20200413 17:49:18.362" level="INFO">Clicking element 'xpath=//XCUIElementTypeApplication[@name="ACE-dev"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeOther[2]/XCUIElementTypeCollectionView/XCUIElementTypeCell[3]/XCUIElementTypeOther'.</msg>
-<status status="PASS" starttime="20200413 17:49:18.359" endtime="20200413 17:49:20.059"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:49:16.917" endtime="20200413 17:49:20.060"></status>
-</kw>
-<kw name="Click Back Button On All Page" library="home">
-<doc>Home-&gt;其他返回</doc>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20200413 17:49:21.062" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:49:20.061" endtime="20200413 17:49:21.062"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:49:21.062" endtime="20200413 17:49:22.211"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//XCUIElementTypeButton[@name="返回"]</arg>
-</arguments>
-<msg timestamp="20200413 17:49:22.214" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="返回"]'.</msg>
-<status status="PASS" starttime="20200413 17:49:22.212" endtime="20200413 17:49:23.859"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:49:20.060" endtime="20200413 17:49:23.861"></status>
-</kw>
-<kw name="Swipe Left To Right On Home Page" library="home">
-<doc>Home-&gt;上方匯率的向左滑轉</doc>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20200413 17:49:24.863" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:49:23.862" endtime="20200413 17:49:24.863"></status>
-</kw>
-<kw name="Swipe By Percent" library="AppiumLibrary">
-<doc>Swipe from one percent of the screen to another percent, for an optional duration.
-Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
-<arguments>
-<arg>10</arg>
-<arg>25</arg>
-<arg>90</arg>
-<arg>25</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:49:24.863" endtime="20200413 17:49:26.571"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20200413 17:49:27.571" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200413 17:49:26.571" endtime="20200413 17:49:27.571"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:49:23.861" endtime="20200413 17:49:27.572"></status>
-</kw>
-<kw name="Click Eye On Home Page" library="home">
-<doc>Home-&gt;Eye</doc>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=(//XCUIElementTypeButton[@name="home btn reveal"])[1]</arg>
-</arguments>
-<status status="PASS" starttime="20200413 17:49:27.572" endtime="20200413 17:49:28.857"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=(//XCUIElementTypeButton[@name="home btn reveal"])[1]</arg>
-</arguments>
-<msg timestamp="20200413 17:49:28.859" level="INFO">Clicking element 'xpath=(//XCUIElementTypeButton[@name="home btn reveal"])[1]'.</msg>
-<status status="PASS" starttime="20200413 17:49:28.857" endtime="20200413 17:49:30.508"></status>
-</kw>
-<status status="PASS" starttime="20200413 17:49:27.572" endtime="20200413 17:49:30.509"></status>
-</kw>
-<doc>點擊上面Bar 的三種匯率，向右滑動 在點擊三種匯率，再向左滑動</doc>
-<tags>
-<tag>prod</tag>
-</tags>
-<status status="PASS" starttime="20200413 17:48:38.559" endtime="20200413 17:49:30.509" critical="yes"></status>
-</test>
-<status status="PASS" starttime="20200413 17:47:10.600" endtime="20200413 17:49:30.513"></status>
+<status status="PASS" starttime="20200414 18:21:41.371" endtime="20200414 18:23:50.948"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0">Critical Tests</stat>
-<stat pass="4" fail="0">All Tests</stat>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="4" fail="0">prod</stat>
+<stat pass="2" fail="0">prod</stat>
 </tag>
 <suite>
-<stat pass="4" fail="0" id="s1" name="Test Login Home">Test Login Home</stat>
+<stat pass="2" fail="0" id="s1" name="Test Login Quote">Test Login Quote</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20200413 17:47:10.565" level="WARN">Collapsing consecutive whitespace during parsing is deprecated. Fix ' #' in file '/Users/shocklee/Documents/github/workspace/Python/Ace/iOS/test_login_home.robot' on line 64.</msg>
+<msg timestamp="20200414 18:22:44.260" level="WARN">2</msg>
+<msg timestamp="20200414 18:22:45.961" level="WARN">Check "ETH" Detail</msg>
+<msg timestamp="20200414 18:22:51.128" level="WARN">幣種:ETH 價格:0.024469 數量:6.856</msg>
+<msg timestamp="20200414 18:22:55.680" level="WARN">Check "GTO" Detail</msg>
+<msg timestamp="20200414 18:23:01.929" level="WARN">幣種:GTO 價格:0.00000832 數量:0</msg>
+<msg timestamp="20200414 18:23:06.916" level="WARN">2</msg>
+<msg timestamp="20200414 18:23:08.535" level="WARN">Check "TACEX" Detail</msg>
+<msg timestamp="20200414 18:23:14.172" level="WARN">幣種:TACEX 價格:0.0317 數量:128,181.40</msg>
+<msg timestamp="20200414 18:23:18.363" level="WARN">Check "ACEX" Detail</msg>
+<msg timestamp="20200414 18:23:24.351" level="WARN">幣種:ACEX 價格:0.0326 數量:130,582.4</msg>
+<msg timestamp="20200414 18:23:29.422" level="WARN">2</msg>
+<msg timestamp="20200414 18:23:31.141" level="WARN">Check "ETH" Detail</msg>
+<msg timestamp="20200414 18:23:37.292" level="WARN">幣種:ETH 價格:0.024469 數量:6.856</msg>
+<msg timestamp="20200414 18:23:41.825" level="WARN">Check "GTO" Detail</msg>
+<msg timestamp="20200414 18:23:48.083" level="WARN">幣種:GTO 價格:0.00000832 數量:0</msg>
 </errors>
 </robot>

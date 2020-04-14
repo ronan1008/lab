@@ -1,10 +1,9 @@
+.gitignore
 Python/.vscode/tasks.json
 Python/.DS_Store
 .DS_Store
-未命名.code-workspace
 Python/.vscode/settings.json
 Python/.DS_Store
-.DS_Store
 Python/proEx/robot/execute/selenium-screenshot*
 Python/proEx/robot/execute/output.xml
 Python/proEx/robot/execute/report.html
