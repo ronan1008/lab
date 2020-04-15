@@ -6,11 +6,12 @@ Usage:
     ./dummy-web-server.py -l localhost -p 8000
 Send a GET request:
     curl http://localhost:8000
+    curl -X GET -H "Accept: application/json" -H "Content-Type: application/json" 'http://localhost:8000/?test1=shock&test2=lee'
 Send a HEAD request:
     curl -I http://localhost:8000
 Send a POST request:
     curl -d "foo=bar&bin=baz" http://localhost:8000
-    curl -X POST -H "Content-Type: application/json" -d '{"status" : false, "name" : "Jack"}' "http://localhost:8000"
+    curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" -d '{"status" : false, "name" : "Jack"}' "http://localhost:8000"
 """
 import argparse
 from http.server import HTTPServer, BaseHTTPRequestHandler
@@ -31,29 +32,24 @@ class S(BaseHTTPRequestHandler):
 
     def do_GET(self):
         self._set_headers()
-        self.wfile.write(self._html("hi!"))
-
+        self.wfile.write(self._html("GET!"))
+        
     def do_HEAD(self):
         self._set_headers()
-
-    # def do_POST(self):
-    #     # Doesn't do anything with posted data
-    #     self._set_headers()
-    #     self.wfile.write(self._html("POST!"))
 
     def do_POST(self):
         # Doesn't do anything with posted data
         content_length = int(self.headers['Content-Length']) # <--- Gets the size of data
         post_data = self.rfile.read(content_length) # <--- Gets the data itself
         self._set_headers()
-        self.wfile.write("<html><body><h1>POST!</h1><pre>" + post_data + "</pre></body></html>\n")
+        self.wfile.write(self._html("POST!"))
         print(post_data)
 
 def run(server_class=HTTPServer, handler_class=S, addr="localhost", port=8000):
     server_address = (addr, port)
     httpd = server_class(server_address, handler_class)
 
-    print("Starting httpd server on {addr}:{port}")
+    print("Starting httpd server on {}:{}".format(addr, port))
     httpd.serve_forever()
 
 

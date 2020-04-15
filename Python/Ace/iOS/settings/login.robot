@@ -24,13 +24,23 @@ Open Ace On iOS
 
 Open Ace App And Login With Mobile
     Open Ace On iOS
-    Goto Me Tab On Home Page
-    Click Mobile Login On Me Page
-    Input Tel Number In Mobile Login On Me Page    0936736561
-    Input Password In Mobile Login On Me Page    Arborabc1234
-    Click Login Button In Login On Me Page
-    Input Google Auth In Login On Me Page    ${googleAuth}
-    Click Login Button In Auth On Me Page    ${googleAuth}
+    ${status}=	Run Keyword And Return Status	Page Should Contain Element	xpath=(//XCUIElementTypeButton[@name="點擊登入"])[1]
+	Run Keyword If	${status} == True	Run Keywords
+ 	...    Goto Me Tab On Home Page 
+    ...    AND    Click Mobile Login On Me Page   
+    ...    AND    Input Tel Number In Mobile Login On Me Page    0936736561   
+    ...    AND    Input Password In Mobile Login On Me Page    Arborabc1234   
+    ...    AND    Click Login Button In Login On Me Page  
+    ...    AND    Input Google Auth In Login On Me Page    ${googleAuth}
+    ...    AND    Click Login Button In Auth On Me Page    ${googleAuth}
+
+    # Goto Me Tab On Home Page
+    # Click Mobile Login On Me Page
+    # Input Tel Number In Mobile Login On Me Page    0936736561
+    # Input Password In Mobile Login On Me Page    Arborabc1234
+    # Click Login Button In Login On Me Page
+    # Input Google Auth In Login On Me Page    ${googleAuth}
+    # Click Login Button In Auth On Me Page    ${googleAuth}
 
 Open Ace App And Login With Mail
     Open Ace On iOS
