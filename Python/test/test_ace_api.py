@@ -1,21 +1,50 @@
 import hashlib
 import datetime
-#https://www.ace.io/polarisex/open/v1
-POST /coin/customerAccount
-produ_site = 'www.ace.io'
-stage_site = 'stageadmin.ace.io'
-https://stageadmin.ace.io/coin/customerAccount
+import requests
+import json
+import urllib.parse
 
 
+def generate_signKey(phone_num, timestamp, ace_sign = 'ACE_SIGN'):
+    data = ace_sign + str(timestamp) + phone_num
+    md5 = hashlib.md5()
+    md5.update(data.encode("utf-8"))
+    signKey = md5.hexdigest()
+    print(data)
+    return signKey
 
-ace_sign = 'ACE_SIGN'
-timestamp = str(int(datetime.datetime.now().timestamp()))
-phone_num = '886937855506'
+def post_api(data, api_url):
+    headers = {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+    response = requests.request("POST", api_url, headers=headers, data = data)
+    print(response.text)
 
-data = ace_sign + timestamp + phone_num
-print(data)
-md5 = hashlib.md5()
-md5.update(data.encode("utf-8"))
-signKey = md5.hexdigest()
-print(signKey)
 
+if __name__ == '__main__':
+
+    produ_site = 'https://www.ace.io/polarisex/open/v1'
+    stage_site = 'https://stage.ace.io/polarisex/open/v1'
+    test_site = 'http://localhost:8000'
+    url_path = '/coin/customerAccount'
+    url_path = '/coin/coinRelations'
+    api_url = stage_site + url_path
+#    api_url = test_site
+    uid = '437'
+    apiKey = "437#2020"
+    securityKey = "50caded91f924ed184ce173177294b15" 
+
+    phone_num = '0886936736561'
+    timestamp = int(datetime.datetime.now().timestamp())
+    format_timestamp = str('{:0<13d}'.format(timestamp))
+    signKey = generate_signKey(phone_num, format_timestamp)
+    format_timestamp = urllib.parse.quote_plus(format_timestamp)
+    data = "uid={}&timeStamp={}&signKey={}&apiKey={}&securityKey={}".format(uid, format_timestamp, signKey, apiKey, securityKey)
+    post_api(data, api_url)
+
+    print('uid', uid) 
+    print('timeStamp', format_timestamp)
+    print('signKey', signKey)
+    print('apiKey', apiKey)
+    print('securityKey', securityKey)
+    print(data)
