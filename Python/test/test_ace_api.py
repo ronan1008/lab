@@ -168,17 +168,6 @@ def cancel_all_order(base_url, uid, apiKey, securityKey):
         pool.join()
         print('Contiune Deleting....')
         return cancel_all_order(base_url, uid, apiKey, securityKey)
-    
-
-
-def link_crawler(link):
-    '''input a link then recursive the link if there is still has a link in "next" columns'''
-    yield link
-    vehicles_dict = request_url_to_dict(link)
-    if vehicles_dict['next'] is not None:
-        yield from link_crawler(vehicles_dict['next'])
-
-
 
 if __name__ == '__main__':
 
@@ -209,16 +198,16 @@ if __name__ == '__main__':
     # TWD_BTC_order = new_order(base_url, uid, apiKey, securityKey, phone_num, currency['BTC'], currency['TWD'], buy_or_sell['buy'], 193346.9, 0.001, order_type['limit'])
     # orderNo = TWD_BTC_order['attachment']
 
-    pool = multiprocessing.Pool(processes = 10)
-    for i in range(1000):
-            #使用 TWD 買入BTC,以 現價委託 193346.9的價格買入數量 0.001 
-            # TWD_BTC_order = new_order(base_url, uid, apiKey, securityKey, phone_num, currency['BTC'], currency['TWD'], buy_or_sell['buy'], 193346.9, 0.001, order_type['limit'])
+    # pool = multiprocessing.Pool(processes = 10)
+    # for i in range(1000):
+    #         #使用 TWD 買入BTC,以 現價委託 193346.9的價格買入數量 0.001 
+    #         # TWD_BTC_order = new_order(base_url, uid, apiKey, securityKey, phone_num, currency['BTC'], currency['TWD'], buy_or_sell['buy'], 193346.9, 0.001, order_type['limit'])
             
-            TWD_BTC_order = pool.apply_async(new_order, (base_url,uid,apiKey,securityKey,phone_num,currency['BTC'],currency['TWD'],buy_or_sell['buy'],193346.9,0.001,order_type['limit']))
-            print('第{}筆'.format(i))
-    pool.close()
-    pool.join()
-    print('making 1000 order finished....')
+    #         TWD_BTC_order = pool.apply_async(new_order, (base_url,uid,apiKey,securityKey,phone_num,currency['BTC'],currency['TWD'],buy_or_sell['buy'],193346.9,0.001,order_type['limit']))
+    #         print('第{}筆'.format(i))
+    # pool.close()
+    # pool.join()
+    # print('making 1000 order finished....')
 
     # for i in range(10):
     #         #使用 TWD 買入BTC,以 現價委託 193346.9的價格賣出數量 0.001 
