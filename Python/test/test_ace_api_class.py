@@ -185,7 +185,7 @@ class Ace:
 
         if len(order_list_id) == 0:
             return "Cancel all order finished"
-        else: 
+        else:
             pool = multiprocessing.Pool(processes = 5)
             for orderNo in order_list_id:
                 pool.apply_async(self.cancel_order, (orderNo,))
@@ -198,7 +198,7 @@ class Ace:
         start_time = datetime.datetime.now()
         pool = multiprocessing.Pool(processes = 5)
         for i in range(batchNum):
-            #使用 TWD 買入BTC,以 現價委託 193346.9的價格買入數量 0.001 
+            #使用 TWD 買入BTC,以 現價委託 193346.9的價格買入數量 0.001
             pool.apply_async(self.new_order, (currencyId, baseCurrencyId, buyOrSell, price, num, trade_type))
         pool.close()
         pool.join()
@@ -214,18 +214,18 @@ if __name__ == '__main__':
     #account_info = member_a.customer_account_info()
     #pprint(account_info)
 
-    #使用 TWD 買入BTC,以 現價委託 193346.9的價格買入數量 0.001 
+    #使用 TWD 買入BTC,以 現價委託 193346.9的價格買入數量 0.001
     #order_status = member_a.new_order('BTC', 'TWD', 'buy', "193346.9" , "0.001", 'limit')
 
-    #使用 mutli-process 大量產生 1000 筆: TWD 買入BTC,以 現價委託 193346.9的價格買入數量 0.001 
+    #使用 mutli-process 大量產生 1000 筆: TWD 買入BTC,以 現價委託 193346.9的價格買入數量 0.001
     #order_status = member_a.batch_new_order('BTC', 'TWD', 'buy', "193346.9" , "0.001", 'limit', 5000)
     #print(order_status)
 
-    #得到所有訂單的id 
+    #得到所有訂單的id
     #id_list = member_a.get_order_list_id()
     #print(id_list)
-    
-    
+
+
     #刪除所有訂單
     #cancel_status = member_a.cancel_all_order()
     #print(cancel_status)
