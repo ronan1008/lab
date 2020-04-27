@@ -82,8 +82,8 @@ class Ace:
             'signKey': self.signKey,
             'apiKey' : self.apiKey,
             'securityKey' : self.securityKey,
-            'tradeCurrencyId' : tradeCurrencyId,
-            'baseCurrencyId' : baseCurrencyId,
+            'tradeCurrencyId' : self.currency[tradeCurrencyId],
+            'baseCurrencyId' : self.currency[baseCurrencyId],
             'limit' : limit,
         }
         obj = self._post_api(self.data, partial_url)
@@ -211,20 +211,36 @@ class Ace:
 if __name__ == '__main__':
     #uid, apiKey, securityKey, phone_num
     member_a = Ace(437, "437#2020", "50caded91f924ed184ce173177294b15", '0886936736561')
-    account_info = member_a.customer_account_info()
-    pprint(account_info)
-    pprint(member_a.data)
+    # account_info = member_a.customer_account_info()
+    # pprint(account_info)
+    # pprint(member_a.data)
+    
+#    info = member_a.get_kline_info('BTC','TWD','limit')
+#    pprint(info)
 
+    #btc_twd_info = member_a.get_kline_info('BTC','TWD','2000')
+    eth_twd_info = member_a.get_kline_info('ETH','TWD',10)
+    #pprint(btc_twd_info)
+    pprint(eth_twd_info)
+
+
+    # info = member_a.get_coin_exchange_info()
+    # pprint(info)
     #使用 TWD 買入BTC,以 現價委託 193346.9的價格買入數量 0.001
-    #order_status = member_a.new_order('BTC', 'TWD', 'buy', "193346.9" , "0.001", 'limit')
+    #order_status = member_a.new_order('BTC', 'TWD', 'buy', "193546.9" , "0.001", 'limit')
 
     #使用 mutli-process 大量產生 1000 筆: TWD 買入BTC,以 現價委託 193346.9的價格買入數量 0.001
     #order_status = member_a.batch_new_order('BTC', 'TWD', 'buy', "193346.9" , "0.001", 'limit', 5000)
     #print(order_status)
 
-    #得到所有訂單的id
+    #得到使用者的所有訂單
+    #order_list = member_a.get_order_list()
+    #pprint(order_list)
+    
+    
+    #得到使用者的所有訂單id
     #id_list = member_a.get_order_list_id()
-    #print(id_list)
+    #pprint(id_list)
 
 
     #刪除所有訂單
