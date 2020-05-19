@@ -18,11 +18,13 @@ const expressSession = require('express-session')
 const authMiddleware = require('./middleware/authMiddleware')
 const redirectIfAuthenticatedMiddleware = require('./middleware/redirectIfAuthenticatedMiddleware')
 const logoutController = require('./controllers/logout')
+const flash = require('connect-flash')
 
 app.use(express.static('public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(fileUpload())
+app.use(flash());
 
 mongoose.connect('mongodb://localhost/my_database', {useNewUrlParser:true});
 
