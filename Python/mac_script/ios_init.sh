@@ -9,6 +9,10 @@ else
     brew install carthage
     brew tap wix/brew
     brew install wix/brew/applesimutils
+    
+    sudo xcode-select --install
+    sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+
 
     #libimobiledevice(真機測試需要)
     brew install libimobiledevice

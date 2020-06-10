@@ -5,7 +5,7 @@ java_version=`java --version | head -1 | awk '{print $2}'`
 
 if [ -z "$java_version" ]
 then
-    echo "Download Java : https://www.oracle.com/java/technologies/javase-jdk13-downloads.html"
+    echo "Download Java : https://mac.filehorse.com/download-java-development-kit/14709/"
     echo "Download Android Studio : https://developer.android.com/studio"
     echo "在android studio 裡面的 Configure->SDK Manager\nAndroid SDK->SDK Tools 把 Hide Obsolete Packages 取消\n安裝Android SDK Tooks(Obsolete)"
 else
