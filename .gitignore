@@ -1,9 +1,11 @@
-node_modules
 tasks.json
 .DS_Store
 settings.json
+node_modules/
+.vscode/
 selenium-screenshot*
 output.xml
 report.html
 log.html
-__pycache__/*
+__pycache__/
+
