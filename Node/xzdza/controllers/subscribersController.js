@@ -1,110 +1,74 @@
+//引入 subscriber module
 const Subscriber = require("../models/subscriber")
-const subscriber = require("../models/subscriber")
 
-const getSubscriberParams = (body) => {
-    return {
-        name: body.name,
-        email: body.email,
-        zipCode: parseInt(body.zipCode)
-    }
+
+// //從database 導出 getAllSubscribers
+// //getAllSubscribers pass資料至下一個中間件函式
+// exports.getAllSubscribers = (req, res, next) => {
+//     //在 Subscriber model 用 find 查詢
+//     Subscriber.find( {}, (error, subscribers) =>{
+//         //將錯誤pass到下一個中間件函式
+//         if(error) next(error)
+//         //在request 物件，設定從Mongo DB返回的資料
+//         req.data = subscribers
+//         //繼續下一個中間件函式
+//         next()
+//     }) 
+// }
+
+exports.getAllSubscribers = (req, res) =>{
+    Subscriber.find({})
+        .exec()
+        .then(subscribers =>{
+            res.render("subscribers",{subscribers: subscribers})
+        })
+        .catch(error =>{
+            console.log(error.message)
+            return [];
+        })
+        .then(() =>{
+            console.log("promise complete")
+        })
+}       
+
+
+
+
+//新增一個 action 用來呈現 contact頁面
+exports.getSubscriptionPage = (req, res) => {
+	res.render("contact")
 }
 
-module.exports = {
-    index: (req, res, next) => {
-        Subscriber.find()
-            .then(subscribers => {
-                res.locals.subscribers = subscribers
-                next()
-            })
-            .catch(error => {
-                console.log(`Error fetching subscribers: ${error.message}`)
-            })
-    },
+// //新增一個 action 儲存 subscribers
+// exports.saveSubscriber = (req,res) => {
+    
+// 	//產生一個新的 subscriber
+// 	let newSubscriber = new Subscriber({
+// 		name: req.body.name,
+// 		email: req.body.email,
+// 		zipCode: req.body.zipCode
+// 	})
 
-    indexView: (req, res) => {
-        res.render("subscribers/index")
-    },
+// 	//儲存這個 subscriber
+// 	newSubscriber.save((error, result) => {
+// 		if (error) res.send(error)
+// 		res.render("thanks")
+// 	})
+// }
 
-    new: (req, res) => {
-        res.render("subscribers/new")
-    },
 
-    create: (req, res, next) => {
-        let subscriberParams = getSubscriberParams(req.body)
-        Subscriber.create(subscriberParams)
-            .then(subscriber => {
-                res.locals.redirect = "/subscribers"
-                res.locals.subscriber = subscriber
-                next()
-            })
-            .catch(error => {
-                console.log(`Error saving subscribers: ${error.message}`)
-                next(error)
-            })
-    },
-
-    redirectView: (req, res, next) => {
-        let redirectPath = res.locals.redirect
-        if (redirectPath) res.redirect(redirectPath)
-        else next()
-    },
-
-    show: (req, res, next) => {
-        var subscriberId = req.params.index
-        Subscriber.findById(subscriberId)
-            .then(subscriber => {
-                res.locals.subscriber = subscriber
-                next()
-            })
-            .catch(error => {
-                console.log(`Error fetching subscriber by ID: ${error.message}`)
-                next(error)
-            })
-    },
-
-    showView: (req, res, next) => {
-        res.render('subscribers/show')
-    },
-
-    edit: (req, res, next) => {
-        var subscriberId = req.params.id 
-        Subscriber.findById(subscriberId)
-            .then(subscriber => {
-                res.render("subscribers/edit", { subscriber: subscriber})
-            })
-            .catch(error => {
-                console.log(`Error fetching subscriber by ID: ${error.message}`)
-                next(error)
-            })
-    },
-
-    update: (req, res, next) => {
-        let subscriberId = req.params.id 
-        let subscriberParams = getSubscriberParams(req.body)
-
-        Subscriber.findByIdAndUpdate(subscriberId, {
-            $set : subscriberParams
+exports.saveSubscriber = (req, res) => {
+    let newSubscriber = new Subscriber({
+        name: req.body.name,
+        email: req.body.email,
+        zipCode: req.body.zipCode
+    })
+    newSubscriber
+        .save()
+        .then( result => {
+            res.render("thanks")
         })
-            .then(subscriber => {
-                res.locals.redirect = `subscribers/${subscriberId}`
-                res.locals.subscriber = subscriber
-            })
-            .catch( error => {
-                console.log(`Error updating subscriber by ID: ${error.message}`)
-                next(error)
-            })
-    },
-
-    delete: (req, res, next) => {
-        let subscriberId = req.params.id 
-        Subscriber.findByIdAndRemove(subscriberId)
-            .then(() => {
-                res.locals.redirect = "/subscribers"
-                next()
-            })
-            .catch(error => {
-                console.log(`Error deleting subscriber by ID: ${error.message}`)
-                next()
-            })
-    }
+        .catch(error => {
+            if(error) res.send(error)
+        })
 }
