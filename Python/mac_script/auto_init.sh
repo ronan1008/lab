@@ -29,4 +29,5 @@ then
 else
     echo "Chrome Version : $chrome_version"
     echo "https://chromedriver.chromium.org/downloads"
+    echo "mv chromedriver /usr/local/bin"
 fi

@@ -1,8 +1,8 @@
 const router = require("express").Router()
-const coursesController = require("../controllers/coursesController")
+const coursesController = require("../../controllers/coursesController")
 
-router.get("/courses", coursesController.index, 
-                       coursesController.filterUserCourses, 
+router.get("/courses", coursesController.index,
+                       coursesController.filterUserCourses,
                        coursesController.respondJSON
 )
 

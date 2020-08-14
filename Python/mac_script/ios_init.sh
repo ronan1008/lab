@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 xcode_version=`/usr/bin/xcodebuild -version`
 if [ -z "$xcode_version" ]
 then
