@@ -1,18 +1,21 @@
 const Course = require("../models/course")
-const User = require("../models/user")
+const Subscriber = require("../models/subscriber")
 const httpStatus = require('http-status-codes')
 const getCourseParams = body => {
     return {
         title : body.title,
         description: body.description,
+        grade: body.grade,
         maxStudents: body.maxStudents,
-        cost: body.cost
+        startTime: body.startTime,
+        endTime: body.endTime
     }
 }
 module.exports = {
     index: (req, res, next) => {
         Course.find()
             .then(courses => {
+                courses.subscribers = courses.subscribers.length
                 res.locals.courses = courses
                 next()           
             })
@@ -22,19 +25,11 @@ module.exports = {
             })
     },
 
-    indexView: (req, res) => {
-        res.render("courses/index")
-    },
-
-    new: (req, res) => {
-        res.render("courses/new")
-    },
 
     create: (req, res, next) => {
         let courseParams = getCourseParams(req.body)
         Course.create(courseParams)
             .then(course => {
-                res.locals.redirect = "/courses"
                 res.locals.course = course
                 next()
             })
@@ -42,12 +37,6 @@ module.exports = {
                 console.log(`Error saving course: ${error.message}`)
                 next(error)
             })
-    },
-
-    redirectView: (req, res, next) => {
-        let redirectPath = res.locals.redirect
-        if (redirectPath !== underfined) res.redirect(redirectPath)
-        else next()
     },
 
     show: (req, res, next) => {
@@ -60,21 +49,6 @@ module.exports = {
             .catch(error => {
                 console.log(`Error fetching course by ID: ${error.message}`)
                 next(error)
-            })
-    },
-
-    showView: (req, res) => {
-        res.render("courses/show")
-    },
-
-    edit: (req, res, next) => {
-        let courseId = req.params.id
-        Course.findById(courseId)
-            .then(course => {
-                res.render("courses/edit", {course: course})
-            })
-            .catch(error => {
-                console.log(`Error fetching course by ID: ${error.message}`)
             })
     },
 
@@ -109,7 +83,8 @@ module.exports = {
     respondJSON: (req, res) => {
         res.json({
             status: httpStatus.OK,
-            data: res.locals
+            data: res.locals,
+            message: 'Ok'
         })
     },
 
@@ -130,7 +105,6 @@ module.exports = {
     },
 
     filterUserCourses: (req, res, next) => {
-
         let currentUser = res.locals.currentUser
         if ( currentUser ) {
             let mappedCourses = res.locals.courses.map((course => {
@@ -165,5 +139,57 @@ module.exports = {
         } else {
             next(new Error("User must log in."))
         }
+    },
+
+    join:  (req, res, next) => {
+        var joinSubcriber 
+        var joinCourse
+        let courseId = req.params.id
+        userJson = {
+            title: req.body.title,
+            address: req.body.address,
+            email: req.body.email,
+            birthday: new Date(req.body.birthday),
+            name: req.body.name,
+            sex: req.body.sex,
+            tel: req.body.tel,
+            zodiac: req.body.zodiac
+        }    
+        Subscriber.create(userJson)
+            .then(subscriber => {
+                joinSubcriber = subscriber
+                console.log(`Created Subscriber: ${subscriber.getInfo()}`)
+            })
+            .then(() => {
+                return Course.findById(courseId)
+            })
+            .then((course) => {
+                if (course.subscribers.length < course.maxStudents){
+                    joinCourse = course
+                    console.log(`Find Course: ${course.title}, Join people: ${course.subscribers.length}`)
+                }else{
+                    res.json({
+                        status: httpStatus.OK,
+                        message: "Failed : 名額已滿，沒有加入成功"
+                    })
+                }
+            })
+            .then(() => {
+                joinCourse.subscribers.push(joinSubcriber)
+                joinCourse.save()
+            })
+            .then(() => {
+                return Course.populate(joinCourse, "subscribers")
+            })
+            .then(course => {
+                console.log(course)
+                res.locals.course = course
+                next()
+            })
+            .catch(error => {
+                console.log(`Error occur`)
+                next(error)
+            })
+
     }
 }

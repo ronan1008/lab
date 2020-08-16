@@ -13,13 +13,7 @@ const coursesSchema = new Schema(
         description: {
             type: String,
         },
-/*
-        registeredStudents: {
-            type: Number,
-            default: 0,
-            min: [0,"Course cannot have negative number of students"]
-        },
-*/
+
         maxStudents: {
             type: Number,
             default: 0,
@@ -31,6 +25,7 @@ const coursesSchema = new Schema(
         endTime: {
             type: Date,
         },
+        subscribers: [{type: mongoose.Schema.Types.ObjectId, ref: "Subscriber"}]
     },
     {
         timestamps: true

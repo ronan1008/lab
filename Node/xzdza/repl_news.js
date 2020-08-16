@@ -1,7 +1,9 @@
 const mongoose = require("mongoose")
 const News = require("./models/news")
+let mongoDbAtlas = "mongodb+srv://xzdzaorgtw:886229936810@xzdza.elxrf.mongodb.net/xzdza?retryWrites=true&w=majority"
+//let mongoDB = "mongodb://localhost:27017/xzdza"
 
-mongoose.connect("mongodb://localhost:27017/xzdza", 
+mongoose.connect(mongoDbAtlas, 
                     {
                         useNewUrlParser: true,
                         useUnifiedTopology: true,
@@ -84,6 +86,21 @@ News.deleteMany({})
     .then(() => { 
         body = {
             title:"PChome線上購物",
+            description: "感謝您訂購PChome線上購物的優質產品 訂單編號：20200811588865 發票已經開立，發票號碼：DV40029080，電子發票不直接寄送，請至網站「顧客中心-查訂單」查看發票內容或索取正本。不愧是「高雄之王」！藍、綠、白三位候選人都要敬他三分！",
+            type:"最新消息",
+            order: 1,
+            mark: true,
+            startTime:"2020-08-10 22:23:00",
+            endTime:"2020-08-10 22:23:00"
+        }
+        return News.create(body)
+    })
+	.then( news => {
+		console.log(`Created News: ${news.title}`)
+    })
+    .then(() => { 
+        body = {
+            title:"PChome線上購物2",
             description: "感謝您訂購PChome線上購物的優質產品 訂單編號：20200811588865 發票已經開立，發票號碼：DV40029080，電子發票不直接寄送，請至網站「顧客中心-查訂單」查看發票內容或索取正本。不愧是「高雄之王」！藍、綠、白三位候選人都要敬他三分！",
             type:"最新消息",
             order: 1,

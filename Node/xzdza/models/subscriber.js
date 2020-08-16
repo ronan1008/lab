@@ -10,26 +10,32 @@ var subscriberSchema = new Schema(
         },
         email: {
             type: String,
-            required: true,
             lowercase: true,
             trim: true,
-            unique: true
 
         },
         sex: {
             type: String,
             required: true,
-            enum : ['male','female','unisex'],
+            enum : ['男','女','跨性別'],
         },
         address: {
             type: String,
+            required: true,
+        },
+        birthday: {
+            type: Date,
             required: true,
         },
         tel: {
             type: String,
             required: true,
         },
-        courses: [{type: Schema.Types.ObjectId, ref: "Course"}]
+        zodiac: {
+            type: String,
+            required: true,
+            enum : ['鼠','牛','虎','兔','龍','蛇','馬','羊','猴','雞','狗','豬'],
+        },
     },
     {
         timestamps: true
@@ -37,7 +43,7 @@ var subscriberSchema = new Schema(
 )
 
 subscriberSchema.methods.getInfo = function () {
-    return `Name: ${this.name} Email: ${this.email} Sex: ${this.sex} address: ${this.address} tel: ${this.tel} courses: ${this.courses}`
+    return `Name: ${this.name} Email: ${this.email} Sex: ${this.sex} address: ${this.address} tel: ${this.tel}`
 }
 
 module.exports = mongoose.model("Subscriber", subscriberSchema)

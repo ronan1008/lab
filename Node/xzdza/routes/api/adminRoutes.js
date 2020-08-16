@@ -19,7 +19,7 @@ router.put("/news/:id/update", newsController.update, newsController.respondJSON
 router.get("/news/:id", newsController.show, newsController.respondJSON)
 router.delete("/news/:id/delete", newsController.delete, newsController.respondJSON)
 
-
+router.post("/courses/create", coursesController.create, coursesController.respondJSON)
 router.get("/courses", coursesController.index,coursesController.filterUserCourses,coursesController.respondJSON)
 router.get("/courses/:id/join", coursesController.join,coursesController.respondJSON)
 

@@ -4,8 +4,10 @@ const Course = require("./models/course")
 
 var testCourse
 var testSubscriber
+let mongoDbAtlas = "mongodb+srv://xzdzaorgtw:886229936810@xzdza.elxrf.mongodb.net/xzdza?retryWrites=true&w=majority"
+//let mongoDB = "mongodb://localhost:27017/xzdza"
 
-mongoose.connect("mongodb://localhost:27017/xzdza", 
+mongoose.connect(mongoDbAtlas, 
                     {
                         useNewUrlParser: true,
                         useUnifiedTopology: true,

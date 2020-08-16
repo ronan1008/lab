@@ -105,7 +105,8 @@ module.exports = {
     respondJSON: (req, res) => {
         res.json({
             status: httpStatus.OK,
-            data: res.locals
+            data: res.locals,
+            message: "Ok"
         })
     },
 
