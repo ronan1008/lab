@@ -24,10 +24,6 @@ module.exports = {
         res.render("subscribers/index")
     },
 
-    new: (req, res) => {
-        res.render("subscribers/new")
-    },
-
     create: (req, res, next) => {
         let subscriberParams = getSubscriberParams(req.body)
         Subscriber.create(subscriberParams)
