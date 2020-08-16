@@ -37,8 +37,8 @@ const coursesSchema = new Schema(
     }
 )
 
-userSchema.virtual("fullTitle").get( function (){
-    return `${this.grade} ${this.title}`
-})
+// userSchema.virtual("fullTitle").get( function (){
+//     return `${this.grade} ${this.title}`
+// })
 
 module.exports = mongoose.model("Course", coursesSchema)

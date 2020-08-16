@@ -1,6 +1,6 @@
 const Course = require("../models/course")
-const httpStatus = require('http-status-codes')
 const User = require("../models/user")
+const httpStatus = require('http-status-codes')
 const getCourseParams = body => {
     return {
         title : body.title,

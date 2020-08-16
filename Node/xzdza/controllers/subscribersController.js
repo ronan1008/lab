@@ -1,5 +1,4 @@
 const Subscriber = require("../models/subscriber")
-const subscriber = require("../models/subscriber")
 
 const getSubscriberParams = (body) => {
     return {

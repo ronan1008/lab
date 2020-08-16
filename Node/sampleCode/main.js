@@ -25,17 +25,17 @@ const db = mongoose.connection
 app.set("view engine", "ejs")
 app.set("port", process.env.PORT || 3000)
 
-router.use(
+app.use(
     mehtodOveride("_method",{
         methods: ["POST","GET"]
     })
 )
-router.use(express.urlencoded({extended: false}))
-router.use(express.json())
-router.use(layouts)
-router.use(express.static("public"))
-router.use(cookieParser("SecretCuisine123"))
-router.use(expressSession({
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
+app.use(layouts)
+app.use(express.static("public"))
+app.use(cookieParser("SecretCuisine123"))
+app.use(expressSession({
     secret: "secretCuisine123",
     cookie: {
         maxAge: 4000000

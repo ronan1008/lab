@@ -1,10 +1,16 @@
 const mongoose = require("mongoose")
 const { Schema } = require("mongoose")
 const Subscriber = require("./subscriber")
-const passportLocalMongoose = require("passport-local-mongoose")
+//const passportLocalMongoose = require("passport-local-mongoose")
+const bcrypt = require("bcrypt")
 const userSchema = new Schema(
     {
         name:{
+            type: String,
+            required: true,
+            trim: true
+        },
+        loginId:{
             type: String,
             required: true,
             trim: true
@@ -35,6 +41,8 @@ const userSchema = new Schema(
             required: true
         },
         role:{
+            type: String,
+            required: true,
             enum : ['admin','user']
         }
     },
@@ -43,29 +51,26 @@ const userSchema = new Schema(
     }
 )
 
-userSchema.virtual("fullName").get( function (){
-    return `${this.name.first} ${this.name.last}`
-})
 
 userSchema.pre("save", function(next){
     let user = this
-    if (user.subscribedAccount === undefined) {
-        Subscriber.findOne({
-            email: user.email
-        })
-        .then(subscriber => {
-            user.subscribedAccount = subscriber
+    bcrypt.hash(user.password, 10)
+        .then(hash => {
+            user.password = hash
             next()
         })
         .catch(error => {
-            console.log(`Error in connecting subscriber: ${error.message}`)
+            console.log(`Error in hash password ${error.message}`)
             next(error)
+
         })
-    } else {
-        next()
-    }
 })
 
-userSchema.plugin(passportLocalMongoose,{ usernameField: "email" })
+userSchema.methods.passwordComparison = function(inputPassword){
+    let user = this
+    return bcrypt.compare(inputPassword, user.password)
+}
+
+// userSchema.plugin(passportLocalMongoose,{ usernameField: "email" })
 
 module.exports = mongoose.model("User", userSchema)

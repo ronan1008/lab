@@ -11,13 +11,18 @@ var newsSchema = new Schema(
         description: {
             type: String,
             required: true,
-            lowercase: true,
-            trim: true,
-            unique: true
+        },
+        type:{
+            type: String,
+            enum : ['最新消息','來年運勢','線上報名','成果發表展'],
+            required: true,        
         },
         order: {
             type: Number,
             required: true,
+        },
+        mark: {
+            type: Boolean,
         },
         startTime: {
             type: Date,

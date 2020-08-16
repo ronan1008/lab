@@ -37,7 +37,7 @@ var subscriberSchema = new Schema(
 )
 
 subscriberSchema.methods.getInfo = function () {
-    return `Name: ${this.name} Email: ${this.email} Zip Code: ${this.zipCode}`
+    return `Name: ${this.name} Email: ${this.email} Sex: ${this.sex} address: ${this.address} tel: ${this.tel} courses: ${this.courses}`
 }
 
 module.exports = mongoose.model("Subscriber", subscriberSchema)

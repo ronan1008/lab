@@ -6,9 +6,6 @@ const imagesSchema = new Schema(
             type: String,
             required: true,
         },
-        thumb_path: {
-            type: String
-        },
         description: {
             type: String
         }
@@ -18,4 +15,4 @@ const imagesSchema = new Schema(
     }
 )
 
-module.exports = mongoose.model("Course", imagesSchema)
+module.exports = mongoose.model("Image", imagesSchema)

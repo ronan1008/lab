@@ -1,16 +1,19 @@
-const User = require("../models/user"),
-      passport = require("passport"),
-  getUserParams = body => {
+const User = require("../models/user")
+const passport = require("passport")
+const jsonWebToken = require("jsonwebtoken")
+const httpStatus = require('http-status-codes')
+
+getUserParams = body => {
     return {
-      name: {
-        first: body.first,
-        last: body.last
-      },
-      email: body.email,
-      //password: body.password,
-      zipCode: body.zipCode
+        name: {
+            first: body.first,
+            last: body.last
+        },
+        email: body.email,
+        //password: body.password,
+        zipCode: body.zipCode
     };
-  };
+};
 
 module.exports = {
   index: (req, res, next) => {
@@ -117,10 +120,6 @@ module.exports = {
       });
   },
 
-  login: (req, res, next) => {
-      res.render("users/login")
-  },
-
   validate: (req, res, next) => {
       req.sanitizeBody("email")
          .normalizeEmail({all_lowercase: true})
@@ -145,16 +144,116 @@ module.exports = {
       })
   },
 
-  authenticate: passport.authenticate("local", {
-      failureRedirect: "/users/login",
-      failureFlash: "Failed to login",
-      successRedirect: "/",
-      successFlash: "Logged in!"
-  }),
+  // authenticate: passport.authenticate("local", {
+  //     failureRedirect: "/users/login",
+  //     failureFlash: "Failed to login",
+  //     successRedirect: "/",
+  //     successFlash: "Logged in!"
+  // }),
+
+  apiAuthenticate: (req, res, next) => {
+    User.findOne({loginId: req.body.loginId})
+        .then(user => {
+          console.log(user)
+          if (user && user.role == 'admin'){
+            user.passwordComparison(req.body.password).then(passwordsMatch => {
+              if(passwordsMatch) {
+                let signedToken = jsonWebToken.sign(
+                  {
+                    data: user._id,
+                    exp: new Date().setDate(new Date().getDate() + 1 )
+                  },
+                  "xzdza"
+                )
+                res.json({
+                  success: true,
+                  token: signedToken
+                })
+          
+              } else {
+                res.status(httpStatus.UNAUTHORIZED).json({
+                  error: true,
+                  message: "Could not authenticate user."
+                })
+              }
+          
+            })
+          } else {
+            res.status(httpStatus.UNAUTHORIZED).json({
+              error: true,
+              message: "Error failed to log in: User account not found."
+            })
+          }
+        })
+        .catch(error => {
+          res.status(httpStatus.UNAUTHORIZED).json({
+            error: true,
+            message: `Error logging in user: ${error.message}`
+          })
+        })
+  },
 
   logout: (req, res, next) => {
       req.logout()
       req.flash("success", "You have been logged out!")
       res.locals.redirect = "/"
+  },
+
+
+  respondJSON: (req, res) => {
+    res.json({
+        status: httpStatus.OK,
+        data: res.locals
+    })
+  },
+
+  errorJSON: (error, req, res, next) => {
+      let errorObject
+      if (error) {
+          errorObject = {
+              status: httpStatus.INTERNAL_SERVER_ERROR,
+              message: error.message
+          }
+      } else {
+          errorObject = {
+              status: httpStatus.OK,
+              message: "Unknown Error."
+          }
+      }
+      res.json(errorObject)
+  },
+
+  verifyJWT: (req, res, next) => {
+    let token = req.headers.token
+    if (token) {
+      jsonWebToken.verify(token,"xzdza",(errors, payload) => {
+        console.log(payload)
+        if (payload){
+          User.findById(payload.data).then( user => {
+            if (user && user.role=='admin') {
+              next()
+            } else {
+              res.status(httpStatus.FORBIDDEN).json({
+                error: true,
+                message: "No User account found."
+              })
+            }
+          })
+        } else {
+          res.status(httpStatus.UNAUTHORIZED).json({
+            error: true,
+            message: "Cannot verify API token"
+          })
+          next()
+        }
+      })
+    } else {
+      res.status(httpStatus.UNAUTHORIZED).json({
+        error: true,
+        message: "Provide Token"
+      })
+    }
+
   }
+
 };
