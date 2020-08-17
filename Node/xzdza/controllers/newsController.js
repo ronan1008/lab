@@ -27,6 +27,20 @@ module.exports = {
             })
     },
 
+    frontIndex: (req, res, next) => {
+        let query = {}
+        if(req.query.type) query.type = req.query.type;
+        News.find(query).sort({type:'asc',order:'asc', updatedAt:'desc'}).select('_id title')
+            .then(news => {
+                res.locals.news = news
+                next()
+            })
+            .catch(error => {
+                console.log(`Error fetching news: ${error.message}`)
+            })
+    },
+
+
     filterNews: (req, res, next) => {
         //console.log(res.locals.news)
         let filterNews = res.locals.news.map(( news =>{
@@ -60,7 +74,7 @@ module.exports = {
 
     show: (req, res, next) => {
         var newsId = req.params.id 
-        News.findById(newsId)
+        News.findById(newsId).select('_id title description startTime endTime ')
             .then(news => {
                 res.locals.news = news
                 next()

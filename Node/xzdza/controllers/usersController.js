@@ -166,8 +166,9 @@ module.exports = {
                   "xzdza"
                 )
                 res.json({
-                  success: true,
-                  token: signedToken
+                  status: httpStatus.OK,
+                  message: "Ok",
+                  data: {token:signedToken}
                 })
           
               } else {
@@ -207,6 +208,7 @@ module.exports = {
         message: "Ok"
     })
   },
+  
 
   errorJSON: (error, req, res, next) => {
       let errorObject

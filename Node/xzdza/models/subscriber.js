@@ -11,8 +11,8 @@ var subscriberSchema = new Schema(
         email: {
             type: String,
             lowercase: true,
+            required: true,
             trim: true,
-
         },
         sex: {
             type: String,
