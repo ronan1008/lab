@@ -15,9 +15,9 @@ module.exports = {
     index: (req, res, next) => {
         Course.find()
             .then(courses => {
-                courses.subscribers = courses.subscribers.length
+                //courses.subscribers = courses.subscribers.length
                 res.locals.courses = courses
-                next()           
+                next()
             })
             .catch(error => {
                 console.log(`Error fetching courses: ${error.message}`)
@@ -25,6 +25,38 @@ module.exports = {
             })
     },
 
+    frontIndex: (req, res, next) => {
+        Course.find({
+           "startTime": {$lte:  new Date()},
+           "endTime": {$gte:  new Date()}
+        })
+        .then(courses => {
+            //courses.subscribers = courses.subscribers.length
+            res.locals.courses = courses
+            next()
+        })
+        .catch(error => {
+            console.log(`Error fetching courses: ${error.message}`)
+            next(error)
+        })
+    },
+
+    filterCourse: (req, res, next) => {
+        //console.log(res.locals.news)
+        let filterCourse = res.locals.courses.map(( course =>{
+            var courseList = {}
+            courseList['_id'] = course._id
+            courseList['grade'] = course.grade
+            courseList['title'] = course.title
+            courseList['maxStudents'] = course.maxStudents
+            courseList['subscribers'] = course.subscribers.length
+            courseList['startTime'] = course.startTime
+            courseList['endTime'] = course.endTime
+            return courseList;
+        }))
+        res.locals.courses = filterCourse
+        next()
+    },
 
     create: (req, res, next) => {
         let courseParams = getCourseParams(req.body)
@@ -40,7 +72,7 @@ module.exports = {
     },
 
     show: (req, res, next) => {
-        let courseId = req.params.id 
+        let courseId = req.params.id
         Course.findById(courseId)
             .then(course => {
                 res.locals.course = course
@@ -53,7 +85,7 @@ module.exports = {
     },
 
     update: (req, res, next) => {
-        let courseId = req.params.id 
+        let courseId = req.params.id
         courseParams = getCourseParams(req.body)
         Course.findByIdAndUpdate(courseId,{ $set: courseParams})
             .then(course => {
@@ -142,7 +174,7 @@ module.exports = {
     },
 
     join:  (req, res, next) => {
-        var joinSubcriber 
+        var joinSubcriber
         var joinCourse
         let courseId = req.params.id
         userJson = {
@@ -154,7 +186,7 @@ module.exports = {
             sex: req.body.sex,
             tel: req.body.tel,
             zodiac: req.body.zodiac
-        }    
+        }
         Subscriber.create(userJson)
             .then(subscriber => {
                 joinSubcriber = subscriber

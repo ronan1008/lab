@@ -13,7 +13,6 @@ const coursesSchema = new Schema(
         description: {
             type: String,
         },
-
         maxStudents: {
             type: Number,
             default: 0,
