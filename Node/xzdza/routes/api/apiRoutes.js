@@ -12,7 +12,7 @@ router.use("/news", newsRoute)
 router.use("/subscribers", subscriberRoutes)
 router.use("/courses", courseRoutes)
 router.use("/admin", adminRoute)
-router.use("/", errorRoutes)
+//router.use("/", errorRoutes)
 
 module.exports = router
 

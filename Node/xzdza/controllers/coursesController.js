@@ -125,9 +125,17 @@ module.exports = {
     errorJSON: (error, req, res, next) => {
         let errorObject
         if (error) {
-            errorObject = {
-                status: httpStatus.INTERNAL_SERVER_ERROR,
-                message: error.message
+            console.log(error.message)
+            if (error.message.indexOf('You have already signed') != -1){
+                errorObject = {
+                    status: httpStatus.FORBIDDEN,
+                    message: error.message
+                }
+            } else {
+                errorObject = {
+                    status: httpStatus.INTERNAL_SERVER_ERROR,
+                    message: error.message
+                }
             }
         } else {
             errorObject = {
@@ -170,15 +178,19 @@ module.exports = {
         }
         Course.findById(courseId).populate({path:'subscribers', select: 'email'})
             .then(courses => {
-                courses.subscribers.forEach((subscriber)=>{
-                    console.log(subscriber)
-                    if (subscriber.email == req.body.email){
-                        return res.json({
-                            status: httpStatus.OK,
-                            message: "Failed : 你已經加入過此課程"
-                        })
-                    }
-                })
+                // courses.subscribers.map((subscriber)=>{
+                //     console.log(subscriber)
+                //     if (subscriber.email == req.body.email){                   
+                //         throw new Error("You have already signed")
+                //     }
+                var findEmail = courses.subscribers.find(function(item, index, array){
+                        return item.email == req.body.email;  
+                });
+                if(findEmail) {throw new Error("You have already signed")}
+
+
+
+                // })
             }) 
             .then(() => {
                 return Subscriber.create(userJson)
@@ -196,10 +208,7 @@ module.exports = {
                     joinCourse = course
                     console.log(`Find Course: ${course.title}, Join people: ${course.subscribers.length}`)
                 }else{
-                    return res.json({
-                        status: httpStatus.OK,
-                        message: "Failed : 名額已滿，沒有加入成功"
-                    })
+                    throw new Error("echelon full up")
                 }
             })
             .then(() => {
