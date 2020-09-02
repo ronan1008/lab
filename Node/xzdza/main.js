@@ -20,7 +20,8 @@ mongoose.connect(mongoDbAtlas,
                         useNewUrlParser: true,
                         useUnifiedTopology: true,
                         useCreateIndex: true,
-                        useFindAndModify: false
+                        useFindAndModify: false,
+                        autoIndex: true
                     }
                 )
 const db = mongoose.connection

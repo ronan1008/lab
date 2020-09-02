@@ -75,6 +75,9 @@ module.exports = {
         let courseId = req.params.id
         Course.findById(courseId)
             .then(course => {
+                return Course.populate(course, "subscribers")
+            })
+            .then( (course) => {
                 res.locals.course = course
                 next()
             })
@@ -89,7 +92,6 @@ module.exports = {
         courseParams = getCourseParams(req.body)
         Course.findByIdAndUpdate(courseId,{ $set: courseParams})
             .then(course => {
-                res.locals.redirect =  `/courses/${courseId}`
                 res.locals.course = course
                 next()
             })
@@ -103,7 +105,7 @@ module.exports = {
         let courseId = req.params.id
         Course.findByIdAndRemove(courseId)
             .then( () => {
-                res.locals.redirect = "/courses"
+                res.locals.course = courseId
                 next()
             })
             .catch(error => {
@@ -123,9 +125,17 @@ module.exports = {
     errorJSON: (error, req, res, next) => {
         let errorObject
         if (error) {
-            errorObject = {
-                status: httpStatus.INTERNAL_SERVER_ERROR,
-                message: error.message
+            console.log(error.message)
+            if (error.message.indexOf('You have already signed') != -1){
+                errorObject = {
+                    status: httpStatus.FORBIDDEN,
+                    message: error.message
+                }
+            } else {
+                errorObject = {
+                    status: httpStatus.INTERNAL_SERVER_ERROR,
+                    message: error.message
+                }
             }
         } else {
             errorObject = {
@@ -151,28 +161,7 @@ module.exports = {
             next()
         }
     },
-
-    join: (req, res, next) => {
-        let courseId = req.params.id
-        let currentUser = req.user
-        if (currentUSer) {
-            User.findByIdAndUpdate(currentUser, {
-                $addToSet:{
-                    courses: courseId
-                }
-            })
-                .then(() => {
-                    res.locals.success = true
-                    next()
-                })
-                .catch((error) => {
-                    next(error)
-                })
-        } else {
-            next(new Error("User must log in."))
-        }
-    },
-
+//TODO:
     join:  (req, res, next) => {
         var joinSubcriber
         var joinCourse
@@ -187,31 +176,49 @@ module.exports = {
             tel: req.body.tel,
             zodiac: req.body.zodiac
         }
-        Subscriber.create(userJson)
+        Course.findById(courseId).populate({path:'subscribers', select: 'email'})
+            .then(courses => {
+                // courses.subscribers.map((subscriber)=>{
+                //     console.log(subscriber)
+                //     if (subscriber.email == req.body.email){                   
+                //         throw new Error("You have already signed")
+                //     }
+                var findEmail = courses.subscribers.find(function(item, index, array){
+                        return item.email == req.body.email;  
+                });
+                if(findEmail) {throw new Error("You have already signed")}
+
+
+
+                // })
+            }) 
+            .then(() => {
+                return Subscriber.create(userJson)
+            })
+
             .then(subscriber => {
                 joinSubcriber = subscriber
                 console.log(`Created Subscriber: ${subscriber.getInfo()}`)
             })
             .then(() => {
-                return Course.findById(courseId)
+                return Course.findById(courseId).select('_id title grade subscribers maxStudents')
             })
             .then((course) => {
                 if (course.subscribers.length < course.maxStudents){
                     joinCourse = course
                     console.log(`Find Course: ${course.title}, Join people: ${course.subscribers.length}`)
                 }else{
-                    res.json({
-                        status: httpStatus.OK,
-                        message: "Failed : 名額已滿，沒有加入成功"
-                    })
+                    throw new Error("echelon full up")
                 }
             })
             .then(() => {
+                console.log(joinCourse)
                 joinCourse.subscribers.push(joinSubcriber)
-                joinCourse.save()
+                return joinCourse.save()
             })
             .then(() => {
-                return Course.populate(joinCourse, "subscribers")
+                return Course.populate(joinCourse, { path: 'subscribers', model: 'Subscriber', select: 'name' })
+                //return Course.findById(courseId)
             })
             .then(course => {
                 console.log(course)

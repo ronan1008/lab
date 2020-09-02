@@ -21,7 +21,9 @@ router.delete("/news/:id/delete", newsController.delete, newsController.respondJ
 
 router.post("/courses/create", coursesController.create, coursesController.respondJSON)
 router.get("/courses", coursesController.index,coursesController.filterUserCourses,coursesController.respondJSON)
-router.get("/courses/:id/join", coursesController.join,coursesController.respondJSON)
+router.put("/courses/:id/update", coursesController.update, coursesController.respondJSON)
+router.get("/courses/:id", coursesController.show, coursesController.respondJSON)
+router.delete("/courses/:id/delete", coursesController.delete, coursesController.respondJSON)
 
 router.post("/images/upload",imagesController.upload)
 module.exports = router

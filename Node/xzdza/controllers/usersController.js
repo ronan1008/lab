@@ -166,8 +166,9 @@ module.exports = {
                   "xzdza"
                 )
                 res.json({
-                  success: true,
-                  token: signedToken
+                  status: httpStatus.OK,
+                  message: "Ok",
+                  data: {token:signedToken}
                 })
           
               } else {
@@ -193,13 +194,6 @@ module.exports = {
         })
   },
 
-  logout: (req, res, next) => {
-      req.logout()
-      req.flash("success", "You have been logged out!")
-      res.locals.redirect = "/"
-  },
-
-
   respondJSON: (req, res) => {
     res.json({
         status: httpStatus.OK,
@@ -207,6 +201,7 @@ module.exports = {
         message: "Ok"
     })
   },
+  
 
   errorJSON: (error, req, res, next) => {
       let errorObject
