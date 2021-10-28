@@ -1,0 +1,46 @@
+---
+- hosts: Shock
+  name: Update new version with git on Shock machine
+  gather_facts: no
+  roles: 
+    - role: ping
+    #   become: yes
+  vars: 
+    githubuser: shocklee
+    githubpassword: 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
+  tasks:
+    - name: Checkout a github repo and use refspec to fetch all pull requests
+    #   become: yes
+      git:
+        repo: "https://{{ githubuser | urlencode }}:{{ githubpassword | urlencode }}@github.com/onlifemedia/tl-backend.git"
+        dest: /home/shocklee/tl-backend
+        update: yes
+        version: private-room-develop
+      register: git_ret
+
+    - name: Show git return value
+      debug:
+        msg: "{{ git_ret.before }}  ->  {{ git_ret.after }}"
+      
+    - name: copy remote file to remote path
+    #   become: yes
+    #   become_user: shocklee
+      shell: sudo cp -r apiv2/* /var/www/apiv2; 
+      register: cmdoutput
+      args:
+        chdir: /home/shocklee/tl-backend
+
+      changed_when: cmdoutput.rc == 0
+
+    - name: copy remote file to remote path
+      become: yes
+      shell: source venv/bin/activate; pip install -r requirements.txt; flask db upgrade; sudo systemctl restart uwsgi.service tl-worker.service 
+      register: cmdoutput
+      args:
+        chdir: /var/www/apiv2
+        executable: /bin/bash
+      changed_when: cmdoutput.rc == 0
+      
+    - name: Show git return value
+      debug:
+        msg: "{{ cmdoutput }}"

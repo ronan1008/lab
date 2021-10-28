@@ -43,6 +43,7 @@
         dest: /var/tmp/{{ sql_file_name }}
         flat: yes
 
+#TODO:
     # - name: copy files to remote nodes
     #   copy:
     #     src: /var/tmp/{{ sql_file_name }}
