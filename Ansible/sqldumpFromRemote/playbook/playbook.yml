@@ -1,0 +1,36 @@
+---
+- hosts: destination
+  name: play-test
+  gather_facts: no
+  vars: 
+    sql_file_name: "live_casting_bakxxxxxx.sql"
+  tasks:
+    - name: check connection
+      ping:
+      register: response
+
+    - name: when receieve pong start task
+      when: response.ping == 'pong'
+      debug:
+        msg: "host alive"
+        verbosity: 0
+
+    - name: dump db
+      shell: mysqldump -u root -pmysql live_casting > "{{ sql_file_name }}";
+      # shell: echo 'good' > aaa.txt
+      register: dboutput
+      args:
+        chdir: /home/shocklee/
+      changed_when: dboutput.rc != 0
+
+    - name: db return
+      debug:
+        msg: "{{ dboutput }}"
+
+
+    - name: Fetch files from remote nodes
+      when: dboutput.rc == 0
+      fetch:
+        src: /home/shocklee/{{ sql_file_name }}
+        dest: /var/tmp/{{ sql_file_name }}
+        flat: yes
