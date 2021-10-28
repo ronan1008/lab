@@ -49,16 +49,16 @@
     #     dest: /home/shocklee/mysqlBackup/sync_testing_mysql/{{ sql_file_name }}
     #     mode: '0644'
 
-    - name: clean remote database
-      shell: mysqldump -u root -pmysql live_casting > {{ sql_file_name }};
-      register: shell_return
-      args:
-        chdir: /home/shocklee/
-        executable: /bin/bash
-      changed_when: shell_return.rc != 0
+    # - name: clean remote database
+    #   shell: mysql -u root -pmysql -e 'drop database live_casting; create database live_casting;'
+    #   register: shell_return
+    #   args:
+    #     chdir: /home/shocklee/
+    #     executable: /bin/bash
+    #   changed_when: shell_return.rc != 0
 
     # - name: restore db from sql
-    #   shell: mysqldump -u root -pmysql live_casting > {{ sql_file_name }};
+    #   shell: mysqldump -u root -pmysql live_casting < {{ sql_file_name }};
     #   register: dboutput
     #   args:
     #     chdir: /home/shocklee/
