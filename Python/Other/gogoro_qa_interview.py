@@ -2,7 +2,7 @@ import sys
 import requests
 import pandas as pd
 import matplotlib.pyplot as plt
-
+from pprint import pprint
 
 def _url_json_link(raw_url):
     ''' input url then format url to json request,like:  https://swapi.co/api/?format=json'''
@@ -29,7 +29,7 @@ def sorted_dict_bykeys(dict_type):
 
 def find_url_with_num(film_url_list, category, num):
     '''input films_url_list and number to find out match url'''
-    url_pattern = "https://swapi.co/api/{}/{}/".format(category, num)
+    url_pattern = "https://swapi.dev/api/{}/{}/".format(category, num)
     for film in film_url_list:
         if film['url'] == url_pattern:
             return film['url']
@@ -45,7 +45,7 @@ def link_crawler(link):
 
 def main():
     '''main execute function'''
-    root_url = 'https://swapi.co/api/'
+    root_url = 'https://swapi.dev/api/'
     # 1
     print("1. How many different species appears in film-6?\n")
     root_dict = request_url_to_dict(root_url)
@@ -54,7 +54,9 @@ def main():
     films_dict = request_url_to_dict(films_url)
 
     films_list = films_dict['results']
+    pprint(films_list)
     film_num_url = find_url_with_num(films_list, 'films', 6)
+    film_num_url = "https://swapi.dev/api/films/6/?format=json"
     film_num_dict = request_url_to_dict(film_num_url)
 
     species_num = len(film_num_dict['species'])
