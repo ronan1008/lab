@@ -1,0 +1,10 @@
+---
+  - name: check connection
+    ping:
+    register: response
+
+  - name: when receieve pong start task
+    when: response.ping == 'pong'
+    debug:
+      msg: "host alive"
+      verbosity: 0

@@ -1,0 +1,9 @@
+[source]
+testing-api.xtars.com ansible_connection=ssh ansible_user=shocklee
+
+[destination]
+34.80.110.80 ansible_connection=ssh ansible_user=shocklee
+
+
+[test]
+192.168.0.55 ansible_connection=ssh ansible_user=shocklee ansible_sudo_pass=17701008

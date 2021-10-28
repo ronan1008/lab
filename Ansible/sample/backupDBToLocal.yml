@@ -1,20 +1,13 @@
 ---
-- hosts: destination
+- hosts: test
   name: play-test
   gather_facts: no
+  roles: 
+    - role: ping
+      become: yes
   vars: 
     sql_file_name: "live_casting_bakxxxxxx.sql"
   tasks:
-    - name: check connection
-      ping:
-      register: response
-
-    - name: when receieve pong start task
-      when: response.ping == 'pong'
-      debug:
-        msg: "host alive"
-        verbosity: 0
-
     - name: dump db
       shell: mysqldump -u root -pmysql live_casting > "{{ sql_file_name }}";
       # shell: echo 'good' > aaa.txt
@@ -26,7 +19,6 @@
     - name: db return
       debug:
         msg: "{{ dboutput }}"
-
 
     - name: Fetch files from remote nodes
       when: dboutput.rc == 0

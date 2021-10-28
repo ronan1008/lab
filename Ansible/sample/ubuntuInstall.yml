@@ -1,0 +1,9 @@
+---
+- hosts: test
+  name: play-test
+  gather_facts: no
+  roles: 
+    - role: ping
+      become: yes
+    - role: pip
+      become: yes
