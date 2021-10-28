@@ -1,0 +1,65 @@
+---
+- hosts: Testing
+  name: backup Testing sql to local /var/tmp, then restore shock db from local
+  gather_facts: yes
+  roles: 
+    - role: ping
+      become: yes
+  vars: 
+    sql_file_name: "live_casting_{{ ansible_date_time.iso8601_basic_short }}.sql"
+  tasks:
+
+    - name: Show backup file name
+      debug:
+        msg: "{{ sql_file_name }}"
+
+    - name: check remote dir
+      shell: set -o pipefail ; ls | grep live_casting 
+      register: shell_return
+      args:
+        chdir: /home/shocklee/
+        executable: /bin/bash
+      changed_when: shell_return.rc != 0
+
+    - name: delete files when sql files > 1
+      when:  shell_ret.stdout_lines|length > 1
+      file:
+        path: "{{ item }}"
+        state: absent
+      with_items:
+        - /home/shocklee/{{ shell_return.stdout_lines[0] }}
+
+    - name: dump db
+      shell: mysqldump -u root -pmysql live_casting > {{ sql_file_name }};
+      register: dboutput
+      args:
+        chdir: /home/shocklee/
+      changed_when: dboutput.rc == 0
+
+    - name: Fetch files from remote nodes
+      when: dboutput.rc == 0
+      fetch:
+        src: /home/shocklee/{{ sql_file_name }}
+        dest: /var/tmp/{{ sql_file_name }}
+        flat: yes
+
+    # - name: copy files to remote nodes
+    #   copy:
+    #     src: /var/tmp/{{ sql_file_name }}
+    #     dest: /home/shocklee/mysqlBackup/sync_testing_mysql/{{ sql_file_name }}
+    #     mode: '0644'
+
+    - name: clean remote database
+      shell: mysqldump -u root -pmysql live_casting > {{ sql_file_name }};
+      register: shell_return
+      args:
+        chdir: /home/shocklee/
+        executable: /bin/bash
+      changed_when: shell_return.rc != 0
+
+    # - name: restore db from sql
+    #   shell: mysqldump -u root -pmysql live_casting > {{ sql_file_name }};
+    #   register: dboutput
+    #   args:
+    #     chdir: /home/shocklee/
+    #   changed_when: dboutput.rc != 0
