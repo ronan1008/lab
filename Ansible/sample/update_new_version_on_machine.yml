@@ -10,7 +10,7 @@
     githubpassword: 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
   tasks:
     - name: Checkout a github repo and use refspec to fetch all pull requests
-    #   become: yes
+      become: yes
       git:
         repo: "https://{{ githubuser | urlencode }}:{{ githubpassword | urlencode }}@github.com/onlifemedia/tl-backend.git"
         dest: /home/shocklee/tl-backend
