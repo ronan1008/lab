@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  test_env:
+    build: .
+    image: shock/python3.7
+    container_name: xtars
+    # tty: true
