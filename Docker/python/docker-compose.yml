@@ -3,5 +3,5 @@ services:
   test_env:
     build: .
     image: shock/python3.7
-    container_name: xtars
+    container_name: python-xtars
     # tty: true
