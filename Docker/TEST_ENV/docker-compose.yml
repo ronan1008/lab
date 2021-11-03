@@ -4,4 +4,7 @@ services:
     build: .
     image: shock/python3.7
     container_name: python-xtars
-    # tty: true
+    volumes: 
+      - /Users/shocklee/Documents/TrueLove/tl-QA:/code
+    entrypoint: /bin/bash
+    tty: true
