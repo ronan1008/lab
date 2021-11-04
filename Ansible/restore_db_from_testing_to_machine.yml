@@ -2,10 +2,10 @@
 - hosts: Testing
   name: backup Testing sql to local /var/tmp, then restore shock db from local
   gather_facts: yes
-  roles: 
+  roles:
     - role: ping
       become: yes
-  vars: 
+  vars:
     sql_file_name: "live_casting_{{ ansible_date_time.iso8601_basic_short }}.sql"
   tasks:
 
@@ -14,7 +14,7 @@
         msg: "{{ sql_file_name }}"
 
     - name: check remote dir
-      shell: set -o pipefail ; ls | grep live_casting 
+      shell: set -o pipefail ; ls | grep live_casting
       register: shell_return
       args:
         chdir: /home/shocklee/
