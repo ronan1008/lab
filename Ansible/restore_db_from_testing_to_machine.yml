@@ -13,9 +13,7 @@
       debug:
         msg: "{{ sql_file_name }}"
 
-    - name: debug delete
-      debug:
-        msg: "{{ hostvars['testing-api.xtars.com']['var'] }}"
+
     # - name: check remote dir
     #   shell: set -o pipefail ; ls | grep live_casting
     #   register: shell_return
@@ -47,19 +45,20 @@
     #     flat: yes
 
 
-# - hosts: Shock
-#   name: copy files to test machine, then restore db from files
-#   gather_facts: yes
-#   roles:
-#     - role: ping
-#       become: yes
-#   vars:
-#     sql_file_name: "{{ sql_file_name }}"
-#   tasks:
+- hosts: Shock
+  name: copy files to test machine, then restore db from files
+  gather_facts: yes
+  roles:
+    - role: ping
+      become: yes
+  vars:
+    sql_file_name: "live_casting_{{ hostvars['testing-api.xtars.com']['ansible_date_time']['iso8601_basic_short'] }}.sql"
+  tasks:
 
-#       - name: Show local backup file name
-#         debug:
-#           msg: "{{ sql_file_name }}"
+
+    - name: debug delete
+      debug:
+        msg: "{{ sql_file_name }}"
 
 #TODO:
     # - name: copy files to remote nodes
