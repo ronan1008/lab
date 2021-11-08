@@ -6,6 +6,7 @@
     - role: ping
     #   become: yes
   vars: 
+    branch_name: private-room-develop
     githubuser: shocklee
     githubpassword: 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
   tasks:
@@ -15,7 +16,7 @@
         repo: "https://{{ githubuser | urlencode }}:{{ githubpassword | urlencode }}@github.com/onlifemedia/tl-backend.git"
         dest: /home/shocklee/tl-backend
         update: yes
-        version: private-room-develop
+        version:  "{{ branch_name }}"
       register: git_ret
 
     - name: Show git return value
@@ -32,7 +33,7 @@
 
       changed_when: cmdoutput.rc == 0
 
-    - name: copy remote file to remote path
+    - name: enable python virtual enviroment then service restart 
       become: yes
       shell: source venv/bin/activate; pip install -r requirements.txt; flask db upgrade; sudo systemctl restart uwsgi.service tl-worker.service 
       register: cmdoutput
