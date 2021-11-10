@@ -1,0 +1,13 @@
+version: "2"
+services:
+  pytest:
+    build: .
+    restart: always
+    image: shock/python
+    container_name: pytest_api
+    volumes:
+      - .:/code/
+    environment:
+      - LC_ALL=C.UTF-8
+    tty: true
+    # command: tail -f /dev/null
