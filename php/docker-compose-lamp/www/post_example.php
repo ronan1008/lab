@@ -21,5 +21,5 @@ echo $x->data->token."\n";
 echo $x->data->nonce."\n";
 
 // $url = $res->getBody()->getContents();
-print($client->getUri())
+// print($client->getUri())
 ?>

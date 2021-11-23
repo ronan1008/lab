@@ -2,28 +2,65 @@
 
 require __DIR__ . '/vendor/autoload.php';
 use GuzzleHttp\Client;
+use GuzzleHttp\TransferStats;
 
 $client = new Client(['base_uri' => 'http://34.80.110.80', 'headers' => [ 'Content-Type' => 'application/json' ]]);
 // echo var_dump($client)
 $mybody['account'] = 'tl-lisa';
 $mybody['password'] = '12345678';
-print_r($mybody);
 // $response = $client->post( '/api/v2/identity/auth/login', ['body'=>$mybody]);
-$res = $client->request('POST', '/api/v2/identity/auth/login', ['json'=>$mybody]);
+$res = $client->request('POST', '/api/v2/identity/auth/login', ['json'=>$mybody,
+    'debug'  =>  true
+]);
 
+echo "\n". "*****************"."\n";
 $body = $res->getBody();
 $status = $res->getStatusCode();
-echo $res->getReasonPhrase();
-
-// print $status;
-// print_r($body);
+// echo $res->getReasonPhrase();
 $x = json_decode( $res->getBody());
-// print($x->nonce);
 var_dump($x);
 echo $x->Message;
 echo $x->data->token;
 echo $x->data->nonce;
+echo "\n". "*****************"."\n";
 
+
+
+
+$retText = <<<EOF
+[1]
+msgid=#000000333
+statuscode=0
+[2]
+msgid=#000000334
+statuscode=1
+AccountPoint=92
+EOF;
+
+
+function parse_sms_return($retText){
+
+    $ret_list = explode("\n", $retText);   
+    $sms_status= array();
+    $key = '';
+
+    foreach($ret_list as $val){
+        if (preg_match("/^\[\d?\]$/" , $val)){
+            $key = $val;
+            $sms_status[$key] = array();
+        } elseif (strpos($val, 'AccountPoint')===0){
+            $row =  explode("=", $val);
+            $sms_status[$row[0]] = $row[1];
+        } else {
+            $row =  explode("=", $val);
+            $sms_status[$key][$row[0]]= $row[1];
+        }
+    }
+    return $sms_status;
+}
+
+$result = parse_sms_return($retText);
+print_r($result);
 
 // echo $body->('Status');
 
