@@ -6,8 +6,14 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
-
-
+from scrapy.exceptions import DropItem
 class MyfirstPipeline:
     def process_item(self, item, spider):
-        return item
+        title = item['title'] if item['title'] else ''
+        if '迪士尼' in title :
+            item['push'] = f"{item.get('push', '')} ...."
+            item['date'] = f"2022 {item['date']}"
+            print(item)
+            return item
+        else:
+            raise DropItem(f"Drop this item: {item['title']}")

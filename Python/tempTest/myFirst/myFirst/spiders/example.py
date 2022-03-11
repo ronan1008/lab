@@ -21,6 +21,7 @@ class PttSpider(scrapy.Spider):
         if next_page_url and self.count_page <= 10:
             self.count_page = self.count_page + 1
             newurl = response.urljoin(next_page_url)
+            yield scrapy.Request(newurl, callback=self.parse, dont_filter=True)
         else:
-            raise CloseSpider('close it')
-        yield scrapy.Request(newurl, callback=self.parse, dont_filter=True)
+            return
+            # raise CloseSpider('close it')
