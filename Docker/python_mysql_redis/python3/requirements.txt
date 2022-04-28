@@ -51,7 +51,7 @@ matplotlib==3.4.3
 more-itertools==8.4.0
 multidict==5.2.0
 mysql-connector==2.2.9
-numpy==1.19.2
+numpy==1.22.3
 packaging==20.4
 pandas==1.4.2
 paramiko==2.7.1
@@ -78,7 +78,7 @@ pyquery==1.4.1
 pytest==5.4.3
 python-dateutil==2.8.1
 python-settings==0.2.2
-pytz==2020.1
+pytz==2022.1
 PyWavelets==1.1.1
 PyYAML==6.0
 query-string==2019.4.13
@@ -97,7 +97,7 @@ scipy==1.6.0
 scp==0.13.3
 selenium==3.141.0
 simplejson==3.17.0
-six==1.14.0
+six==1.16.0
 soupsieve==2.0.1
 SQLAlchemy==1.4.26
 sqlparse==0.4.1
