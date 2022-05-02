@@ -30,6 +30,7 @@ services:
     command: tail -f /dev/null
     volumes:
       - ../../../workspace:/workspace
+      - ~/.ssh:/root/.ssh
     environment:
       - LC_ALL=C.UTF-8
     links:
