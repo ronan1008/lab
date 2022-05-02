@@ -33,6 +33,7 @@ services:
       - ~/.ssh:/root/.ssh
     environment:
       - LC_ALL=C.UTF-8
+
     links:
       - mysql
       - redis
