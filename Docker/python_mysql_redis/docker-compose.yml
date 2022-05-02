@@ -26,10 +26,10 @@ services:
     build:
       context: ./python3
     restart: always
-    working_dir: /code
+    working_dir: /workspace
     command: tail -f /dev/null
     volumes:
-      - ${PWD}/code:/code
+      - ../../../workspace:/workspace
     environment:
       - LC_ALL=C.UTF-8
     links:
