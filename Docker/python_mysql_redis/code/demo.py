@@ -22,7 +22,7 @@ class User(BASE):
 
 
 engine = sa.create_engine("mysql+pymysql://root:mysql@mysql:3306/demo" , echo= True)
-engine = sa.create_engine("mysql+pymysql://root:mysql@mysql:3306/demo")
+# engine = sa.create_engine("mysql+pymysql://root:mysql@mysql:3306/demo")
 
 Session = sa.orm.sessionmaker(bind=engine)
 BASE.metadata.create_all(engine)
