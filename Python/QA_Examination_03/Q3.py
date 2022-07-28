@@ -57,7 +57,7 @@ def Q1():
     error_list= []
 
     for i, data_row in enumerate(data):
-        
+
         if i == 0:
             continue
         else:
@@ -71,7 +71,7 @@ def Q1():
 
     pprint(error_list)
 
-#Q2 
+#Q2
 
 def Q2():
     SQL = '''
@@ -162,10 +162,10 @@ def Q4():
 
     member_center = driver.find_element_by_xpath('//a[text()="My104會員中心"]')
     member_center.click()
-    new_window  = driver.window_handles[1]    
+    new_window  = driver.window_handles[1]
     driver.switch_to.window(new_window)
     member_name_ele = driver.find_element_by_xpath('//div[@class="h2 mb-3"]')
-    member_name = member_name_ele.text 
+    member_name = member_name_ele.text
     pprint(member_name)
 
     if member_name:
@@ -176,10 +176,11 @@ def Q4():
         print("沒找到姓名")
     time.sleep(3)
     driver.quit()
-    
+
 
 
 if __name__ == '__main__':
+    print('this is for job exam')
     print('第1題答案')
     Q1()
     print('第2題答案')
@@ -188,4 +189,5 @@ if __name__ == '__main__':
     Q3()
     print('第4題答案')
     Q4()
+
 
