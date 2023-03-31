@@ -29,7 +29,7 @@ services:
     working_dir: /workspace
     command: tail -f /dev/null
     volumes:
-      - ../../../workspace:/workspace
+      - ../../../lab:/workspace
       - ~/.ssh:/root/.ssh
     environment:
       - LC_ALL=C.UTF-8
