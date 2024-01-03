@@ -3,7 +3,7 @@ QA automation
 Sample Project
 ------------
 * <span style="color:#3A8732"> <strong>webSocket_room</strong> </span>:
-  * <span style="color:grey"> <strong>Purpose</strong> </span> : use abstract factory method, sub classes inherit base class to avoid dupliate code
+  * <span style="color:grey"> <strong>Purpose</strong> </span> : use abstract factory method, sub classes inherit base class to avoid duplicate code
   * <span style="color:grey"> <strong>plugins</strong> </span> : asyncio、websockets、Shell Scripts
 
 * <span style="color:#3A8732"> <strong>Xtars</strong> </span> :
